@@ -1,0 +1,68 @@
+.item-quantity{
+  position: relative;
+
+  &__btn{
+    @extend %buttonreset;
+    position: absolute;
+    width: 3.6rem;
+    height: 3.6rem;
+    top: .4rem;
+    font-size: 0;
+    border-radius: 3px;
+    @include animate(background-color, .15s);
+
+    &:hover{
+      background-color: $raven;
+
+      &::before,
+      &::after{
+        background-color: $white;
+      }
+    }
+
+    &--inc{
+      right: .4rem;
+    }
+
+    &--dec{
+      left: .4rem;
+    }
+
+    &--inc::before,
+    &--inc::after,
+    &--dec::before{
+      content: "";
+      position: absolute;
+      background-color: $regentGray;
+      width: .8rem;
+      height: .2rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include animate(background-color, .15s);
+    }
+
+    &--inc::after{
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  & &__input{
+    width: 100%;
+    text-align: center;
+    height: 4.4rem;
+    padding: .5rem 4.4rem;
+    border: none;
+    background-color: #F2F5F4;
+    font-weight: 500;
+    font-family: $headings-font-family;
+    color: $regentGray;
+    @include animate(background-color);
+
+    &:focus{
+      background-color: #E8EBEA;
+      color: $outerSpace;
+    }
+  }
+
+}

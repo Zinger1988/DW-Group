@@ -1,0 +1,22 @@
+.title-bordered{
+  border-bottom: 1px solid rgba($raven, .3);
+
+  &__heading{
+    display: inline-block;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    padding-bottom: 1.2rem;
+    box-shadow: inset 0 -2px 0 $mySin;
+    font-weight: 700;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  &--white{
+
+    .title-bordered__heading{
+      color: #fff;
+    }
+
+  }
+}

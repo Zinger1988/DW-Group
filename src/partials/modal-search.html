@@ -1,0 +1,53 @@
+<div class="modal modal--search close-modal" id="modal-search">
+    <div class="modal__body modal__body--size--lg modal__body--side-img">
+        <div class="modal__header">
+            <h3 class="modal__header-title">Расширенный поиск</h3>
+            <button class="modal__header-close">
+                <i class="icon icon--cancel close-modal"></i>
+                <span>Закрыть</span>
+            </button>
+        </div>
+        <form class="form" action="/">
+            <div class="modal__content">
+                <label class="form-row form__row">
+                    <span class="form-row__label">Поисковый запрос</span>
+                    <input class="form-row__control" type="search" name="search" placeholder="Поиск товаров...">
+                </label>
+                <label class="form-row form__row">
+                    <span class="form-row__label">Производитель</span>
+                    <select class="form-row__control select2 select2--theme--default">
+                        <option value="" selected>Не задано</option>
+                        <option value="">1C Original</option>
+                        <option value="">3M</option>
+                        <option value="">Hanp</option>
+                        <option value="">Foshan Yat Sing</option>
+                        <option value="">IPM</option>
+                        <option value="">Katun</option>
+                        <option value="">Delacamp</option>
+                        <option value="">Kuroki</option>
+                        <option value="">MK-Imaging, Delacamp</option>
+                        <option value="">Printermayin</option>
+                        <option value="">Static Control</option>
+                    </select>
+                </label>
+                <label class="form-row form__row">
+                    <span class="form-row__label">Наличие</span>
+                    <select class="form-row__control select2 select2--theme--default">
+                        <option value="" selected>Не задано</option>
+                        <option value="">Много</option>
+                        <option value="">Достаточно</option>
+                        <option value="">Заканчивается</option>
+                    </select>
+                </label>
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="modal__footer-btn btn btn--style--wired-grey close-modal">
+                    <span class="btn__text">Отмена</span>
+                </button>
+                <button type="button" class="modal__footer-btn btn btn--style--default">
+                    <span class="btn__text">Поиск</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

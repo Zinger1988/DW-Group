@@ -1,0 +1,202 @@
+.footer{
+  background-color: $outerSpace;
+  color: #fff;
+  padding-top: 4rem;
+
+  &__main .container{
+    @extend %clearfix;
+  }
+
+  @include media('>=sm'){
+    padding: 5rem 11.19vw 0;
+  }
+
+  @include media('>=md'){
+    padding: 5rem 2.83vw 0;
+  }
+
+  @include media('>=lg'){
+    padding: 5rem 0 0;
+  }
+
+  @include media('>=xl'){
+    padding: 5rem 4vw 0;
+  }
+
+  @include media('>=xxl'){
+    padding: 5rem 0 0;
+  }
+
+  @include media('>=xxxl'){
+    padding: 6rem 0 0;
+  }
+
+  &__logo{
+    margin-bottom: 3.4rem;
+  }
+
+  @include media('>=md'){
+    &__logo,
+    &__contact-panel{
+      float: left;
+      clear: left;
+    }
+  }
+
+  &__contact-panel{
+    margin-bottom: 4rem;
+
+    @include media('>=md'){
+      width: calc(33.819% - 30px);
+    }
+
+    @include media('>=lg'){
+      width: calc(25.796% - 30px);
+    }
+
+    @include media('>=xl'){
+      width: calc(23.44% - 30px);
+    }
+
+    @include media('>=xxl'){
+      width: calc(19.194% - 30px);
+    }
+
+  }
+
+  &__nav{
+    margin-bottom: 5rem;
+
+    @include media('>=md'){
+      margin-left: 33.819%;
+    }
+
+    @include media('>=lg'){
+      margin-left: 25.796%;
+    }
+
+    @include media('>=xl'){
+      margin-left: 23.44%;
+    }
+
+    @include media('>=xxl'){
+      margin-left: 19.194%;
+    }
+
+    &-title{
+      margin-bottom: 5rem;
+
+      @include media('>=lg'){
+        margin-bottom: 5.9rem;
+      }
+
+    }
+
+    &-list{
+      @extend %listreset;
+      column-count: 2;
+      column-gap: 3rem;
+
+      @include media('>=lg'){
+        column-count: 3;
+        column-gap: 4rem;
+      }
+
+      @include media('>=xl'){
+        column-count: 4;
+      }
+
+      @include media('>=xxl'){
+        column-count: 5;
+      }
+
+    }
+
+    &-item{
+      font-size: 1.3rem;
+      line-height: 1.23;
+      margin-bottom: 1.4rem;
+      break-inside: avoid;
+
+      @include media('>=xxl'){
+        margin-bottom: 1.6rem;
+      }
+
+    }
+
+    &-link{
+      color: $white;
+      @include animate(color text-decoration-color);
+
+      &:hover,
+      &:focus{
+        color: $mySin;
+        text-decoration-color: $mySin;
+      }
+    }
+
+  }
+
+  &__bottom{
+
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding-top: 1.3rem;
+      padding-bottom: 1.7rem;
+
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        background: linear-gradient(-90deg, rgba(90,90,90,0) 0%, rgba(90,90,90,.6) 50%, rgba(90,90,90,0) 100%);
+      }
+    }
+  }
+
+  &__copyright{
+    font-size: 12px;
+    color: #7E7E7E;
+  }
+
+  &__socials{
+    @extend %listreset;
+    font-size: 0;
+
+    &-item{
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 1rem;
+    }
+
+    &-link{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      color: #fff;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: 1px solid $outerSpaceDarken;
+      @include animate(border-color color);
+
+      &:hover,
+      &:focus{
+        color: $mySin;
+        border-color: $mySin;
+        text-decoration-color: transparent;
+      }
+
+      .icon{
+        font-size: 1.6rem;
+      }
+    }
+
+  }
+}

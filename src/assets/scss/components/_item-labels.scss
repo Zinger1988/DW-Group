@@ -1,0 +1,26 @@
+.item-labels{
+  display: flex;
+  flex-direction: column;
+
+  &__item{
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1;
+    padding: .5rem 1.5rem .6rem;
+    border-radius: 14px 0 0 14px;
+    background-color: $regentGray;
+    margin-bottom: .5rem;
+
+
+    &--discount{
+      color: $white;
+      background-color: $mandy;
+    }
+
+    &--new{
+      color: $white;
+      background-color: $curiousBlue;
+    }
+  }
+
+}

@@ -1,0 +1,97 @@
+.content-holder {
+
+  $this: &;
+
+  &--catalog {
+
+    #{$this}__sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      z-index: 200;
+      @include animate(transform);
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      &-close-btn{
+        @extend %buttonreset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: $outerSpace;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.4rem;
+        padding: 2rem;
+
+        .icon{
+          color: $mySin;
+          font-size: 1.8rem;
+          line-height: 1;
+          margin-right: 1rem;
+        }
+
+        @include media('>=xl'){
+          display: none;
+        }
+      }
+    }
+
+    @include media('>=xl'){
+
+      &{
+        display: flex;
+      }
+
+      #{$this}__inner{
+        flex-grow: 1;
+      }
+
+      #{$this}__pagination{
+        margin-top: auto;
+      }
+
+      #{$this}__sidebar,
+      #{$this}__sidebar.active{
+        height: auto;
+        flex-shrink: 0;
+        z-index: unset;
+        position: static;
+        width: 294px;
+        transform: translateX(0);
+        border-right: 1px solid $mercury;
+        overflow: unset;
+      }
+    }
+  }
+}
+
+.sb-filter-overlay{
+  display: none;
+  background-color: rgba($black, .8);
+  position: fixed;
+  z-index: 120;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &.active{
+    display: block;
+  }
+
+  @include media('>=xl'){
+    &,
+    &.active{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "fonts";
+@import "typography";
+@import "forms";
+@import "helpers";
+
+html {
+  font-size: $rem-base;
+  font-family: $base-font-sans-serif;
+  line-height: $base-line-height;
+  color: $base-text-color;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}

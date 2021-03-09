@@ -1,0 +1,152 @@
+.main-nav{
+  padding: 3rem 2rem 3rem;
+  background: $outerSpace;
+  color: $white;
+
+  &--header{
+    padding: 5rem 2rem 3rem;
+
+    .main-nav__container{
+      padding: 0;
+      min-width: 0;
+
+      @include media('>=lg'){
+        padding: 0 2.9rem;
+        position: relative;
+      }
+
+      @include media('>=xl'){
+        padding: 0 3.3rem;
+      }
+
+      @include media('>=xxl'){
+        padding: 0 3.7rem;
+      }
+
+      @include media('>=xxxl'){
+        padding: 0 6rem;
+      }
+
+    }
+
+    .main-nav__close-btn{
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+
+      @include media('>=lg'){
+        top: 0;
+        right: 4.4rem;
+      }
+
+    }
+
+    @include media('>=lg'){
+      border-top: 1px solid $outerSpaceDarken;
+      padding: 2rem 0 3.7rem;
+
+      .main-nav__title-bordered{
+        display: none;
+      }
+    }
+  }
+
+  &__title-bordered{
+    margin-bottom: 3rem;
+  }
+
+  &__filter{
+    margin-bottom: 2rem;
+
+    &-select{
+      margin-bottom: 1.3rem;
+    }
+
+    &-desc{
+      font-size: 1.2rem;
+      color: $raven;
+    }
+
+    @include media('>=lg'){
+      display: flex;
+      max-width: 74rem;
+
+      &-select{
+        margin: 0 2rem 0 0;
+        width: 36rem;
+        flex-shrink: 0;
+      }
+
+      &-desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  &__list{
+    @extend %listreset;
+
+    @include media('>=lg'){
+      margin: 0 -2rem;
+      column-count: 3;
+      column-gap: 6rem;
+
+      .main-nav__item{
+        break-inside: avoid;
+      }
+    }
+
+    @include media('>=xl'){
+      column-count: 4;
+      column-gap: 3rem;
+    }
+
+    @include media('>=xxxl'){
+      column-count: 5;
+      column-gap: 6rem;
+    }
+  }
+
+  &__link{
+    @extend %linkreset;
+    display: block;
+    font-size: 1.7rem;
+    padding: .2rem 2rem .2rem 0;
+    position: relative;
+    @include animate(color);
+
+    @include media('>=lg'){
+      font-size: 1.4rem;
+      padding: .4rem 3rem .4rem 2rem;
+      border-radius: 3px;
+
+      &:hover{
+        background-color: $outerSpaceDarken;
+      }
+    }
+
+    &:hover{
+      color: $mySin;
+    }
+
+    &::before{
+      content: "\e81c";
+      font: .9rem/1 'Fontello';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #A2B1C0;
+
+      @include media('>=lg'){
+        right: 2rem;
+      }
+
+    }
+  }
+
+}

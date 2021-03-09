@@ -1,0 +1,73 @@
+.btn{
+  @extend %linkreset;
+  @extend %buttonreset;
+  font: 700 1.3rem/1.3 $headings-font-family;
+  text-transform: uppercase;
+  color: $outerSpace;
+  display: inline-block;
+  vertical-align: middle;
+  padding: .923em 1.7em;
+  border-radius: 1.769em;
+  text-align: center;
+  min-width: 10em;
+  min-height: 3.384em;
+  @include v-align();
+
+  @include media('>=md'){
+    padding: 1.023em 2em;
+    border-radius: 1.923em;
+    min-width: 11em;
+    min-height: 3.784em;
+  }
+
+  .icon{
+    font-size: 1.538em;
+    line-height: 1;
+
+    @include media('>=md'){
+        font-size: 1.738em;
+    }
+  }
+
+  &__text{
+    margin: 0 .6em;
+  }
+
+  &--style--default{
+    background-color: $mySin;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba($mySin,.3);
+    }
+  }
+
+  &--style--wired-default{
+    background-color: $white;
+    box-shadow: inset 0 0 0 2px $mySin;
+    @include animate(background-color);
+
+    &:hover{
+      background-color: $mySin;
+    }
+  }
+
+  &--style--grey{
+    background-color: $mercury;
+
+    &:hover{
+      background-color: $tiara;
+    }
+  }
+
+  &--style--wired-grey{
+    background-color: $white;
+    box-shadow: inset 0 0 0 2px $mercury;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: inset 0 0 0 2px $tiara;
+    }
+  }
+
+}

@@ -1,0 +1,130 @@
+.modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba($black, .9);
+  z-index: $modal-z-index;
+  overflow: auto;
+  padding: 10rem 1rem;
+  min-width: 36rem;
+
+  &.active{
+    display: block;
+  }
+
+  &__body{
+    background: $white;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba($black, .14);
+    padding: 1.8rem 2rem 2.5rem;
+    margin: 0 auto;
+    transform: scale(.6);
+    opacity: 0;
+    @include animate(transform opacity, .2s, 'ease-out');
+
+    @include media('>=md'){
+      padding: 3.5rem 4rem 4rem;
+    }
+
+    &--size--sm{
+      max-width: 40rem;
+    }
+
+    &--size--lg{
+      max-width: 72rem;
+    }
+
+
+    @include media('>=md'){
+      &--side-img{
+        padding-left: 27.5rem;
+        position: relative;
+
+        &::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 22.5rem;
+          height: 100%;
+          background: $mercury url('../img/public/popup_bg.jpg') center / cover;
+          border-radius: 6px 0 0 6px;
+        }
+      }
+    }
+  }
+
+  &.active &__body{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__header{
+    position: relative;
+    margin-bottom: 2.8rem;
+
+    @include media('>=md'){
+      margin-bottom: 3.4rem;
+    }
+
+    &-title{
+      font-size: 1.8rem;
+      margin: 0 3.3rem 0 0;
+      position: relative;
+      padding-bottom: 1.3rem;
+
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 3rem;
+        height: .3rem;
+        background-color: $mySin;
+      }
+    }
+
+    &-close{
+      @extend %buttonreset;
+      font-size: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 1;
+      color: $raven;
+
+      .icon{
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+  &__content:not(:last-child){
+    margin-bottom: 2rem;
+
+    @include media('>=md'){
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__footer{
+    padding-top: 2rem;
+    border-top: 1px dotted $mercury;
+    text-align: center;
+
+    @include media('>=md'){
+      padding-top: 3.5rem;
+    }
+  }
+
+  &--search &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

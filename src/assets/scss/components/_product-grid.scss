@@ -1,0 +1,43 @@
+.product-grid{
+
+  .product-tile{
+    position: relative;
+    z-index: 10;
+
+    &__inner{
+      min-height: 100%;
+    }
+
+    &__sub{
+      display: none;
+    }
+
+    &.active{
+      z-index: 11;
+
+      .product-tile__inner{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 3px 16px rgba($black,.14);
+      }
+
+      .product-tile__sub{
+          display: block;
+      }
+    }
+  }
+  
+  @include media('>=sm'){
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(243px, 1fr));
+  }
+
+  @include media('>=xxxl'){
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+}

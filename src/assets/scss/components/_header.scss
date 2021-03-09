@@ -1,0 +1,478 @@
+.header{
+  background: $outerSpace;
+  color: $white;
+
+  &__top{
+    border-bottom: 1px dotted $outerSpaceDarken;
+
+    @include media('>=xl'){
+      border-bottom-style: solid;
+    }
+
+  }
+
+  &__middle{
+    padding: 1rem 0;
+    border-bottom: 1px solid $outerSpaceDarken;
+    position: relative;
+    z-index: 50;
+
+    &-container{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+
+      @include media('>=lg'){
+        flex-wrap: nowrap;
+      }
+
+    }
+
+    .holder{
+      order: 1;
+      flex-shrink: 0;
+      width: 100%;
+      margin: 1rem 0 0;
+      position: relative;
+
+      @include media('>=md'){
+        order: unset;
+        width: auto;
+        flex-grow: 1;
+        margin: 0 1.5rem 0 0;
+      }
+
+      @include media('>=lg'){
+        display: flex;
+        align-items: flex-end;
+      }
+
+    }
+
+  }
+
+  &__catalog-btn{
+    width: 100%;
+    background: none;
+    color: inherit;
+    border: 1px solid $mySin;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: $headings-font-family;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .5rem 6rem;
+    height: 5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+    @include animate(background-color color);
+
+    &:hover{
+      background-color: $mySin;
+      color: $outerSpace;
+
+      ~.header__search-btn{
+        color: rgba($outerSpace, .5);
+
+        &::before{
+          border-left: 1px solid rgba($outerSpace, .25);
+        }
+      }
+
+    }
+
+    &:focus{
+      outline: none;
+    }
+
+    .icon{
+      font-size: 1.5rem;
+      margin-right: .5em;
+    }
+
+    @include media('>=lg'){
+      padding: .5rem 3rem;
+      width: auto;
+      margin: 0 1.5rem 0 0;
+
+      &.active{
+        background-color: $mySin;
+        color: $outerSpace;
+      }
+
+    }
+
+    @include media('>=xl'){
+      font-size: 1.3rem;
+      height: 4.3rem;
+
+      .icon{
+        margin-right: .8em;
+      }
+
+    }
+
+  }
+
+  &__search-btn{
+    @extend %buttonreset;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 0;
+    width: 5rem;
+    background: none;
+    border: none;
+    padding: 0;
+    color: $regentGray;
+    z-index: 5;
+    border-radius: 0 4px 4px 0;
+    @include animate(color background-color);
+
+    &:hover{
+      color: $white;
+      background-color: $mySin;
+
+      &::before{
+        border-left: 1px solid $mySin;
+      }
+    }
+
+    @include media('>=lg'){
+      display: none;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      height: calc(100% - 16px);
+      border-left: 1px solid $outerSpaceDarken;
+      @include animate(border);
+    }
+
+    .icon{
+      font-size: 2.3rem;
+    }
+
+  }
+
+  &__logo{
+    width: 8rem;
+    margin-right: 2.5rem;
+
+    @include media('>=md'){
+      margin-right: 1.5rem;
+      width: 9.5rem;
+    }
+
+    @include media('>=xl'){
+      margin-right: 4.5rem;
+      width: 16rem;
+    }
+
+  }
+
+  &__controls{
+    display: flex;
+    border: 2px solid $outerSpaceDarken;
+    border-radius: 4px;
+    flex-grow: 1;
+    max-width: 27rem;
+    margin-left: auto;
+    position: relative;
+
+    @include media('>=md'){
+      width: 27rem;
+      flex-grow: 0;
+    }
+
+    @include media('>=lg'){
+      width: 22.1rem;
+      max-width: none;
+    }
+
+    @include media('>=xl'){
+      border: none;
+      width: auto;
+    }
+
+    &-item{
+      display: flex;
+      border-right: 1px solid $outerSpaceDarken;
+      width: 33.333%;
+
+      &:last-child{
+        border: none;
+      }
+
+      @include media('>=xl'){
+        width: auto;
+        border: none;
+        margin-right: 1.5rem;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &--menu{
+          display: none;
+        }
+      }
+
+      &.active .header__controls-btn {
+        cursor: pointer;
+        color: #fff;
+        border-color: $mySin;
+
+        &-count{
+          display: block;
+        }
+
+      }
+
+      &:not(.active):hover .header__controls-btn{
+        color: $white;
+
+        @include media('<xl'){
+          background-color: rgba($raven, .5);
+        }
+        @include media('>=xl'){
+          border: 2px solid $raven;
+        }
+      }
+    }
+
+    &-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      cursor: pointer;
+      padding: .5rem;
+      font-family: inherit;
+      color: $regentGray;
+      height: 4rem;
+      line-height: 1;
+      @include animate(color border background-color);
+
+      &--cart{
+        cursor: default;
+      }
+
+      @include media('>=md'){
+        height: 4.6rem;
+      }
+
+      @include media('>=xl'){
+        height: 4.3rem;
+        border: 2px solid $outerSpaceDarken;
+        border-radius: 4px;
+        padding: .5rem 2rem;
+
+        &--cart{
+          min-width: 16.9rem;
+        }
+
+      }
+
+      .icon{
+        font-size: 2.3rem;
+
+        @include media('>=xl'){
+          margin-right: 1rem;
+        }
+
+      }
+
+      &-text{
+        display: none;
+
+        @include media('>=xl'){
+          display: block;
+          font-size: 1.4rem;
+        }
+
+      }
+
+      &-count{
+        display: none;
+        color: $mySin;
+        font-size: 1.6rem;
+        margin-left: 1rem;
+      }
+
+    }
+
+    &-dropdown{
+      display: none;
+      position: absolute;
+      right: -2px;
+      width: 34rem;
+      top: 100%;
+      z-index: 51;
+
+      @include media('>=sm'){
+        width: 40rem;
+      }
+
+      @include media('>=md'){
+        width: 44rem;
+      }
+
+      &.active{
+        display: block;
+      }
+    }
+
+  }
+
+  &__main-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: $main-nav-z-index;
+    overflow: hidden auto;
+    width: $menu-mob-width;
+
+    @include media('<lg'){
+      transform: translateX(-100%);
+      width: 85%;
+      max-width: 42rem;
+      min-width: 32rem;
+      height: 100vh;
+      @include animate(transform, .2s, 'ease');
+
+      &.active{
+        transform: translateX(0);
+      }
+    }
+
+    @include media('>=lg'){
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 100%;
+      display: none;
+      z-index: 40;
+
+      &.active{
+        display: block;
+      }
+
+    }
+  }
+
+  &__search{
+    position: relative;
+
+    &-close{
+      @extend %buttonreset;
+      display: none;
+    }
+
+    @include media('<lg'){
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 5 ;
+
+      &-close{
+        display: block;
+        position: absolute;
+        width: 5rem;
+        height: 100%;
+        right: 0;
+        top: 0;
+        font-size: 2.3rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 8px;
+          height: calc(100% - 16px);
+          border-left: 1px solid rgba($mineShaft, .15);
+        }
+
+      }
+
+      &.active{
+        display: block;
+      }
+
+      .search__input{
+        padding-right: 9.5rem;
+
+        &:focus{
+          padding-right: 6rem;
+        }
+
+      }
+
+      .search__extended{
+        right: 6.4rem;
+      }
+
+    }
+
+    @include media('>=lg'){
+      flex-grow: 1;
+    }
+
+    @include media('>=xl'){
+
+
+      .search__input{
+        padding: 1.15rem 1.15rem 1.15rem 5rem;
+      }
+
+    }
+
+  }
+
+  &__bottom{
+    padding: .9rem 0 0;
+
+    @include media('<md'){
+      .container {
+        padding-right: 0;
+      }
+    }
+
+    @include media('<xl'){
+      .header__labels{
+        display: none;
+      }
+    }
+
+    @include media('>=xl'){
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      .account-nav{
+        flex-grow: 1;
+
+        &__list{
+          justify-content: flex-end;
+        }
+      }
+    }
+
+  }
+}
+
+//.hover-device .header__controls-item:hover .header__controls-dropdown{
+//  display: block;
+//}

@@ -1,0 +1,114 @@
+.cart-dropdown{
+  background-color: $white;
+  color: $base-text-color;
+  box-shadow: 0 3px 12px rgba($mineShaft, .14);
+  border-radius: 6px;
+  padding: .5rem 0 2rem 0;
+
+  @include media('>=xxl'){
+    padding-bottom: 2.5rem;
+  }
+
+  &__delete{
+    @extend %buttonreset;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 0;
+    width: 3.1rem;
+    height: 3.1rem;
+    line-height: 1;
+    border-radius: 50%;
+    background-color: rgba($outerSpace, .25);
+    color: $white;
+    z-index: 5;
+    @include animate(background-color);
+
+    &:hover{
+      background-color: rgba($outerSpace, .65);
+    }
+
+    .icon{
+      font-size: 1.8rem;
+    }
+  }
+
+  &__body{
+    margin-bottom: 2rem;
+  }
+
+  &__item{
+    padding: 1.5rem 1.5rem 2rem;
+    position: relative;
+    border-bottom: 1px dotted rgba($outerSpace, .15);
+
+    @include media('>=xxl'){
+      padding: 1.5rem 2.5rem 2rem;
+    }
+  }
+
+  &__link{
+    display: flex;
+    padding-right: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__img{
+    width: 5.7rem;
+    flex-shrink: 0;
+    margin-right: 2rem;
+
+    &-item{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__name{
+    font-size: 1.2rem;
+    line-height: 1.583;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__total{
+    display: grid;
+    grid-template-columns: 11rem 1fr 1fr;
+    grid-gap: 1rem;
+    justify-items: right;
+
+    &-item{
+      line-height: 1.2;
+
+      &.item-quantity{
+        width: 11rem;
+      }
+
+      &.product-price{
+        margin-top: .5rem;
+
+        .product-price__item{
+          display: block;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    align-items: center;
+
+    @include media('>=xxl'){
+      padding: 0 2.5rem;
+    }
+
+    .product-price__item{
+      font-size: 2.1rem;
+    }
+
+  }
+}

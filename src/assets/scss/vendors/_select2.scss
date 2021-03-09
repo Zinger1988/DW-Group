@@ -1,0 +1,105 @@
+@import "node_modules/select2/src/scss/core";
+
+.select2-container--above{
+  z-index: 2;
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid $form-element-border-color;
+  border-radius: 3px;
+}
+
+.select2-container--default .select2--theme--outerSpace {
+  background-color: $outerSpace;
+  border: 1px solid #394240;
+}
+
+.select2-container--open .select2-selection--single{
+  border-color: $form-element-focus-border-color;
+  border-bottom: 1px solid $form-element-border-color;
+}
+
+.select2-container--open .select2--theme--outerSpace {
+  border-color: #4C5755;
+  border-bottom: 1px solid transparent;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: $mineShaft;
+  line-height: 21px;
+}
+
+.select2-container--default .select2--theme--outerSpace .select2-selection__rendered{
+  color: $white;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 1.3rem 4rem .8rem 1.5rem;
+}
+
+.select2-container .select2-selection--single {
+  height: 4.4rem;
+  outline: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 4.4rem;
+  width: 4.4rem;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow::before{
+  content: "\e80f";
+  font: 1rem 'Fontello';
+  color: $regentGray;
+  @include animate(transform color);
+}
+
+.select2-container--open .select2-selection--single .select2-selection__arrow::before{
+  transform: rotate(180deg);
+  color: $outerSpaceDarken;
+}
+
+.select2-container--open .select2--theme--outerSpace .select2-selection__arrow::before{
+  color: $white;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.select2-results__option {
+  @include animate(background-color, .15s, ease);
+  padding: 1rem 3.3rem 1rem 1.5rem;
+  border-bottom: 1px dotted rgba($form-element-border-color, .7);
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: $mySin;
+  color: $mineShaft;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+  position: relative;
+}
+
+.select2-container--default .select2-results__option--selected::after{
+  content: "\e823";
+  font: 1.25rem/1 'Fontello';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4.3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: $mineShaft;
+}

@@ -1,0 +1,54 @@
+.text-overflow{
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  &__toggle{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    display: none;
+    padding-top: .75em;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%);
+
+
+    &--visible{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__btn{
+    background-color: $limedSpruce;
+    color: $white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: .39em 1em .39em;
+    border-radius: 20px;
+
+    .icon{
+      font-size: .8rem;
+      margin-right: .5rem;
+      line-height: 1;
+      @include animate(transform)
+    }
+  }
+
+  &--expanded{
+
+    .text-overflow__btn .icon{
+      transform: rotate(180deg);
+    }
+
+  }
+
+}

@@ -1,0 +1,29 @@
+.product-price{
+
+  &__pre{
+    font-size: 12px;
+    line-height: 1;
+    color: $raven;
+    margin-bottom: .5rem;
+  }
+
+  &__item{
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 1.7rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-right: .5em;
+    white-space: nowrap;
+
+    &--old{
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $regentGray;
+      margin-top: .7rem;
+      text-decoration: line-through;
+    }
+
+
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  min-width: 360px;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1522px;
+
+  &--wide{
+    max-width: 1900px;
+  }
+
+  @include media('>=sm'){
+    padding: 0 22px;
+  }
+
+  @include media('>=md'){
+    padding: 0 21px;
+  }
+
+  @include media('>=lg'){
+    padding: 0 29px;
+  }
+
+  @include media('>=xl'){
+    padding: 0 33px;
+  }
+
+  @include media('>=xxl'){
+    padding: 0 37px;
+  }
+
+  @include media('>=xxxl'){
+    padding: 0 60px;
+  }
+
+}

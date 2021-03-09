@@ -1,0 +1,25 @@
+.item-rating {
+
+  &__link{
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  &__mark {
+    display: inline-block;
+    vertical-align: middle;
+
+    &-item {
+      font-size: 1.2rem;
+      line-height: 1;
+      margin-right: .4em;
+      color: rgba($regentGray, .4);
+
+      &--active {
+        color: #FF801E;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,117 @@
+.contact-panel{
+  color: #fff;
+
+  $this: &;
+
+  &__body{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list{
+    @extend %listreset;
+    width: calc(50% - 15px);
+  }
+
+  &__item{
+    line-height: 1.285;
+    margin-bottom: 1.2rem;
+
+    &:last-child{
+      margin: 0;
+    }
+
+    &-icon{
+      color: #818C98;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__list--contacts &__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &--header{
+    position: relative;
+    padding: 5rem 0 3rem;
+
+    #{$this}__title-bordered{
+      margin-bottom: 2rem;
+    }
+
+    #{$this}__close-btn{
+      position: absolute;
+      right: 0;
+      top: 2rem;
+    }
+
+    @include media('>=xl'){
+
+      &{
+        padding: 1.4rem 0;
+      }
+
+      #{$this}__title-bordered,
+      #{$this}__close-btn{
+        display: none;
+      }
+
+      #{$this}__list{
+        width: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      #{$this}__item{
+        margin: 0 0 0 2.5rem;
+      }
+
+      #{$this}__list--contacts #{$this}__item{
+        margin: 0 2.5rem 0 0;
+      }
+
+    }
+  }
+
+  &--footer {
+
+    #{$this}__item-icon{
+      color: $mySin;
+    }
+
+    @include media('>=md') {
+
+      #{$this}__body {
+        flex-direction: column;
+      }
+
+      #{$this}__list{
+        width: auto;
+      }
+
+      #{$this}__list--contacts {
+        margin-bottom: 2.8rem;
+      }
+
+    }
+  }
+
+  &__link{
+    color: $white;
+    @include animate(color text-decoration, .15s);
+
+    &:hover,
+    &:focus{
+      color: $mySin;
+      text-decoration-color: $mySin;
+    }
+  }
+
+}

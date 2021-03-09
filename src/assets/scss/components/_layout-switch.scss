@@ -1,0 +1,37 @@
+.layout-switch{
+  display: inline-flex;
+  align-items: center;
+
+  &__item{
+    @extend %linkreset;
+    font-size: 0;
+    width: 4rem;
+    height: 4rem;
+    color: $regentGray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    @include animate(background-color color);
+
+    &--active{
+      box-shadow: inset 0 0 0 2px $mySin;
+      color: $outerSpace;
+    }
+
+    &:not(:last-child){
+      margin-right: .5rem;
+    }
+
+    & .icon{
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    &:not(&--active):hover{
+      color: $outerSpace;
+      background-color: $mercury;
+    }
+  }
+
+}

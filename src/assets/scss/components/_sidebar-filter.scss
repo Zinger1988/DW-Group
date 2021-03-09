@@ -1,0 +1,135 @@
+.sidebar-filter{
+  background-color: $white;
+  
+  @include media('>=xl'){
+    &__tabs{
+      .tabs__label-holder:after{
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__group{
+    border-bottom: 1px solid $mercury;
+    padding: .5rem 0;
+
+    &:last-child{
+      border-bottom: none;
+    }
+
+    &-title{
+      font-size: 1.4rem;
+      font-family: $headings-font-family;
+      font-weight: 500;
+      padding: 1.4rem 3rem;
+      cursor: pointer;
+      position: relative;
+
+      &.disabled{
+        cursor: default;
+      }
+
+      &-toggler{
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: 3rem;
+        top: 2.55rem;
+        transform: translateY(-50%);
+
+        &::before,
+        &::after{
+          content: "";
+          height: .2rem;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 2px;
+          background-color: $raven;
+          @include animate(transform);
+        }
+
+        &::after{
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
+
+      &.active{
+        .sidebar-filter__group-title-toggler::after{
+          transform: translateY(-50%) rotate(0deg);
+        }
+      }
+
+    }
+
+    &-body{
+      padding: .75rem 3rem 2.5rem;
+    }
+
+  }
+
+  &__checkbox-radio:not(:last-child){
+    margin-bottom: 1.5rem;
+  }
+
+  &__active{
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item{
+      @extend %buttonreset;
+      padding: .5rem 1.4rem .5em 1.7rem;
+      background-color: $mySin;
+      border-radius: 16px;
+      white-space: nowrap;
+      margin: 0 .9rem .9rem 0;
+      @include animate(box-shadow);
+
+      &:not(&--reset):hover{
+        box-shadow: 0 0 0 5px rgba($mySin,.4);
+      }
+
+      &-text{
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-right: .5rem;
+        white-space: nowrap;
+      }
+
+      &::after{
+        content: "\e821";
+        font: 1rem 'Fontello';
+        color: $white;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &--reset{
+        background-color: #F2F5F4;
+        @include animate(background-color color);
+
+        &::after{
+          color: rgba(#2D4C75,.4);
+          @include animate(color);
+        }
+
+        &:hover{
+          background-color: $raven;
+          color: $white;
+
+          &::after{
+            color: $tiara;
+          }
+        }
+      }
+    }
+  }
+}

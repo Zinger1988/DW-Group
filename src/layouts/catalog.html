@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+    <title>DW Group | Каталог товаров</title>
+</head>
+
+<body class="page">
+
+{{> header }}
+
+<main class="page__main">
+    <div class="container container--wide">
+
+        <div class="page__pre">
+            <nav class="crumbs crumbs--white page__crumbs">
+                <ul class="crumbs__list">
+                    <li class="crumbs__item">
+                        <a href="/" class="crumbs__link">Главная</a>
+                    </li>
+                    <li class="crumbs__item">
+                        <a href="#" class="crumbs__link">Каталог</a>
+                    </li>
+                    <li class="crumbs__item crumbs__item--active">
+                        <span>Тонеры для МФУ</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page__summary">
+                <div class="page__summary-item">Товаров всего: 1 230</div>
+                <div class="page__summary-item">Товаров на странице: 50</div>
+            </div>
+        </div><!--page pre-->
+
+        <div class="page__content-holder content-holder content-holder--catalog">
+
+            <aside class="sidebar-filter content-holder__sidebar">
+                {{> filter-sidebar }}
+            </aside>
+
+            <section class="content-holder__inner">
+
+                <div class="content-holder__header content-holder__header--settings">
+
+                    <button class="content-holder__header-btn sidebar-toggle">
+                        <i class="icon icon--equalizer--outline"></i>
+                        <span>Фильтры</span>
+                    </button>
+
+                    <h1 class="content-holder__header-title">Тонеры для МФУ</h1>
+
+                    <div class="content-holder__header-settings">
+
+                        <div class="content-holder__header-select-alt select-alt">
+                            <div class="select-alt__textbox">
+                                <div class="select-alt__textbox-pre">Сначала:</div>
+                                <div class="select-alt__textbox-value"></div>
+                            </div>
+                            <div class="select-alt__option-list">
+                                <div class="select-alt__option-item select-alt__option-item--active">Дорогие</div>
+                                <div class="select-alt__option-item selected">Дешевые</div>
+                                <div class="select-alt__option-item">Акционные</div>
+                                <div class="select-alt__option-item">Новые</div>
+                            </div>
+                        </div>
+
+                        <div class="content-holder__header-select-alt select-alt">
+                            <div class="select-alt__textbox">
+                                <div class="select-alt__textbox-pre">Показать по:</div>
+                                <div class="select-alt__textbox-value"></div>
+                            </div>
+                            <div class="select-alt__option-list">
+                                <div class="select-alt__option-item selected">30</div>
+                                <div class="select-alt__option-item">50</div>
+                                <div class="select-alt__option-item">100</div>
+                            </div>
+                        </div>
+
+                        <div class="content-holder__layout-switch layout-switch">
+                            <a href="#" class="layout-switch__item">
+                                <i class="icon icon--layout--list"></i>
+                                <span>Списком</span>
+                            </a>
+                            <div class="layout-switch__item layout-switch__item--active">
+                                <i class="icon icon--layout--grid--4"></i>
+                                <span>Плитками</span>
+                            </div>
+                        </div>
+
+                    </div> <!--settings bar -->
+
+                </div><!-- page content header -->
+
+                <div class="content-holder__product-grid product-grid">
+                    {{> body }}
+                </div>
+
+                <nav class="pagination pagination--bottom content-holder__pagination">
+                    {{> pagination }}
+                </nav>
+
+            </section>
+        </div><!--page content-->
+
+    </div>
+</main>
+
+{{> footer }}
+
+{{> modal-search }}
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
