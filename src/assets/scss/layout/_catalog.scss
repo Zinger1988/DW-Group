@@ -2,6 +2,12 @@
 
   $this: &;
 
+  @include media('<xl'){
+    &.sidebar-opened{
+      position: static;
+    }
+  }
+
   &--catalog {
 
     #{$this}__sidebar {

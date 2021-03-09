@@ -132,9 +132,11 @@ let siteJS = {
             if(!$('.sidebar-filter').hasClass('active')){
                 siteJS.helpers.elemFadeIn('.sb-filter-overlay', 'active');
                 $('.sidebar-filter').addClass('active');
+                $('.content-holder--catalog').addClass('sidebar-opened');
             } else {
                 siteJS.helpers.elemFadeOut('.sb-filter-overlay', 'active');
                 $('.sidebar-filter').removeClass('active');
+                $('.content-holder--catalog').removeClass('sidebar-opened');
             }
         });
     },
