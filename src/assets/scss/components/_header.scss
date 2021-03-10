@@ -440,13 +440,49 @@
 
   }
 
+  .header__account-nav{
+    .account-nav__list{
+      padding-left: 1rem;
+
+      @include media('>=sm'){
+        padding-left: 2.2rem;
+      }
+
+      @include media('>=md'){
+        padding-left: 2.1rem;
+      }
+
+      @include media('>=lg'){
+        padding-left: 2.9rem;
+      }
+
+      @include media('>=xl'){
+        padding-left: 0;
+        padding-right: 3.3rem;
+      }
+      @include media('>=xxl'){
+        padding-right: 3.7rem;
+      }
+      @include media('>=xxl'){
+        padding-right: 6rem;
+      }
+    }
+  }
+
   &__bottom{
     padding: .9rem 0 0;
 
-    @include media('<md'){
-      .container {
-        padding-right: 0;
+    .container {
+      padding-right: 0;
+      @include media('<xl'){
+          padding-left: 0;
       }
+    }
+
+    .header__labels{
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      padding-right: 3rem;
     }
 
     @include media('<xl'){
@@ -459,6 +495,7 @@
       .container {
         display: flex;
         align-items: center;
+        overflow-x: auto;
       }
 
       .account-nav{

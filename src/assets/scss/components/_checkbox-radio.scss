@@ -9,8 +9,9 @@
     width: 1.2857em;
     height: 1.2857em;
     border-radius: .142em;
-    text-align: center;
-    line-height: 1.2857em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: transparent;
     background-color: #F2F5F4;
     flex-shrink: 0;
