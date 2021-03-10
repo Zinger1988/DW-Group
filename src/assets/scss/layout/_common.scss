@@ -65,8 +65,8 @@
       z-index: 101;
       box-shadow: 0 0 1.5rem rgba($mineShaft, .8);
 
-      @include media('>=xl'){
-        .header__top{
+      @include media('<md') {
+      .header__bottom{
           display: none;
         }
       }
