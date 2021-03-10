@@ -130,6 +130,7 @@ const cssWatch = () =>
         .pipe(sass({
             includePaths: './node_modules/'
         }))
+        .pipe(groupMediaQueries())
         // .pipe(webPCss({ }))
         .pipe(rename({
             suffix: ".min",

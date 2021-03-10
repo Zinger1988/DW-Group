@@ -22,6 +22,11 @@
     border-radius: 1.923em;
     min-width: 11em;
     min-height: 3.784em;
+
+    &--plain{
+      border-radius: 3px;
+      padding: .923em 1.7em;
+    }
   }
 
   &--plain{

@@ -67,14 +67,6 @@
       }
     }
 
-    &:hover{
-      color: $white;
-
-      .icon {
-        color: $white;
-      }
-    }
-
     .icon{
       font-size: 1.8rem;
       margin-right: 1rem;
@@ -82,6 +74,14 @@
 
       @include media('>=lg'){
         font-size: 2.2rem;
+      }
+    }
+
+    &:hover{
+      color: $white;
+
+      .icon {
+        color: $white;
       }
     }
 

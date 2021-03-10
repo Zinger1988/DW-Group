@@ -7,8 +7,177 @@
 
   &__header{
     border-bottom: 1px solid $mercury;
-    display: flex;
-    align-items: center;
+    padding: 1rem 1.5rem;
+
+    $this: &;
+
+    @include media('>=sm'){
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    @include media('>=lg'){
+      padding: 1.5rem 4rem;
+    }
+
+    &-title{
+      font-size: 2.2rem;
+      line-height: 1.363;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    &--settings{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+
+      @include media('>=lg'){
+        flex-wrap: nowrap;
+        padding: 0 1rem 0 0;
+      }
+
+      #{$this}-btn{
+        @extend %buttonreset;
+        display: none;
+        font-size: 0;
+        background-color: $mySin;
+        color: $white;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 6px 0 0 0;
+        line-height: 1;
+        flex-shrink: 0;
+
+        @include media('>=lg'){
+          width: 6rem;
+          height: 6rem;
+        }
+
+        @include media('<xl'){
+          display: block;
+        }
+
+        .icon{
+          font-size: 2.3rem;
+        }
+      }
+
+      #{$this}-title{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+        min-width: 0;
+        padding: 1rem 1.5rem;
+
+        @include media('>=sm'){
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+
+        @include media('>=lg'){
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+      }
+
+      #{$this}-settings-bar{
+        border-top: 1px solid $mercury;
+        width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+
+        @include media('>=sm'){
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+
+        @include media('>=lg'){
+          width: auto;
+          padding: 0;
+          border: none;
+          flex: 0 0 auto;
+        }
+      }
+
+      #{$this}-select-alt{
+        padding-right: 1.5rem;
+        border-right: 1px dotted $tiara;
+        margin-right: 1.5rem;
+
+        @include media('>=sm'){
+          padding-right: 2rem;
+          margin-right: 2.5rem;
+        }
+
+        @include media('>=md'){
+          .select-alt__textbox{
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+          }
+        }
+
+        @include media('>=xxxl'){
+
+          &{
+            display: flex;
+            align-items: center;
+
+            .select-alt__textbox{
+              font-size: 1.3rem;
+
+              &-pre{
+                margin-right: 1rem;
+                cursor: default;
+              }
+
+              &-value{
+                display: none;
+              }
+            }
+
+            .select-alt__option-list,
+            .select-alt__option-list.active{
+              position: static;
+              background: none;
+              box-shadow: none;
+              border-radius: 0;
+              display: flex;
+              align-items: center;
+              min-width: 0;
+            }
+
+            .select-alt__option-item{
+              padding: .3rem 1rem;
+              border: none;
+              font-size: 1.3rem;
+              border-radius: 3px;
+              font-weight: 700;
+
+              &:not(:last-child){
+                margin-right: 1rem;
+              }
+
+              &.selected{
+                background-color: $mySin;
+              }
+            }
+          }
+        }
+      }
+
+      #{$this}-layout-switch{
+        margin-left: auto;
+      }
+
+    }
+  }
+
+  &__body{
     padding: 1rem 1.5rem;
 
     @include media('>=sm'){
@@ -16,155 +185,8 @@
       padding-right: 2.5rem;
     }
 
-    &.content-holder__header--settings{
-      flex-wrap: wrap;
-      padding: 0;
-
-      @include media('>=lg'){
-        flex-wrap: nowrap;
-        padding-right: 1rem;
-      }
-    }
-
-    &-btn{
-      display: none;
-      @extend %buttonreset;
-      font-size: 0;
-      background-color: $mySin;
-      color: $white;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 6px 0 0 0;
-      line-height: 1;
-      flex-shrink: 0;
-
-      @include media('>=lg'){
-        width: 6rem;
-        height: 6rem;
-      }
-
-      @include media('<xl'){
-        display: block;
-      }
-
-      .icon{
-        font-size: 2.3rem;
-      }
-    }
-
-    &-title{
-      font-size: 2.2rem;
-      line-height: 1.363;
-      font-weight: 500;
-      flex-grow: 1;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      margin: 0;
-    }
-
-    &--settings &-title{
-      padding: 1rem 1.5rem;
-
-      @include media('>=sm'){
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-      }
-
-      @include media('>=lg'){
-        padding-top: 1.3rem;
-        padding-bottom: 1.3rem;
-      }
-    }
-
-    &-settings{
-      border-top: 1px solid $mercury;
-      width: 100%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      padding: 1rem 1.5rem;
-
-      @include media('>=sm'){
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-      }
-
-      @include media('>=lg'){
-        width: auto;
-        padding: 0;
-        border: none;
-      }
-    }
-
-    &-select-alt{
-      padding-right: 1.5rem;
-      border-right: 1px dotted $tiara;
-      margin-right: 1.5rem;
-
-      @include media('>=sm'){
-        padding-right: 2rem;
-        margin-right: 2.5rem;
-      }
-
-      @include media('>=md'){
-        .select-alt__textbox{
-          padding-top: .75rem;
-          padding-bottom: .75rem;
-        }
-      }
-
-      @include media('>=xxxl'){
-
-        &{
-          display: flex;
-          align-items: center;
-
-          .select-alt__textbox{
-            font-size: 1.3rem;
-
-            &-pre{
-              margin-right: 1rem;
-              cursor: default;
-            }
-
-            &-value{
-              display: none;
-            }
-          }
-
-          .select-alt__option-list,
-          .select-alt__option-list.active{
-            position: static;
-            background: none;
-            box-shadow: none;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            min-width: 0;
-          }
-
-          .select-alt__option-item{
-            padding: .3rem 1rem;
-            border: none;
-            font-size: 1.3rem;
-            border-radius: 3px;
-            font-weight: 700;
-
-            &:not(:last-child){
-              margin-right: 1rem;
-            }
-
-            &.selected{
-              background-color: $mySin;
-            }
-          }
-        }
-      }
-    }
-
-    .content-holder__layout-switch{
-      margin-left: auto;
+    @include media('>=lg'){
+      padding: 1.5rem 4rem;
     }
   }
 }
