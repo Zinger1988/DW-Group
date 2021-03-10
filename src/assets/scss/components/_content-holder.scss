@@ -16,17 +16,29 @@
       padding-right: 2.5rem;
     }
 
-    &.content-holder__header--settings{
-      flex-wrap: wrap;
-      padding: 0;
-
-      @include media('>=lg'){
-        flex-wrap: nowrap;
-        padding-right: 1rem;
-      }
+    @include media('>=lg'){
+      padding: 1.5rem 4rem;
     }
 
-    &-btn{
+    &-title{
+      font-size: 2.2rem;
+      line-height: 1.363;
+      font-weight: 500;
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+
+  &__header--settings{
+    flex-wrap: wrap;
+    padding: 0;
+
+    @include media('>=lg'){
+      flex-wrap: nowrap;
+      padding-right: 1rem;
+    }
+
+    .content-holder__header-btn{
       display: none;
       @extend %buttonreset;
       font-size: 0;
@@ -52,18 +64,12 @@
       }
     }
 
-    &-title{
-      font-size: 2.2rem;
-      line-height: 1.363;
-      font-weight: 500;
-      flex-grow: 1;
+    .content-holder__header-title{
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      margin: 0;
-    }
-
-    &--settings &-title{
+      flex: 1;
+      min-width: 0;
       padding: 1rem 1.5rem;
 
       @include media('>=sm'){
@@ -72,12 +78,12 @@
       }
 
       @include media('>=lg'){
-        padding-top: 1.3rem;
-        padding-bottom: 1.3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
       }
     }
 
-    &-settings{
+    .content-holder__header-settings-bar{
       border-top: 1px solid $mercury;
       width: 100%;
       flex-shrink: 0;
@@ -94,10 +100,11 @@
         width: auto;
         padding: 0;
         border: none;
+        flex: 0 0 auto;
       }
     }
 
-    &-select-alt{
+    .content-holder__header-select-alt{
       padding-right: 1.5rem;
       border-right: 1px dotted $tiara;
       margin-right: 1.5rem;
@@ -163,8 +170,22 @@
       }
     }
 
-    .content-holder__layout-switch{
+    .content-holder__header-layout-switch{
       margin-left: auto;
+    }
+
+  }
+
+  &__body{
+    padding: 1rem 1.5rem;
+
+    @include media('>=sm'){
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    @include media('>=lg'){
+      padding: 1.5rem 4rem;
     }
   }
 }

@@ -58,7 +58,8 @@
       }
 
       #{$this}__inner{
-        flex-grow: 1;
+        flex: 1;
+        min-width: 0;
       }
 
       #{$this}__pagination{

@@ -8,6 +8,10 @@
     max-width: 1900px;
   }
 
+  &--narrow{
+    max-width: 1200px;
+  }
+
   @include media('>=sm'){
     padding: 0 22px;
   }
