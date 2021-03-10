@@ -1548,7 +1548,10 @@ html {
       padding: 0 60px; } }
 
 .btn {
-  font: 700 1.3rem/1.3 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  font-weight: 700;
+  font-family: "Muller", "Helvetica Neue", "Helvetica", sans-serif;
   text-transform: uppercase;
   color: #242E2C;
   display: inline-flex;
