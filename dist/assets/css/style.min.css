@@ -930,7 +930,7 @@ template {
 @font-face {
   font-family: "Muller";
   font-display: swap;
-  src: url("../fonts/muller-Bold.woff") format("woff"), url("../fonts/muller-Bold.woff2") format("woff2");
+  src: url("../fonts/muller-bold.woff") format("woff"), url("../fonts/muller-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal; }
 
