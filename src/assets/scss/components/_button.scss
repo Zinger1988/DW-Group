@@ -4,7 +4,9 @@
   font: 700 1.3rem/1.3 $headings-font-family;
   text-transform: uppercase;
   color: $outerSpace;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: middle;
   padding: .923em 1.7em;
   border-radius: 1.769em;
