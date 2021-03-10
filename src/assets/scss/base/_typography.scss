@@ -56,11 +56,13 @@ a {
   &--danger{
     color: $mandy;
   }
-
   &--warning{
     color: $pumpkin;
   }
   &--ok{
     color: $limeade;
+  }
+  &--darkgrey{
+    color: $nevada;
   }
 }

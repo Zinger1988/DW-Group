@@ -32,13 +32,18 @@ let siteJS = {
         const wrapper = $('.product-grid');
         const tile = wrapper.find('.product-tile');
         tile.each(function () {
-            $(this).attr('style','');
-            $(this).find('.product-tile__primary').attr('style','');
-            $(this).css({ minHeight: $(this).height() + 'px', minWidth: $(this).width() + 'px'});
-            $(this).find('.product-tile__primary').css({ minHeight: $(this).find('.product-tile__primary').height() + 'px'});
+            $(this)
+                .removeClass('active')
+                .attr('style','');
+            $(this)
+                .find('.product-tile__primary')
+                .attr('style','')
+                .css({ minHeight: $(this).find('.product-tile__primary').height() + 'px'});
+            $(this)
+                .css({ minHeight: $(this).height() + 'px', minWidth: $(this).width() + 'px'});
         });
 
-        if(!tile.hasClass('size-watch')){
+        if($(document.body).hasClass('hover-device') && !tile.hasClass('size-watch')){
             tile.mouseenter(function () {
                 $(this).addClass('active');
             });
@@ -49,6 +54,12 @@ let siteJS = {
                     overflowBlock.find('.text-overflow__btn').click()
                 }
                 $(this).removeClass('active');
+            });
+        } else if ($(document.body).hasClass('touch-device') && !tile.hasClass('size-watch')){
+            tile.find('.text-overflow__btn').click(function () {
+                const parentTile = $(this).closest('.product-tile');
+                parentTile.toggleClass('active');
+                tile.not(parentTile).removeClass('active');
             });
         }
 

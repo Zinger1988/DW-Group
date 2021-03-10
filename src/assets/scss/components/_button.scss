@@ -13,13 +13,16 @@
   text-align: center;
   min-width: 10em;
   min-height: 3.384em;
-  @include v-align();
 
   @include media('>=md'){
     padding: 1.023em 2em;
     border-radius: 1.923em;
     min-width: 11em;
     min-height: 3.784em;
+  }
+
+  &--plain{
+    border-radius: 3px;
   }
 
   .icon{
@@ -45,7 +48,6 @@
   }
 
   &--style--wired-default{
-    background-color: $white;
     box-shadow: inset 0 0 0 2px $mySin;
     @include animate(background-color);
 
@@ -72,4 +74,53 @@
     }
   }
 
+  &--style--green{
+    background-color: #7CBF49;
+    color: $white;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba(#7CBF49, .3);
+    }
+  }
+
+  &--style--orange{
+    background-color: $mySin;
+    color: $white;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba($mySin, .3);
+    }
+  }
+
+  &--style--lightblue{
+    background-color: #61ACDE;
+    color: $white;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba(#61ACDE, .3);
+    }
+  }
+
+  &--style--lightgreen{
+    background-color: #49BFA3;
+    color: $white;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba(#49BFA3, .3);
+    }
+  }
+
+  &--style--darkgrey{
+    background-color: #5C747E;
+    color: $white;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba(#5C747E, .3);
+    }
+  }
 }

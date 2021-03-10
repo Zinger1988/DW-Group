@@ -1,11 +1,7 @@
 .close-btn{
   @extend %buttonreset;
-  width: 4.4rem;
-  height: 4.4rem;
   border-radius: 50%;
   font-size: 0;
-  text-align: center;
-  line-height: 4.4rem;
   border: 1px solid rgba($mySin, .5);
   cursor: pointer;
   text-decoration: none;
@@ -17,6 +13,10 @@
   }
 
   .icon{
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
     font-size: 1.8rem;
+    line-height: 4.4rem;
   }
 }

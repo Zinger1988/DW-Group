@@ -17,11 +17,14 @@
     white-space: nowrap;
 
     &--old{
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: $regentGray;
       margin-top: .7rem;
-      text-decoration: line-through;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 100 100'\
+         xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3e%3cline x1='0'\
+         y1='0' x2='100' y2='100' stroke-width='5' stroke='%23818C98'/%3e%3c/svg%3e");
+      background-size: 100% 100%;
     }
 
 
