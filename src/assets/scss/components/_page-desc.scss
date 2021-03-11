@@ -1,16 +1,9 @@
 .page-desc{
   padding: 5rem 0;
   background:
-          url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTg\
-          4IDE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KP\
-          HJlY3Qgd2lkdGg9IjE4OCIgaGVpZ2h0PSIxODgiIGZpbGw9IiNmN2ZhZjk\
-          iLz4KPC9zdmc+") top right / 50vw auto repeat-y,
-          url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI\
-          xLjYgNDM1LjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z\
-          yI+Cjxwb2x5Z29uIHBvaW50cz0iMTIxLjYgMCAwIDQzNS41IDEyMS42IDQ\
-          zNS41IiBmaWxsPSIjRjdGQUY5Ii8+Cjwvc3ZnPg==") right calc(50vw - 1px) top 0 / auto 100% no-repeat;
-  //url("../img/public/page-desc-square.svg") top right / 50vw auto repeat-y,
-  //url("../img/public/page-desc-triangle.svg") right 50vw top 0 / auto 100% no-repeat;
+          url("../img/public/page-desc-square.svg") top left / 35vw auto repeat-y,
+          url("../img/public/page-desc-triangle.svg") left 35vw top 0 / auto 100% no-repeat,
+          #F7FAF9 url("../img/public/page-desc-offset.svg") right top / auto 100% no-repeat;
 
   &__img{
     margin-bottom: 3rem;
@@ -48,6 +41,10 @@
 
   @include media('>=lg'){
     padding: 6.5rem 0;
+    background:
+            url("../img/public/page-desc-square.svg") top left / 25vw auto repeat-y,
+            url("../img/public/page-desc-triangle.svg") left 25vw top 0 / auto 100% no-repeat,
+            #F7FAF9 url("../img/public/page-desc-offset.svg") right top / auto 100% no-repeat;
 
     &__inner{
       display: flex;
