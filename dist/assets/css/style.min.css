@@ -3037,7 +3037,7 @@ html {
 }
 
 .footer {
-  background-color: #242E2C;
+  background: #242E2C url("../img/public/footer-offset.jpg") right top/auto 100% no-repeat;
   color: #fff;
   padding-top: 4rem;
 }
@@ -4214,6 +4214,8 @@ html {
 .content-holder__header {
   border-bottom: 1px solid #E9E9E9;
   padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .content-holder__header-title {
@@ -4549,6 +4551,10 @@ html {
   .content-holder__header {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .content-holder__header--settings {
+    padding: 0;
   }
 
   .content-holder__header--settings .content-holder__header-title {

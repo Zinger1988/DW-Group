@@ -8,12 +8,18 @@
   &__header{
     border-bottom: 1px solid $mercury;
     padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
 
     $this: &;
 
     @include media('>=sm'){
       padding-left: 2.5rem;
       padding-right: 2.5rem;
+
+      &--settings{
+        padding: 0;
+      }
     }
 
     @include media('>=lg'){
