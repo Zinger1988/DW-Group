@@ -1,0 +1,121 @@
+.page-desc{
+  padding: 5rem 0;
+  background:
+          url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTg\
+          4IDE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KP\
+          HJlY3Qgd2lkdGg9IjE4OCIgaGVpZ2h0PSIxODgiIGZpbGw9IiNmN2ZhZjk\
+          iLz4KPC9zdmc+") top right / 50vw auto repeat-y,
+          url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI\
+          xLjYgNDM1LjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z\
+          yI+Cjxwb2x5Z29uIHBvaW50cz0iMTIxLjYgMCAwIDQzNS41IDEyMS42IDQ\
+          zNS41IiBmaWxsPSIjRjdGQUY5Ii8+Cjwvc3ZnPg==") right calc(50vw - 1px) top 0 / auto 100% no-repeat;
+  //url("../img/public/page-desc-square.svg") top right / 50vw auto repeat-y,
+  //url("../img/public/page-desc-triangle.svg") right 50vw top 0 / auto 100% no-repeat;
+
+  &__img{
+    margin-bottom: 3rem;
+
+    &-item{
+      display: block;
+
+      @include media('<lg'){
+        width: 67%;
+        margin: 0 auto;
+        max-width: 40rem;
+      }
+    }
+  }
+
+  &__text{
+    font-size: 1.3rem;
+    margin: 0 auto;
+    max-width: 60rem;
+
+    *:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  @include media('>=sm'){
+    &__img{
+      margin-bottom: 4rem;
+    }
+
+    &__text{
+      font-size: 1.4rem;
+    }
+  }
+
+  @include media('>=lg'){
+    padding: 6.5rem 0;
+
+    &__inner{
+      display: flex;
+      align-items: center;
+    }
+
+    &__img{
+      margin: 0;
+      height: 43.5rem;
+      width: 39.8%;
+      flex-shrink: 0;
+      position: relative;
+
+      &-item{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &__text{
+      flex-grow: 1;
+      margin-left: 3rem;
+      max-width: none;
+    }
+  }
+
+  @include media('>=xl'){
+    &__inner{
+      width: 89.91%;
+      margin: 0 auto;
+    }
+
+    &__img{
+      height: auto;
+      width: 38.8%;
+
+      &-item{
+        position: static;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  @include media('>=xxl'){
+    &__inner{
+      width: 87.203%;
+    }
+
+    &__img{
+      width: 33.96%;
+    }
+
+    &__text{
+      margin-left: calc(4.619% + 6rem);
+    }
+  }
+
+  @include media('>=xxxl'){
+    &__inner{
+      width: 100%;
+    }
+
+    &__text{
+      font-size: 1.6rem;
+    }
+  }
+}

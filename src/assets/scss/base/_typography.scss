@@ -9,8 +9,14 @@ h6, .h6,
 .h {
   font-family: $headings-font-family;
   font-weight: bold;
-  margin: 0 0 0.5em;
+  margin: 0 0 0.75em;
   color: $headings-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3{
+  line-height: 1.166;
 }
 
 h1, .h1 {
@@ -35,6 +41,51 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: $h6-font-size;
+}
+
+@mixin list-default{
+  margin: 1.25em 0 1.25em 1.25em;
+  padding: 0;
+  list-style: none;
+
+  li{
+    margin: 0 0 .35em 0;
+    padding: 0 0 0 1.5em;
+
+    &::before{
+      display: inline-block;
+      vertical-align: middle;
+      @content;
+    }
+  }
+}
+
+ul:not([class]):not([id]){
+  @include list-default(){
+    content: "";
+    width: .4em;
+    height: .4em;
+    border-radius: 50%;
+    background-color: $mySin;
+    margin: 0 1.1em 0 -1.5em;
+    position: relative;
+    top: -.1em;
+  }
+}
+
+ol:not([class]):not([id]){
+  counter-reset: numeric-list;
+
+  @include list-default(){
+    counter-increment: numeric-list;
+    content: counter(numeric-list)".";
+    font-weight: 700;
+    color: $mySin;
+    width: 1.5em;
+    margin: 0 0 0 -1.5em;
+    position: relative;
+    top: -.1em;
+  }
 }
 
 p {

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+    <title>DW Group | Каталог товаров</title>
+</head>
+
+<body class="page">
+
+{{> header }}
+
+<main class="page__main">
+    <div class="container">
+
+        <div class="page__pre">
+            <nav class="crumbs crumbs--white page__crumbs">
+                <ul class="crumbs__list">
+                    <li class="crumbs__item">
+                        <a href="/" class="crumbs__link">Главная</a>
+                    </li>
+                    <li class="crumbs__item">
+                        <a href="#" class="crumbs__link">Новости</a>
+                    </li>
+                    <li class="crumbs__item crumbs__item--active">
+                        <span>Прибытие поставки WELLDO! термопленки, ролики</span>
+                    </li>
+                </ul>
+            </nav>
+        </div><!--page pre-->
+
+        <div class="page__content-holder content-holder content-holder--post">
+
+            <div class="content-holder__inner">
+
+                <div class="content-holder__header">
+                    <h1 class="content-holder__header-title">Прибытие поставки WELLDO! термопленки, ролики</h1>
+                </div><!-- page content header -->
+
+                <div class="content-holder__body">
+
+                    <div class="post">
+                        {{> body }}
+                    </div><!-- Post -->
+
+                </div><!-- Content holder body -->
+
+            </div><!-- Content holder inner -->
+
+            <aside class="content-holder__sidebar">
+                123
+            </aside>
+        </div>
+    </div>
+
+</main>
+
+{{> footer }}
+
+{{> modal-search }}
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
