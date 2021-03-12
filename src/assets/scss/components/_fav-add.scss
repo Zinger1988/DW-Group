@@ -1,0 +1,19 @@
+.fav-add{
+  @extend %linkreset;
+  cursor: pointer;
+  color: $tiara;
+  @include animate(color);
+
+  &:not(.active):hover{
+    color: $regentGray;
+  }
+
+  &.active{
+    color: $mySin;
+  }
+
+  .icon{
+    font-size: 2.3rem;
+    line-height: 1;
+  }
+}

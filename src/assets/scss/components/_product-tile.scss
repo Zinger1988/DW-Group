@@ -15,6 +15,13 @@
     flex-grow: 1;
   }
 
+  &__fav-add{
+    position: absolute;
+    left: 2.3rem;
+    top: 2rem;
+    z-index: 15;
+  }
+
   &__item-labels{
     position: absolute;
     right: 0;
@@ -44,6 +51,7 @@
     font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 1.6rem;
+    color: $base-text-color;
   }
 
   &__item-rating{

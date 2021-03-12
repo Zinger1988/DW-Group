@@ -69,11 +69,19 @@ $(document).ready(function () {
         const counterActive = counter.find('.carousel-section__counter-active');
         const counterTotal = counter.find('.carousel-section__counter-total');
 
-        counterActive.text(setActiveIndex(Math.ceil((carousel.activeIndex + carousel.params.slidesPerView) / carousel.params.slidesPerView)));
-        counterTotal.text(setActiveIndex(Math.ceil((carousel.slides.length / carousel.params.slidesPerView))));
+        function setSwiperIndex(swiperInstance){
+            counterActive.text(setActiveIndex(Math.ceil((swiperInstance.activeIndex + swiperInstance.params.slidesPerView) / swiperInstance.params.slidesPerView)));
+            counterTotal.text(setActiveIndex(Math.ceil((swiperInstance.slides.length / swiperInstance.params.slidesPerView))));
+        }
+
+        setSwiperIndex(carousel);
 
         carousel.on('activeIndexChange', function () {
             counterActive.text(setActiveIndex(Math.ceil((carousel.activeIndex + carousel.params.slidesPerView) / carousel.params.slidesPerView)));
+        });
+
+        carousel.on('breakpoint', function () {
+            setSwiperIndex(carousel);
         });
 
         function setActiveIndex(index) {

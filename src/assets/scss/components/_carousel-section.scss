@@ -1,4 +1,14 @@
 .carousel-section{
+  background-color: #F7FAF9;
+  padding: 3rem 0 4.5rem;
+
+  $this: &;
+
+  &__item:not(:last-child){
+    padding-bottom: 4.5rem;
+    margin-bottom: 4.5rem;
+    border-bottom: 1px dotted $mercury;
+  }
 
   &__header{
     display: flex;
@@ -68,9 +78,19 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      @include animate(background-color);
 
       .icon{
         font-size: 1.6rem;
+        @include animate(color);
+      }
+
+      &:hover{
+        background-color: $mySin;
+
+        .icon{
+          color: $base-text-color;
+        }
       }
     }
   }
@@ -81,6 +101,7 @@
     right: 0;
     top: -.35em;
     z-index: 5;
+    @include animate(color);
 
     &-text{
       font-size: 1.5rem;
@@ -95,6 +116,10 @@
       display: inline-block;
       vertical-align: middle;
     }
+
+    &:hover{
+        color: $mySin;
+    }
   }
 
   &__body{
@@ -106,6 +131,18 @@
 
     .swiper{
       overflow: hidden;
+    }
+
+    .swiper-slide{
+      height: auto;
+    }
+
+    .product-tile{
+      height: 100%;
+
+      &__inner{
+        height: 100%;
+      }
     }
   }
 
@@ -151,6 +188,7 @@
   }
 
   @include media('>=lg'){
+    padding: 6.6rem 0;
 
     &__title{
       font-size: 3rem;
@@ -172,6 +210,7 @@
   }
 
   @include media('>=xxl'){
+    padding: 6.6rem 0;
 
     &__header{
       margin-bottom: 4rem;
@@ -185,11 +224,11 @@
   &--layout--wide{
     @include media('>=xl'){
 
-      .carousel-section__inner{
+      #{$this}__inner{
         display: flex;
       }
 
-      .carousel-section__header{
+      #{$this}__header{
         width: 29.4rem;
         flex-shrink: 0;
         flex-direction: column;
@@ -198,31 +237,56 @@
         margin: 0;
       }
 
-      .carousel-section__counter{
+      #{$this}__counter{
         margin-bottom: auto;
       }
 
-      .carousel-section__title{
+      #{$this}__title{
         font-size: 3rem;
         padding: 0;
         width: auto;
         margin-bottom: 3rem;
       }
 
-      .carousel-section__arrows{
+      #{$this}__arrows{
         margin-bottom: auto;
       }
 
-      .carousel-section__all-link{
+      #{$this}__all-link{
         position: static;
       }
 
-      .carousel-section__body{
+      #{$this}__body{
         width: calc(100% - 29.4rem);
         flex: 1 0 auto;
       }
 
+      #{$this}__item--reversed{
+
+        #{$this}__inner{
+          flex-direction: row-reverse;
+        }
+
+        #{$this}__header{
+          align-items: flex-end;
+          text-align: right;
+          padding-right: 0;
+          padding-left: 2rem;
+        }
+      }
     }
   }
 
+  &--theme--dark{
+    background: $outerSpace url('../img/public/carousel-section-dark-bg.jpg') center / cover no-repeat;
+    color: $white;
+
+    #{$this}__item:not(:last-child){
+      border-bottom: 1px dotted rgba($mercury, .15);
+    }
+
+    #{$this}__arrows-btn{
+      color: $white;
+    }
+  }
 }
