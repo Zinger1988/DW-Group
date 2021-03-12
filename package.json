@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
-    "select2": "^4.1.0-rc.0"
+    "select2": "^4.1.0-rc.0",
+    "swiper": "^6.5.0"
   },
   "browserslist": [
     "last 1 version",

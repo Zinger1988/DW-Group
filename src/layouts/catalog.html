@@ -92,9 +92,7 @@
 
                 </div><!-- page content header -->
 
-                <div class="content-holder__product-grid product-grid">
-                    {{> body }}
-                </div>
+                {{> body }}
 
                 <nav class="pagination pagination--bottom content-holder__pagination">
                     {{> pagination }}
@@ -104,9 +102,9 @@
         </div><!--page content-->
     </div>
 
-    <div class="carousel-wide">
-        {{> carousel-wide }}
-    </div>
+    <section class="carousel-section carousel-section--layout--wide carousel-section--theme--dark">
+        {{> carousel-section }}
+    </section>
 
     <div class="page-desc">
         {{> page-desc }}
