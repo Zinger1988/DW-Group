@@ -30,6 +30,18 @@
     }
   }
 
+  &--table{
+    #{$this}__toggler{
+      background-color: #8E9AA7;
+    }
+
+    &:hover{
+      #{$this}__toggler {
+        background-color: #9DA9B7;
+      }
+    }
+  }
+
   &__input{
     display: none;
 

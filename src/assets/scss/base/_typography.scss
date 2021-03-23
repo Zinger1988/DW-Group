@@ -103,17 +103,31 @@ a {
   }
 }
 
-.text-marker{
-  &--danger{
-    color: $mandy;
+.text{
+  &--marker{
+    &--danger{
+      color: $mandy;
+    }
+    &--warning{
+      color: $pumpkin;
+    }
+    &--ok{
+      color: $limeade;
+    }
+    &--darkgrey{
+      color: $nevada;
+    }
   }
-  &--warning{
-    color: $pumpkin;
+
+  &--bigger{
+
+    &--115{
+      font-size: 115%;
+    }
   }
-  &--ok{
-    color: $limeade;
+
+  &--nowrap{
+    white-space: nowrap;
   }
-  &--darkgrey{
-    color: $nevada;
-  }
+
 }

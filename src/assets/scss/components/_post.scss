@@ -1,3 +1,11 @@
 .post{
   font-size: 1.3rem;
 }
+
+.post__table{
+  margin: 5rem 0;
+}
+
+.post__table:last-child{
+  margin-bottom: 0;
+}

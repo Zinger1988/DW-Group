@@ -1,0 +1,245 @@
+.table{
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  border-collapse: collapse;
+  table-layout: auto;
+
+  @include media('>=xl') {
+    display: table;
+  }
+
+  &__tbody{
+    display: block;
+
+    @include media('>=xl') {
+      display: table-row-group;
+    }
+  }
+
+  &__row-head{
+    @include media('<xl') {
+      display: none;
+    }
+
+    @include media('>=xl') {
+      display: table-row;
+    }
+  }
+
+  &__cell-head{
+    @include media('>=xl') {
+      display: table-cell;
+      border-bottom: 2px solid $mySin;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: .8rem 1.5rem;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    @include media('>=xxxl') {
+      font-size: 1.2rem;
+      padding: .8rem 2rem;
+    }
+
+    &.table__cell-head--hidden{
+      font-size: 0;
+    }
+  }
+
+  &__row{
+    padding: 1.25rem 0;
+    background-color: #F2F2F2;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    @include animate(background-color color);
+
+    @include media('>=xl') {
+      display: table-row;
+    }
+
+    &:hover {
+      background-color: rgba($mySin,.2);
+    }
+  }
+
+  &__cell{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    line-height: 1.428;
+    padding: .5rem 1rem;
+    vertical-align: middle;
+
+    @include media('>=sm') {
+      font-size: 1.3rem;
+      padding: .75rem 2rem;
+    }
+
+    @include media('>=600px') {
+      font-size: 1.4rem;
+      padding: .8rem 2.4rem;
+    }
+
+    @include media('>=xl') {
+      display: table-cell;
+      font-size: 1.3rem;
+      padding: .8rem 1.5rem;
+      @include animate(padding);
+
+      &--check{
+        padding-right: 0;
+        width: auto;
+      }
+
+      &--dropdown{
+        position: relative;
+
+        &::before{
+          content: "\e830";
+          font: 1.5rem/1 "Fontello";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: rgba(#A2B1C0,.5);
+        }
+
+        &-icon{
+          font-size: 1.2rem;
+          color: #A2B1C0;
+
+          &::before{
+            @include animate(transform)
+          }
+        }
+      }
+    }
+
+    @include media('>=xxxl') {
+      font-size: 1.4rem;
+      padding: 1.2rem 2rem;
+    }
+
+    &::before{
+      @include media('<xl') {
+        content: attr(data-col-name);
+        padding-right: .75rem;
+        position: relative;
+        z-index: 5;
+        font-weight: 700;
+      }
+    }
+
+    &:not(:last-child){
+      @include media('<xl') {
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    .table-cell-inner{
+      @include media('<xl') {
+        max-width: 50%;
+        padding-left: .75rem;
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    &--mob--primary{
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+
+      .table__cell-inner{
+        max-width: none;
+        flex: 0 0 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__row--toggler{
+    cursor: pointer;
+    @include animate(background-color color margin);
+
+    @include media('>=xl'){
+      .table__cell{
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+      }
+    }
+
+    &--active{
+      background-color: #77818C;
+      color: $white;
+      border-radius: 4px 4px 0 0;
+      margin-bottom: 0;
+
+      &:hover{
+        background-color: #6B747E;
+      }
+
+      .table__cell--dropdown-icon::before{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__row-sub{
+    background-color: #8E9AA7;
+
+    .table__cell-sub{
+      display: block;
+      padding: 0 1rem;
+      @include animate(padding);
+
+      @include media('>=xl') {
+        display: table-cell;
+        padding: 0 2rem;
+      }
+    }
+
+    .table__cell-sub-content{
+      display: none;
+      background-color: $white;
+      border-radius: 4px;
+
+      @include media('<xl'){
+        padding: 1rem;
+      }
+
+      &.active{
+        display: block;
+      }
+    }
+
+    &--active{
+      display: block;
+
+      @include media('>=xl') {
+        display: table-row;
+
+        .table__cell-sub{
+          padding: 2rem 2rem 3rem;
+        }
+      }
+
+      .table__cell-sub{
+        padding: 1rem 1rem 1.5rem;
+      }
+    }
+  }
+}
+
+.table{
+
+  @include media('>=xl') {
+    display: table;
+  }
+
+}

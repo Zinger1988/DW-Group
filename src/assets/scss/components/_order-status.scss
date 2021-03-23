@@ -1,0 +1,23 @@
+.order-status{
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: .6rem 1rem;
+  border-radius: 4px;
+  color: $white;
+  font-weight: 700;
+
+  &--danger{
+    background-color: $mandy;
+  }
+  &--warning{
+    background-color: $pumpkin;
+  }
+  &--ok{
+    background-color: $limeade;
+  }
+  &--darkgrey{
+    background-color: $nevada;
+  }
+}

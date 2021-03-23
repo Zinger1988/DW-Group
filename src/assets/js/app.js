@@ -128,6 +128,24 @@ $(document).ready(function () {
             this.filterSidebar();
             this.textBlockOverflow();
             this.productGrid();
+            this.tableSub();
+        },
+        tableSub(){
+
+            const tableRowToggler = $('.table__row--toggler');
+
+            tableRowToggler.click(function (e) {
+                e.stopPropagation();
+                if(!$(e.target).closest('.checkbox-radio').length && !($(e.target).prop('tagName').toLowerCase() === 'a')){
+                    $(this).toggleClass('table__row--toggler--active');
+                    $('.table__row--toggler').not($(this)).removeClass('table__row--toggler--active');
+                    $(this).next('.table__row-sub').find('.table__cell-sub-content').slideToggle();
+                    $('.table__cell-sub-content').not($(this).next('.table__row-sub').find('.table__cell-sub-content')).slideUp();
+                    $(this).next('.table__row-sub').toggleClass('table__row-sub--active');
+                    $('.table__row-sub').not($(this).next('.table__row-sub')).removeClass('table__row-sub--active');
+                }
+            })
+
         },
         productGrid(){
 
@@ -548,6 +566,17 @@ $(document).ready(function () {
             },
             elemFadeToggle(elem, toggleClass = '', durationTime = 200){
                 $(elem).fadeToggle({
+                    duration: durationTime,
+                    done: function () {
+                        $(this).hasClass(toggleClass)?
+                            $(this).removeClass(toggleClass):
+                            $(this).addClass(toggleClass);
+                        $(this).attr('style','');
+                    }
+                });
+            },
+            elemSlideToggle(elem, toggleClass = '', durationTime = 200){
+                $(elem).slideToggle({
                     duration: durationTime,
                     done: function () {
                         $(this).hasClass(toggleClass)?
