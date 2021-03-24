@@ -1,14 +1,16 @@
 .item-quantity{
   position: relative;
+  display: inline-block;
 
   &__btn{
     @extend %buttonreset;
     position: absolute;
     width: 3.6rem;
     height: 3.6rem;
-    top: .4rem;
+    top: 50%;
     font-size: 0;
     border-radius: 3px;
+    transform: translateY(-50%);
     @include animate(background-color, .15s);
 
     &:hover{

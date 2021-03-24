@@ -1,19 +1,23 @@
 .sidebar-filter{
   background-color: $white;
-  
-  @include media('>=xl'){
-    &__tabs{
-      .tabs__label-holder:after{
-        content: "";
-        position: absolute;
-        right: -1px;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background-color: $white;
-      }
+
+  &__tabs{
+
+    &:after{
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $white;
+    }
+
+    .tabs__item {
+      flex: 1 0 auto;
     }
   }
+
 
   &__group{
     border-bottom: 1px solid $mercury;

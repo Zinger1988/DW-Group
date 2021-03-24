@@ -12,6 +12,11 @@
   &__item{
     font-size: 13px;
 
+    @include media('>=xl'){
+      flex: 0 0 auto;
+      min-width: 0;
+    }
+
     &:not(:last-child)::after{
       content: "/";
       margin-right: .25em;
@@ -19,6 +24,18 @@
 
     &:last-child{
       color: rgba(#ABB7C8, .7);
+
+      @include media('>=xl'){
+        flex: 1;
+        min-width: 0;
+
+        span{
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
   }
 
@@ -38,5 +55,4 @@
       color: $mySin;
     }
   }
-
 }

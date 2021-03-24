@@ -1,10 +1,12 @@
 .product-price{
+  line-height: 1;
 
   &__pre{
     font-size: 12px;
     line-height: 1;
     color: $raven;
     margin-bottom: .5rem;
+    display: block;
   }
 
   &__item{

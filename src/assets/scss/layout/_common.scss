@@ -132,7 +132,8 @@
       margin-bottom: 2rem;
 
       .page__crumbs{
-        flex-grow: 1;
+        flex: 1;
+        min-width: 0;
       }
 
       .page__summary{

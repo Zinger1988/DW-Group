@@ -1,0 +1,97 @@
+.product-card{
+
+  &__tabs{
+    $tabs: ".tabs";
+    border-radius: 6px 6px 0 0;
+    overflow: auto hidden;
+
+    @include media('<lg'){
+      #{$tabs}__link{
+        padding: 1.6rem .5rem 1.6rem 1.8rem;
+        font-size: 1.2rem;
+        margin-right: 1.5rem;
+
+        &::after{
+          width: 2.7rem;
+        }
+      }
+    }
+  }
+
+  &__info{
+    padding: 0 1rem;
+  }
+
+  &__item-rating{
+    margin-bottom: .75rem;
+  }
+
+  &__part-number{
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: .42em .95em;
+    border-radius: 3px;
+    background-color: rgba($curiousBlue,.3);
+    color: $curiousBlue;
+    margin-bottom: 1.5rem;
+  }
+
+  &__name{
+    font: 1.4rem/ 1.4 $base-font-family;
+    font-weight: normal;
+    margin: 0 0 2rem;
+  }
+
+  &__holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__holder-left,
+  &__holder-right{
+    max-width: 50%;
+  }
+
+  &__holder-middle{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    order: 1;
+    margin-top: 2rem;
+  }
+
+  &__availability{
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  &__product-price {
+    margin-bottom: 1rem;
+
+    .product-price__item {
+      font-size: 2rem;
+
+      &--old {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__holder-quantity,
+  &__holder-buy-btn{
+    width: 50%;
+    flex: 0 1 auto;
+  }
+
+  &__holder-buy-btn{
+    border-radius: 0 3px 3px 0;
+  }
+
+  &__holder-quantity .item-quantity__input{
+    border-radius: 3px 3px 0 0;
+    min-height: 5rem;
+  }
+
+}

@@ -1,19 +1,31 @@
 .fav-add{
   @extend %linkreset;
   cursor: pointer;
-  color: $tiara;
+  display: flex;
+  align-items: center;
   @include animate(color);
 
   &:not(.active):hover{
-    color: $regentGray;
+    &__icon{
+      color: $regentGray;
+    }
   }
 
   &.active{
-    color: $mySin;
+    &__icon {
+      color: $mySin;
+    }
   }
 
-  .icon{
+  &__icon{
     font-size: 2.3rem;
     line-height: 1;
+    color: $tiara;
+  }
+
+  &__text{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-right: 1.3rem;
   }
 }

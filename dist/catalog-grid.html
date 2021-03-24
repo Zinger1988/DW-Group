@@ -129,8 +129,8 @@
                                     </a>
                                     <div class="search__autocomplete-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">99 999.00</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">99 999.00</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="search__autocomplete-rating item-rating">
@@ -153,8 +153,8 @@
                                     </a>
                                     <div class="search__autocomplete-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">99 999.00</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">99 999.00</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="search__autocomplete-rating item-rating">
@@ -227,15 +227,15 @@
                                     <div class="cart-dropdown__total-item product-price">
                                         <div class="product-price__pre">Цена</div>
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">54.00</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">54.00</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="cart-dropdown__total-item product-price">
                                         <div class="product-price__pre">Сумма</div>
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">54.00</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">54.00</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                 </div>
@@ -263,15 +263,15 @@
                                     <div class="cart-dropdown__total-item product-price">
                                         <div class="product-price__pre">Цена</div>
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">35.26</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">35.26</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="cart-dropdown__total-item product-price">
                                         <div class="product-price__pre">Сумма</div>
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">35.26</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">35.26</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                 </div>
@@ -284,8 +284,8 @@
                             <div class="cart-dropdown__footer-price product-price">
                                 <div class="product-price__pre">Итого</div>
                                 <div class="product-price__item">
-                                    <span class="product-tile__footer-price-val">89.26</span>
-                                    <span class="product-tile__footer-price-cur">&#8372;</span>
+                                    <span class="product-price__value">89.26</span>
+                                    <span class="product-price__currency">&#8372;</span>
                                 </div>
                             </div>
                         </div>
@@ -533,189 +533,184 @@
                     <span>Скрыть</span>
                 </button>
                 
-                <div class="tabs sidebar-filter__tabs">
+                <ul class="tabs sidebar-filter__tabs">
+                    <li class="tabs__item tabs__item--active">
+                        <a class="tabs__link" href="#"  data-tab-label="filter">Фильтр</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a class="tabs__link" href="#"  data-tab-label="partition">Разделы</a>
+                    </li>
+                </ul><!-- tabs label holder -->
                 
-                    <ul class="tabs__label-holder">
-                        <li class="tabs__label-item tabs__label-item--active">
-                            <a class="tabs__label-item-link" href="#"  data-tab-label="filter">Фильтр</a>
-                        </li>
-                        <li class="tabs__label-item">
-                            <a class="tabs__label-item-link" href="#"  data-tab-label="partition">Разделы</a>
-                        </li>
-                    </ul><!-- tabs label holder -->
+                <div class="tabs__content-item tabs__content-item--active" data-tab-content="filter">
                 
-                    <div class="tabs__content">
-                        <div class="tabs__content-item tabs__content-item--active" data-tab-content="filter">
+                    <!--#region catalog sidebar group -->
+                    <div class="sidebar-filter__group">
+                        <div class="sidebar-filter__group-title disabled">
+                            <span class="sidebar-filter__group-title-text">Активные фильтры</span>
+                        </div>
                 
-                            <!--#region catalog sidebar group -->
-                            <div class="sidebar-filter__group">
-                                <div class="sidebar-filter__group-title disabled">
-                                    <span class="sidebar-filter__group-title-text">Активные фильтры</span>
-                                </div>
-                
-                                <div class="sidebar-filter__group-body">
-                                    <div class="sidebar-filter__active">
-                                        <button class="sidebar-filter__active-item">
-                                            <span class="sidebar-filter__active-item-text">3М</span>
-                                        </button>
-                                        <button class="sidebar-filter__active-item">
-                                            <span class="sidebar-filter__active-item-text">Foshan Yat Sing</span>
-                                        </button>
-                                        <button class="sidebar-filter__active-item">
-                                            <span class="sidebar-filter__active-item-text">Black</span>
-                                        </button>
-                                        <button class="sidebar-filter__active-item sidebar-filter__active-item--reset">
-                                            <span class="sidebar-filter__active-item-text">Сбросить все фильтры</span>
-                                        </button>
-                                    </div>
-                                </div>
-                
+                        <div class="sidebar-filter__group-body">
+                            <div class="sidebar-filter__active">
+                                <button class="sidebar-filter__active-item">
+                                    <span class="sidebar-filter__active-item-text">3М</span>
+                                </button>
+                                <button class="sidebar-filter__active-item">
+                                    <span class="sidebar-filter__active-item-text">Foshan Yat Sing</span>
+                                </button>
+                                <button class="sidebar-filter__active-item">
+                                    <span class="sidebar-filter__active-item-text">Black</span>
+                                </button>
+                                <button class="sidebar-filter__active-item sidebar-filter__active-item--reset">
+                                    <span class="sidebar-filter__active-item-text">Сбросить все фильтры</span>
+                                </button>
                             </div>
-                            <!--#endregion catalog sidebar group -->
+                        </div>
                 
-                            <div class="sidebar-filter__group">
+                    </div>
+                    <!--#endregion catalog sidebar group -->
                 
-                                <div class="sidebar-filter__group-title active">
-                                    <span class="sidebar-filter__group-title-text">Производитель</span>
-                                    <span class="sidebar-filter__group-title-toggler"></span>
-                                </div>
+                    <div class="sidebar-filter__group">
                 
-                                <div class="sidebar-filter__group-body">
+                        <div class="sidebar-filter__group-title active">
+                            <span class="sidebar-filter__group-title-text">Производитель</span>
+                            <span class="sidebar-filter__group-title-toggler"></span>
+                        </div>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="123">
+                        <div class="sidebar-filter__group-body">
+                
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="123">
                                             1C Original
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="23">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="23">
                                             3М
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="14">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="14">
                                             Hanp
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="21">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="21">
                                             Foshan Yat Sing
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="42">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="42">
                                             IPM
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="56">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="56">
                                             Katun
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="125">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="125">
                                             Kuroki
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="21">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="21">
                                             MK-Imaging, Delacamp
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="34">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="34">
                                             Printermayin
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="13">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="13">
                                             Static Control
                                         </span>
-                                    </label>
+                            </label>
                 
-                                </div>
+                        </div>
                 
-                            </div><!-- catalog sidebar group -->
+                    </div><!-- catalog sidebar group -->
                 
-                            <div class="sidebar-filter__group">
+                    <div class="sidebar-filter__group">
                 
-                                <div class="sidebar-filter__group-title active">
-                                    <span class="sidebar-filter__group-title-text">Цвет</span>
-                                    <span class="sidebar-filter__group-title-toggler"></span>
-                                </div>
+                        <div class="sidebar-filter__group-title active">
+                            <span class="sidebar-filter__group-title-text">Цвет</span>
+                            <span class="sidebar-filter__group-title-toggler"></span>
+                        </div>
                 
-                                <div class="sidebar-filter__group-body">
+                        <div class="sidebar-filter__group-body">
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="123">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="123">
                                             Cyan
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="23">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="23">
                                             Magenta
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="14">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="14">
                                             Yellow
                                         </span>
-                                    </label>
+                            </label>
                 
-                                    <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                        <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                        <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label" data-count="21">
+                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
+                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
+                                <span class="checkbox-radio__toggler"></span>
+                                <span class="checkbox-radio__label" data-count="21">
                                             Black
                                         </span>
-                                    </label>
-                                </div>
+                            </label>
+                        </div>
                 
-                            </div><!-- catalog sidebar group -->
+                    </div><!-- catalog sidebar group -->
                 
-                        </div><!-- tabs content item -->
-                        <div class="tabs__content-item" data-tab-content="partition">
+                </div><!-- tabs content item -->
+                <div class="tabs__content-item" data-tab-content="partition">
                 
-                        </div><!-- tabs content item -->
-                    </div><!-- tabs content -->
-                </div><!-- tabs -->            </aside>
+                </div><!-- tabs content item -->            </aside>
 
             <section class="content-holder__inner">
 
@@ -777,7 +772,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add active">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/01.jpg" alt="image">
@@ -804,8 +799,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">36.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">36.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--warning">
@@ -838,7 +833,7 @@
                                     <div class="item-labels__item item-labels__item--discount">Акция</div>
                                 </div>
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/02.jpg" alt="image">
@@ -864,12 +859,12 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">36.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">36.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                         <div class="product-price__item product-price__item--old">
-                                            <span class="product-tile__footer-price-val">35.26</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">35.26</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -902,7 +897,7 @@
                                     <div class="item-labels__item item-labels__item--new">Новинка</div>
                                 </div>
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/03.jpg" alt="image">
@@ -928,8 +923,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">312.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">312.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--danger">
@@ -959,7 +954,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/04.jpg" alt="image">
@@ -985,8 +980,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">312.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">312.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1016,7 +1011,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/01.jpg" alt="image">
@@ -1042,8 +1037,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">36.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">36.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--darkgrey">
@@ -1073,7 +1068,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/02.jpg" alt="image">
@@ -1099,8 +1094,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">262.50</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">262.50</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1133,7 +1128,7 @@
                                     <div class="item-labels__item item-labels__item--new">Новинка</div>
                                 </div>
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/03.jpg" alt="image">
@@ -1159,8 +1154,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">312.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">312.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--danger">
@@ -1190,7 +1185,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/04.jpg" alt="image">
@@ -1216,8 +1211,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">312.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">312.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1250,7 +1245,7 @@
                                     <div class="item-labels__item item-labels__item--discount">Акция</div>
                                 </div>
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/01.jpg" alt="image">
@@ -1276,18 +1271,18 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">36.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">36.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <!--                <div class="product-tile__footer-price product-price">-->
                                     <!--                    <div class="product-price__item text--marker&#45;&#45;danger">-->
-                                    <!--                        <span class="product-tile__footer-price-val">36.25</span>-->
-                                    <!--                        <span class="product-tile__footer-price-cur">&#8372;</span>-->
+                                    <!--                        <span class="product-price__value">36.25</span>-->
+                                    <!--                        <span class="product-price__currency">&#8372;</span>-->
                                     <!--                    </div>-->
                                     <!--                    <div class="product-price__item product-price__item&#45;&#45;old">-->
-                                    <!--                        <span class="product-tile__footer-price-val">35.26</span>-->
-                                    <!--                        <span class="product-tile__footer-price-cur">&#8372;</span>-->
+                                    <!--                        <span class="product-price__value">35.26</span>-->
+                                    <!--                        <span class="product-price__currency">&#8372;</span>-->
                                     <!--                    </div>-->
                                     <!--                </div>-->
                                     <div class="product-tile__footer-availability text--marker--warning">
@@ -1317,7 +1312,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/02.jpg" alt="image">
@@ -1343,8 +1338,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">262.50</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">262.50</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1377,7 +1372,7 @@
                                     <div class="item-labels__item item-labels__item--new">Новинка</div>
                                 </div>
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/03.jpg" alt="image">
@@ -1403,8 +1398,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">312.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">312.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--danger">
@@ -1434,7 +1429,7 @@
                             <!--#region catalog tile main-->
                             <div class="product-tile__primary">
                                 <a href="#" class="product-tile__fav-add fav-add">
-                                    <i class="icon icon--favorite--solid"></i>
+                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                 </a>
                                 <a href="#" class="product-tile__img">
                                     <img class="product-tile__img-item" src="assets/img/catalog/04.jpg" alt="image">
@@ -1460,8 +1455,8 @@
                                     </div>
                                     <div class="product-tile__footer-price product-price">
                                         <div class="product-price__item">
-                                            <span class="product-tile__footer-price-val">312.25</span>
-                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                            <span class="product-price__value">312.25</span>
+                                            <span class="product-price__currency">&#8372;</span>
                                         </div>
                                     </div>
                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1579,7 +1574,7 @@
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/04.jpg" alt="image">
@@ -1603,10 +1598,10 @@
                                                             <i class="icon icon--cart--alt"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">312.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">312.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1640,7 +1635,7 @@
                                                     <div class="item-labels__item item-labels__item--discount">Акция</div>
                                                 </div>
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/02.jpg" alt="image">
@@ -1664,14 +1659,14 @@
                                                             <i class="icon icon--cart--alt"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">36.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">36.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                         <div class="product-price__item product-price__item--old">
-                                                            <span class="product-tile__footer-price-val">35.26</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">35.26</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1705,7 +1700,7 @@
                                                     <div class="item-labels__item item-labels__item--new">Новинка</div>
                                                 </div>
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/03.jpg" alt="image">
@@ -1729,10 +1724,10 @@
                                                             <i class="icon icon--cart--locked"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">312.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">312.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--danger">
@@ -1763,7 +1758,7 @@
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/04.jpg" alt="image">
@@ -1787,10 +1782,10 @@
                                                             <i class="icon icon--cart--processing"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">312.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">312.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1821,7 +1816,7 @@
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/01.jpg" alt="image">
@@ -1845,10 +1840,10 @@
                                                             <i class="icon icon--cart--warning"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">36.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">36.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--darkgrey">
@@ -1879,7 +1874,7 @@
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/02.jpg" alt="image">
@@ -1903,10 +1898,10 @@
                                                             <i class="icon icon--cart--alt"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">262.50</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">262.50</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--ok">
@@ -1940,7 +1935,7 @@
                                                     <div class="item-labels__item item-labels__item--new">Новинка</div>
                                                 </div>
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/03.jpg" alt="image">
@@ -1964,10 +1959,10 @@
                                                             <i class="icon icon--cart--alt"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">312.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">312.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--danger">
@@ -1998,7 +1993,7 @@
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
                                                 <a href="#" class="product-tile__fav-add fav-add">
-                                                    <i class="fav-add__icon icon--star-circled"></i>
+                                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
                                                     <img class="product-tile__img-item" src="assets/img/catalog/04.jpg" alt="image">
@@ -2022,10 +2017,10 @@
                                                             <i class="icon icon--cart--alt"></i>
                                                         </button>
                                                     </div>
-                                                    <div class="product-tile__footer-price product-price">
+                                                    <div class="product-tile__product-price product-price">
                                                         <div class="product-price__item">
-                                                            <span class="product-tile__footer-price-val">312.25</span>
-                                                            <span class="product-tile__footer-price-cur">&#8372;</span>
+                                                            <span class="product-price__value">312.25</span>
+                                                            <span class="product-price__currency">&#8372;</span>
                                                         </div>
                                                     </div>
                                                     <div class="product-tile__footer-availability text--marker--ok">

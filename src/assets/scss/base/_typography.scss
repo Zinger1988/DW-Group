@@ -105,6 +105,9 @@ a {
 
 .text{
   &--marker{
+    &--primary{
+      color: $mySin;
+    }
     &--danger{
       color: $mandy;
     }
