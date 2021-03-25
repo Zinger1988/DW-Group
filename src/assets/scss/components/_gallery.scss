@@ -1,0 +1,188 @@
+.gallery{
+    border: 1px solid #E9E9E9;
+    border-radius: 6px;
+
+    $this: &;
+
+    &__main{
+        overflow: hidden;
+        border-bottom: 1px solid #E9E9E9;
+        position: relative;
+
+        .swiper-slide{
+            padding: 1rem;
+        }
+
+        #{$this}__main-img{
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+
+            @include media(">=sm"){
+                max-width: 300px;
+            }
+
+            @include media(">=md"){
+                max-width: 380px;
+            }
+        }
+    }
+
+    &__thumbs{
+        overflow: hidden;
+        cursor: grab;
+        position: relative;
+
+        .swiper-slide{
+            padding: 1rem 0;
+            width: 8rem;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 0;
+                height: 3px;
+                background-color: $mySin;
+                @include animate(width left)
+            }
+        }
+
+        .swiper-slide-thumb-active::after{
+            width: 100%;
+            left: 0;
+        }
+
+        #{$this}__thumbs-img{
+            display: block;
+            width: 100%;
+            max-width: 80px;
+            margin: 0 auto;
+        }
+    }
+
+    &__btn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 6rem;
+        line-height: 6rem;
+        background-color: $mySin;
+        font-size: 0;
+        color: #fff;
+        z-index: 10;
+        cursor: pointer;
+        text-align: center;
+        @extend %buttonreset;
+        @include animate(box-shadow);
+
+        @include media(">=sm"){
+            width: 4rem;
+            height: 8rem;
+            line-height: 8rem;
+        }
+
+        @include media(">=lg"){
+            width: 3rem;
+            height: 6rem;
+            line-height: 6rem;
+        }
+
+        @include media(">=xl"){
+            width: 3.5rem;
+            height: 7rem;
+            line-height: 7rem;
+        }
+
+        &:hover{
+            box-shadow: 0 0 0 1rem rgba($mySin, .3);
+
+            @include media(">=sm"){
+                box-shadow: 0 0 0 1.4rem rgba($mySin, .3);
+            }
+
+            @include media(">=lg"){
+                box-shadow: 0 0 0 1rem rgba($mySin, .3);
+            }
+
+            @include media(">=xl"){
+                box-shadow: 0 0 0 1.2rem rgba($mySin, .3);
+            }
+        }
+
+        &--prev{
+            left: 0;
+            border-radius: 0 3rem 3rem 0;
+            padding-right: .5rem;
+
+            @include media(">=sm"){
+                border-radius: 0 4rem 4rem 0;
+                padding-right: .9rem;
+            }
+
+            @include media(">=lg"){
+                border-radius: 0 3rem 3rem 0;
+                padding-right: .5rem;
+            }
+
+            @include media(">=xl"){
+                border-radius: 0 3.5rem 3.5rem 0;
+                padding-right: .75rem;
+            }
+        }
+
+        &--next{
+            right: 0;
+            border-radius: 3rem 0 0 3rem;
+            padding-left: .5rem;
+
+            @include media(">=sm"){
+                border-radius: 4rem 0 0 4rem;
+                padding-left: .9rem;
+            }
+
+            @include media(">=lg"){
+                border-radius: 3rem 0 0 3rem;
+                padding-left: .5rem;
+            }
+
+            @include media(">=xl"){
+                border-radius: 3.5rem 0 0 3.5rem;
+                padding-left: .75rem;
+            }
+        }
+    }
+
+    &__btn-icon{
+        font-size: 1.3rem;
+
+        @include media(">=sm"){
+            font-size: 1.7rem;
+        }
+
+        @include media(">=sm"){
+            font-size: 1.3rem;
+        }
+
+        @include media(">=xl"){
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.hover-device .gallery__main{
+    
+    .gallery__btn{
+        opacity: 0;
+        @include animate(opacity box-shadow);
+    }
+    
+    &:hover{
+        .gallery__btn{
+            opacity: 1;
+        }
+    }
+}

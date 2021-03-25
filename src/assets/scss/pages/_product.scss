@@ -62,6 +62,7 @@
   }
 
   &__gallery{
+    margin-bottom: 2.5rem;
 
     @include media(">=lg"){
       grid-area: gallery;

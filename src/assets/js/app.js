@@ -39,6 +39,29 @@ $(document).ready(function () {
 
     // Swiper ---------------------------------------
 
+    const galleryThumbs = new Swiper('.gallery__thumbs', {
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+
+      const galleryTop = new Swiper('.gallery__main', {
+        spaceBetween: 0,
+        loop: true,
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+          nextEl: '.gallery__btn--next',
+          prevEl: '.gallery__btn--prev',
+        },
+        thumbs: {
+          swiper: galleryThumbs,
+        },
+      });
+
     const carouselWide = new Swiper('.carousel-section--layout--wide .swiper', {
         loop: false,
         slidesPerView: 4,
