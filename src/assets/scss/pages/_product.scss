@@ -210,6 +210,12 @@
 
   &__features{
 
+    @include media('>=md'){
+      max-width: 76.8rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
     @include media(">=lg"){
       grid-area: features;
     }

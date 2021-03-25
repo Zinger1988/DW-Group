@@ -5464,35 +5464,34 @@ html {
 .features {
   background-color: #FAFAFA;
   color: #818C98;
-  padding: 1.5rem 2.1rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 6px;
 }
 
 .features__item:not(:last-child) {
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.5rem;
 }
 
 .features__icon {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.333;
   float: left;
   color: #FFB41E;
 }
 
 .features__title {
-  font: 1.6rem/1.5 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 1.4rem/1.52 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
   color: #333333;
-  margin: 0 0 .3rem 3.1rem;
+  margin: 0 0 .1rem 2.7rem;
 }
 
 .features__desc {
-  font-size: 1.3rem;
-  line-height: 1.76;
-  margin-left: 3.1rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-left: 2.7rem;
 }
 
 .chars-table {
-  padding: .5rem 0;
   background-color: #FAFAFA;
   border-radius: 4px;
 }
@@ -5501,27 +5500,29 @@ html {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: .5rem 2.3rem;
-  font-size: 1.3rem;
+  padding: .5rem 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   position: relative;
 }
 
 .chars-table__item:first-child {
+  padding-top: 1rem;
   border-radius: 4px 4px 0 0;
 }
 
 .chars-table__item:last-child {
+  padding-bottom: 1rem;
   border-radius: 0 0 4px 4px;
 }
 
 .chars-table__item::before {
   content: "";
   position: absolute;
-  left: 2.5rem;
-  top: 2rem;
+  left: 1.8rem;
+  top: 1.7rem;
   height: 0;
-  width: calc(100% - 5rem);
+  width: calc(100% - 3.6rem);
   border-top: 1px dotted rgba(112, 112, 112, 0.3);
   z-index: 3;
 }
@@ -5562,7 +5563,7 @@ html {
 
 .accordion__title {
   position: relative;
-  padding: 1.3rem 4rem 1.3rem 0;
+  padding: 1.1rem 3rem 1.1rem 0;
   border-bottom: 2px solid #E9E9E9;
   cursor: pointer;
   transition: border 0.3s ease-in-out;
@@ -5573,12 +5574,12 @@ html {
 }
 
 .accordion__title-text {
-  font: 1.6rem/1.5 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 1.4rem/1.4 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 .accordion__title-toggler {
   position: absolute;
-  right: 2rem;
+  right: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
   width: 1rem;
@@ -5605,8 +5606,8 @@ html {
 }
 
 .accordion__body {
-  display: none;
   padding-top: 1.5rem;
+  display: none;
 }
 
 .accordion__item--active .accordion__title {
@@ -6100,9 +6101,58 @@ html {
   }
 
   .features {
-    max-width: 76.8rem;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 1.5rem 2.1rem;
+  }
+
+  .features__item:not(:last-child) {
+    margin-bottom: 1.9rem;
+  }
+
+  .features__icon {
+    font-size: 1.8rem;
+    line-height: 1.333;
+  }
+
+  .features__title {
+    font: 1.5rem/1.5 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+    margin: 0 0 .3rem 3.1rem;
+  }
+
+  .features__desc {
+    font-size: 1.3rem;
+    line-height: 1.76;
+    margin-left: 3.1rem;
+  }
+
+  .chars-table__item {
+    font-size: 1.3rem;
+    padding: .5rem 2.3rem;
+  }
+
+  .chars-table__item:first-child {
+    padding-top: 1.2rem;
+  }
+
+  .chars-table__item:last-child {
+    padding-bottom: 1.2rem;
+  }
+
+  .chars-table__item::before {
+    left: 2.5rem;
+    top: 2rem;
+    width: calc(100% - 5rem);
+  }
+
+  .accordion__title {
+    padding: 1.3rem 4rem 1.3rem 0;
+  }
+
+  .accordion__title-text {
+    font: 1.6rem/1.4 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+  }
+
+  .accordion__title-toggler {
+    right: 2rem;
   }
 
   .product-card__tabs {
@@ -6145,6 +6195,12 @@ html {
 
   .product-card__product-price .product-price__item--old {
     font-size: 1.6rem;
+  }
+
+  .product-card__features {
+    max-width: 76.8rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
