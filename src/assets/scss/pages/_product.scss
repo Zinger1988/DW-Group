@@ -4,6 +4,11 @@
     $tabs: ".tabs";
     border-radius: 6px 6px 0 0;
     overflow: auto hidden;
+    margin-bottom: 2rem;
+
+    @include media('>=md'){
+      margin-bottom: 3rem;
+    }
 
     @include media('<lg'){
       #{$tabs}__link{
@@ -18,12 +23,49 @@
     }
   }
 
+  &__main{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+
+    @include media(">=sm"){
+      padding: 0 2.2rem;
+    }
+
+    @include media(">=md"){
+      padding: 0 2.1rem;
+    }
+
+    @include media(">=lg"){
+      padding: 0 2.9rem;
+      display: grid;
+      grid-template-areas:
+        "gallery info"
+        "service info";
+        grid-template-columns: 300px 1fr;
+        grid-gap: 2rem 2.9rem;
+    }
+  }
+
   &__info{
-    padding: 0 1rem;
+    
+    @include media(">=md"){
+      max-width: 81.2rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include media(">=lg"){
+      max-width: none;
+    }
   }
 
   &__item-rating{
-    margin-bottom: .75rem;
+    margin: 0 0 .75rem;
+
+    @include media(">=md"){
+      float: right;
+      margin: .4rem 0 0;
+    }
   }
 
   &__part-number{
@@ -34,12 +76,23 @@
     background-color: rgba($curiousBlue,.3);
     color: $curiousBlue;
     margin-bottom: 1.5rem;
+
+    @include media(">=md"){
+      font-size: 1.3rem;
+      margin-bottom: 2.7rem;
+    }
   }
 
   &__name{
     font: 1.4rem/ 1.4 $base-font-family;
     font-weight: normal;
     margin: 0 0 2rem;
+
+    @include media(">=md"){
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 2.9rem;
+    }
   }
 
   &__holder{
@@ -60,6 +113,12 @@
     width: 100%;
     order: 1;
     margin-top: 2rem;
+
+    @include media(">=xl"){
+      width: 32rem;
+      order: unset;
+      margin: 0;
+    }
   }
 
   &__availability{
@@ -76,6 +135,14 @@
       &--old {
         font-size: 1.3rem;
       }
+
+      @include media(">=md"){
+        font-size: 2.6rem;
+
+        &--old {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 
@@ -85,7 +152,18 @@
     flex: 0 1 auto;
   }
 
-  &__holder-buy-btn{
+  @include media(">=xl"){
+
+    &__holder-quantity{
+      width: 14rem;
+    }
+
+    &__holder-buy-btn{
+      width: 18rem;
+    }
+  }
+
+  &__holder-buy-btn.btn{
     border-radius: 0 3px 3px 0;
   }
 

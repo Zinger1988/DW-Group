@@ -36,11 +36,7 @@
     "webpack": "^5.22.0",
     "webpack-stream": "^6.1.2"
   },
-  "dependencies": {
-    "jquery": "^3.5.1",
-    "select2": "^4.1.0-rc.0",
-    "swiper": "^6.5.0"
-  },
+  "dependencies": {},
   "browserslist": [
     "last 1 version",
     "> 1%",

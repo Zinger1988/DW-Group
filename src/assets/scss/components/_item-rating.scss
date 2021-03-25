@@ -6,8 +6,8 @@
   }
 
   &__mark {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
 
     &-item {
       font-size: 1.2rem;

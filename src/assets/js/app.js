@@ -1,7 +1,3 @@
-import $ from 'jquery';
-import Swiper from 'swiper/bundle';
-import select2 from 'select2';
-
 $(document).ready(function () {
 
     // Select 2 ---------------------------------------
@@ -31,6 +27,15 @@ $(document).ready(function () {
 
         $(result).select2({width: '100%', ...currentOptions});
     });
+
+    $(".select2--theme--outerSpace").select2(
+        {
+            width: '100%',
+            minimumResultsForSearch: -1,
+            selectionCssClass : "select2--theme--outerSpace"
+        }
+    );
+
 
     // Swiper ---------------------------------------
 

@@ -152,24 +152,24 @@ const js = () =>
             }
         }))
         // .pipe(sourcemaps.init())
-        .pipe(webpackStream({
-            mode: "production",
-            output: {
-                filename: 'app.js',
-            },
-            module: {
-                rules: [
-                    {
-                        test: /\.(js)$/,
-                        exclude: /(node_modules)/,
-                        loader: 'babel-loader',
-                        query: {
-                            presets: ['@babel/preset-env']
-                        }
-                    }
-                ]
-            }
-        }))
+        // .pipe(webpackStream({
+        //     mode: "production",
+        //     output: {
+        //         filename: 'app.js',
+        //     },
+        //     module: {
+        //         rules: [
+        //             {
+        //                 test: /\.(js)$/,
+        //                 exclude: /(node_modules)/,
+        //                 loader: 'babel-loader',
+        //                 query: {
+        //                     presets: ['@babel/preset-env']
+        //                 }
+        //             }
+        //         ]
+        //     }
+        // }))
         .pipe(gulp.dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
 
@@ -184,12 +184,12 @@ const jsWatch = () =>
                 this.emit('end');
             }
         }))
-        .pipe(webpackStream({
-            mode: "development",
-            output: {
-                filename: 'app.js',
-            }
-        }))
+        // .pipe(webpackStream({
+        //     mode: "development",
+        //     output: {
+        //         filename: 'app.js',
+        //     }
+        // }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
 
