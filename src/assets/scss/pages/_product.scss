@@ -42,8 +42,9 @@
         "gallery info"
         "features info";
         grid-template-columns: 300px 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto 1fr;
         grid-gap: 2rem 2.9rem;
+        align-items: start;
     }
 
     @include media(">=xl"){
