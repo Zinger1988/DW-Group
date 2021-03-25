@@ -42,7 +42,28 @@
         "gallery info"
         "service info";
         grid-template-columns: 300px 1fr;
+        grid-template-rows: auto auto;
         grid-gap: 2rem 2.9rem;
+    }
+
+    @include media(">=xl"){
+      padding: 0 3.3rem;
+      grid-gap: 2rem 3.3rem;
+      grid-template-columns: 350px 1fr;
+    }
+
+    @include media(">=xxl"){
+      padding: 0 4rem;
+      grid-gap: 2rem 4rem;
+      grid-gap: 2rem 4rem;
+      grid-template-columns: 400px 1fr;
+    }
+  }
+
+  &__gallery{
+
+    @include media(">=lg"){
+      grid-area: gallery;
     }
   }
 
@@ -56,6 +77,7 @@
 
     @include media(">=lg"){
       max-width: none;
+      grid-area: info;
     }
   }
 
@@ -100,11 +122,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    @include media(">=xl"){
+      flex-wrap: nowrap;
+    }
   }
 
   &__holder-left,
   &__holder-right{
     max-width: 50%;
+
+    @include media(">=xl"){
+      max-width: none;
+    }
   }
 
   &__holder-middle{
@@ -170,6 +200,13 @@
   &__holder-quantity .item-quantity__input{
     border-radius: 3px 3px 0 0;
     min-height: 5rem;
+  }
+
+  &__service{
+
+    @include media(">=lg"){
+      grid-area: service;
+    }
   }
 
 }
