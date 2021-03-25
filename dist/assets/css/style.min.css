@@ -5461,6 +5461,166 @@ html {
   background-color: #5C747E;
 }
 
+.features {
+  background-color: #FAFAFA;
+  color: #818C98;
+  padding: 1.5rem 2.1rem;
+  border-radius: 6px;
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 1.9rem;
+}
+
+.features__icon {
+  font-size: 1.8rem;
+  line-height: 1.333;
+  float: left;
+  color: #FFB41E;
+}
+
+.features__title {
+  font: 1.6rem/1.5 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #333333;
+  margin: 0 0 .3rem 3.1rem;
+}
+
+.features__desc {
+  font-size: 1.3rem;
+  line-height: 1.76;
+  margin-left: 3.1rem;
+}
+
+.chars-table {
+  padding: .5rem 0;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+}
+
+.chars-table__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: .5rem 2.3rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.chars-table__item:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.chars-table__item:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.chars-table__item::before {
+  content: "";
+  position: absolute;
+  left: 2.5rem;
+  top: 2rem;
+  height: 0;
+  width: calc(100% - 5rem);
+  border-top: 1px dotted rgba(112, 112, 112, 0.3);
+  z-index: 3;
+}
+
+.chars-table .chars-table__text-inner {
+  background-color: #FAFAFA;
+  position: relative;
+  z-index: 5;
+}
+
+.chars-table__attr {
+  max-width: 36.333%;
+  color: #818C98;
+  padding-right: 1rem;
+}
+
+.chars-table__attr .chars-table__text-inner::after {
+  content: "\00A0 \00A0";
+}
+
+.chars-table__param {
+  padding-left: 1rem;
+  max-width: 60.666%;
+  text-align: right;
+}
+
+.chars-table__param .chars-table__text-inner::before {
+  content: "\00A0 \00A0";
+}
+
+.chars-table__item:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+.chars-table__item:nth-child(even) .chars-table__text-inner {
+  background-color: #F2F2F2;
+}
+
+.accordion__title {
+  position: relative;
+  padding: 1.3rem 4rem 1.3rem 0;
+  border-bottom: 2px solid #E9E9E9;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+}
+
+.accordion__title:hover {
+  border-bottom: 2px solid #FFB41E;
+}
+
+.accordion__title-text {
+  font: 1.6rem/1.5 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+.accordion__title-toggler {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  font-size: 0;
+}
+
+.accordion__title-toggler::before,
+.accordion__title-toggler::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: .2rem;
+  border-radius: .1rem;
+  background-color: #506661;
+}
+
+.accordion__title-toggler::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.accordion__body {
+  display: none;
+  padding-top: 1.5rem;
+}
+
+.accordion__item--active .accordion__title {
+  border-bottom: 2px solid #FFB41E;
+}
+
+.accordion__item--active .accordion__body {
+  display: block;
+}
+
+.accordion__item--active .accordion__title-toggler::after {
+  transform: translate(-50%, -50%) rotate(0);
+}
+
 .page {
   min-height: 100vh;
   line-height: 1.571;
@@ -5602,6 +5762,10 @@ html {
   margin-bottom: 2rem;
 }
 
+.product-card__info {
+  margin-bottom: 2rem;
+}
+
 .product-card__item-rating {
   margin: 0 0 .75rem;
 }
@@ -5627,6 +5791,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .product-card__holder-left,
@@ -5934,6 +6099,12 @@ html {
     flex-grow: 1;
   }
 
+  .features {
+    max-width: 76.8rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .product-card__tabs {
     margin-bottom: 3rem;
   }
@@ -5943,7 +6114,7 @@ html {
   }
 
   .product-card__info {
-    max-width: 81.2rem;
+    max-width: 76.8rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -5962,6 +6133,10 @@ html {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 2.9rem;
+  }
+
+  .product-card__holder {
+    margin-bottom: 4.2rem;
   }
 
   .product-card__product-price .product-price__item {
@@ -6311,7 +6486,7 @@ html {
   .product-card__main {
     padding: 0 2.9rem;
     display: grid;
-    grid-template-areas: "gallery info" "service info";
+    grid-template-areas: "gallery info" "features info";
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto auto;
     grid-gap: 2rem 2.9rem;
@@ -6326,8 +6501,8 @@ html {
     grid-area: info;
   }
 
-  .product-card__service {
-    grid-area: service;
+  .product-card__features {
+    grid-area: features;
   }
 }
 
@@ -7082,6 +7257,12 @@ html {
     position: relative;
     z-index: 5;
   }
+}
+
+@media (max-width: 767px) {
+  .page__header--fixed .header__bottom {
+    display: none;
+  }
 
   .product-card__tabs .tabs__link {
     padding: 1.6rem .5rem 1.6rem 1.8rem;
@@ -7091,12 +7272,6 @@ html {
 
   .product-card__tabs .tabs__link::after {
     width: 2.7rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .page__header--fixed .header__bottom {
-    display: none;
   }
 }
 

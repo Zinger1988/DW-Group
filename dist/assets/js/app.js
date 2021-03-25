@@ -134,6 +134,26 @@ $(document).ready(function () {
             this.textBlockOverflow();
             this.productGrid();
             this.tableSub();
+            this.accordion();
+        },
+        accordion(){
+            
+            const accordionItem = $('.accordion__item');
+
+            accordionItem.each(function(){
+                const currentItem = $(this);
+                const title = $(this).find('.accordion__title');
+                const body = $(this).find('.accordion__body');
+
+                title.click(function(){
+                    body.slideToggle({
+                        complete: function() {
+                            currentItem.toggleClass('accordion__item--active');
+                        }
+                    });
+                })
+            });
+
         },
         tableSub(){
 

@@ -1,0 +1,68 @@
+.accordion{
+
+    $this: &;
+
+    &__title{
+        position: relative;
+        padding: 1.3rem 4rem 1.3rem 0;
+        border-bottom: 2px solid $mercury;
+        cursor: pointer;
+        @include animate(border);
+
+        &:hover{
+            border-bottom: 2px solid $mySin;
+        }
+    }
+
+    &__title-text{
+        font: 1.6rem/ 1.5 $headings-font-family;
+    }
+
+    &__title-toggler{
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1rem;
+        height: 1rem;
+        font-size: 0;
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1rem;
+            height: .2rem;
+            border-radius: .1rem;
+            background-color: #506661;
+        }
+
+        &::after{
+            transform: translate(-50%, -50%) rotate(90deg);
+            @include animate(transform);
+        }
+    }
+
+    &__body{
+        display: none;
+        padding-top: 1.5rem;
+    }
+
+    &__item--active{
+
+        #{$this}__title{
+            border-bottom: 2px solid $mySin;    
+        }
+
+        #{$this}__body{
+            display: block;
+        }
+
+        #{$this}__title-toggler::after{
+            transform: translate(-50%, -50%) rotate(0);
+        }
+    }
+}

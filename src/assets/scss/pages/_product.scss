@@ -10,7 +10,7 @@
       margin-bottom: 3rem;
     }
 
-    @include media('<lg'){
+    @include media('<md'){
       #{$tabs}__link{
         padding: 1.6rem .5rem 1.6rem 1.8rem;
         font-size: 1.2rem;
@@ -40,7 +40,7 @@
       display: grid;
       grid-template-areas:
         "gallery info"
-        "service info";
+        "features info";
         grid-template-columns: 300px 1fr;
         grid-template-rows: auto auto;
         grid-gap: 2rem 2.9rem;
@@ -68,9 +68,10 @@
   }
 
   &__info{
+    margin-bottom: 2rem;
     
     @include media(">=md"){
-      max-width: 81.2rem;
+      max-width: 76.8rem;
       margin-right: auto;
       margin-left: auto;
     }
@@ -122,6 +123,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3rem;
+
+    @include media(">=md"){
+      margin-bottom: 4.2rem;
+    }
 
     @include media(">=xl"){
       flex-wrap: nowrap;
@@ -202,10 +208,10 @@
     min-height: 5rem;
   }
 
-  &__service{
+  &__features{
 
     @include media(">=lg"){
-      grid-area: service;
+      grid-area: features;
     }
   }
 

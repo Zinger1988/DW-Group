@@ -1,0 +1,35 @@
+.features{
+    background-color: #FAFAFA;
+    color: $regentGray;
+    padding: 1.5rem 2.1rem;
+    border-radius: 6px;
+
+    &__item:not(:last-child){
+        margin-bottom: 1.9rem;
+    }
+
+    &__icon{
+        font-size: 1.8rem;
+        line-height: 1.333;
+        float: left;
+        color: $mySin;
+    }
+
+    &__title{
+        font: 1.6rem/ 1.5 $headings-font-family;
+        color: $base-text-color;
+        margin: 0 0 .3rem 3.1rem;
+    }
+
+    &__desc{
+        font-size: 1.3rem;
+        line-height: 1.76;
+        margin-left: 3.1rem;
+    }
+
+    @include media('>=md'){
+        max-width: 76.8rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
