@@ -2696,7 +2696,8 @@ input[type='submit'] {
 
 .clearfix:after,
 .footer__main .container:after,
-.product-tile__footer:after {
+.product-tile__footer:after,
+.product-hor:after {
   content: '';
   display: block;
   clear: both;
@@ -5746,12 +5747,29 @@ html {
 .product-hor {
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid #E9E9E9;
+  position: relative;
+}
+
+.product-hor:not(:last-child) {
+  border-bottom: 1px dotted #E9E9E9;
 }
 
 .product-hor__img {
   float: left;
-  width: 6rem;
+  width: 8rem;
+  margin-bottom: .6rem;
+}
+
+.product-hor__item-labels {
+  float: left;
+  clear: left;
+}
+
+.product-hor__item-labels .item-labels__item {
+  font-size: 1.1rem;
+  padding: .4rem 1.1rem .4rem;
+  border-radius: 0 9px 9px 0;
+  margin-bottom: .3rem;
 }
 
 .product-hor__img-item {
@@ -5760,7 +5778,7 @@ html {
 }
 
 .product-hor__desc {
-  margin-left: 7.5rem;
+  margin-left: 9.5rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -5798,7 +5816,7 @@ html {
 }
 
 .product-hor__part-number {
-  margin-bottom: .5rem;
+  margin-bottom: .4rem;
 }
 
 .product-hor__availability {
@@ -5817,8 +5835,16 @@ html {
 .product-hor__price {
   display: flex;
   align-items: flex-start;
-  margin-left: 7.5rem;
-  margin-bottom: 1.5rem;
+  margin-left: 9.5rem;
+  margin-bottom: 2rem;
+}
+
+.product-hor__product-price {
+  flex: 0 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .product-hor__product-price .product-price__pre {
@@ -5829,17 +5855,22 @@ html {
   font-size: 1.6rem;
 }
 
+.product-hor__product-price .product-price__item--old {
+  font-size: 1.2rem;
+  margin-top: .3rem;
+}
+
 .product-hor__product-price:not(:last-child) {
   margin-right: 1rem;
 }
 
 .product-hor__controls {
-  margin-left: 7.5rem;
-  width: 20rem;
+  margin-left: 9.5rem;
+  max-width: 20rem;
 }
 
 .product-hor__controls-btn {
-  display: block;
+  display: flex;
   width: 100%;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -5847,6 +5878,17 @@ html {
 
 .product-hor__item-quantity {
   width: 100%;
+}
+
+.product-hor__item-quantity .item-quantity__input {
+  height: 4.2rem;
+}
+
+.product-hor__fav-add {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
 }
 
 .product-list {

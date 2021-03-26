@@ -1,11 +1,29 @@
 .product-hor{
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid $mercury;
+    position: relative;
+    @extend %clearfix;
+
+    &:not(:last-child){
+        border-bottom: 1px dotted $mercury;
+    }
 
     &__img{
         float: left;
-        width: 6rem;
+        width: 8rem;
+        margin-bottom: .6rem;
+    }
+
+    &__item-labels{
+        float: left;
+        clear: left;
+
+        .item-labels__item{
+            font-size: 1.1rem;
+            padding: .4rem 1.1rem .4rem;
+            border-radius: 0 9px 9px 0;
+            margin-bottom: .3rem;
+        }
     }
 
     &__img-item{
@@ -14,7 +32,7 @@
     }
 
     &__desc{
-        margin-left: 7.5rem;
+        margin-left: 9.5rem;
         display: flex;
         flex-wrap: wrap;
 
@@ -52,7 +70,7 @@
     }
 
     &__part-number{
-        margin-bottom: .5rem;
+        margin-bottom: .4rem;
     }
 
     &__availability{
@@ -71,11 +89,16 @@
     &__price{
         display: flex;
         align-items: flex-start;
-        margin-left: 7.5rem;
-        margin-bottom: 1.5rem;
+        margin-left: 9.5rem;
+        margin-bottom: 2rem;
     }
 
     &__product-price{
+        flex: 0 1 auto;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
         .product-price__pre{
             font-size: 1.1rem;
@@ -84,7 +107,11 @@
         .product-price__item{
             font-size: 1.6rem;
         }
-        
+
+        .product-price__item--old{
+            font-size: 1.2rem;
+            margin-top: .3rem;
+        }
 
         &:not(:last-child){
             margin-right: 1rem;
@@ -92,12 +119,12 @@
     }
 
     &__controls{
-        margin-left: 7.5rem;
-        width: 20rem;
+        margin-left: 9.5rem;
+        max-width: 20rem;
     }
 
     &__controls-btn{
-        display: block;
+        display: flex;
         width: 100%;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
@@ -105,6 +132,17 @@
 
     &__item-quantity{
         width: 100%;
+
+        .item-quantity__input{
+            height: 4.2rem;
+        }
+    }
+
+    &__fav-add{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
     }
 
 }
