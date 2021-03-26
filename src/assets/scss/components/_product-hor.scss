@@ -1,0 +1,110 @@
+.product-hor{
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid $mercury;
+
+    &__img{
+        float: left;
+        width: 6rem;
+    }
+
+    &__img-item{
+        display: block;
+        width: 100%;
+    }
+
+    &__desc{
+        margin-left: 7.5rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        .text-overflow__toggle{
+            justify-content: flex-start;
+            text-transform: none;
+        }
+    }
+
+    &__name{
+        font-size: 1.2rem;
+        line-height: 1.35;
+        margin-bottom: 1.25rem;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    &__desc-footer{
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+    }
+    
+    &__part-number,
+    &__availability{
+        color: #98A3B3;
+        font-size: 1.1rem;
+        line-height: 1.35;
+        padding-right: 2rem;
+        min-width: 33.333%;
+        max-width: 20rem;
+        flex: 0 0 auto;
+    }
+
+    &__part-number{
+        margin-bottom: .5rem;
+    }
+
+    &__availability{
+        margin-bottom: .4rem;
+    }
+
+    &__item-rating{
+        font-size: 1.1rem;
+        flex: 0 0 auto;
+
+        .item-rating__link{
+            font-size: 1.1rem;
+        }
+    }
+
+    &__price{
+        display: flex;
+        align-items: flex-start;
+        margin-left: 7.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__product-price{
+
+        .product-price__pre{
+            font-size: 1.1rem;
+        }
+
+        .product-price__item{
+            font-size: 1.6rem;
+        }
+        
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+
+    &__controls{
+        margin-left: 7.5rem;
+        width: 20rem;
+    }
+
+    &__controls-btn{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__item-quantity{
+        width: 100%;
+    }
+
+}
