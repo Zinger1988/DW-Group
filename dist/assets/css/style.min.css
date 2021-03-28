@@ -5753,12 +5753,6 @@ html {
   border-bottom: 1px dotted #E9E9E9;
 }
 
-.product-hor__img {
-  float: left;
-  width: 8rem;
-  margin-bottom: .6rem;
-}
-
 .product-hor__item-labels {
   float: left;
   clear: left;
@@ -5769,6 +5763,12 @@ html {
   padding: .4rem 1.1rem .4rem;
   border-radius: 0 9px 9px 0;
   margin-bottom: .3rem;
+}
+
+.product-hor__img {
+  float: left;
+  width: 8rem;
+  margin-bottom: .6rem;
 }
 
 .product-hor__img-item {
@@ -6246,15 +6246,15 @@ html {
     font-size: 1.3rem;
   }
 
-  .product-hor__img {
-    margin-bottom: 1rem;
-  }
-
   .product-hor__item-labels .item-labels__item {
     font-size: 1.3rem;
     padding: .5rem 1.5rem .6rem;
     border-radius: 0 14px 14px 0;
     margin-bottom: .5rem;
+  }
+
+  .product-hor__img {
+    margin-bottom: 1rem;
   }
 
   .product-hor__desc {
@@ -6946,6 +6946,21 @@ html {
     align-items: flex-start;
   }
 
+  .product-hor__item-labels .item-labels__item {
+    font-size: 1.1rem;
+    padding: .4rem 1.1rem .4rem;
+    border-radius: 0 9px 9px 0;
+    margin-bottom: .3rem;
+  }
+
+  .product-hor__item-labels {
+    position: absolute;
+    left: 0;
+    top: 10.6rem;
+    transform: translateY(-100%);
+    z-index: 5;
+  }
+
   .product-hor__img {
     float: none;
     height: 9rem;
@@ -6953,13 +6968,6 @@ html {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 0;
-  }
-
-  .product-hor__item-labels {
-    position: absolute;
-    left: 0;
-    top: 6.8rem;
-    z-index: 5;
   }
 
   .product-hor__desc {
