@@ -1,3 +1,23 @@
 .product-list{
     padding: 0 1.5rem;
+
+    @include media(">=sm"){
+        padding: 0 2.2rem;
+    }
+
+    @include media(">=md"){
+        padding: 0 2.1rem;
+    }
+
+    @include media('>=lg'){
+        padding: 0 2.9rem;
+      }
+    
+      @include media('>=xl'){
+        padding: 0 3.3rem;
+      }
+    
+      @include media('>=xxl'){
+        padding: 0 4rem;
+      }
 }

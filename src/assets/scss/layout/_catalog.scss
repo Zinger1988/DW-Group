@@ -59,7 +59,7 @@
 
       #{$this}__inner{
         flex: 1;
-        min-width: 0;
+        min-width: calc(100% - 294px);
       }
 
       #{$this}__pagination{
@@ -77,6 +77,22 @@
         border-right: 1px solid $mercury;
         overflow: unset;
         background: none;
+      }
+
+      .product-list{
+        padding: 0 3.3rem 0 2rem;
+      }
+    }
+
+    @include media('>=xxl'){
+      .product-list{
+        padding: 0 3.7rem 0 2.2rem;
+      }
+    }
+
+    @include media('>=xxxl'){
+      .product-list{
+        padding: 0 4rem 0 3rem;
       }
     }
   }

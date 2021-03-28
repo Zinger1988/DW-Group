@@ -1,8 +1,16 @@
 .product-hor{
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1.6rem 0;
     position: relative;
     @extend %clearfix;
+    
+    @include media(">=lg"){
+        display: flex;
+        align-items: flex-start;
+    }
+
+    @include media(">=xxxl"){
+        padding-right: 4rem;
+    }
 
     &:not(:last-child){
         border-bottom: 1px dotted $mercury;
@@ -12,6 +20,19 @@
         float: left;
         width: 8rem;
         margin-bottom: .6rem;
+
+        @include media(">=sm"){
+            margin-bottom: 1rem;
+        }
+
+        @include media(">=lg"){
+            float: none;
+            height: 9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 0;
+        }
     }
 
     &__item-labels{
@@ -23,6 +44,20 @@
             padding: .4rem 1.1rem .4rem;
             border-radius: 0 9px 9px 0;
             margin-bottom: .3rem;
+
+            @include media(">=sm"){
+                font-size: 1.3rem;
+                padding: .5rem 1.5rem .6rem;
+                border-radius: 0 14px 14px 0;
+                margin-bottom: .5rem;
+            }
+        }
+
+        @include media(">=lg"){
+            position: absolute;
+            left: 0;
+            top: 6.8rem;
+            z-index: 5;
         }
     }
 
@@ -36,18 +71,52 @@
         display: flex;
         flex-wrap: wrap;
 
+        @include media(">=sm"){
+            margin-left: 12rem;
+        }
+
+        @include media(">=lg"){
+            margin-left: 2rem;
+            margin-right: 3rem;
+            width: calc(100% - 42rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+        }
+
+        @include media(">=xxl"){
+            margin-left: 3rem;
+            margin-right: 4rem;
+            width: calc(100% - 56.5rem);
+        }
+
+        @include media(">=xxxl"){
+            width: calc(100% - 58.5rem);
+        }
+
         .text-overflow__toggle{
             justify-content: flex-start;
             text-transform: none;
+            text-transform: uppercase;
+            font-size: 1rem;
         }
     }
 
     &__name{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.35;
         margin-bottom: 1.25rem;
         width: 100%;
         flex-shrink: 0;
+
+        @include media(">=sm"){
+            margin-bottom: 1.5rem;
+        }
+
+        @include media(">=lg"){
+            margin-bottom: 1rem;
+        }
     }
 
     &__desc-footer{
@@ -56,6 +125,10 @@
         align-items: baseline;
         flex-wrap: wrap;
         margin-bottom: 1.25rem;
+
+        @include media(">=lg"){
+            margin-bottom: 0;
+        }
     }
     
     &__part-number,
@@ -64,25 +137,44 @@
         font-size: 1.1rem;
         line-height: 1.35;
         padding-right: 2rem;
-        min-width: 33.333%;
-        max-width: 20rem;
         flex: 0 0 auto;
+
+        @include media(">=sm"){
+            font-size: 1.2rem;
+            padding-right: 3rem;
+        }
     }
 
     &__part-number{
         margin-bottom: .4rem;
+
+        @include media(">=sm"){
+            margin-bottom: .7rem;
+        }
     }
 
     &__availability{
         margin-bottom: .4rem;
+
+        @include media(">=sm"){
+            margin-bottom: .7rem;
+        }
     }
 
     &__item-rating{
         font-size: 1.1rem;
-        flex: 0 0 auto;
+        padding-right: 2rem;
+
+        @include media(">=sm"){
+            padding-right: 3rem;
+        }
 
         .item-rating__link{
             font-size: 1.1rem;
+            
+            @include media(">=sm"){
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -91,58 +183,203 @@
         align-items: flex-start;
         margin-left: 9.5rem;
         margin-bottom: 2rem;
+
+        @include media(">=sm"){
+            margin-left: 12rem;
+        }
+
+        @include media(">=lg"){
+            width: 9rem;
+            margin: 0 2rem 0 0;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        @include media(">=xxl"){
+            flex-direction: row;
+            width: 20.5rem;
+            margin: 0 3rem 0 0;
+            align-items: flex-start;
+        }
     }
 
     &__product-price{
         flex: 0 1 auto;
         min-width: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+
+        @include media(">=lg"){
+            min-height: 4.5rem;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include media(">=xxl"){
+            width: 50%;
+            min-height: 9rem;
+        }
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
 
         .product-price__pre{
             font-size: 1.1rem;
+
+            @include media(">=sm"){
+                font-size: 1.2rem;
+                margin-bottom: .6rem;
+            }
+
+            @include media(">=lg"){
+                font-size: 1rem;
+                margin-bottom: .3rem;
+            }
+
+            @include media(">=xxl"){
+                font-size: 1.1rem;
+            }
         }
 
         .product-price__item{
             font-size: 1.6rem;
+            margin: 0;
+
+            @include media(">=sm"){
+                font-size: 1.9rem;
+            }
+
+            @include media(">=lg"){
+                font-size: 1.5rem;
+            }
+
+            @include media(">=xxl"){
+                font-size: 1.6rem;
+            }
         }
 
         .product-price__item--old{
             font-size: 1.2rem;
-            margin-top: .3rem;
-        }
+            margin-left: .5rem;
 
-        &:not(:last-child){
-            margin-right: 1rem;
+            @include media(">=sm"){
+                font-size: 1.3rem;
+            }
+
+            @include media(">=lg"){
+                font-size: 1.2rem;
+                margin-top: .3rem;
+                margin-left: 0;
+            }
+
+            @include media(">=xxl"){
+                font-size: 1.3rem;
+            }
         }
     }
 
     &__controls{
         margin-left: 9.5rem;
         max-width: 20rem;
-    }
 
-    &__controls-btn{
-        display: flex;
-        width: 100%;
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
+        @include media(">=sm"){
+            margin-left: 12rem;
+            display: flex;
+            max-width: none;
+        }
 
-    &__item-quantity{
-        width: 100%;
+        @include media(">=lg"){
+            display: flex;
+            flex-direction: column;
+            margin-left: 0;
+        }
 
-        .item-quantity__input{
-            height: 4.2rem;
+        .product-hor__controls-btn{
+            display: flex;
+            width: 100%;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 5;
+    
+            @include media("<sm"){
+                font-size: 1.2rem;
+            }
+    
+            @include media(">=sm"){
+                width: 20rem;
+                flex: 0 0 auto;
+                margin-bottom: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            @include media(">=lg"){
+                width: 18rem;
+                border-radius: 3px 3px 0 0;
+                font-size: 1.2rem;
+            }
+
+            @include media(">=xxxl"){
+                width: 20rem;
+                font-size: 1.3rem;
+            }
+        }
+
+        .product-hor__item-quantity{
+            width: 100%;
+    
+            @include media(">=sm"){
+                width: 14rem;
+                flex: 0 0 auto;
+            }
+    
+            .item-quantity__input{
+                @include media("<sm"){
+                    height: 4.2rem;
+                }
+    
+                @include media(">=sm"){
+                    height: 5rem;
+                    border-radius: 0 3px 3px 0;
+                }
+
+                @include media(">=lg"){
+                    height: 4.5rem;
+                    border-radius: 0 0 3px 3px;
+                }
+
+                @include media(">=xxxl"){
+                    height: 5rem;
+                }
+            }
+
+            @include media(">=lg"){
+                width: 18rem;
+            }
+
+            @include media(">=xxxl"){
+                width: 20rem;
+            }
         }
     }
 
     &__fav-add{
         position: absolute;
         left: 0;
-        top: 0;
+        top: 1.6rem;
         z-index: 5;
+
+        @include media(">=xxxl"){
+            left: auto;
+            right: 0;
+        }
+
+        .fav-add__icon{
+            @include media(">=xxxl"){
+                font-size: 2.2rem;
+            }
+        }
     }
 
 }
