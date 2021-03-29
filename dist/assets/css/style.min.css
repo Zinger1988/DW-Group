@@ -2660,7 +2660,8 @@ input[type='submit'] {
 .product-tile__name,
 .layout-switch__item,
 .carousel-section__all-link,
-.fav-add {
+.fav-add,
+.product-hor__name {
   text-decoration: none;
   color: inherit;
 }
@@ -2678,6 +2679,7 @@ input[type='submit'] {
 .layout-switch__item:hover,
 .carousel-section__all-link:hover,
 .fav-add:hover,
+.product-hor__name:hover,
 .btn:focus,
 .search__extended:focus,
 .account-nav__link:focus,
@@ -2690,7 +2692,8 @@ input[type='submit'] {
 .product-tile__name:focus,
 .layout-switch__item:focus,
 .carousel-section__all-link:focus,
-.fav-add:focus {
+.fav-add:focus,
+.product-hor__name:focus {
   text-decoration: none;
 }
 

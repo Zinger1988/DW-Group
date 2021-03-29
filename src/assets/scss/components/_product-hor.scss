@@ -116,6 +116,7 @@
     }
 
     &__name{
+        @extend %linkreset;
         font-size: 1.4rem;
         line-height: 1.35;
         margin-bottom: 1.25rem;

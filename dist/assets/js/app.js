@@ -90,11 +90,19 @@ $(document).ready(function () {
         }
     });
 
-    const carouselRegular = new Swiper('.carousel-section--layout--medium .swiper', {
+    const carouselRegular = new Swiper('.carousel-section--layout--regular .swiper', {
         loop: false,
         slidesPerView: 4,
         slidesPerGroup: 4,
         breakpoints: {
+            1900: {
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+            },
+            1600: {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+            },
             1357: {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
