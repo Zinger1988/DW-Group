@@ -33,6 +33,7 @@
 
     @include media(">=md"){
       padding: 0 2.1rem;
+      margin-bottom: 4rem;
     }
 
     @include media(">=lg"){
@@ -221,6 +222,10 @@
     @include media(">=lg"){
       grid-area: features;
     }
+  }
+
+  .product-list{
+    padding-bottom: 3rem;
   }
 
 }

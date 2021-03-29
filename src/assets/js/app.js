@@ -90,6 +90,30 @@ $(document).ready(function () {
         }
     });
 
+    const carouselRegular = new Swiper('.carousel-section--layout--medium .swiper', {
+        loop: false,
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        breakpoints: {
+            1357: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+            788: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            547: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            }
+        }
+    });
+
     $('.carousel-section__item').each(function () {
         const arrows = $(this).find('.carousel-section__arrows-btn');
         const carousel = $(this).find('.swiper').prop('swiper');
@@ -166,7 +190,7 @@ $(document).ready(function () {
 
                 tips.each(function(){
                     const tip = $(this);
-                    const tipTarget = tip.parent().find('.' + tip.data('tipFor'));
+                    const tipTarget = tip.closest('.tip-holder').find('.' + tip.data('tipFor'));
                     tipTarget.append(tip)
 
                     tipTarget.mouseenter(function(e){
