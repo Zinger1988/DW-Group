@@ -318,6 +318,8 @@
       width: 34rem;
       top: 100%;
       z-index: 51;
+      max-height: 90vh;
+      overflow-y: auto;
 
       @include media('>=sm'){
         width: 40rem;
@@ -325,6 +327,11 @@
 
       @include media('>=md'){
         width: 44rem;
+        max-height: 85vh;
+      }
+
+      @include media('>xl'){
+        max-height: 80vh;
       }
 
       &.active{

@@ -138,6 +138,18 @@
     }
   }
 
+  &__baloon-tip{
+    display: inline-flex;
+
+    @include media(">=md"){
+      margin-bottom: 1rem;
+    }
+
+    @include media(">=md"){
+      margin-bottom: 1.5rem;
+    }
+  }
+
   &__holder{
     @include media(">=md"){
       display: flex;
