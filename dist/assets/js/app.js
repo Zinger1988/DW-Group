@@ -158,6 +158,28 @@ $(document).ready(function () {
             this.productGrid();
             this.tableSub();
             this.accordion();
+            this.baloonTip();
+        },
+        baloonTip(){
+            if($(document.body).hasClass("hover-device")){
+                const tips = $('.baloon-tip');
+
+                tips.each(function(){
+                    const tip = $(this);
+                    const tipTarget = tip.parent().find('.' + tip.data('tipFor'));
+                    tipTarget.append(tip)
+
+                    tipTarget.mouseenter(function(e){
+                        if(!$(e.target).hasClass('baloon-tip')){
+                            siteJS.helpers.elemFadeIn(tip, 'baloon-tip--active');
+                        }
+                    })
+
+                    tipTarget.mouseleave(function(){
+                        siteJS.helpers.elemFadeOut(tip, 'baloon-tip--active');
+                    })
+                })
+            }
         },
         accordion(){
             

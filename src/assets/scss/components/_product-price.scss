@@ -4,9 +4,10 @@
   &__pre{
     font-size: 12px;
     line-height: 1;
-    color: $raven;
+    color: rgba($raven, .6);
     margin-bottom: .5rem;
     display: block;
+    font-weight: normal;
   }
 
   &__item{
@@ -29,7 +30,5 @@
          y1='0' x2='100' y2='100' stroke-width='4' stroke='%23818C98'/%3e%3c/svg%3e");
       background-size: 100% 100%;
     }
-
-
   }
 }
