@@ -546,6 +546,10 @@
     
                     <div class="product-card__gallery gallery">
     
+                        <a href="#" class="product-card__fav-add fav-add">
+                            <i class="fav-add__icon icon icon--favorite--solid"></i>
+                        </a>
+    
                         <div class="gallery__main">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -610,7 +614,7 @@
     
                     </div><!-- product gallery-->
     
-                    <div class="product-card__info">
+                    <div class="product-card__info tip-holder">
     
                         <div class="product-card__item-rating item-rating">
                             <div class="item-rating__mark" data-mark="4.6"></div>
@@ -623,50 +627,53 @@
                         <div class="product-card__part-number">Код товара: UTHP1010</div>
     
                         <h1 class="product-card__name">
-                            Тонер Static Control HP LJ 1320/ 1160/ 1000/ 1010/ 1012/ 1015/ 1018/ 1020/ 1022/ 1200/ 1220/ 5L/
-                            6L/ 2100/ 2200/ 2300/ 2400/ 2410/ 2420/ 2430/ 3100/ 3105/ 3300/ 3310/ 3320/ 3330/ 3380/ 3390/
-                            3392/ 5200/ 8000/ P2014/ 2015/ 2035/ 2055/ 3005/ 3015/ M3027/ 3035/ 5025/ 5035/ M102/ 104/ 106/
-                            130/ 132/ 134/ Canon LBP440/ 445/ 460/ 465/ 660/ 1210/ 2460/ EP-A , Q5949A/ Q2610A/ C4096A/
-                            Q7553A/ Q7516A/ Q7570A/ Q7551A/ Q6511A/ C3 909A/ Q2612A/ CE505A/ CE255A/ C7115A/ Q3906A/ CF217A
+                            WELLDO Вал магнитный в сборе WELLDO HP LJ P1005/ 1006/ 1007/ 1008/ 1102/ 1505/
+                            1560/ 1566/ 1606/ M1212/ 1214/ 1217/ 1120/ 1132/ 1522/ 1536/ M125/ 127/ Canon
+                            MF4410 /4430/ 4450/ 4550/ 4570/ 4580/ 4730/ 4750/ 4780/ 4870/ 4890/ LBP-3010/
+                            3020/ 3100/ 3250/ 6000/ 6020/ 6200/ CB435A/ CB436A/ CE278A/ CE285A/ Canon 712/
+                            713/ 725/ 726/ 728, Silver GLOSSY Coating - OEM технология! + комплект втулок
                         </h1>
     
-                        <div class="product-card__holder">
+                        <div class="product-tile__baloon-tip baloon-tip" data-tip-for="product-card__buy-btn">
+                            <i class="baloon-tip__icon icon--info"></i>
+                            <span class="baloon-tip__text">Звоните, товар в резерве</span>
+                        </div>
     
-                            <div class="product-card__holder-left">
+                        <div class="product-card__holder">
+                            
+                            <div class="product-card__price">
                                 <div class="product-card__product-price product-price">
                                     <div class="product-price__item">
-                                        <span class="product-price__value">999.00</span>
+                                        <span class="product-price__pre">Цена</span>
+                                        <span class="product-price__value">1.08</span>
                                         <span class="product-price__currency">&#8372;</span>
                                     </div>
-                                    <div class="product-price__item product-price__item--old">
-                                        <span class="product-price__value">999.00</span>
+                                    <!-- <div class="product-price__item product-price__item--old">
+                                        <span class="product-price__value">1.15</span>
+                                        <span class="product-price__currency">&#8372;</span>
+                                    </div> -->
+                                </div>
+                                <div class="product-card__product-price product-price">
+                                    <div class="product-price__item">
+                                        <span class="product-price__pre">РРЦ</span>
+                                        <span class="product-price__value">1.35</span>
                                         <span class="product-price__currency">&#8372;</span>
                                     </div>
                                 </div>
-                                <div class="product-card__availability">
-                                    Наличие: <span class="text text--marker--ok">много</span>
-                                </div>
-                            </div><!-- product card holder left-->
+                            </div><!-- product card price-->
     
-                            <div class="product-card__holder-middle">
-                                <div class="product-card__holder-quantity item-quantity">
+                            <div class="product-card__controls">
+                                <div class="product-card__quantity item-quantity">
                                     <button class="item-quantity__btn item-quantity__btn--dec">-</button>
                                     <button class="item-quantity__btn item-quantity__btn--inc">+</button>
                                     <input class="item-quantity__input" type="number" value="1" min="1">
                                 </div>
     
-                                <button class="product-card__holder-buy-btn btn btn--plain btn--style--green">
-                                    <i class="icon icon--cart--processing"></i>
-                                    <span class="btn__text">Купить</span>
+                                <button class="product-card__buy-btn btn btn--plain btn--style--lightblue">
+                                    <i class="icon icon--cart--locked"></i>
+                                    <span class="btn__text">В резерве</span>
                                 </button>
-                            </div><!-- product card holder middle-->
-    
-                            <div class="product-card__holder-right">
-                                <a href="#" class="product-card__fav-add fav-add">
-                                    <b class="fav-add__text">В избранное</b>
-                                    <i class="fav-add__icon icon icon--favorite--solid"></i>
-                                </a>
-                            </div><!-- product card holder right-->
+                            </div><!-- product card product-card controls-->
     
                         </div><!-- product card holder-->
     
@@ -948,7 +955,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1017,7 +1024,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1080,7 +1087,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1146,7 +1153,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1208,7 +1215,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1272,7 +1279,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1333,7 +1340,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1394,7 +1401,7 @@
                             </div>
                         </div>
                 
-                        <a href="#" class="product-hor__fav-add fav-add active">
+                        <a href="#" class="product-hor__fav-add fav-add">
                             <i class="fav-add__icon icon icon--favorite--solid"></i>
                         </a>
                     </div><!-- product hor-->
@@ -1406,7 +1413,7 @@
     
     </div><!-- container -->
     
-    <section class="carousel-section carousel-section--layout--regular">
+    <section class="carousel-section carousel-section--layout--regular carousel-section--theme--dark">
                 
         <div class="carousel-section__item">
             <div class="container container--wide">
@@ -1513,7 +1520,7 @@
                                 
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
@@ -1579,7 +1586,7 @@
                                                 <div class="product-tile__item-labels item-labels">
                                                     <div class="item-labels__item item-labels__item--discount">Акция</div>
                                                 </div>
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
@@ -1652,7 +1659,7 @@
                                 
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
@@ -1717,7 +1724,7 @@
                                 
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
@@ -1781,7 +1788,7 @@
                                 
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
@@ -1847,7 +1854,7 @@
                                 
                                             <!--#region catalog tile main-->
                                             <div class="product-tile__primary">
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
@@ -1913,7 +1920,7 @@
                                                 <div class="product-tile__item-labels item-labels">
                                                     <div class="item-labels__item item-labels__item--new">Новинка</div>
                                                 </div>
-                                                <a href="#" class="product-tile__fav-add fav-add active">
+                                                <a href="#" class="product-tile__fav-add fav-add">
                                                     <i class="fav-add__icon icon icon--favorite--solid"></i>
                                                 </a>
                                                 <a href="#" class="product-tile__img">
