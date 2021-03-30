@@ -1,0 +1,102 @@
+.table-alt{
+    $this: &;
+
+    &__item{
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        &:not(:last-child){
+            border-bottom: 1px dotted #D2D2D2;
+        }
+    }
+    
+    &__secondary{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 1.4rem;
+        background-color: #F9F9F9;
+        border-radius: 0 0 4px 4px;
+    }
+    
+    &__secondary-item{
+        width: 50%;
+        flex-shrink: 0;
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+
+        @include media(">=sm"){
+            width: 33.333%;
+        }
+        
+        .product-price__pre{
+            @include media("<md"){
+                font-size: 1.1rem;
+                margin-bottom: .3rem;
+            }
+        }
+        
+        .product-price__item{
+            @include media("<md"){
+                font-size: 1.3rem;
+            }
+        }
+        
+        &.table-alt__secondary-item--primary{
+            width: 100%;
+            order: -1;
+        }
+    }
+
+    &__main{
+        padding: 1rem 1.4rem;
+        background-color: #F2F2F2;
+        border-radius: 4px 4px 0 0;
+
+        .text-overflow__toggle {
+            background: #f2f2f2;
+            background: linear-gradient(0deg, #F2F2F2 15%, rgba(242, 242, 242, 0) 100%);
+            font-size: 1rem;
+        }
+    }
+
+    &__main-footer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+
+    &__name{
+        @extend %linkreset;
+        font-size: 1.2rem;
+        margin-bottom: .7rem;
+        display: block;
+        margin-right: 3.6rem;
+    }
+
+    &__availability{
+        font-size: 1.1rem;
+        margin-right: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    &__item-rating{
+
+        .item-rating__mark-item{
+            font-size: 1rem;
+        }
+
+        .item-rating__link{
+            font-size: 1.1rem;
+        }
+    }
+
+    &__item-quantity{
+        display: block;
+        width: 100%;
+
+        .item-quantity__input{
+            background-color: $white;
+            box-shadow: inset 0 0 0 1px #E9E9E9;
+        }
+    }
+}
