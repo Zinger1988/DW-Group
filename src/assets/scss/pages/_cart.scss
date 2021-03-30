@@ -1,0 +1,7 @@
+.cart{
+    padding-top: 2.5rem;
+
+    @include media(">=lg"){
+        padding-top: 3rem;
+    }
+}
