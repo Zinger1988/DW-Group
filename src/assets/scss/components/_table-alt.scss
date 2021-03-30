@@ -2,60 +2,116 @@
     $this: &;
 
     &__item{
-        padding-bottom: 1.5rem;
         margin-bottom: 1.5rem;
 
-        &:not(:last-child){
+        @include media(">=md"){
+            position: relative;
+            padding-bottom: 1.6rem;
+            margin-bottom: 1.6rem;
             border-bottom: 1px dotted #D2D2D2;
+        }
+
+        @include media(">=xl"){
+            padding-left: 11rem;
         }
     }
     
     &__secondary{
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         padding: 1rem 1.4rem;
         background-color: #F9F9F9;
-        border-radius: 0 0 4px 4px;
+
+        @include media(">=md"){
+            padding: 1.8rem;
+        }
+
+        @include media(">=lg"){
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 1rem 1.8rem;
+        }
     }
     
     &__secondary-item{
-        width: 50%;
+        min-width: 50%;
         flex-shrink: 0;
         margin-bottom: 1rem;
         padding-right: 1rem;
 
-        @include media(">=sm"){
-            width: 33.333%;
+        @include media(">=md"){
+            margin-bottom: 1.4rem;
+        }
+
+        @include media(">=lg"){
+            min-width: 0;
+            margin-bottom: 0;
         }
         
         .product-price__pre{
+
             @include media("<md"){
                 font-size: 1.1rem;
                 margin-bottom: .3rem;
             }
+
+            @include media(">=lg"){
+                margin-bottom: .8rem;
+            }
         }
         
         .product-price__item{
+
             @include media("<md"){
                 font-size: 1.3rem;
+            }
+
+            @include media(">=lg"){
+                font-size: 1.4rem;
             }
         }
         
         &.table-alt__secondary-item--primary{
             width: 100%;
             order: -1;
+            padding-right: 0;
+
+            @include media(">=lg"){
+                width: 14rem;
+                order: unset;
+                margin-right: 1rem;
+            }
         }
     }
 
     &__main{
-        padding: 1rem 1.4rem;
+        @extend %clearfix;
+        padding: 1.4rem 1.4rem 1rem;
         background-color: #F2F2F2;
         border-radius: 4px 4px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 7.8rem;
+        position: relative;
+
+        @include media(">=md"){
+            padding: 1.8rem;
+            min-height: 11.6rem;
+        }
+
+        @include media(">=xl"){
+            min-height: 0;
+        }
 
         .text-overflow__toggle {
             background: #f2f2f2;
             background: linear-gradient(0deg, #F2F2F2 15%, rgba(242, 242, 242, 0) 100%);
-            font-size: 1rem;
+            
+            @include media("<md"){
+                font-size: 1rem;
+            }
         }
     }
 
@@ -63,30 +119,81 @@
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        margin-left: 6.25rem;
+
+        @include media(">=md"){
+            margin-left: 10rem;
+        }
+
+        @include media(">=xl"){
+            margin-left: 0;
+        }
+    }
+
+    &__img{
+        position: absolute;
+        left: 1.4rem;
+        top: 1.4rem;
+        width: 5rem;
+
+        @include media(">=md"){
+            left: 1.8rem;
+            top: 1.8rem;
+            width: 8rem;
+        }
+
+        @include media(">=xl"){
+            left: -11rem;
+            top: 0;
+        }
+    }
+
+    &__img-item{
+        display: block;
+        width: 100%;
+        border-radius: 2px;
     }
 
     &__name{
         @extend %linkreset;
         font-size: 1.2rem;
         margin-bottom: .7rem;
+        margin-left: 6.26rem;
         display: block;
-        margin-right: 3.6rem;
+
+        @include media(">=md"){
+            margin-left: 10rem;
+            margin-right: 4rem;
+            font-size: 1.3rem;
+        }
+
+        @include media(">=xl"){
+            margin-left: 0;
+        }
     }
 
     &__availability{
         font-size: 1.1rem;
         margin-right: 1.5rem;
         flex-shrink: 0;
+
+        @include media(">=md"){
+            font-size: 1.3rem;
+            margin-right: 5rem;
+        }
     }
 
     &__item-rating{
-
         .item-rating__mark-item{
-            font-size: 1rem;
+            @include media("<md"){
+                font-size: 1rem;
+            }
         }
 
         .item-rating__link{
-            font-size: 1.1rem;
+            @include media("<md"){
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -97,6 +204,49 @@
         .item-quantity__input{
             background-color: $white;
             box-shadow: inset 0 0 0 1px #E9E9E9;
+        }
+    }
+
+    &__delete{
+        @extend %buttonreset;
+        display: block;
+        width: 100%;
+        background-color: $mineShaft;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+        border-radius: 0 0 4px 4px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.2rem;
+
+        @include media(">=md"){
+            position: absolute;
+            right: 1.8rem;
+            top: 1.8rem;
+            padding: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: #707F85;
+        }
+    }
+
+    &__delete-text{
+        @include media(">=md"){
+            display: none;
+        }
+    }
+
+    &__delete-icon{
+        font-size: .9rem;
+        line-height: 1;
+        margin-right: .75rem;
+
+        @include media(">=md"){
+            margin-right: 0;
         }
     }
 }
