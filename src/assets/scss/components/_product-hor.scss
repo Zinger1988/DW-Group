@@ -116,12 +116,12 @@
     }
 
     &__name{
-        @extend %linkreset;
         font-size: 1.4rem;
         line-height: 1.35;
         margin-bottom: 1.25rem;
         width: 100%;
         flex-shrink: 0;
+        color: inherit;
 
         @include media(">=sm"){
             margin-bottom: 1.5rem;
@@ -129,6 +129,11 @@
 
         @include media(">=lg"){
             margin-bottom: 1rem;
+        }
+
+        &:hover,
+        &:focus{
+            text-decoration-color: inherit;
         }
     }
 

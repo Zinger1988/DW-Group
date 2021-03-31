@@ -103,11 +103,11 @@
     }
 
     &__name{
-        @extend %linkreset;
         font-size: 1.2rem;
         margin-bottom: .7rem;
         margin-left: 6.26rem;
         display: block;
+        color: inherit;
 
         @include media(">=md"){
             margin-left: 10rem;
@@ -121,6 +121,11 @@
 
         @include media(">=xl"){
             margin-left: 0;
+        }
+
+        &:hover,
+        &:focus{
+            text-decoration-color: inherit;
         }
     }
 

@@ -50,12 +50,17 @@
   }
 
   &__name{
-    @extend %linkreset;
+    color: inherit;
     display: block;
     font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 1.3rem;
     color: $base-text-color;
+
+    &:hover,
+    &:focus{
+      text-decoration-color: inherit;
+    }
   }
 
   &__price{

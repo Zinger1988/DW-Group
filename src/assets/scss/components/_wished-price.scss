@@ -1,0 +1,61 @@
+.wished-price{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: .8rem 1rem .8rem 3rem;
+    border: 2px solid rgba($curiousBlue, .25);
+    border-radius: 6px;
+
+    &__img{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 3.6rem;
+    }
+
+    &__text{
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.15;
+        margin-right: 2rem;
+    }
+
+    &__input[type="text"]{
+        display: block;
+        border: none;
+        background-color: rgba($curiousBlue, .12);
+        border-radius: 3px 0 0 3px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-weight: 700;
+        text-align: center;
+        width: 10rem;
+        padding: .8rem 1rem;
+        margin-left: auto;
+        @include animate(box-shadow);
+        flex: 1 0 10rem;
+
+        &:focus{
+            box-shadow: inset 0 0 0 1px rgba($curiousBlue, .5);
+        }
+    }
+
+    &__btn{
+        @extend %buttonreset;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        width: 5rem;
+        flex-shrink: 0;
+        text-align: center;
+        padding: 1.1rem 1rem;
+        border-radius: 0 3px 3px 0;
+        background-color: $curiousBlue;
+        color: #fff;
+        @include animate(color)
+        
+        &:hover{
+            background-color: darken($curiousBlue, 10%);
+        }
+    }
+}

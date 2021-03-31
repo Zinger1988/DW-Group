@@ -21,6 +21,12 @@
         }
       }
     }
+
+    .tabs__link{
+      @include media('>=md'){
+        padding: 2.3rem 2.5rem 2.3rem 4rem;
+      }
+    }
   }
 
   &__main{
@@ -206,6 +212,12 @@
         font-size: 1.8rem;
       }
     }
+  }
+
+  &__wished-price{
+    margin-bottom: 1.5rem;
+    margin-left: 1.8rem;
+    max-width: 40rem;
   }
 
   &__controls{

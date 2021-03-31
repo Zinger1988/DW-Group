@@ -2658,12 +2658,9 @@ input[type='submit'] {
 .crumbs__link,
 .tabs__item .tabs__link,
 .product-tile__img,
-.product-tile__name,
 .layout-switch__item,
 .carousel-section__all-link,
-.fav-add,
-.product-hor__name,
-.table-alt__name {
+.fav-add {
   text-decoration: none;
   color: inherit;
 }
@@ -2677,12 +2674,9 @@ input[type='submit'] {
 .crumbs__link:hover,
 .tabs__item .tabs__link:hover,
 .product-tile__img:hover,
-.product-tile__name:hover,
 .layout-switch__item:hover,
 .carousel-section__all-link:hover,
 .fav-add:hover,
-.product-hor__name:hover,
-.table-alt__name:hover,
 .btn:focus,
 .search__extended:focus,
 .account-nav__link:focus,
@@ -2692,12 +2686,9 @@ input[type='submit'] {
 .crumbs__link:focus,
 .tabs__item .tabs__link:focus,
 .product-tile__img:focus,
-.product-tile__name:focus,
 .layout-switch__item:focus,
 .carousel-section__all-link:focus,
-.fav-add:focus,
-.product-hor__name:focus,
-.table-alt__name:focus {
+.fav-add:focus {
   text-decoration: none;
 }
 
@@ -2724,6 +2715,7 @@ input[type='submit'] {
 .gallery__btn,
 .table-alt__delete,
 .order-summary__controls-btn,
+.wished-price__btn,
 .content-holder--catalog .content-holder__sidebar-close-btn {
   background: none;
   border: none;
@@ -2746,6 +2738,7 @@ input[type='submit'] {
 .gallery__btn:focus,
 .table-alt__delete:focus,
 .order-summary__controls-btn:focus,
+.wished-price__btn:focus,
 .content-holder--catalog .content-holder__sidebar-close-btn:focus {
   outline: none;
 }
@@ -4503,11 +4496,17 @@ html {
 }
 
 .product-tile__name {
+  color: inherit;
   display: block;
   font-size: 1.3rem;
   line-height: 1.6;
   margin-bottom: 1.3rem;
   color: #333333;
+}
+
+.product-tile__name:hover,
+.product-tile__name:focus {
+  text-decoration-color: inherit;
 }
 
 .product-tile__price {
@@ -5822,6 +5821,12 @@ html {
   margin-bottom: 1.25rem;
   width: 100%;
   flex-shrink: 0;
+  color: inherit;
+}
+
+.product-hor__name:hover,
+.product-hor__name:focus {
+  text-decoration-color: inherit;
 }
 
 .product-hor__desc-footer {
@@ -6048,6 +6053,12 @@ html {
   margin-bottom: .7rem;
   margin-left: 6.26rem;
   display: block;
+  color: inherit;
+}
+
+.table-alt__name:hover,
+.table-alt__name:focus {
+  text-decoration-color: inherit;
 }
 
 .table-alt__availability {
@@ -6185,6 +6196,11 @@ html {
   align-items: center;
   margin-bottom: .75rem;
   text-align: left;
+  transition: color 0.3s ease-in-out;
+}
+
+.order-summary__controls-btn:hover {
+  color: #FFB41E;
 }
 
 .order-summary__controls-btn:last-child {
@@ -6210,6 +6226,67 @@ html {
 .control-pad--cart {
   max-width: 40rem;
   margin: 0 auto;
+}
+
+.wished-price {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: .8rem 1rem .8rem 3rem;
+  border: 2px solid rgba(55, 148, 210, 0.25);
+  border-radius: 6px;
+}
+
+.wished-price__img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.6rem;
+}
+
+.wished-price__text {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.15;
+  margin-right: 2rem;
+}
+
+.wished-price__input[type="text"] {
+  display: block;
+  border: none;
+  background-color: rgba(55, 148, 210, 0.12);
+  border-radius: 3px 0 0 3px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  width: 10rem;
+  padding: .8rem 1rem;
+  margin-left: auto;
+  transition: box-shadow 0.3s ease-in-out;
+  flex: 1 0 10rem;
+}
+
+.wished-price__input[type="text"]:focus {
+  box-shadow: inset 0 0 0 1px rgba(55, 148, 210, 0.5);
+}
+
+.wished-price__btn {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 5rem;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 1.1rem 1rem;
+  border-radius: 0 3px 3px 0;
+  background-color: #3794D2;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.wished-price__btn:hover {
+  background-color: #2779af;
 }
 
 .page {
@@ -6410,6 +6487,12 @@ html {
 
 .product-card__price .product-price__item--old .product-price__value {
   font-size: 1.6rem;
+}
+
+.product-card__wished-price {
+  margin-bottom: 1.5rem;
+  margin-left: 1.8rem;
+  max-width: 40rem;
 }
 
 .product-card__controls {
@@ -7010,6 +7093,10 @@ html {
 
   .product-card__tabs {
     margin-bottom: 3rem;
+  }
+
+  .product-card__tabs .tabs__link {
+    padding: 2.3rem 2.5rem 2.3rem 4rem;
   }
 
   .product-card__main {
