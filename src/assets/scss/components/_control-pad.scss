@@ -1,0 +1,26 @@
+.control-pad{
+
+    $this: &;
+
+    &__btn{
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+
+    &--cart{
+        max-width: 40rem;
+        margin: 0 auto;
+
+        @include media(">=md"){
+            max-width: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            #{$this}__btn{
+                width: auto;
+                margin: 0 1rem;
+            }
+        }
+    }
+}

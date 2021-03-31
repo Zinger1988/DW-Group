@@ -195,4 +195,19 @@
       padding: 1.5rem 4rem;
     }
   }
+
+  &__footer{
+    background-color: #FAFAFA;
+    padding: 2.5rem 1.5rem 3rem;
+    border-radius: 0 0 6px 6px;
+
+    @include media('>=sm'){
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    @include media('>=lg'){
+      padding: 2.5rem 4rem 4rem;
+    }
+  }
 }

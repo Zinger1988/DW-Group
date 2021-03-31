@@ -5069,6 +5069,12 @@ html {
   padding: 1rem 1.5rem;
 }
 
+.content-holder__footer {
+  background-color: #FAFAFA;
+  padding: 2.5rem 1.5rem 3rem;
+  border-radius: 0 0 6px 6px;
+}
+
 .layout-switch {
   display: inline-flex;
   align-items: center;
@@ -6196,6 +6202,16 @@ html {
   font-size: 1.3rem;
 }
 
+.control-pad__btn {
+  width: 100%;
+  margin: 0 0 1rem;
+}
+
+.control-pad--cart {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 .page {
   min-height: 100vh;
   line-height: 1.571;
@@ -6425,6 +6441,7 @@ html {
 
 .cart {
   padding-top: 2.5rem;
+  padding-bottom: 4rem;
 }
 
 .cart__order-summary {
@@ -6482,6 +6499,11 @@ html {
   }
 
   .content-holder__body {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .content-holder__footer {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -6974,6 +6996,18 @@ html {
     font-size: 2.2rem;
   }
 
+  .control-pad--cart {
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .control-pad--cart .control-pad__btn {
+    width: auto;
+    margin: 0 1rem;
+  }
+
   .product-card__tabs {
     margin-bottom: 3rem;
   }
@@ -7256,6 +7290,10 @@ html {
 
   .content-holder__body {
     padding: 1.5rem 4rem;
+  }
+
+  .content-holder__footer {
+    padding: 2.5rem 4rem 4rem;
   }
 
   .page-desc {
@@ -7627,6 +7665,7 @@ html {
 
   .cart {
     padding-top: 3rem;
+    padding-bottom: 4rem;
   }
 }
 

@@ -1,8 +1,10 @@
 .cart{
     padding-top: 2.5rem;
+    padding-bottom: 4rem;
 
     @include media(">=lg"){
         padding-top: 3rem;
+        padding-bottom: 4rem;
     }
 
     &__order-summary{
@@ -47,8 +49,5 @@
                 }
             }
         }
-    }
-
-    &__footer{
     }
 }
