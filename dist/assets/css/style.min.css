@@ -6120,13 +6120,13 @@ html {
   z-index: 5;
   flex-shrink: 0;
   line-height: 1.2;
+  max-width: 50%;
 }
 
 .order-summary__list-attr {
   font-size: 1rem;
   color: #818C98;
   padding-right: .5rem;
-  max-width: 60%;
 }
 
 .order-summary__list-attr .order-summary__list-inner::after {
@@ -6167,6 +6167,7 @@ html {
   display: inline-flex;
   align-items: center;
   margin-bottom: .75rem;
+  text-align: left;
 }
 
 .order-summary__controls-btn:last-child {
