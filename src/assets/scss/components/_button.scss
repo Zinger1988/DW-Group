@@ -131,4 +131,20 @@
       box-shadow: 0 0 0 6px rgba(#5C747E, .3);
     }
   }
+
+  &--size{
+    
+    &--lg{
+      padding: 1.09em 2em;
+      border-radius: 2.089em;
+      min-height: 3.996em;
+
+      @include media('>=md'){
+        padding: 1.2em 2.36em;
+        border-radius: 2.271em;
+        min-height: 4.468em;
+      }
+    }
+
+  }
 }

@@ -694,7 +694,7 @@
     
                 </div><!-- cart table -->
     
-                <div class="order-summary">
+                <div class="order-summary cart__order-summary">
     
                     <div class="order-summary__product-price product-price">
                         <div class="product-price__pre">Итого, к оплате</div>
@@ -755,6 +755,60 @@
                     </div><!-- order-summary controls -->
                 
                 </div><!-- order-summary -->
+    
+                <div class="form cart__form">
+    
+                    <div class="cart__form-group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Выберите способ оплаты</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">Безналичный</option>
+                                <option value="">Карта</option>
+                                <option value="">Другой</option>
+                            </select>
+                        </label>
+    
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Выберите тип заказа</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">На сборку/ отгружать</option>
+                                <option value="">Резерв</option>
+                            </select>
+                        </label>
+    
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Выберите метод получения</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">Автолюкс</option>
+                                <option value="">Ваш Час</option>
+                                <option value="">Деливери</option>
+                                <option value="">Доставка</option>
+                                <option value="">Новая почта</option>
+                                <option value="">Ночной экспресс</option>
+                                <option value="">Самовывоз</option>
+                            </select>
+                        </label>
+                    </div><!-- cart form group-->
+    
+                    <div class="cart__form-group cart__form-group--textarea">
+                        <div class="form-row">
+                            <div class="form-row__label">Комментарий к заказу</div>
+                            <textarea class="form-row__control" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div><!-- cart form group-->
+    
+                </div><!-- cart form -->
+    
+                <div class="cart__footer">
+    
+                    <a class="cart__footer-btn btn btn--style--wired-default" href="#">Вернуться назад</a>
+    
+                    <button class="cart__footer-btn btn btn--style--default btn--size--lg" href="#">Отправить заказ в работу</button>
+    
+                </div><!-- cart footer -->
     
             </div>
         

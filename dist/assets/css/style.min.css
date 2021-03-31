@@ -2915,6 +2915,12 @@ html {
   box-shadow: 0 0 0 6px rgba(92, 116, 126, 0.3);
 }
 
+.btn--size--lg {
+  padding: 1.09em 2em;
+  border-radius: 2.089em;
+  min-height: 3.996em;
+}
+
 .contact-panel {
   color: #fff;
 }
@@ -6421,6 +6427,10 @@ html {
   padding-top: 2.5rem;
 }
 
+.cart__order-summary {
+  margin-bottom: 3.5rem;
+}
+
 @media (min-width: 536px) {
   .container {
     padding: 0 22px;
@@ -6694,6 +6704,12 @@ html {
 
   .btn .icon {
     font-size: 1.738em;
+  }
+
+  .btn--size--lg {
+    padding: 1.2em 2.36em;
+    border-radius: 2.271em;
+    min-height: 4.468em;
   }
 
   .contact-panel--footer .contact-panel__body {
@@ -7039,6 +7055,26 @@ html {
     max-width: 76.8rem;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .cart__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart__form-group {
+    width: calc(50% - 10px);
+  }
+
+  .cart__form-group--textarea .form-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .cart__form-group--textarea .form-row__control {
+    height: 10rem;
+    flex: 1 0 auto;
   }
 }
 
@@ -7968,7 +8004,7 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-gap: .7rem 4rem;
     align-self: flex-start;
-    margin: .5rem auto 0;
+    margin: .7rem auto 0;
     max-width: 58rem;
   }
 
@@ -8067,6 +8103,10 @@ html {
   .product-card__main {
     padding: 0 3.3rem;
     grid-template-columns: 370px 1fr;
+  }
+
+  .cart__order-summary {
+    margin-bottom: 4rem;
   }
 }
 
@@ -8550,6 +8590,10 @@ html {
 
   .product-card__tabs .tabs__link::after {
     width: 2.7rem;
+  }
+
+  .cart__form-group:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 
