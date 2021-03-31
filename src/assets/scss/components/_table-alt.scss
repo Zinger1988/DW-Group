@@ -59,6 +59,15 @@
         background-color: #C0C5CB;
         @include animate(background-color);
 
+        @include media(">=lg"){
+            right: 1.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 4px;
+        }
+
         &:hover{
             background-color: #707776;
         }
@@ -104,6 +113,10 @@
             margin-left: 10rem;
             margin-right: 4rem;
             font-size: 1.3rem;
+        }
+
+        @include media(">=md"){
+            margin-right: 6rem;
         }
 
         @include media(">=xl"){
@@ -218,6 +231,20 @@
                 width: 14rem;
                 order: unset;
                 margin-right: 1rem;
+            }
+        }
+
+        &--bigger{
+            .product-price__pre{
+                @include media(">=md"){
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .product-price__item{
+                @include media(">=lg"){
+                    font-size: 2rem;
+                }
             }
         }
     }

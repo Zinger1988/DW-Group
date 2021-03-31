@@ -605,7 +605,7 @@
                                     <input class="item-quantity__input" type="number" value="1" min="1">
                                 </div>
                             </div>
-                            <div class="table-alt__secondary-item product-price">
+                            <div class="table-alt__secondary-item table-alt__secondary-item--bigger product-price">
                                 <div class="product-price__pre">Сумма</div>
                                 <div class="product-price__item">
                                     <span class="product-price__value">1.08</span>
@@ -682,7 +682,7 @@
                                     <input class="item-quantity__input" type="number" value="1" min="1">
                                 </div>
                             </div>
-                            <div class="table-alt__secondary-item product-price">
+                            <div class="table-alt__secondary-item table-alt__secondary-item--bigger product-price">
                                 <div class="product-price__pre">Сумма</div>
                                 <div class="product-price__item">
                                     <span class="product-price__value">79.00</span>
@@ -694,39 +694,67 @@
     
                 </div><!-- cart table -->
     
-                <div class="summary">
-                
-                    <div class="summary__controls">
-                        <button class="summary__controls-btn">
-                            <i class="summary__controls-icon"></i>
-                            <span class="summary__controls-text">Импортировать товары в заказ из Excel</span>
-                        </button>
-                        <button class="summary__controls-btn">
-                            <i class="summary__controls-icon"></i>
-                            <span class="summary__controls-text">Шаблон для импорта товаров из Excel</span>
-                        </button>
-                        <button class="summary__controls-btn">
-                            <i class="summary__controls-icon"></i>
-                            <span class="summary__controls-text">Перейти к списку дополнительных заказов</span>
-                        </button>
-                    </div><!-- summary controls -->
-                
-                    <ul class="summary__list">
-                        <li class="summary__list-item">
-                            <span class="summary__list-attr">Всего товаров в заказе</span>
-                            <span class="summary__list-param">4</span>
-                        </li>
-                    </ul><!-- summary list -->
-                
-                    <div class="summary__product-price product-price">
+                <div class="order-summary">
+    
+                    <div class="order-summary__product-price product-price">
                         <div class="product-price__pre">Итого, к оплате</div>
                         <div class="product-price__item">
-                            <span class="product-price__value">14.21</span>
+                            <span class="product-price__value">80.08</span>
                             <span class="product-price__currency">&#8372;</span>
                         </div>
                     </div>
+    
+                    <ul class="order-summary__list">
+                        <li class="order-summary__list-item">
+                            <div class="order-summary__list-attr">
+                                <span class="order-summary__list-inner">Всего товаров в заказе</span>
+                            </div>
+                            <div class="order-summary__list-param">
+                                <span class="order-summary__list-inner">4</span>
+                            </div>
+                        </li>
+                        <li class="order-summary__list-item">
+                            <div class="order-summary__list-attr">
+                                <span class="order-summary__list-inner">Всего позиций в заказе</span>
+                            </div>
+                            <div class="order-summary__list-param">
+                                <span class="order-summary__list-inner">4</span>
+                            </div>
+                        </li>
+                        <li class="order-summary__list-item">
+                            <div class="order-summary__list-attr">
+                                <span class="order-summary__list-inner">Общий вес (кг)</span>
+                            </div>
+                            <div class="order-summary__list-param">
+                                <span class="order-summary__list-inner">0.6</span>
+                            </div>
+                        </li>
+                        <li class="order-summary__list-item">
+                            <div class="order-summary__list-attr">
+                                <span class="order-summary__list-inner">Общий объем (м<sup>3</sup>)</span>
+                            </div>
+                            <div class="order-summary__list-param">
+                                <span class="order-summary__list-inner">0.43</span>
+                            </div>
+                        </li>
+                    </ul><!-- order-summary list -->
                 
-                </div><!-- summary -->
+                    <div class="order-summary__controls">
+                        <button class="order-summary__controls-btn">
+                            <i class="order-summary__controls-icon icon icon--globe"></i>
+                            <span class="order-summary__controls-text">Импортировать товары в заказ из Excel</span>
+                        </button>
+                        <button class="order-summary__controls-btn">
+                            <i class="order-summary__controls-icon icon icon--globe"></i>
+                            <span class="order-summary__controls-text">Шаблон для импорта товаров из Excel</span>
+                        </button>
+                        <button class="order-summary__controls-btn">
+                            <i class="order-summary__controls-icon icon icon--globe"></i>
+                            <span class="order-summary__controls-text">Перейти к списку дополнительных заказов</span>
+                        </button>
+                    </div><!-- order-summary controls -->
+                
+                </div><!-- order-summary -->
     
             </div>
         
