@@ -72,6 +72,16 @@
     }
   }
 
+  &--style--darkgreen{
+    background-color: $forestGreen;
+    color: $white;
+    @include animate(box-shadow);
+
+    &:hover{
+      box-shadow: 0 0 0 6px rgba($forestGreen, .3);
+    }
+  }
+
   &--style--wired-grey{
     background-color: $white;
     box-shadow: inset 0 0 0 2px $mercury;
