@@ -6469,34 +6469,25 @@ html {
   display: grid;
   align-items: center;
   grid-template-areas: "price favorite" "whished whished" "controls controls";
-  grid-template-columns: auto auto;
+  grid-template-columns: auto min-content;
   grid-gap: 1.5rem 1rem;
   margin-bottom: 1rem;
 }
 
 .product-card__price {
-  display: flex;
-  flex-wrap: wrap;
   grid-area: price;
 }
 
-.product-card__product-price {
-  margin-right: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .product-card__product-price .product-price__item {
-  margin: .55rem .75rem .55rem 0;
+  margin: 0 .75rem 0 0;
 }
 
 .product-card__product-price .product-price__item .product-price__value {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .product-card__product-price .product-price__item--old {
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
 
 .product-card__product-price .product-price__item--old .product-price__value {
@@ -6830,7 +6821,7 @@ html {
   }
 
   .product-card__product-price .product-price__item .product-price__value {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 
   .product-card__product-price .product-price__item--old .product-price__value {
