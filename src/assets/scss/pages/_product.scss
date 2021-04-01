@@ -65,17 +65,6 @@
     }
   }
 
-  &__fav-add{
-    position: absolute;
-    left: 2rem;
-    top: 2rem;
-    z-index: 5;
-
-    .fav-add__icon{
-      font-size: 3rem;
-    }
-  }
-
   &__gallery{
     margin-bottom: 2.5rem;
     position: relative;
@@ -135,7 +124,7 @@
   &__name{
     font: 1.4rem/ 1.4 $base-font-family;
     font-weight: normal;
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
 
     @include media(">=md"){
       font-size: 1.5rem;
@@ -157,86 +146,45 @@
   }
 
   &__holder{
-    @include media(">=md"){
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 3rem;
-    }
-
-    @include media(">=xxl"){
-      justify-content: flex-start;
-    }
   }
 
   &__price{
-    display: grid;
-    grid-template-columns: calc(40% - 1.5rem) 1fr;
-    grid-gap: 1.5rem;
-    margin: 2rem 0 1.5rem;
+    display: flex;
+    margin-bottom: 1.25rem;
 
-    @include media(">=md"){
-      width: 40%;
-      display: block;
-      margin: 0;
-
-      .product-card__product-price{
-        padding: .7rem 0;
-      }
+    @include media(">=sm"){
+      margin-bottom: 1.5rem;
     }
+  }
 
-    @include media(">=xxl"){
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-gap: 2.5rem;
-      width: auto;
-      margin-right: 5rem;
-
-      .product-card__product-price{
-        padding: .55rem 0;
-      }
-    }
+  &__product-price{
+    margin-right: 1.5rem;
 
     .product-price__value{
-      font-size: 1.9rem;
+      font-size: 1.8rem;
 
-      @include media(">=xxl"){
+      @include media(">=sm"){
         font-size: 2.2rem;
-      }
-    }
-
-    .product-price__item--old .product-price__value{
-      font-size: 1.6rem;
-
-      @include media(">=xxl"){
-        font-size: 1.8rem;
       }
     }
   }
 
   &__wished-price{
-    margin-bottom: 1.5rem;
-    margin-left: 1.8rem;
-    max-width: 40rem;
+    margin-bottom: 1.25rem;
+
+    @include media(">=sm"){
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__holder-separator{
+    display: none;
   }
 
   &__controls{
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
-
-    @include media(">=md"){
-      width: 50%;
-      max-width: 30rem;
-      margin-bottom: 0;
-      flex-direction: column;
-    }
-
-    @include media(">=xxl"){
-      width: auto;
-      flex-direction: row;
-      max-width: none;
-    }
   }
 
   &__buy-btn.btn{
@@ -245,35 +193,15 @@
     position: relative;
     padding-right: 1em;
     padding-left: 1em;
-
-    @include media(">=md"){
-      width: 100%;
-    }
-
-    @include media(">=xxl"){
-      width: 20rem;
-    }
   }
 
   &__quantity{
     width: 40%;
-
-    @include media(">=md"){
-      width: 100%;
-    }
-
-    @include media(">=xxl"){
-      width: auto;
-    }
   }
 
   &__quantity .item-quantity__input{
     border-radius: 3px 3px 0 0;
     min-height: 5rem;
-
-    @include media(">=xxl"){
-      width: 14rem;
-    }
   }
 
   &__features{

@@ -6232,24 +6232,24 @@ html {
   display: flex;
   align-items: center;
   position: relative;
-  padding: .8rem 1rem .8rem 3rem;
+  padding: .8rem 1rem .8rem 5.25rem;
   border: 2px solid rgba(55, 148, 210, 0.25);
   border-radius: 6px;
 }
 
 .wished-price__img {
   position: absolute;
-  left: 0;
+  left: .75rem;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 3.6rem;
+  transform: translate(0, -50%);
+  width: 4.1rem;
 }
 
 .wished-price__text {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.15;
-  margin-right: 2rem;
+  margin-right: 1.25rem;
 }
 
 .wished-price__input[type="text"] {
@@ -6261,11 +6261,11 @@ html {
   line-height: 1.5;
   font-weight: 700;
   text-align: center;
-  width: 10rem;
+  width: 8rem;
   padding: .8rem 1rem;
   margin-left: auto;
   transition: box-shadow 0.3s ease-in-out;
-  flex: 1 0 10rem;
+  flex: 0 0 8rem;
 }
 
 .wished-price__input[type="text"]:focus {
@@ -6430,17 +6430,6 @@ html {
   margin-bottom: 2rem;
 }
 
-.product-card__fav-add {
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
-  z-index: 5;
-}
-
-.product-card__fav-add .fav-add__icon {
-  font-size: 3rem;
-}
-
 .product-card__gallery {
   margin-bottom: 2.5rem;
   position: relative;
@@ -6467,7 +6456,7 @@ html {
 .product-card__name {
   font: 1.4rem/1.4 "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
 }
 
 .product-card__baloon-tip {
@@ -6475,24 +6464,24 @@ html {
 }
 
 .product-card__price {
-  display: grid;
-  grid-template-columns: calc(40% - 1.5rem) 1fr;
-  grid-gap: 1.5rem;
-  margin: 2rem 0 1.5rem;
+  display: flex;
+  margin-bottom: 1.25rem;
 }
 
-.product-card__price .product-price__value {
-  font-size: 1.9rem;
+.product-card__product-price {
+  margin-right: 1.5rem;
 }
 
-.product-card__price .product-price__item--old .product-price__value {
-  font-size: 1.6rem;
+.product-card__product-price .product-price__value {
+  font-size: 1.8rem;
 }
 
 .product-card__wished-price {
-  margin-bottom: 1.5rem;
-  margin-left: 1.8rem;
-  max-width: 40rem;
+  margin-bottom: 1.25rem;
+}
+
+.product-card__holder-separator {
+  display: none;
 }
 
 .product-card__controls {
@@ -6778,8 +6767,30 @@ html {
     font-size: 2rem;
   }
 
+  .wished-price {
+    padding: .8rem 1rem .8rem 6rem;
+  }
+
+  .wished-price__text {
+    font-size: 1.3rem;
+    line-height: 1.25;
+    margin-right: 1.5rem;
+  }
+
   .product-card__main {
     padding: 0 2.2rem;
+  }
+
+  .product-card__price {
+    margin-bottom: 1.5rem;
+  }
+
+  .product-card__product-price .product-price__value {
+    font-size: 2.2rem;
+  }
+
+  .product-card__wished-price {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -7138,38 +7149,6 @@ html {
 
   .product-card__baloon-tip {
     margin-bottom: 1.5rem;
-  }
-
-  .product-card__holder {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-  }
-
-  .product-card__price {
-    width: 40%;
-    display: block;
-    margin: 0;
-  }
-
-  .product-card__price .product-card__product-price {
-    padding: .7rem 0;
-  }
-
-  .product-card__controls {
-    width: 50%;
-    max-width: 30rem;
-    margin-bottom: 0;
-    flex-direction: column;
-  }
-
-  .product-card__buy-btn.btn {
-    width: 100%;
-  }
-
-  .product-card__quantity {
-    width: 100%;
   }
 
   .product-card__features {
@@ -8364,48 +8343,6 @@ html {
   .product-card__main {
     padding: 0 4rem;
     grid-template-columns: 400px 1fr;
-  }
-
-  .product-card__holder {
-    justify-content: flex-start;
-  }
-
-  .product-card__price {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 2.5rem;
-    width: auto;
-    margin-right: 5rem;
-  }
-
-  .product-card__price .product-card__product-price {
-    padding: .55rem 0;
-  }
-
-  .product-card__price .product-price__value {
-    font-size: 2.2rem;
-  }
-
-  .product-card__price .product-price__item--old .product-price__value {
-    font-size: 1.8rem;
-  }
-
-  .product-card__controls {
-    width: auto;
-    flex-direction: row;
-    max-width: none;
-  }
-
-  .product-card__buy-btn.btn {
-    width: 20rem;
-  }
-
-  .product-card__quantity {
-    width: auto;
-  }
-
-  .product-card__quantity .item-quantity__input {
-    width: 14rem;
   }
 }
 
