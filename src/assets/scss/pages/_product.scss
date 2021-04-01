@@ -134,7 +134,8 @@
   }
 
   &__baloon-tip{
-    display: inline-flex;
+    display: flex;
+    width: 100%;
 
     @include media(">=md"){
       margin-bottom: 1rem;
@@ -154,7 +155,7 @@
       "controls controls";
     grid-template-columns: auto auto;
     grid-gap: 1.5rem 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     
     @include media(">=xl"){
       margin-bottom: 1.5rem;
@@ -293,6 +294,10 @@
 
   .product-list{
     padding-bottom: 3rem;
+  }
+
+  &__accordion{
+    margin-top: 2rem;
   }
 
 }

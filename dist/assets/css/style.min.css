@@ -6461,7 +6461,8 @@ html {
 }
 
 .product-card__baloon-tip {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
 }
 
 .product-card__holder {
@@ -6470,7 +6471,7 @@ html {
   grid-template-areas: "price favorite" "whished whished" "controls controls";
   grid-template-columns: auto auto;
   grid-gap: 1.5rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .product-card__price {
@@ -6548,6 +6549,10 @@ html {
 
 .product-card .product-list {
   padding-bottom: 3rem;
+}
+
+.product-card__accordion {
+  margin-top: 2rem;
 }
 
 .cart {
@@ -8175,7 +8180,6 @@ html {
   }
 
   .wished-price {
-    border: 2px solid rgba(55, 148, 210, 0.25);
     padding: 1.1rem 1.5rem 1.1rem 3.4rem;
   }
 
