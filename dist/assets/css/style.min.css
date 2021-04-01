@@ -6527,19 +6527,19 @@ html {
 
 .product-card__controls {
   grid-area: controls;
-  display: flex;
 }
 
 .product-card__buy-btn.btn {
-  width: 60%;
-  border-radius: 0 3px 3px 0;
   position: relative;
   padding-right: 1em;
   padding-left: 1em;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  min-height: 5rem;
 }
 
 .product-card__quantity {
-  width: 40%;
+  width: 100%;
 }
 
 .product-card__quantity .item-quantity__input {
@@ -7195,12 +7195,21 @@ html {
     margin-bottom: 1.5rem;
   }
 
+  .product-card__controls {
+    display: flex;
+  }
+
   .product-card__buy-btn.btn {
     width: 20rem;
+    border-radius: 0 3px 3px 0;
   }
 
   .product-card__quantity {
     width: 14rem;
+  }
+
+  .product-card__quantity .item-quantity__input {
+    border-radius: 3px 0 0 3px;
   }
 
   .product-card__features {
