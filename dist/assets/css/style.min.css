@@ -8282,14 +8282,15 @@ html {
 
   .product-card__holder {
     margin-bottom: 1.5rem;
-    grid-template-areas: "price whished whished" "separator separator separator" "controls controls favorite";
-    grid-template-columns: auto auto auto;
+    grid-template-areas: "price whished whished whished" "separator separator separator separator" "controls controls controls favorite";
+    grid-template-columns: auto auto auto auto;
     grid-gap: 2rem 1rem;
   }
 
   .product-card__wished-price {
-    max-width: 38rem;
+    max-width: 45rem;
     justify-self: end;
+    margin-left: 3rem;
   }
 
   .product-card__holder-separator {
@@ -8433,7 +8434,7 @@ html {
 
   .product-card__main {
     padding: 0 4rem;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 440px 1fr;
   }
 }
 

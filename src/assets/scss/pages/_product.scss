@@ -61,7 +61,7 @@
 
     @include media(">=xxl"){
       padding: 0 4rem;
-      grid-template-columns: 400px 1fr;
+      grid-template-columns: 440px 1fr;
     }
   }
 
@@ -160,10 +160,10 @@
     @include media(">=xl"){
       margin-bottom: 1.5rem;
       grid-template-areas:
-        "price whished whished"
-        "separator separator separator"
-        "controls controls favorite";
-      grid-template-columns: auto auto auto;
+        "price whished whished whished"
+        "separator separator separator separator"
+        "controls controls controls favorite";
+      grid-template-columns: auto auto auto auto;
       grid-gap: 2rem 1rem;
     }
   }
@@ -225,8 +225,9 @@
     grid-area: whished;
 
     @include media(">=xl"){
-      max-width: 38rem;
+      max-width: 45rem;
       justify-self: end;
+      margin-left: 3rem;
     }
   }
 
