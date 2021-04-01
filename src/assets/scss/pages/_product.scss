@@ -174,10 +174,14 @@
   }
 
   &__product-price{
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include media(">=sm"){
+      margin-right: 1.5rem;
+    }
 
     .product-price__item{
       margin: .55rem .75rem .55rem 0;
