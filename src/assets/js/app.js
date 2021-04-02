@@ -446,7 +446,8 @@ $(document).ready(function () {
             const modalBtn = $('[data-modal-id]');
             const modal = $('.modal');
 
-            modalBtn.click(function () {
+            modalBtn.click(function (e) {
+                e.preventDefault();
                 const modalTarget = '#' + $(this).data('modalId');
                 siteJS.helpers.elemFadeIn(modalTarget, 'active');
             });
