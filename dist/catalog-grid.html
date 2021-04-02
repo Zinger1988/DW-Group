@@ -2432,7 +2432,7 @@
         </form>
     </div>
 </div>
-<div class="modal modal--search close-modal" id="modal-preview">
+<div class="modal close-modal" id="modal-preview">
     <div class="modal__body modal__body--size--lg">
         <div class="modal__header">
             <h3 class="modal__header-title">Предпросмотр</h3>
@@ -2443,7 +2443,12 @@
         </div>
         <div class="modal__content">
 
-            <div class="product-card product-card--preview">
+            <div class="product-card">
+
+                <div class="product-card__preview-img">
+                    <img class="product-card__preview-img-item" src="assets/img/catalog/01.jpg" alt="image">
+                </div>
+
                 <div class="product-card__info tip-holder">
         
                     <div class="product-card__item-rating item-rating">
@@ -2454,7 +2459,8 @@
                         </a>
                     </div>
         
-                    <div class="product-card__part-number">Код товара: UTHP1010</div>
+                    <div class="product-card__part-number">ВЭД-код: 0123456789</div>
+                    <div class="product-card__part-number">Код товара: QWERTYUIOPASDFGHJKLZXCVB</div>
         
                     <h1 class="product-card__name">
                         WELLDO Вал магнитный в сборе WELLDO HP LJ P1005/ 1006/ 1007/ 1008/ 1102/ 1505/
@@ -2639,12 +2645,10 @@
 
         </div><!-- modal content -->
         <div class="modal__footer">
-            <button class="modal__footer-btn btn btn--style--wired-grey close-modal">
-                <span class="btn__text close-modal">Закрыть</span>
-            </button>
-            <a href="#" class="modal__footer-btn btn btn--style--default">
-                <span class="btn__text">Подробнее</span>
-            </a>
+            <div class="control-pad control-pad--modal">
+                <button class="control-pad__btn btn btn--style--wired-default close-modal" href="#">Закрыть</button>
+                <a class="control-pad__btn btn btn--style--default" href="#">Подробнее о товаре</a>
+            </div><!-- control pad -->
         </div>
     </div>
 </div>
