@@ -26,16 +26,20 @@
     opacity: 0;
     @include animate(transform opacity, .2s, 'ease-out');
 
-    @include media('>=md'){
-      padding: 3.5rem 4rem 4rem;
-    }
-
     &--size--sm{
       max-width: 40rem;
+
+      @include media('>=md'){
+        padding: 2.5rem 3rem 3rem;
+      }
     }
 
     &--size--lg{
       max-width: 72rem;
+
+      @include media('>=md'){
+        padding: 3.5rem 4rem 4rem;
+      }
     }
 
 
@@ -103,6 +107,17 @@
     }
   }
 
+  &__title-icon{
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 8rem;
+
+    @include media('>=md'){
+      margin: 0 auto 2rem;
+      width: 10rem;
+    }
+  }
+
   &__content:not(:last-child){
     margin-bottom: 2rem;
 
@@ -125,6 +140,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &--info &__content{
+    text-align: center;
   }
 
 }
