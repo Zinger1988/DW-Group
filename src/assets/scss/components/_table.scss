@@ -11,7 +11,8 @@
   }
 
   &__row{
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 1.25rem 0;
     background-color: #F2F2F2;
     margin-bottom: 1rem;
@@ -19,7 +20,7 @@
     @include animate(background-color color);
 
     @include media(">=md"){
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
     }
 
@@ -115,7 +116,11 @@
       display: block;
 
       .table__cell-sub{
-        padding: 1rem 1rem 1.5rem;
+        padding: 3rem 1rem 1.5rem;
+
+        @include media(">=xl"){
+          padding: 1rem 1rem 1.5rem;
+        }
       }
     }
   }
@@ -123,14 +128,34 @@
 
 @mixin table-build($breakpoint, $tableModifier) {
 
-  .#{$tableModifier}.table {
+  .#{$tableModifier} {
 
     @include media('<#{$breakpoint}') {
       .table__row-head {
         display: none;
       }
 
+      .table__row{
+
+        &--toggler{
+          position: relative;
+          padding-bottom: 3rem;
+          margin-bottom: 3rem;
+
+          &--active {
+            margin-bottom: 0;
+
+            .table__cell {
+              border-bottom: 1px solid rgba(255,255,255,.1);
+            }
+          }
+        }
+      }
+
       .table__cell {
+        border-bottom: 1px solid #fff;
+        @include animate(border);
+
         &::before {
           content: attr(data-col-name);
           padding-right: .75rem;
@@ -139,16 +164,34 @@
           font-weight: 700;
         }
 
-        &:not(:last-child) {
-          border-bottom: 1px solid #fff;
-        }
-
         .table-cell-inner {
           max-width: 50%;
           padding-left: .75rem;
           position: relative;
           z-index: 5;
         }
+
+        &--dropdown{
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          background-color: $mySin;
+          border-radius: 4px;
+        }
+
+        &--check{
+          order: 1;
+          flex-direction: row-reverse;
+
+          .checkbox-radio{
+            align-items: center;
+          }
+        }
+      }
+
+      .table__row-sub--active{
+        margin-bottom: 3rem;
       }
     }
 
@@ -190,6 +233,10 @@
         &--check {
           padding-right: 0;
           width: auto;
+
+          .checkbox-radio__label{
+            display: none;
+          }
         }
 
         &--dropdown {
