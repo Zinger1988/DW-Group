@@ -245,7 +245,7 @@ $(document).ready(function () {
                     $('.table__cell-sub-content').not($(this).next('.table__row-sub').find('.table__cell-sub-content')).slideUp();
                     $(this).next('.table__row-sub').toggleClass('table__row-sub--active');
                     $('.table__row-sub').not($(this).next('.table__row-sub')).removeClass('table__row-sub--active');
-                    $(this).find('.table__cell-dropdown-text').toggleClass('active');
+                    // $(this).find('.table__dropdown-text').toggleClass('table__dropdown-text--active');
                 }
             })
 

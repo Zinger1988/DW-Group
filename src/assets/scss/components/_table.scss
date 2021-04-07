@@ -17,18 +17,102 @@
     flex-direction: column;
     padding: 1.25rem 0;
     background-color: #F2F2F2;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     border-radius: 4px;
     @include animate(background-color color);
-
-    @include media(">=md"){
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
 
     &:hover {
       background-color: rgba($mySin,.2);
     }
+
+    &--toggler{
+      cursor: pointer;
+      padding-bottom: 0;
+      @include animate(background-color color margin);
+  
+      &--active{
+        background-color: #77818C;
+        color: $white;
+        border-radius: 4px 4px 0 0;
+        margin-bottom: 0;
+  
+        &:hover{
+          background-color: #6B747E;
+        }
+
+        #{$this}__cell{
+          border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+  
+        #{$this}__dropdown{
+          border-radius: 0;
+          background-color: #5C6772;
+        }
+  
+        #{$this}__dropdown-icon::before{
+          transform: rotate(180deg);
+        }
+  
+        #{$this}__dropdown-text{
+          display: block;
+  
+          &--active{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__row-head{
+    display: none;
+  }
+
+  &__row-sub{
+    background-color: #8E9AA7;
+
+    &--active{
+      display: block;
+      margin-bottom: 3rem;
+
+      #{$this}__cell-sub{
+        padding: 1rem 1rem 1.5rem;
+      }
+    }
+  }
+
+  &__dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    padding: 1rem;
+    background-color: $mySin;
+    @include animate(background-color, border-radius);
+
+    @include media('>=sm') {
+      padding: 1.25rem;
+    }
+
+    @include media('>=md') {
+      padding: 1.5rem;
+    }
+  }
+
+  &__dropdown-text{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: .75rem;
+    display: none;
+
+    &--active{
+      display: block;
+    }
+  }
+
+  &__dropdown-icon{
+    font-size: 1.2rem;
   }
 
   &__cell{
@@ -39,6 +123,8 @@
     line-height: 1.428;
     padding: .5rem 1rem;
     vertical-align: middle;
+    border-bottom: 1px solid #fff;
+    @include animate(border);
 
     @include media('>=sm') {
       font-size: 1.3rem;
@@ -50,17 +136,27 @@
       padding: .8rem 2.4rem;
     }
 
-    @include media('>=md') {
-      min-width: 50%;
-      flex-grow: 1;
-    }
-
-    @include media('>=xxxl') {
+    @include media('>=xxl') {
       font-size: 1.4rem;
       padding: 1.2rem 2rem;
     }
 
-    &--mob--primary{
+    &[data-col-name]::before {
+      content: attr(data-col-name);
+      padding-right: .75rem;
+      position: relative;
+      z-index: 5;
+      font-weight: 700;
+    }
+
+    #{$this}__cell-inner {
+      max-width: 50%;
+      padding-left: .75rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    &--wide{
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
@@ -73,191 +169,111 @@
         padding-left: 0;
       }
     }
-  }
 
-  &__row--toggler{
-    cursor: pointer;
-    @include animate(background-color color margin);
+    &--dropdown{
+      display: block;
+      padding: 0;
 
-    &--active{
-      background-color: #77818C;
-      color: $white;
-      border-radius: 4px 4px 0 0;
-      margin-bottom: 0;
-
-      &:hover{
-        background-color: #6B747E;
+      #{$this}__cell-inner {
+        max-width: none;
+        padding: 0;
       }
 
-      .table__cell--dropdown-icon::before{
-        transform: rotate(180deg);
+      @include media('>=sm') {
+          padding: 0;
       }
-    }
-
-    .table__cell-dropdown-text{
-      display: none;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-right: 1rem;
+  
+      @include media('>=600px') {
+          padding: 0;
+      }
     }
   }
 
-  &__row-sub{
-    background-color: #8E9AA7;
+  &__cell-sub{
+    display: block;
+    padding: 0 1rem;
+    @include animate(padding);
+  }
 
-    .table__cell-sub{
+  &__cell-sub-content{
+    display: none;
+    background-color: $white;
+    border-radius: 4px;
+
+    &.active{
       display: block;
-      padding: 0 1rem;
-      @include animate(padding);
-    }
-
-    .table__cell-sub-content{
-      display: none;
-      background-color: $white;
-      border-radius: 4px;
-
-      &.active{
-        display: block;
-      }
-    }
-
-    &--active{
-      display: block;
-
-      .table__cell-sub{
-        padding: 3rem 1rem 1.5rem;
-
-        @include media(">=xl"){
-          padding: 1rem 1rem 1.5rem;
-        }
-      }
     }
   }
 }
 
 @mixin table-build($breakpoint, $tableModifier) {
 
+  $this: '.table'; /* THIS value */
+
   .#{$tableModifier} {
-
-    @include media('<#{$breakpoint}') {
-      .table__row-head {
-        display: none;
-      }
-
-      .table__row{
-
-        &--toggler{
-          position: relative;
-          padding-bottom: 0;
-
-          .table__cell-dropdown-text--collapsed{
-            display: block;
-          }
-
-          &--active {
-            margin-bottom: 0;
-
-            .table__cell {
-              border-bottom: 1px solid rgba(255,255,255,.1);
-
-              &--dropdown{
-                border-radius: 0;
-                background-color: #5C6772;
-              }
-            }
-
-            .table__cell-dropdown-text--collapsed{
-              display: none;
-            }
-
-            .table__cell-dropdown-text--uncollapsed{
-              display: block;
-            }
-
-          }
-        }
-      }
-
-      .table__cell {
-        border-bottom: 1px solid #fff;
-        @include animate(border);
-
-        &::before {
-          content: attr(data-col-name);
-          padding-right: .75rem;
-          position: relative;
-          z-index: 5;
-          font-weight: 700;
-        }
-
-        .table-cell-inner {
-          max-width: 50%;
-          padding-left: .75rem;
-          position: relative;
-          z-index: 5;
-        }
-
-        &--dropdown{
-          background-color: $mySin;
-          border-radius: 0 0 4px 4px;
-          justify-content: center;
-          padding: 1rem;
-          text-transform: uppercase;
-
-          .table__cell-inner{
-            display: flex;
-          }
-        }
-
-        &--check{
-          order: 1;
-          flex-direction: row-reverse;
-
-          .checkbox-radio{
-            align-items: center;
-          }
-        }
-      }
-
-      .table__row-sub--active{
-        margin-bottom: 3rem;
-      }
-    }
 
     @include media('>=#{$breakpoint}') {
       display: table;
 
-      .table__tbody {
+      #{$this}__tbody {
         display: table-row-group;
       }
 
-      .table__row-head {
+      #{$this}__row {
         display: table-row;
-      }
 
-      .table__cell-head {
-        display: table-cell;
-        border-bottom: 2px solid $mySin;
-        font-size: 1.1rem;
-        font-weight: 700;
-        padding: .8rem 1.5rem;
-        white-space: nowrap;
-        text-align: left;
+        &:not(:hover):nth-child(odd){
+          background-color: #FAFAFA;
+        }
+        
+        &--toggler{
 
-        &.table__cell-head--hidden{
-          font-size: 0;
+          #{$this}__cell {
+            padding-top: 2.2rem;
+            padding-bottom: 2.2rem;
+          }
         }
       }
 
-      .table__row {
+      #{$this}__row-head {
         display: table-row;
       }
 
-      .table__cell {
+      #{$this}__row-sub--active {
+        display: table-row;
+
+        #{$this}__cell-sub {
+          padding: 2rem 2rem 3rem;
+        }
+      }
+
+      #{$this}__dropdown{
+        padding: 0;
+        background-color: unset;
+      }
+
+      #{$this}__dropdown-text,
+      #{$this}__dropdown-text.active{
+        display: none;
+      }
+
+      #{$this}__dropdown-icon{
+        color: #A2B1C0;
+      }
+
+      #{$this}__cell {
         display: table-cell;
-        font-size: 1.3rem;
-        padding: .8rem 1.5rem;
         @include animate(padding);
+        padding: 1.2rem 2.4rem;
+
+        &[data-col-name]::before {
+          display: none;
+        }
+
+        #{$this}__cell-inner {
+          max-width: none;
+          padding-left: 0;
+        }
 
         &--check {
           padding-right: 0;
@@ -280,51 +296,41 @@
             transform: translate(-50%, -50%);
             color: rgba(#A2B1C0, .5);
           }
-
-          .table__cell--dropdown-icon {
-            font-size: 1.2rem;
-            color: #A2B1C0;
-
-            &::before {
-              @include animate(transform)
-            }
-          }
         }
       }
 
-      .table__row--toggler {
-        .table__cell {
-          padding-top: 2.2rem;
-          padding-bottom: 2.2rem;
+      #{$this}__cell-head {
+        display: table-cell;
+        border-bottom: 2px solid $mySin;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: .8rem 2.4rem;
+        white-space: nowrap;
+        text-align: left;
+
+        &--hidden{
+          font-size: 0;
         }
       }
 
-      .table__row-sub {
-        .table__cell-sub {
-          display: table-cell;
-          padding: 0 2rem;
-        }
+      #{$this}__cell-sub {
+        display: table-cell;
+        padding: 0 2rem;
+      }
 
-        .table__cell-sub-content {
-          padding: 1rem;
-        }
-
-        &--active {
-          display: table-row;
-
-          .table__cell-sub {
-            padding: 2rem 2rem 3rem;
-          }
-        }
+      #{$this}__cell-sub-content {
+        padding: 1rem;
       }
     }
 
     @include media('>=xxxl'){
-      .table__cell-head{
-        font-size: 1.2rem;
-        padding: .8rem 2rem;
+      #{$this}__cell-head{
+        font-size: 1.3rem;
+        padding: .8rem 2.4rem;
       }
     }
+
+    
   }
 }
 
