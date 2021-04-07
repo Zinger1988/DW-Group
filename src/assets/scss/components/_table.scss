@@ -6,6 +6,8 @@
   border-collapse: collapse;
   table-layout: auto;
 
+  $this: &;
+
   &__tbody{
     display: block;
   }
@@ -65,7 +67,7 @@
       width: 100%;
       flex-shrink: 0;
 
-      .table__cell-inner{
+      #{$this}__cell-inner{
         max-width: none;
         flex: 0 0 100%;
         padding-left: 0;
@@ -90,6 +92,13 @@
       .table__cell--dropdown-icon::before{
         transform: rotate(180deg);
       }
+    }
+
+    .table__cell-dropdown-text{
+      display: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-right: 1rem;
     }
   }
 
@@ -139,15 +148,32 @@
 
         &--toggler{
           position: relative;
-          padding-bottom: 3rem;
-          margin-bottom: 3rem;
+          padding-bottom: 0;
+
+          .table__cell-dropdown-text--collapsed{
+            display: block;
+          }
 
           &--active {
             margin-bottom: 0;
 
             .table__cell {
               border-bottom: 1px solid rgba(255,255,255,.1);
+
+              &--dropdown{
+                border-radius: 0;
+                background-color: #5C6772;
+              }
             }
+
+            .table__cell-dropdown-text--collapsed{
+              display: none;
+            }
+
+            .table__cell-dropdown-text--uncollapsed{
+              display: block;
+            }
+
           }
         }
       }
@@ -172,12 +198,15 @@
         }
 
         &--dropdown{
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          transform: translate(-50%,-50%);
           background-color: $mySin;
-          border-radius: 4px;
+          border-radius: 0 0 4px 4px;
+          justify-content: center;
+          padding: 1rem;
+          text-transform: uppercase;
+
+          .table__cell-inner{
+            display: flex;
+          }
         }
 
         &--check{

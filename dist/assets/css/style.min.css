@@ -5482,6 +5482,13 @@ html {
   transform: rotate(180deg);
 }
 
+.table__row--toggler .table__cell-dropdown-text {
+  display: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
 .table__row-sub {
   background-color: #8E9AA7;
 }
@@ -8686,8 +8693,11 @@ html {
 
   .table--build-xl .table__row--toggler {
     position: relative;
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
+    padding-bottom: 0;
+  }
+
+  .table--build-xl .table__row--toggler .table__cell-dropdown-text--collapsed {
+    display: block;
   }
 
   .table--build-xl .table__row--toggler--active {
@@ -8696,6 +8706,19 @@ html {
 
   .table--build-xl .table__row--toggler--active .table__cell {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .table--build-xl .table__row--toggler--active .table__cell--dropdown {
+    border-radius: 0;
+    background-color: #5C6772;
+  }
+
+  .table--build-xl .table__row--toggler--active .table__cell-dropdown-text--collapsed {
+    display: none;
+  }
+
+  .table--build-xl .table__row--toggler--active .table__cell-dropdown-text--uncollapsed {
+    display: block;
   }
 
   .table--build-xl .table__cell {
@@ -8719,12 +8742,15 @@ html {
   }
 
   .table--build-xl .table__cell--dropdown {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #FFB41E;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
+    justify-content: center;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+
+  .table--build-xl .table__cell--dropdown .table__cell-inner {
+    display: flex;
   }
 
   .table--build-xl .table__cell--check {
@@ -8823,8 +8849,11 @@ html {
 
   .table--build-lg .table__row--toggler {
     position: relative;
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
+    padding-bottom: 0;
+  }
+
+  .table--build-lg .table__row--toggler .table__cell-dropdown-text--collapsed {
+    display: block;
   }
 
   .table--build-lg .table__row--toggler--active {
@@ -8833,6 +8862,19 @@ html {
 
   .table--build-lg .table__row--toggler--active .table__cell {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .table--build-lg .table__row--toggler--active .table__cell--dropdown {
+    border-radius: 0;
+    background-color: #5C6772;
+  }
+
+  .table--build-lg .table__row--toggler--active .table__cell-dropdown-text--collapsed {
+    display: none;
+  }
+
+  .table--build-lg .table__row--toggler--active .table__cell-dropdown-text--uncollapsed {
+    display: block;
   }
 
   .table--build-lg .table__cell {
@@ -8856,12 +8898,15 @@ html {
   }
 
   .table--build-lg .table__cell--dropdown {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #FFB41E;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
+    justify-content: center;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+
+  .table--build-lg .table__cell--dropdown .table__cell-inner {
+    display: flex;
   }
 
   .table--build-lg .table__cell--check {
