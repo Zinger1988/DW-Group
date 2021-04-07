@@ -25,6 +25,10 @@
       background-color: rgba($mySin,.2);
     }
 
+    &:last-child{
+      margin-bottom: 0;
+    }
+
     &--toggler{
       cursor: pointer;
       padding-bottom: 0;
@@ -199,10 +203,15 @@
     display: none;
     background-color: $white;
     border-radius: 4px;
+    padding: 1rem;
 
     &.active{
       display: block;
     }
+  }
+
+  &__cell-sub-table{
+    margin-bottom: 2rem;
   }
 }
 
@@ -316,10 +325,6 @@
       #{$this}__cell-sub {
         display: table-cell;
         padding: 0 2rem;
-      }
-
-      #{$this}__cell-sub-content {
-        padding: 1rem;
       }
     }
 

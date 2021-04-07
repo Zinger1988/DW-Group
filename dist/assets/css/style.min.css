@@ -5438,6 +5438,10 @@ html {
   background-color: rgba(255, 180, 30, 0.2);
 }
 
+.table__row:last-child {
+  margin-bottom: 0;
+}
+
 .table__row--toggler {
   cursor: pointer;
   padding-bottom: 0;
@@ -5580,10 +5584,15 @@ html {
   display: none;
   background-color: #ffffff;
   border-radius: 4px;
+  padding: 1rem;
 }
 
 .table__cell-sub-content.active {
   display: block;
+}
+
+.table__cell-sub-table {
+  margin-bottom: 2rem;
 }
 
 /* THIS value */
@@ -7739,10 +7748,6 @@ html {
     padding: 0 2rem;
   }
 
-  .table--build-lg .table__cell-sub-content {
-    padding: 1rem;
-  }
-
   .gallery__btn {
     width: 3rem;
     height: 6rem;
@@ -8311,10 +8316,6 @@ html {
   .table--build-xl .table__cell-sub {
     display: table-cell;
     padding: 0 2rem;
-  }
-
-  .table--build-xl .table__cell-sub-content {
-    padding: 1rem;
   }
 
   .gallery__btn {
