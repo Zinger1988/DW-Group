@@ -3,6 +3,7 @@
   display: flex;
   @include descending-z-index();
   padding-right: .9rem;
+  overflow: auto hidden;
 
   $this: &;
 
@@ -14,12 +15,9 @@
       display: block;
       text-align: center;
       color: $regentGray;
-      font-size: 1.3rem;
       line-height: 1;
       white-space: nowrap;
       position: relative;
-      padding: 2.3rem .5rem 2.3rem 2rem;
-      margin-right: 2.25rem;
       font-family: $headings-font-family;
       font-weight: 700;
       text-transform: uppercase;
@@ -27,6 +25,15 @@
       background: rgb(236,236,236);
       background: linear-gradient(0deg, rgba(236,236,236,1) 0%, rgba(248,248,248,1) 30%, rgba(248,248,248,1) 100%);
       @include animate(color);
+      padding: 1.6rem .5rem 1.6rem 1.8rem;
+      font-size: 1.2rem;
+      margin-right: 1.5rem;
+
+      @include media(">=md"){
+        font-size: 1.3rem;
+        padding: 2.3rem 2.5rem 2.3rem 4rem;
+        margin-right: 2.25rem;
+      }
 
       &:hover{
         color: inherit;
@@ -37,7 +44,7 @@
         position: absolute;
         left: 100%;
         top: 0;
-        width: 3.5rem;
+        width: 2.7rem;
         height: 100%;
         z-index: 5;
         background: url("data:image/svg+xml;base64,\
@@ -64,6 +71,10 @@
         dD4NCgkJPHBhdGggaWQ9ItCa0L7QvdGC0YPRgF8zMTI2LTJfMTJfIiBjbGFzcz0ic3QxIiBkPSJ\
         NMjkuOSw1NS42TDE0LjQsOS4zQzEyLjYsMy44LDYuNywwLDAsMHY2MGgzNi42QzMzLjcsNjAuMS\
         wzMSw1OC40LDI5LjksNTUuNnoiDQoJCQkvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K") left top / cover;
+
+        @include media(">=md"){
+          width: 3.5rem;
+        }
       }
     }
 
