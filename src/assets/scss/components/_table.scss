@@ -73,8 +73,6 @@
   }
 
   &__row-sub{
-    background-color: #8E9AA7;
-
     &--active{
       display: block;
       margin-bottom: 3rem;
@@ -93,6 +91,7 @@
     border-radius: 0 0 4px 4px;
     padding: 1rem;
     background-color: $mySin;
+    cursor: pointer;
     @include animate(background-color, border-radius);
 
     @include media('>=sm') {
@@ -101,6 +100,16 @@
 
     @include media('>=md') {
       padding: 1.5rem;
+    }
+
+    &--sub{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: $white;
+      border-top: 1px dotted rgba(#8E9AA7, .3);
+      z-index: 5;
     }
   }
 
@@ -117,6 +126,23 @@
 
   &__dropdown-icon{
     font-size: 1.2rem;
+  }
+
+  &__dropdown-btn{
+    @extend %buttonreset;
+    display: inline-flex;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 20px;
+    border: 1px solid rgba(#8E9AA7, .4);
+    @include animate(background-color border);
+
+    &:hover{
+      border: 1px solid transparent;
+      background-color: rgba(#8E9AA7, .15);
+    }
   }
 
   &__cell{
@@ -196,14 +222,17 @@
   &__cell-sub{
     display: block;
     padding: 0 1rem;
+    background-color: #8E9AA7;
     @include animate(padding);
+    border-radius: 0 0 4px 4px;
   }
 
   &__cell-sub-content{
     display: none;
+    position: relative;
     background-color: $white;
     border-radius: 4px;
-    padding: 1rem;
+    padding: 1rem 1rem 9rem;
 
     &.active{
       display: block;
@@ -212,6 +241,31 @@
 
   &__cell-sub-table{
     margin-bottom: 2rem;
+  }
+
+  &__order-summary{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    $this: ".order-summary";
+
+    @include media(">=sm"){
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    // #{$this}__list{
+    //   padding: 0 1rem;
+
+    //   @include media(">=sm"){
+    //     padding: 0 0 0 2rem;
+    //   }
+    // }
+
+    // #{$this}__product-price{
+    //   margin-right: 2rem;
+    // }
+    
   }
 }
 
@@ -256,24 +310,24 @@
         }
       }
 
-      #{$this}__dropdown{
+      #{$this}__dropdown:not(#{$this}__dropdown--sub){
         padding: 0;
         background-color: unset;
-      }
 
-      #{$this}__dropdown-text,
-      #{$this}__dropdown-text.active{
-        display: none;
-      }
+        #{$this}__dropdown-text,
+        #{$this}__dropdown-text.active{
+          display: none;
+        }
 
-      #{$this}__dropdown-icon{
-        color: #A2B1C0;
+        #{$this}__dropdown-icon{
+          color: #A2B1C0;
+        }
       }
 
       #{$this}__cell {
         display: table-cell;
         @include animate(padding);
-        padding: 1.2rem 2.4rem;
+        padding: 1.2rem 2rem;
 
         &[data-col-name]::before {
           display: none;
@@ -313,7 +367,7 @@
         border-bottom: 2px solid $mySin;
         font-size: 1.1rem;
         font-weight: 700;
-        padding: .8rem 2.4rem;
+        padding: .8rem 2rem;
         white-space: nowrap;
         text-align: left;
 
@@ -325,13 +379,20 @@
       #{$this}__cell-sub {
         display: table-cell;
         padding: 0 2rem;
+        border-radius: 0;
+      }
+
+      #{$this}__cell-sub-content{
+        padding-bottom: 10rem;
       }
     }
 
-    @include media('>=xxxl'){
+    @include media('>=1400px'){
       #{$this}__cell-head{
-        font-size: 1.3rem;
-        padding: .8rem 2.4rem;
+        &:not(#{$this}__cell-head--hidden){
+          font-size: 1.3rem;
+          padding: .8rem 2rem;
+        }
       }
     }
 

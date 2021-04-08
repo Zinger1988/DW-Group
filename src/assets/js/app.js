@@ -235,6 +235,7 @@ $(document).ready(function () {
         tableSub(){
 
             const tableRowToggler = $('.table__row--toggler');
+            const tableSubContentBtn = $('.table__dropdown-btn');
 
             tableRowToggler.click(function (e) {
                 e.stopPropagation();
@@ -247,6 +248,12 @@ $(document).ready(function () {
                     $('.table__row-sub').not($(this).next('.table__row-sub')).removeClass('table__row-sub--active');
                     // $(this).find('.table__dropdown-text').toggleClass('table__dropdown-text--active');
                 }
+            })
+
+            tableSubContentBtn.click(function(){
+                $(this).closest('.table__cell-sub-content').slideUp();
+                $(this).closest('.table__row-sub').prev('.table__row--toggler').removeClass('table__row--toggler--active');
+                $(this).closest('.table__row-sub').removeClass('table__row-sub--active');
             })
 
         },
