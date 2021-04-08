@@ -1,6 +1,5 @@
 .checkbox-radio{
   display: flex;
-  align-items: baseline;
   cursor: pointer;
 
   $this: &;
@@ -55,6 +54,7 @@
   &__label{
     margin-left: 1rem;
     flex-grow: 1;
+    align-self: center;
   }
 
   &--count{

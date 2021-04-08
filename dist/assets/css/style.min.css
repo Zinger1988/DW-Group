@@ -4228,7 +4228,6 @@ html {
 
 .checkbox-radio {
   display: flex;
-  align-items: baseline;
   cursor: pointer;
 }
 
@@ -4275,6 +4274,7 @@ html {
 .checkbox-radio__label {
   margin-left: 1rem;
   flex-grow: 1;
+  align-self: center;
 }
 
 .checkbox-radio--count .checkbox-radio__label {
@@ -5589,6 +5589,18 @@ html {
   padding-left: 0;
 }
 
+.table__cell--check {
+  order: 1;
+  padding-top: 1.4rem;
+  padding-bottom: 0;
+  font-size: 1.6rem;
+  border-bottom: none;
+}
+
+.table__cell--check .checkbox-radio__label {
+  font-size: 1.4rem;
+}
+
 .table__cell--dropdown {
   display: block;
   padding: 0;
@@ -6844,6 +6856,16 @@ html {
     padding: .75rem 2rem;
   }
 
+  .table__cell--check {
+    font-size: 1.8rem;
+    padding-top: 1.6rem;
+    padding-bottom: 0;
+  }
+
+  .table__cell--check .checkbox-radio__label {
+    font-size: 1.5rem;
+  }
+
   .table__cell--dropdown {
     padding: 0;
   }
@@ -7015,6 +7037,12 @@ html {
   .table__cell {
     font-size: 1.4rem;
     padding: .8rem 2.4rem;
+  }
+
+  .table__cell--check {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 
   .table__cell--dropdown {
@@ -7739,8 +7767,8 @@ html {
 
   .table--build-lg .table__cell {
     display: table-cell;
-    transition: padding 0.3s ease-in-out;
     padding: 1.2rem 2rem;
+    transition: padding 0.3s ease-in-out;
   }
 
   .table--build-lg .table__cell[data-col-name]::before {
@@ -7755,6 +7783,8 @@ html {
   .table--build-lg .table__cell--check {
     padding-right: 0;
     width: auto;
+    border-bottom: 1px solid #fff;
+    font-size: 1.4rem;
   }
 
   .table--build-lg .table__cell--check .checkbox-radio__label {
@@ -8314,8 +8344,8 @@ html {
 
   .table--build-xl .table__cell {
     display: table-cell;
-    transition: padding 0.3s ease-in-out;
     padding: 1.2rem 2rem;
+    transition: padding 0.3s ease-in-out;
   }
 
   .table--build-xl .table__cell[data-col-name]::before {
@@ -8330,6 +8360,8 @@ html {
   .table--build-xl .table__cell--check {
     padding-right: 0;
     width: auto;
+    border-bottom: 1px solid #fff;
+    font-size: 1.4rem;
   }
 
   .table--build-xl .table__cell--check .checkbox-radio__label {
@@ -8659,6 +8691,12 @@ html {
   .table__cell {
     font-size: 1.4rem;
     padding: 1.2rem 2rem;
+  }
+
+  .table__cell--check {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 
   .product-hor__desc {
