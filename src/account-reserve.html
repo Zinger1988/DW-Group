@@ -1,0 +1,87 @@
+---
+layout: account
+title: account
+---
+
+<table class="table table--build-xl account__table">
+    <h1 class="h3">Резервы</h1>
+    {{> table-reserve }}
+</table>
+
+<div class="order-summary table__order-summary">
+
+    <div class="order-summary__product-price product-price">
+        <div class="product-price__pre">Итого, к оплате</div>
+        <div class="product-price__item">
+            <span class="product-price__value">12.90</span>
+            <span class="product-price__currency">&#8372;</span>
+        </div>
+    </div>
+
+    <ul class="order-summary__list">
+        <li class="order-summary__list-item">
+            <div class="order-summary__list-attr">
+                <span class="order-summary__list-inner">Всего позиций</span>
+            </div>
+            <div class="order-summary__list-param">
+                <span class="order-summary__list-inner">1</span>
+            </div>
+        </li>
+        <li class="order-summary__list-item">
+            <div class="order-summary__list-attr">
+                <span class="order-summary__list-inner">Всего товаров, шт</span>
+            </div>
+            <div class="order-summary__list-param">
+                <span class="order-summary__list-inner">1</span>
+            </div>
+        </li>
+        <li class="order-summary__list-item">
+            <div class="order-summary__list-attr">
+                <span class="order-summary__list-inner">Общий вес (кг)</span>
+            </div>
+            <div class="order-summary__list-param">
+                <span class="order-summary__list-inner">0.00</span>
+            </div>
+        </li>
+        <li class="order-summary__list-item">
+            <div class="order-summary__list-attr">
+                <span class="order-summary__list-inner">Общий объем (м<sup>3</sup>)</span>
+            </div>
+            <div class="order-summary__list-param">
+                <span class="order-summary__list-inner">0.00</span>
+            </div>
+        </li>
+        <li class="order-summary__list-item">
+            <div class="order-summary__list-attr">
+                <span class="order-summary__list-inner">Способ оплаты</span>
+            </div>
+            <div class="order-summary__list-param">
+                <span class="order-summary__list-inner">Наличный</span>
+            </div>
+        </li>
+        <li class="order-summary__list-item">
+            <div class="order-summary__list-attr">
+                <span class="order-summary__list-inner">Метод доставки</span>
+            </div>
+            <div class="order-summary__list-param">
+                <span class="order-summary__list-inner">не определен</span>
+            </div>
+        </li>
+    </ul><!-- order-summary list -->
+
+    <div class="order-summary__controls">
+        <button class="order-summary__controls-btn">
+            <i class="order-summary__controls-icon icon icon--globe"></i>
+            <span class="order-summary__controls-text">Добавить выбранное в текущий заказ</span>
+        </button>
+        <button class="order-summary__controls-btn">
+            <i class="order-summary__controls-icon icon icon--globe"></i>
+            <span class="order-summary__controls-text">Добавить все в текущий заказ</span>
+        </button>
+        <button class="order-summary__controls-btn">
+            <i class="order-summary__controls-icon icon icon--globe"></i>
+            <span class="order-summary__controls-text">Распечатать заказ</span>
+        </button>
+    </div><!-- order-summary controls -->
+
+</div><!-- order-summary -->
