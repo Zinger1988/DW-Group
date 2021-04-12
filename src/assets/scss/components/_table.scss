@@ -19,10 +19,19 @@
     background-color: #F2F2F2;
     margin-bottom: 1.25rem;
     border-radius: 4px;
-    @include animate(background-color color);
+    @include animate(color);
+
+    .text-overflow__toggle{
+      justify-content: flex-start;
+      background: linear-gradient(0deg, #F2F2F2 15%, rgba(#F2F2F2, 0) 100%);
+    }
 
     &:hover {
-      background-color: rgba($mySin,.2);
+      background-color: #FFECC6;
+
+      .text-overflow__toggle{
+        background: linear-gradient(0deg, #FFECC6 15%, rgba(#FFECC6, 0) 100%);
+      }
     }
 
     &:last-child{
@@ -288,6 +297,62 @@
       padding-right: 2rem;
     }
   }
+
+  &__product-name{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    
+    &:not(:last-child){
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__availability{
+    font-size: 1.2rem;
+    color: #98A3B3;
+
+    @include media(">=md"){
+      font-size: 1.3rem;
+    }
+  }
+
+  &__status-radio{
+
+    .checkbox-radio__input[type="radio"]{
+
+      ~ .checkbox-radio__toggler{
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        color: transparent;
+        @include animate(background-color, .1s);
+
+        &::before{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%) scale(0);
+          content: "\e823";
+          font: .7em/1 "Fontello";
+          line-height: 1;
+          @include animate(transform, .2s);
+        }
+      }
+
+      &:checked{
+        ~ .checkbox-radio__toggler{
+          box-shadow: none;
+          background-color: $forestGreen;
+          color: #fff;
+
+          &::before{
+            transform: translate(-50%,-50%) scale(1);
+          }
+        }
+      }
+    }
+  }
 }
 
 @mixin table-build($breakpoint, $tableModifier) {
@@ -308,6 +373,10 @@
 
         &:not(:hover):nth-child(odd){
           background-color: #FAFAFA;
+
+          .text-overflow__toggle{
+            background: linear-gradient(0deg, #FAFAFA 15%, rgba(#FAFAFA, 0) 100%);
+          }
         }
         
         &--toggler{

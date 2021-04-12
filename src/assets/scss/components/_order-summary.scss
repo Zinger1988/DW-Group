@@ -31,8 +31,8 @@
             grid-template-columns: 1fr 1fr;
             grid-gap: .7rem 4rem;
             align-self: flex-start;
-            margin: .7rem auto 0;
-            max-width: 58rem;
+            margin: .7rem auto 0 0;
+            max-width: 70rem;
         }
     }
 
@@ -144,7 +144,7 @@
         @include media(">=xl"){
             padding: 0;
             background-color: unset;
-            margin-left: 5rem;
+            margin-left: 3rem;
         }
 
         .product-price__value{
@@ -181,11 +181,12 @@
             padding: 0;
             background: none;
             margin-top: 0;
-            margin-right: 3rem;
+            margin-right: 1rem;
+            padding-right: 2rem;
         }
 
-        @include media(">=lg"){
-            margin-right: 5rem;
+        @include media(">=xl"){
+            margin-right: auto;
         }
     }
 

@@ -17,6 +17,8 @@
   min-width: 10em;
   min-height: 3.384em;
 
+  $this: &;
+
   @include media('>=md'){
     padding: 1.023em 2em;
     border-radius: 1.923em;
@@ -66,6 +68,7 @@
 
   &--style--grey{
     background-color: $mercury;
+    @include animate(background-color);
 
     &:hover{
       background-color: $tiara;
@@ -146,15 +149,44 @@
     
     &--lg{
       padding: 1.09em 2em;
-      border-radius: 2.089em;
       min-height: 3.996em;
+      border-radius: 3px;
+
+      &:not(#{$this}--plain){
+        border-radius: 2.089em;
+      }
 
       @include media('>=md'){
         padding: 1.2em 2.36em;
-        border-radius: 2.271em;
         min-height: 4.468em;
+
+        &:not(#{$this}--plain){
+          border-radius: 2.271em;
+        }
       }
     }
 
+    &--sm{
+      font-size: 1rem;
+      padding: .7em 1.5em;
+      border-radius: 3px;
+      min-height: 2.7em;
+      min-width: 0;
+
+      &:not(#{$this}--plain){
+        border-radius: 1.35em;
+      }
+
+      @include media('>=md'){
+        min-width: 0;
+        font-size: 1.2rem;
+        padding: .7em 1.5em;
+        min-height: 2.7em;
+
+        &:not(#{$this}--plain){
+          border-radius: 1.35em;
+        }
+      }
+    }
   }
 }
