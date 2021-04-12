@@ -274,10 +274,7 @@ $(document).ready(function () {
                         currentSubRow.removeClass('table__row-sub--active');
                     }
 
-                    const tableProductName = currentSubRow.find('.table__product-name');
-                    if(!tableProductName.hasClass('text-block-overflow--active')){
-                        siteJS.textBlockOverflow(tableProductName);
-                    }
+                    siteJS.textBlockOverflow();
                 }
             })
 
