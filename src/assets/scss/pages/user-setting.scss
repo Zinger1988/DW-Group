@@ -1,0 +1,154 @@
+.user-settings{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  $this: &;
+
+  @include media(">=lg"){
+    display: flex;
+    padding: 0;
+
+    &__content{
+      padding: 3rem 4rem 4rem;
+      flex-grow: 1;
+    }
+  }
+
+  &__form-group{
+    margin-bottom: 2rem;
+
+    @include media(">=md"){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.8rem 2rem;
+      margin-bottom: 4rem;
+
+      .form__title{
+        grid-column: span 2;
+        margin: 0;
+      }
+
+      .form-row{
+        margin: 0;
+      }
+    }
+  }
+
+  &__static-info-list{
+    @extend %listreset;
+    border-top: 2px solid $mySin;
+    background-color: #FAFAFA;
+    border-radius: 0 0 4px 4px;
+  }
+
+  &__static-info-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: .3rem 1.2rem;
+
+    @include media(">=md"){
+      padding: .6rem 2rem;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      z-index: 4;
+      left: 2.5rem;
+      width: calc(50% - 2.5rem);
+      top: 1.5rem;
+      border-top: 1px dotted rgba(#707070,.3);
+
+      @include media(">=md"){
+        top: 1.9rem;
+      }
+    }
+
+    &:nth-child(odd){
+      background-color: #F5F5F5;
+
+      #{$this}__static-attr-inner,
+      #{$this}__static-param-inner{
+        background-color: #F5F5F5;
+      }
+    }
+
+    &:first-child{
+      padding-top: 1rem;
+
+      &::before{
+        top: 2.2rem;
+      }
+
+      @include media(">=md"){
+        padding-top: 1.5rem;
+
+        &::before{
+          top: 2.8rem;
+        }
+      }
+    }
+
+    &:last-child{
+      border-radius: 0 0 4px 4px;
+      padding-bottom: 1rem;
+
+      @include media(">=md"){
+        padding-bottom: 1.5rem;
+      }
+    }
+
+    #{$this}__static-attr-inner,
+    #{$this}__static-param-inner{
+      background-color: #FAFAFA;
+    }
+  }
+
+  &__static-attr,
+  &__static-param{
+    position: relative;
+    z-index: 5;
+    line-height: 1.8rem;
+  }
+
+  &__static-attr{
+    padding-right: 2rem;
+    font-size: 1.1rem;
+    color: #818C98;
+
+    @include media(">=md"){
+      font-size: 1.3rem;
+    }
+  }
+
+  &__static-param{
+    font-size: 1.2rem;
+    width: 50%;
+    flex-shrink: 0;
+
+    @include media(">=md"){
+      font-size: 1.4rem;
+    }
+  }
+
+  &__static-attr-inner::after{
+    content: "\00A0 \00A0";
+  }
+
+  &__static-param-inner{
+    display: inline-block;
+    padding-left: 1rem;
+  }
+
+  &__sb{
+    @include media(">=lg"){
+      width: 33%;
+      max-width: 34rem;
+      flex-shrink: 0;
+      background-color: #F8FAF9;
+      border-radius: 6px 0 0 6px;
+    }
+  }
+}
