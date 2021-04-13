@@ -1,0 +1,279 @@
+---
+layout: default
+title: account
+---
+
+<div class="container container--narrow">
+
+    <div class="page__pre">
+        <nav class="crumbs crumbs--white page__crumbs">
+            <ul class="crumbs__list">
+                <li class="crumbs__item">
+                    <a href="/" class="crumbs__link">Главная</a>
+                </li>
+                <li class="crumbs__item">
+                    <span>Финансы</span>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- page pre -->
+
+    <section class="content-holder page__content-holder content-holder--finance">
+
+        <div class="content-holder__header content-holder__header--settings">
+            <h1 class="content-holder__header-title">Финансы</h1>
+
+            <div class="content-holder__header-settings-bar">
+
+                <div class="content-holder__header-calendar">
+                    <div class="content-holder__header-calendar-pre">Дата сверки за период</div>
+                    <div class="content-holder__header-calendar-body">
+                        <div class="content-holder__header-calendar-item">
+                            <input type="text" placeholder="Начальная дата" class="content-holder__header-calendar-input datepicker-reconciliation" readonly data-position='bottom left'>
+                        </div>
+                        <div class="content-holder__header-calendar-item">
+                            <input type="text" placeholder="Конечная дата" class="content-holder__header-calendar-input datepicker-reconciliation" readonly data-position='bottom right'>
+                        </div>
+                        <button class="content-holder__header-calendar-btn">Ok</button>
+                    </div>
+                </div><!--calendar holder -->
+
+            </div><!--settings bar -->
+
+        </div><!-- content holder header -->
+
+        <div class="content-holder__body">
+
+            <div class="finance-info">
+
+                <div class="finance-info__chart">
+
+                    <div class="finance-info__chart-group">
+                        <div class="finance-info__chart-item finance-info__chart-item--danger">
+                            <div class="finance-info__chart-img">
+                                <img src="assets/img/public/debt_hrn.png" alt="image" class="finance-info__chart-img-item">
+                            </div>
+                            <div class="finance-info__product-price product-price">
+                                <div class="product-price__pre">Ваш долг по счетам:</div>
+                                <div class="product-price__item">
+                                    <span class="product-price__value">230.25</span>
+                                    <span class="product-price__currency">грн</span>
+                                </div>
+                            </div>
+                        </div><!-- finance info chart item-->
+
+                        <div class="finance-info__chart-item finance-info__chart-item--ok">
+                            <div class="finance-info__chart-img">
+                                <img src="assets/img/public/calendar_gold.png" alt="image" class="finance-info__chart-img-item">
+                            </div>
+                            <div class="finance-info__product-price product-price">
+                                <div class="product-price__pre">Нужно оплатить в ближайшие 5 дней:</div>
+                                <div class="product-price__item">
+                                    <span class="product-price__value">0.00</span>
+                                    <span class="product-price__currency">грн</span>
+                                </div>
+                            </div>
+                        </div><!-- finance info chart item-->
+                    </div>
+
+                    <div class="finance-info__chart-group">
+                        <div class="finance-info__chart-item finance-info__chart-item--ok">
+                            <div class="finance-info__chart-img">
+                                <img src="assets/img/public/debt_usd.png" alt="image" class="finance-info__chart-img-item">
+                            </div>
+                            <div class="finance-info__product-price product-price">
+                                <div class="product-price__pre">Ваш долг по заказам:</div>
+                                <div class="product-price__item">
+                                    <span class="product-price__value">0.00</span>
+                                    <span class="product-price__currency">usd</span>
+                                </div>
+                            </div>
+                        </div><!-- finance info chart item-->
+
+                        <div class="finance-info__chart-item finance-info__chart-item--warning">
+                            <div class="finance-info__chart-img">
+                                <img src="assets/img/public/calendar_silver.png" alt="image" class="finance-info__chart-img-item">
+                            </div>
+                            <div class="finance-info__product-price product-price">
+                                <div class="product-price__pre">Нужно оплатить в ближайшие 5 дней:</div>
+                                <div class="product-price__item">
+                                    <span class="product-price__value">0.00</span>
+                                    <span class="product-price__currency">usd</span>
+                                </div>
+                            </div>
+                        </div><!-- finance info chart item-->
+                    </div>
+
+                    <div class="finance-info__chart-item finance-info__chart-item--rating">
+                        <div class="finance-info__chart-img">
+                            <img src="assets/img/public/rating.png" alt="image" class="finance-info__chart-img-item">
+                        </div>
+                        <div class="finance-info__product-price product-price product-price--finance-rating">
+                            <div class="product-price__pre">Ваш личный рейтинг:</div>
+                            <div class="product-price__item">
+                                <div class="product-price__value">4.6</div>
+                                <div class="item-rating finance-info__item-rating">
+                                    <div class="item-rating__mark" data-mark="4.6"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="finance-info__chart-btn btn btn--style--wired-default">О рейтинге</button>
+                    </div>
+
+                </div><!-- finance info chart-->
+
+                <div class="finance-info__folders">
+
+                    <div class="finance-info__folder-item">
+                        <div class="finance-info__folder-title">Счета</div>
+                        <div class="finance-info__folder-body">
+                            <ul class="finance-info__folder-list">
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Просрочено по оплате, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Отгружено, но не оплачено, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Надо оплатить в ближайшие 5 дней, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">302.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Сумма оплат за выбранный период, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- finance info folder item-->
+
+                    <div class="finance-info__folder-item">
+                        <div class="finance-info__folder-title">Заказы</div>
+                        <div class="finance-info__folder-body">
+                            <ul class="finance-info__folder-list">
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--danger">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Просрочено по оплате, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--warning">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Отгружено, но не оплачено, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Надо оплатить в ближайшие 5 дней, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">302.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Сумма оплат за выбранный период, usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- finance info folder item-->
+
+                    <div class="finance-info__folder-item finance-info__folder-item--wide">
+                        <div class="finance-info__folder-title">Условия сотрудничества/Общие финансовые показатели</div>
+                        <div class="finance-info__folder-body">
+                            <ul class="finance-info__folder-list">
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Договор
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">есть</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--warning">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Кредитный лимит
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">0.00</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Отсрочка, дней
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">10</span>
+                                    </span>
+                                </li>
+                                <li class="finance-info__folder-list-item finance-info__folder-list-item--ok">
+                                    <span class="finance-info__folder-attr">
+                                        <span class="finance-info__folder-attr-inner">
+                                            Среднемесячная закупка (на основании последних 3-х месяцев), usd
+                                        </span>
+                                    </span>
+                                    <span class="finance-info__folder-param">
+                                        <span class="finance-info__folder-param-inner">460.00</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- finance info folder item-->
+
+                </div><!-- finance info folders-->
+
+            </div><!-- finance info -->
+
+        </div><!-- content holder body -->
+
+    </section><!-- content holder -->
+
+</div>

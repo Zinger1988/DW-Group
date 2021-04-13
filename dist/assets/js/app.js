@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $('.datepicker-reconciliation').datepicker({
+        maxDate: new Date(),
+    });
+
     // Select 2 ---------------------------------------
 
     const select2Themes = [

@@ -41,7 +41,7 @@
 
       @include media('>=lg'){
         flex-wrap: nowrap;
-        padding: 0 1rem 0 0;
+        padding: 0;
       }
 
       #{$this}-btn{
@@ -178,6 +178,118 @@
 
       #{$this}-layout-switch{
         margin-left: auto;
+
+        @include media(">=lg"){
+          margin-right: 1rem;
+        }
+      }
+
+      #{$this}-calendar{
+        width: 100%;
+
+        @include media(">=lg"){
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      #{$this}-calendar-pre{
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: .75rem;
+
+        @include media(">=lg"){
+          margin-right: 2rem;
+          margin-bottom: 0;
+        }
+      }
+
+      #{$this}-calendar-body{
+        display: flex;
+        align-items: center;
+      }
+
+      #{$this}-calendar-item{
+        width: calc(50% - 2rem);
+        position: relative;
+
+        @include media(">=lg"){
+          width: auto;
+        }
+
+        &::before{
+          content: "\e837";
+          font: 1.6rem/1 "Fontello";
+          color: #C8CFD8;
+          position: absolute;
+          left: 1.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @include media(">=lg"){
+            left: 2.8rem;
+          }
+        }
+
+        &:first-child{
+          #{$this}-calendar-input{
+            border-radius: 3px 0 0 3px;
+
+            @include media(">=lg"){
+              border-radius: 0;
+            }
+          }
+        }
+      }
+
+      #{$this}-calendar-input{
+        width: 100%;
+        height: 4rem;
+        border-color: #E9E9E9;
+        border-radius: 0;
+        border-right: 0;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 1.3rem 1.3rem 1.3rem 4rem;
+        @include animate(border background-color);
+        cursor: pointer;
+
+        @include media(">=lg"){
+          width: 18rem;
+          height: 6rem;
+          border-radius: 0;
+          border-top: none;
+          border-bottom: none;
+          padding: 1.3rem 1.3rem 1.3rem 5.6rem;
+        }
+
+        &:focus{
+          border-color: #E9E9E9;
+          background-color: #F1F1F1;
+        }
+      }
+
+      #{$this}-calendar-btn{
+        @extend %buttonreset;
+        width: 4rem;
+        height: 4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font: 500 13px $headings-font-family;
+        background-color: $mySin;
+        border-radius: 0 3px 3px 0;
+        @include animate(background-color);
+
+        @include media(">=lg"){
+          width: 6rem;
+          height: 6rem;
+          border-radius: 0 6px 0 0;
+        }
+
+        &:hover{
+          background-color: darken($mySin, 9%);
+        }
       }
 
     }
@@ -208,6 +320,20 @@
 
     @include media('>=lg'){
       padding: 2.5rem 4rem 4rem;
+    }
+  }
+
+  &--finance{
+    .content-holder__header{
+      margin-bottom: 2rem;
+
+      @include media(">=lg"){
+        margin-bottom: 3rem;
+      }
+
+      @include media(">=xl"){
+        margin-bottom: 4rem;
+      }
     }
   }
 }
