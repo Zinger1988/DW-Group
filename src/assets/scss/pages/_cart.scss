@@ -14,40 +14,4 @@
             margin-bottom: 4rem;
         }
     }
-
-    &__form{
-        @include media(">=md"){
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-
-    &__form-group{
-
-        &:not(:last-child){
-            @include media("<md"){
-                margin-bottom: 2rem;
-            }
-        }
-
-        @include media(">=md"){
-            width: calc(50% - 10px);
-        }
-
-        &--textarea{
-
-            .form-row{
-                @include media(">=md"){
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-
-                    &__control{
-                        height: 10rem;
-                        flex: 1 0 auto;
-                    }
-                }
-            }
-        }
-    }
 }

@@ -38,6 +38,20 @@
   }
 
   &__table{
-    margin-bottom: 2rem;
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
+
+    @include media(">=md"){
+      &:not(:last-child){
+        margin-bottom: 4rem;
+      }
+    }
+
+    @include media(">=xl"){
+      &:not(:last-child){
+        margin-bottom: 5rem;
+      }
+    }
   }
 }

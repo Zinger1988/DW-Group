@@ -35,13 +35,9 @@
     border-radius: 3px;
   }
 
-  .icon{
+  &__icon{
     font-size: 1.538em;
     line-height: 1;
-
-    @include media('>=md'){
-        font-size: 1.738em;
-    }
   }
 
   &__text{

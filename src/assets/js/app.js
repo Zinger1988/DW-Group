@@ -196,6 +196,60 @@ $(document).ready(function () {
             this.accordion();
             this.baloonTip();
             this.passwordToggler();
+            this.fileAdd()
+        },
+        fileAdd: function(){
+            const wrapper = $('.add-file');
+
+            wrapper.each(function () {
+
+                const inputFile = $(this).find('.add-file__input');
+                const addFileBtn = $(this).find('.add-file__btn');
+                const fileListOutput = $(this).find('.add-file__list');
+                const reset = $(this).find('.add-file__clear');
+
+                reset.click(() => {
+                    inputFile.value = "";
+                    fileListOutput
+                        .removeClass('active')
+                        .find('.add-file__list-item, .add-file__error')
+                        .remove();
+                })
+
+                addFileBtn.click(() => inputFile.click());
+
+                inputFile.change(function () {
+
+                    inputFile.value = "";
+                    fileListOutput.find('.add-file__list-item, .add-file__error').remove();
+                    reset.removeClass('hidden');
+
+                    const filesArr = Array.from(inputFile.get(0).files);
+                    const fragment = document.createDocumentFragment();
+
+                    const filesSize = filesArr.reduce((acc, {size}) => {
+                        return acc + size
+                    }, 0)
+
+                    if(filesSize > 5120000){
+                        reset.addClass('hidden');
+                        fileListOutput
+                            .addClass('active')
+                            .append('<div class="add-file__error">File is too big</div>');
+                        inputFile.value = "";
+                        return;
+                    }
+
+                    filesArr.forEach(({name}) => {
+                        $(fragment).append(`<div class="add-file__list-item">${name}</div>`);
+                    })
+
+                    if(inputFile.val()){
+                        fileListOutput.prepend(fragment);
+                        fileListOutput.addClass('active');
+                    }
+                })
+            });
         },
         passwordToggler(){
 

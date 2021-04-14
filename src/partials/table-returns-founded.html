@@ -1,0 +1,314 @@
+<tbody class="table__tbody">
+
+    <tr class="table__row-head">
+        <th class="table__cell-head">PN</th>
+        <th class="table__cell-head">Производитель</th>
+        <th class="table__cell-head">Наименование</th>
+        <th class="table__cell-head">Кол-во</th>
+        <th class="table__cell-head">Цена, грн</th>
+        <th class="table__cell-head">Номер заказа</th>
+        <th class="table__cell-head table__cell-head--hidden">Дополнительно</th>
+    </tr><!--table row head-->
+
+    <tr class="table__row table__row--toggler">
+        <td class="table__cell" data-col-name="PN">
+            <div class="table__cell-inner">1C-Original</div>
+        </td>
+        <td class="table__cell" data-col-name="Производитель">
+            <div class="table__cell-inner">1C-Original</div>
+        </td>
+        <td class="table__cell table__cell--wide" data-col-name="Наименование">
+            <div class="table__cell-inner">
+                <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
+                    Корпус оригинальный после 1 цикла Canon i-SENSYS M F211/ 212/ 216/ 217/ 226/ 229/ HP LJ Pro M201/
+                    202/ 225, Canon 737/ CF283X, картридж первопроходный VIRGIN!
+                </a>
+            </div>
+        </td>
+        <td class="table__cell" data-col-name="Кол-во">
+            <div class="table__cell-inner">2</div>
+        </td>
+        <td class="table__cell" data-col-name="Цена, грн">
+            <div class="table__cell-inner">
+                <b class="text text--bigger--115 text--nowrap">200.00</b>
+            </div>
+        </td>
+        <td class="table__cell" data-col-name="Номер заказа">
+            <div class="table__cell-inner">453789</div>
+        </td>
+        <td class="table__cell table__cell--dropdown">
+            <div class="table__cell-inner">
+                <div class="table__dropdown">
+                    <span class="table__dropdown-text">Свернуть</span>
+                    <span class="table__dropdown-text table__dropdown-text--active">Развернуть</span>
+                    <i class="table__dropdown-icon icon icon--arrow--tiangle--down"></i>
+                </div>
+            </div>
+        </td>
+    </tr><!--table row toggler-->
+
+    <tr class="table__row-sub">
+        <td colspan="11" class="table__cell-sub">
+
+            <div class="table__cell-sub-content table__cell-sub-content--returns">
+
+                <div class="table__sub-form form form--col2">
+                    <div class="form__group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Комплектность товара</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </label>
+
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Состояние товара</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </label>
+
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Причина возврата</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </label>
+                    </div><!-- form group-->
+
+                    <div class="form__group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Модель устройства, в котором использовалась запчасть</div>
+                            <input class="form-row__control" type="text" name="model name">
+                        </label>
+                        <div class="form__row form-row form__row--fluid">
+                            <div class="form-row__label">Подробное описание причины возврата</div>
+                            <textarea class="form-row__control" name=""></textarea>
+                        </div>
+                    </div><!-- form group-->
+                </div><!-- form -->
+
+                <div class="table__add-file add-file">
+                    <div class="add-file__main">
+                        <input type="file" class="add-file__input" multiple accept="image/jpeg,image/png,video/avi,video/mp4,video/mp4,application/pdf,application/msword,application/excel,text/plain">
+                        <button class="add-file__btn btn btn--style--wired-default">
+                            <i class="btn__icon icon icon--file-add"></i>
+                            <span class="btn__text">Добавить файл</span>
+                        </button>
+                        <div class="add-file__desc">
+                            <div class="add-file__desc-title">
+                                Прикрепите документы (сканы отпечатков, фотографии товара и пр.)
+                            </div>
+                            <div class="add-file__desc-text">
+                                Загрузке подлежат документы (pdf, doc, docx, txt, xls, xlsx), изображения (jpg, png) и
+                                видео (avi, mpeg, mp4) размером до 5 мб
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-file__list">
+                        <div class="add-file__clear">Очистить список</div>
+                    </div>
+                </div><!-- add file -->
+
+                <div class="table__info-block info-block info-block--danger">
+                    <i class="icon info-block__icon icon--alert--triangle"></i>
+                    <div class="info-block__text">
+                        <ul class="info-block__list">
+                            <li class="info-block__list-item">При жалобе на качество при печати/ брак (фотобарабаны, валы, картриджи и пр.) -
+                                обязателен скан отпечатка тестовой страницы принтера, на которой будет видна модель
+                                принтера! Сканы плохих отпечатков в виде текста и другой информации могут
+                                рассматриваться только как дополнительные.
+                            </li>
+                            <li class="info-block__list-item">При жалобе на чипы/ брак сначала убедитесь, что регион Вашего принтера и чипа идентичны!
+                                Обязательна тестовая страницы + дословный текст ошибки (№ ошибки) на дисплее принтера
+                                или фото дисплея, а также конфигурационная страница.
+                            </li>
+                            <li class="info-block__list-item">При жалобе на заводской брак/ механическое повреждение - обязательно фото товара/
+                                поврежденного/ дефектного места!
+                            </li>
+                            <li class="info-block__list-item">Обратите внимание, возможно отклонение товара при недостаточном/ неточном описании
+                                проблемы или отсутствии сканов/ фотографий
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="control-pad control-pad--return">
+                    <button class="control-pad__btn btn btn--style--default btn--size--lg" href="#">Добавить в список возвратов</button>
+                    <button class="control-pad__btn btn btn--style--wired-default btn--size--lg" href="#">К списку возвратов</button>
+                </div>
+
+                <div class="table__dropdown table__dropdown--sub">
+                    <button class="table__dropdown-btn">
+                        <span class="table__dropdown-text table__dropdown-text--active">Свернуть</span>
+                        <i class="table__dropdown-icon icon--arrow--up"></i>
+                    </button>
+                </div><!--table dropdown-->
+
+            </div><!--table row subcontent-->
+
+        </td>
+    </tr><!--table row sub-->
+
+    <tr class="table__row table__row--toggler">
+        <td class="table__cell" data-col-name="PN">
+            <div class="table__cell-inner">WD-MRSH278AG</div>
+        </td>
+        <td class="table__cell" data-col-name="Производитель">
+            <div class="table__cell-inner">WELLDO</div>
+        </td>
+        <td class="table__cell table__cell--wide" data-col-name="Наименование">
+            <div class="table__cell-inner">
+                <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
+                    Вал магнитный оболочка WELLDO HP LJ P1005/ 1006/ 1007/ 1008/ 1102/ 1505/ 1560/ 1566/ 1606/ M1212/
+                    1214/ 1217/ 1120/ 1132/ 1522/ 1536/ M125/ 127/ Canon MF4410/ 4430/ 4450/ 4550/ 4570/ 4580/ 4730/
+                    4750/ 4780/ 4870/ 4890/ LBP-3010/ 3020/ 3100/ 3250/ 6000/ 6020/ 6200/ CB435A/ CB436A/ CE278A/
+                    CE285A/ Canon 712/ 713/ 725/ 726/ 728, Silver GLOSSY Coating - OEM технология! Для получения
+                    эталонных от печатков рекомендуется использовать оригинальный магнитный сердечник!
+                </a>
+            </div>
+        </td>
+        <td class="table__cell" data-col-name="Кол-во">
+            <div class="table__cell-inner">8</div>
+        </td>
+        <td class="table__cell" data-col-name="Цена, грн">
+            <div class="table__cell-inner">
+                <b class="text text--bigger--115 text--nowrap">314.12</b>
+            </div>
+        </td>
+        <td class="table__cell" data-col-name="Номер заказа">
+            <div class="table__cell-inner">435223</div>
+        </td>
+        <td class="table__cell table__cell--dropdown">
+            <div class="table__cell-inner">
+                <div class="table__dropdown">
+                    <span class="table__dropdown-text">Свернуть</span>
+                    <span class="table__dropdown-text table__dropdown-text--active">Развернуть</span>
+                    <i class="table__dropdown-icon icon icon--arrow--tiangle--down"></i>
+                </div>
+            </div>
+        </td>
+    </tr><!--table row toggler-->
+
+    <tr class="table__row-sub">
+        <td colspan="11" class="table__cell-sub">
+
+            <div class="table__cell-sub-content table__cell-sub-content--returns">
+
+                <div class="table__sub-form form form--col2">
+                    <div class="form__group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Комплектность товара</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </label>
+
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Состояние товара</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </label>
+
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Причина возврата</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </label>
+                    </div><!-- form group-->
+
+                    <div class="form__group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Модель устройства, в котором использовалась запчасть</div>
+                            <input class="form-row__control" type="text" name="model name">
+                        </label>
+                        <div class="form__row form-row form__row--fluid">
+                            <div class="form-row__label">Подробное описание причины возврата</div>
+                            <textarea class="form-row__control" name=""></textarea>
+                        </div>
+                    </div><!-- form group-->
+                </div><!-- form -->
+
+                <div class="table__add-file add-file">
+                    <div class="add-file__main">
+                        <input type="file" class="add-file__input" multiple accept="image/jpeg,image/png,video/avi,video/mp4,video/mp4,application/pdf,application/msword,application/excel,text/plain">
+                        <button class="add-file__btn btn btn--style--wired-default">
+                            <i class="btn__icon icon icon--file-add"></i>
+                            <span class="btn__text">Добавить файл</span>
+                        </button>
+                        <div class="add-file__desc">
+                            <div class="add-file__desc-title">
+                                Прикрепите документы (сканы отпечатков, фотографии товара и пр.)
+                            </div>
+                            <div class="add-file__desc-text">
+                                Загрузке подлежат документы (pdf, doc, docx, txt, xls, xlsx), изображения (jpg, png) и
+                                видео (avi, mpeg, mp4) размером до 5 мб
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-file__list">
+                        <div class="add-file__clear">Очистить список</div>
+                    </div>
+                </div><!-- add file -->
+
+                <div class="table__info-block info-block info-block--danger">
+                    <i class="icon info-block__icon icon--alert--triangle"></i>
+                    <div class="info-block__text">
+                        <ul class="info-block__list">
+                            <li class="info-block__list-item">При жалобе на качество при печати/ брак (фотобарабаны, валы, картриджи и пр.) -
+                                обязателен скан отпечатка тестовой страницы принтера, на которой будет видна модель
+                                принтера! Сканы плохих отпечатков в виде текста и другой информации могут
+                                рассматриваться только как дополнительные.
+                            </li>
+                            <li class="info-block__list-item">При жалобе на чипы/ брак сначала убедитесь, что регион Вашего принтера и чипа идентичны!
+                                Обязательна тестовая страницы + дословный текст ошибки (№ ошибки) на дисплее принтера
+                                или фото дисплея, а также конфигурационная страница.
+                            </li>
+                            <li class="info-block__list-item">При жалобе на заводской брак/ механическое повреждение - обязательно фото товара/
+                                поврежденного/ дефектного места!
+                            </li>
+                            <li class="info-block__list-item">Обратите внимание, возможно отклонение товара при недостаточном/ неточном описании
+                                проблемы или отсутствии сканов/ фотографий
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="control-pad control-pad--return">
+                    <button class="control-pad__btn btn btn--style--default btn--size--lg" href="#">Добавить в список возвратов</button>
+                    <button class="control-pad__btn btn btn--style--wired-default btn--size--lg" href="#">К списку возвратов</button>
+                </div>
+
+                <div class="table__dropdown table__dropdown--sub">
+                    <button class="table__dropdown-btn">
+                        <span class="table__dropdown-text table__dropdown-text--active">Свернуть</span>
+                        <i class="table__dropdown-icon icon--arrow--up"></i>
+                    </button>
+                </div><!--table dropdown-->
+
+            </div><!--table row subcontent-->
+
+        </td>
+    </tr><!--table row sub-->
+
+</tbody>

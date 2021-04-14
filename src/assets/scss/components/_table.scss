@@ -41,7 +41,7 @@
     &--toggler{
       cursor: pointer;
       padding-bottom: 0;
-      @include animate(background-color color margin);
+      @include animate(color margin);
   
       &--active{
         background-color: #77818C;
@@ -51,6 +51,14 @@
   
         &:hover{
           background-color: #6B747E;
+
+          .text-overflow__toggle{
+            background: linear-gradient(0deg, #6B747E 15%, rgba(#6B747E, 0) 100%);
+          }
+        }
+
+        .text-overflow__toggle{
+          background: linear-gradient(0deg, #77818C 15%, rgba(#77818C, 0) 100%);
         }
 
         #{$this}__cell{
@@ -71,6 +79,15 @@
   
           &--active{
             display: none;
+          }
+        }
+
+        .table__product-name{
+          color: $white;
+
+          &:hover,
+          &:focus{
+            text-decoration-color: $white;
           }
         }
       }
@@ -354,6 +371,22 @@
       }
     }
   }
+
+  &__sub-form{
+    margin-bottom: 2rem;
+  }
+
+  &__add-file{
+    margin-bottom: 1rem;
+  }
+
+  &__info-block{
+    margin-bottom: 2rem;
+
+    @include media(">=lg"){
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 @mixin table-build($breakpoint, $tableModifier) {
@@ -477,6 +510,10 @@
 
       #{$this}__cell-sub-content{
         padding-bottom: 10rem;
+
+        &--returns{
+          padding: 2.6rem 2rem 10rem;
+        }
       }
     }
 

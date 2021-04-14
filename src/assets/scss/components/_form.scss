@@ -1,14 +1,12 @@
 .form{
 
+  $this: &;
+
   &__row{
     display: block;
 
     &:not(:last-child){
       margin-bottom: 2rem;
-    }
-
-    &:not(:first-child){
-      margin-top: 2rem;
     }
 
     &--check-radio{
@@ -34,5 +32,43 @@
     vertical-align: middle;
     margin-right: 1rem;
     color: $mySin;
+  }
+
+  &__group{
+    margin-bottom: 2rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &--col2{
+    @include media(">=md"){
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #{$this}__group{
+
+      @include media(">=md"){
+        margin-bottom: 0;
+      }
+
+      @include media(">=md"){
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    #{$this}__row--fluid{
+      flex-grow: 1;
+
+      .form-row__control{
+        height: 100%;
+        min-height: 10rem;
+      }
+    }
   }
 }

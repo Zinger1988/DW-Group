@@ -756,9 +756,8 @@
                 
                 </div><!-- order-summary -->
     
-                <div class="form cart__form">
-    
-                    <div class="cart__form-group">
+                <div class="form form--col2">
+                    <div class="form__group">
                         <label class="form__row form-row">
                             <div class="form-row__label">Выберите способ оплаты</div>
                             <select class="select2 select2--theme--default">
@@ -791,16 +790,15 @@
                                 <option value="">Самовывоз</option>
                             </select>
                         </label>
-                    </div><!-- cart form group-->
+                    </div><!-- form group-->
     
-                    <div class="cart__form-group cart__form-group--textarea">
-                        <div class="form-row">
+                    <div class="form__group">
+                        <div class="form-row form__row form__row--fluid">
                             <div class="form-row__label">Комментарий к заказу</div>
-                            <textarea class="form-row__control" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea class="form-row__control" name=""></textarea>
                         </div>
-                    </div><!-- cart form group-->
-    
-                </div><!-- cart form -->
+                    </div><!-- form group-->
+                </div><!-- form -->
     
             </div><!-- content hlder body -->
     
@@ -1050,33 +1048,35 @@
                         <option value="">Static Control</option>
                     </select>
                 </label>
-                <label class="form-row form__row form__row--check-radio">
-                    <span class="checkbox-radio">
-                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                        <span class="checkbox-radio__toggler"></span>
-                        <span class="checkbox-radio__label">
-                            Только в наличии
+                <div class="form__group">
+                    <label class="form-row form__row form__row--check-radio">
+                        <span class="checkbox-radio">
+                            <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                            <span class="checkbox-radio__toggler"></span>
+                            <span class="checkbox-radio__label">
+                                Только в наличии
+                            </span>
                         </span>
-                    </span>
-                </label>
-                <label class="form-row form__row form__row--check-radio">
-                    <span class="checkbox-radio">
-                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                        <span class="checkbox-radio__toggler"></span>
-                        <span class="checkbox-radio__label">
-                            Только акционные
+                    </label>
+                    <label class="form-row form__row form__row--check-radio">
+                        <span class="checkbox-radio">
+                            <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                            <span class="checkbox-radio__toggler"></span>
+                            <span class="checkbox-radio__label">
+                                Только акционные
+                            </span>
                         </span>
-                    </span>
-                </label>
-                <label class="form-row form__row form__row--check-radio">
-                    <span class="checkbox-radio">
-                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                        <span class="checkbox-radio__toggler"></span>
-                        <span class="checkbox-radio__label">
-                            Только новинки
+                    </label>
+                    <label class="form-row form__row form__row--check-radio">
+                        <span class="checkbox-radio">
+                            <input class="checkbox-radio__input" type="checkbox" name="" value="">
+                            <span class="checkbox-radio__toggler"></span>
+                            <span class="checkbox-radio__label">
+                                Только новинки
+                            </span>
                         </span>
-                    </span>
-                </label>
+                    </label>
+                </div>
                 <label class="form-row form__row">
                     <span class="form-row__label">Группа товаров</span>
                     <select class="form-row__control select2 select2--theme--default">
