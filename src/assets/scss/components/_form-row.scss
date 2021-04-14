@@ -2,6 +2,8 @@
   display: block;
   position: relative;
 
+  $this: &;
+
   &__label{
     position: absolute;
     left: 1.1rem;
@@ -17,5 +19,21 @@
   &__control{
     display: block;
     width: 100%;
+  }
+
+  &__icon{
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 2.2rem;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+  }
+
+  &--input-icon{
+
+    #{$this}__control{
+      padding-right: 3.8rem;
+    }
   }
 }

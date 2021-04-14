@@ -22,15 +22,14 @@ title: account
 
         <div class="content-holder__body user-settings">
 
-            <aside class="user-settings__sb">
-
-            </aside><!-- user settings sidebar -->
-
             <div class="user-settings__content">
                 <form method="post" action="" class="user-settings__form form">
 
                     <div class="user-settings__form-group">
-                        <h2 class="h4 form__title">Личные данные</h2>
+                        <h2 class="h4 form__title">
+                            <i class="form__title-icon icon icon--user--circled"></i>
+                            <span class="form__title-text">Личные данные</span>
+                        </h2>
                         <div class="form__row form-row">
                             <div class="form-row__label">Фамилия</div>
                             <input class="form-row__control" type="text" autocomplete="family-name" name="last name">
@@ -67,7 +66,10 @@ title: account
                     </div><!-- user settings form group -->
 
                     <div class="user-settings__form-group">
-                        <h2 class="h4 form__title">Данные предприятия</h2>
+                        <h2 class="h4 form__title">
+                            <i class="form__title-icon icon icon--building"></i>
+                            <span class="form__title-text">Данные предприятия</span>
+                        </h2>
                         <div class="form__row form-row">
                             <div class="form-row__label">Физический адрес</div>
                             <input class="form-row__control" type="text" autocomplete="street-address" name="enterprise address">
@@ -155,6 +157,40 @@ title: account
 
                 </form>
             </div><!-- user settings content -->
+
+            <aside class="user-settings__sb">
+
+                <div class="user-settings__sb-group">
+                    <h3 class="h4 user-settings__sb-title">Ваш менеджер</h3>
+                    <div class="user-settings__sb-group-body">
+                        <p>
+                            <b>
+                                Александр<br>
+                                <a href="mailto:aleksandr@dwgroup.ua">aleksandr@dwgroup.ua</a>
+                            </b>
+                        </p>
+                        <p>
+                            <b>
+                                +38 (044) 227-07-73<br>
+                                +38 (044) 227-07-73
+                            </b>
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn--style--wired-default">
+                        Запросить замену
+                    </a>
+                </div>
+
+                <div class="user-settings__sb-group">
+                    <h3 class="h4 user-settings__sb-title">Безопасность</h3>
+                    <div class="user-settings__sb-group-body">
+                        <a href="#" class="btn btn--style--wired-default" data-modal-id="modal-password">
+                            Сменить пароль
+                        </a>
+                    </div>
+                </div>
+
+            </aside><!-- user settings sidebar -->
 
         </div><!-- content holder body user-settings-->
 

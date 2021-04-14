@@ -195,6 +195,22 @@ $(document).ready(function () {
             this.tableSub();
             this.accordion();
             this.baloonTip();
+            this.passwordToggler();
+        },
+        passwordToggler(){
+
+            const toggleWrap = $('.password-toggle');
+
+            toggleWrap.each(function() {
+                const btn = $(this).find('.password-toggle__btn');
+                const control = $(this).find('.password-toggle__control');
+
+                btn.click(function() {
+                    $(this).toggleClass('password-toggle__btn--active')
+                    let attrValue = control.attr('type') === 'password'? 'text': 'password';
+                    control.attr('type', attrValue);
+                })
+            })
         },
         baloonTip(){
             if($(document.body).hasClass("hover-device")){

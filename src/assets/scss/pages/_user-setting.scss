@@ -1,14 +1,19 @@
 .user-settings{
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0;
 
   $this: &;
 
   @include media(">=lg"){
     display: flex;
+    flex-direction: row-reverse;
     padding: 0;
+  }
 
-    &__content{
+  &__content{
+    margin-bottom: 3rem;
+
+    @include media(">=lg") {
       padding: 3rem 4rem 4rem;
       flex-grow: 1;
     }
@@ -143,12 +148,44 @@
   }
 
   &__sb{
+    background-color: #F8FAF9;
+    margin: 0 -1.5rem;
+    padding: 2.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 3rem;
+    justify-items: center;
+
+    @include media(">=sm"){
+      margin: 0 -2.5rem;
+      padding: 3.5rem 2.5rem;
+      justify-items: start;
+    }
+
     @include media(">=lg"){
+      display: block;
       width: 33%;
       max-width: 34rem;
       flex-shrink: 0;
-      background-color: #F8FAF9;
       border-radius: 6px 0 0 6px;
+      padding: 3.6rem 4rem;
+      margin: 0;
     }
+  }
+
+  .user-settings__sb-group{
+    min-width: 20rem;
+
+    @include media(">=lg"){
+      margin-bottom: 5rem;
+    }
+
+    .btn{
+      width: 100%;
+    }
+  }
+
+  &__sb-title{
+    margin: 0 0 2rem;
   }
 }

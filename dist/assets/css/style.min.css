@@ -3170,6 +3170,30 @@ button.swiper-pagination-bullet {
 
 /* '' */
 
+.icon--building:before {
+  content: '\e838';
+}
+
+/* '' */
+
+.icon--user--circled:before {
+  content: '\e839';
+}
+
+/* '' */
+
+.icon--eye:before {
+  content: '\e83b';
+}
+
+/* '' */
+
+.icon--eye--hidden:before {
+  content: '\e83c';
+}
+
+/* '' */
+
 h1,
 .h1,
 h2,
@@ -5200,6 +5224,19 @@ html {
   width: 100%;
 }
 
+.form-row__icon {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 2.2rem;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+}
+
+.form-row--input-icon .form-row__control {
+  padding-right: 3.8rem;
+}
+
 .checkbox-radio {
   display: flex;
   cursor: pointer;
@@ -5935,6 +5972,19 @@ html {
 
 .form__row--check-radio:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.form__title-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form__title-icon {
+  font-size: 2.8rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  color: #FFB41E;
 }
 
 .select-alt {
@@ -7596,6 +7646,14 @@ html {
   background-color: #2779af;
 }
 
+.password-toggle__btn {
+  cursor: pointer;
+}
+
+.password-toggle__btn--active::before {
+  content: "\e83c";
+}
+
 .page {
   min-height: 100vh;
   line-height: 1.571;
@@ -8129,7 +8187,11 @@ html {
 
 .user-settings {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0;
+}
+
+.user-settings__content {
+  margin-bottom: 3rem;
 }
 
 .user-settings__form-group {
@@ -8213,6 +8275,28 @@ html {
 .user-settings__static-param-inner {
   display: inline-block;
   padding-left: 1rem;
+}
+
+.user-settings__sb {
+  background-color: #F8FAF9;
+  margin: 0 -1.5rem;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 3rem;
+  justify-items: center;
+}
+
+.user-settings .user-settings__sb-group {
+  min-width: 20rem;
+}
+
+.user-settings .user-settings__sb-group .btn {
+  width: 100%;
+}
+
+.user-settings__sb-title {
+  margin: 0 0 2rem;
 }
 
 @media (min-width: 536px) {
@@ -8505,6 +8589,12 @@ html {
 
   .account__main {
     padding: 0 2.2rem;
+  }
+
+  .user-settings__sb {
+    margin: 0 -2.5rem;
+    padding: 3.5rem 2.5rem;
+    justify-items: start;
   }
 }
 
@@ -9760,6 +9850,7 @@ html {
 
   .user-settings {
     display: flex;
+    flex-direction: row-reverse;
     padding: 0;
   }
 
@@ -9769,11 +9860,17 @@ html {
   }
 
   .user-settings__sb {
+    display: block;
     width: 33%;
     max-width: 34rem;
     flex-shrink: 0;
-    background-color: #F8FAF9;
     border-radius: 6px 0 0 6px;
+    padding: 3.6rem 4rem;
+    margin: 0;
+  }
+
+  .user-settings .user-settings__sb-group {
+    margin-bottom: 5rem;
   }
 }
 
