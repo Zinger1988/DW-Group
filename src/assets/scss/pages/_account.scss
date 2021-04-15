@@ -17,13 +17,17 @@
         margin-bottom: 5rem;
       }
     }
+
+    &--return-list{
+      @include media(">=xl"){
+        &:not(:last-child){
+          margin-bottom: 1rem;
+        }
+      }
+    }
   }
 
   &__order-search{
-    margin-bottom: 2.5rem;
-
-    @include media(">=md"){
-      margin-bottom: 3.5rem;
-    }
+    margin-bottom: 3.5rem;
   }
 }

@@ -3706,6 +3706,7 @@ input[type='submit'] {
 .carousel-section__arrows-btn,
 .table__row .table__clear-btn,
 .table__dropdown-btn,
+.table__cell--delete .table__delete-btn,
 .gallery__btn,
 .table-alt__delete,
 .order-summary__controls-btn,
@@ -3733,6 +3734,7 @@ input[type='submit'] {
 .carousel-section__arrows-btn:focus,
 .table__row .table__clear-btn:focus,
 .table__dropdown-btn:focus,
+.table__cell--delete .table__delete-btn:focus,
 .gallery__btn:focus,
 .table-alt__delete:focus,
 .order-summary__controls-btn:focus,
@@ -6570,7 +6572,6 @@ html {
   display: block;
   width: 100%;
   border-radius: 4px;
-  overflow: hidden;
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -6584,7 +6585,7 @@ html {
   flex-direction: column;
   padding: 1.25rem 0;
   background-color: #F2F2F2;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
   border-radius: 4px;
   transition: color 0.3s ease-in-out;
 }
@@ -6664,7 +6665,7 @@ html {
 
 .table__row--clear {
   background-color: transparent;
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .table__row--clear:hover {
@@ -6678,10 +6679,17 @@ html {
 .table__row .table__clear-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(142, 154, 167, 0.4);
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
-.table__row .table__clear-btn:hover .table__clear-btn-text {
-  color: #FFB41E;
+.table__row .table__clear-btn:hover {
+  border: 1px solid transparent;
+  background-color: rgba(142, 154, 167, 0.15);
 }
 
 .table__row .table__clear-btn-icon {
@@ -6824,6 +6832,39 @@ html {
 .table__cell--dropdown .table__cell-inner {
   max-width: none;
   padding: 0;
+}
+
+.table__cell--delete {
+  background: transparent;
+  padding: 0;
+}
+
+.table__cell--delete .table__cell-inner {
+  position: static;
+}
+
+.table__cell--delete .table__delete-btn {
+  color: #fff;
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  text-align: center;
+  transform: translate(50%, -50%);
+  background-color: #A2B1C0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.table__cell--delete .table__delete-btn:hover {
+  background-color: #707776;
+}
+
+.table__cell--delete .table__delete-btn-icon {
+  font-size: 1rem;
+  line-height: 3.1rem;
 }
 
 .table__cell-sub {
@@ -7915,7 +7956,7 @@ html {
 .order-search__form {
   display: flex;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .order-search__form-row {
@@ -7932,6 +7973,7 @@ html {
   min-height: 4.4rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  min-width: 0;
 }
 
 .page {
@@ -8224,7 +8266,7 @@ html {
 }
 
 .account__order-search {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .finance-info {
@@ -8897,6 +8939,10 @@ html {
     padding: 0;
   }
 
+  .table__cell--delete {
+    padding: 0;
+  }
+
   .order-summary__product-price {
     flex-shrink: unset;
     width: auto;
@@ -9406,10 +9452,6 @@ html {
     margin-left: auto;
   }
 
-  .account__order-search {
-    margin-bottom: 3.5rem;
-  }
-
   .finance-info__chart {
     display: flex;
     flex-wrap: wrap;
@@ -9906,6 +9948,18 @@ html {
     top: 50%;
     transform: translate(-50%, -50%);
     color: rgba(162, 177, 192, 0.5);
+  }
+
+  .table--build-lg .table__cell--delete .table__delete-btn {
+    position: static;
+    transform: none;
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .table--build-lg .table__cell--delete .table__delete-btn-icon {
+    font-size: .8rem;
+    line-height: 2.7rem;
   }
 
   .table--build-lg .table__cell-head {
@@ -10568,6 +10622,18 @@ html {
     color: rgba(162, 177, 192, 0.5);
   }
 
+  .table--build-xl .table__cell--delete .table__delete-btn {
+    position: static;
+    transform: none;
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .table--build-xl .table__cell--delete .table__delete-btn-icon {
+    font-size: .8rem;
+    line-height: 2.7rem;
+  }
+
   .table--build-xl .table__cell-head {
     display: table-cell;
     border-bottom: 2px solid #FFB41E;
@@ -10801,6 +10867,10 @@ html {
   .account__table:not(:last-child) {
     margin-bottom: 5rem;
   }
+
+  .account__table--return-list:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (min-width: 1261px) {
@@ -10895,6 +10965,10 @@ html {
     font-size: 1.8rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
+  }
+
+  .table__cell--delete {
+    padding: 0;
   }
 
   .product-hor__desc {

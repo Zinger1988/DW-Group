@@ -2,7 +2,6 @@
   display: block;
   width: 100%;
   border-radius: 4px;
-  overflow: hidden;
   border-collapse: collapse;
   table-layout: auto;
 
@@ -17,7 +16,7 @@
     flex-direction: column;
     padding: 1.25rem 0;
     background-color: #F2F2F2;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
     border-radius: 4px;
     @include animate(color);
 
@@ -96,7 +95,7 @@
 
     &--clear{
       background-color: transparent;
-      padding-bottom: 0;
+      padding: 0;
 
       &:hover{
         background-color: transparent;
@@ -111,11 +110,17 @@
       @extend %buttonreset;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      padding: 1rem 2.5rem;
+      border-radius: 20px;
+      border: 1px solid rgba(#8E9AA7, 0.4);
+      @include animate(background-color border);
+      white-space: nowrap;
+
 
       &:hover{
-        #{$this}__clear-btn-text{
-          color: $mySin;
-        }
+        border: 1px solid transparent;
+        background-color: rgba(#8E9AA7, .15);
       }
     }
 
@@ -314,6 +319,48 @@
   
       @include media('>=600px') {
           padding: 0;
+      }
+    }
+
+    &--delete{
+      background: transparent;
+      padding: 0;
+
+      @include media('>=600px') {
+        padding: 0;
+      }
+
+      @include media('>=xxl') {
+        padding: 0;
+      }
+
+      #{$this}__cell-inner{
+        position: static;
+      }
+
+      #{$this}__delete-btn{
+        @extend %buttonreset;
+        color: #fff;
+        font-size: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 50%;
+        text-align: center;
+        transform: translate(50%, -50%);
+        background-color: #A2B1C0;
+        @include animate(background-color);
+
+        &:hover{
+          background-color: #707776;
+        }
+      }
+
+      #{$this}__delete-btn-icon{
+        font-size: 1rem;
+        line-height: 3.1rem;
       }
     }
   }
@@ -535,6 +582,21 @@
             top: 50%;
             transform: translate(-50%, -50%);
             color: rgba(#A2B1C0, .5);
+          }
+        }
+
+        &--delete{
+
+          #{$this}__delete-btn{
+            position: static;
+            transform: none;
+            width: 2.7rem;
+            height: 2.7rem;
+          }
+
+          #{$this}__delete-btn-icon{
+            font-size: .8rem;
+            line-height: 2.7rem;
           }
         }
       }
