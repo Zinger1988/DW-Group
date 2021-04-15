@@ -1,9 +1,57 @@
 ---
-layout: account
+layout: default
 title: account
 ---
 
-<h1 class="h3">Текущие заказы</h1>
-<table class="table table--build-xl account__table">
-    {{> table-current }}
-</table>
+<div class="container">
+
+    <div class="page__pre">
+        <nav class="crumbs crumbs--white page__crumbs">
+            <ul class="crumbs__list">
+                <li class="crumbs__item">
+                    <a href="/" class="crumbs__link">Главная</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#" class="crumbs__link">Заказы</a>
+                </li>
+                <li class="crumbs__item crumbs__item--active">
+                    <span>Текущие заказы</span>
+                </li>
+            </ul>
+        </nav>
+    </div><!--page pre-->
+
+    <div class="page__content-holder content-holder">
+
+        <ul class="tabs account__tabs tabs--theme--dark">
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="product-info">Незакрытые заказы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Все заказы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Резервы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Счета</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Возвраты</a>
+            </li>
+            <li class="tabs__item tabs__item--active">
+                <a class="tabs__link" href="#" data-tab-label="comments">Текущие заказы</a>
+            </li>
+        </ul><!-- tabs -->
+
+        <div class="content-holder__body account">
+
+            <h1 class="h3">Текущие заказы</h1>
+            <table class="table table--build-xl account__table">
+                {{> table-current }}
+            </table>
+
+        </div><!--content holder body-->
+
+    </div><!--content holder-->
+</div>

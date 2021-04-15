@@ -36,8 +36,9 @@
   }
 
   &__icon{
-    font-size: 1.538em;
+    font-size: 1.4em;
     line-height: 1;
+    margin-right: .3em;
   }
 
   &__text{
@@ -184,5 +185,13 @@
         }
       }
     }
+  }
+
+  &--disabled,
+  &--disabled:hover{
+    cursor: default;
+    background-color: #F2F5F4;
+    box-shadow: none;
+    color: #ABB7C8;
   }
 }

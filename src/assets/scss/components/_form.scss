@@ -70,5 +70,27 @@
         min-height: 10rem;
       }
     }
+
+    &--return{
+      #{$this}__group{
+        @include media(">=lg"){
+          &:nth-child(odd){
+            width: calc(33.333% - 10px);
+          }
+          &:nth-child(even){
+            width: calc(66.666% - 10px);
+          }
+        }
+
+        @include media(">=xl"){
+          &:nth-child(odd){
+            width: calc(25% - 10px);
+          }
+          &:nth-child(even){
+            width: calc(75% - 10px);
+          }
+        }
+      }
+    }
   }
 }

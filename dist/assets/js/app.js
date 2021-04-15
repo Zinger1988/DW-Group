@@ -4,6 +4,10 @@ $(document).ready(function () {
         maxDate: new Date(),
     });
 
+    $('.datepicker-return-date').datepicker({
+        maxDate: new Date(),
+    });
+
     // Select 2 ---------------------------------------
 
     const select2Themes = [

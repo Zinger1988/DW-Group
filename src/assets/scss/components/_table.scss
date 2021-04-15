@@ -41,6 +41,7 @@
     &--toggler{
       cursor: pointer;
       padding-bottom: 0;
+      position: relative;
       @include animate(color margin);
   
       &--active{
@@ -91,6 +92,44 @@
           }
         }
       }
+    }
+
+    &--clear{
+      background-color: transparent;
+      padding-bottom: 0;
+
+      &:hover{
+        background-color: transparent;
+      }
+
+      #{$this}__cell{
+        justify-content: center;
+      }
+    }
+
+    #{$this}__clear-btn{
+      @extend %buttonreset;
+      display: inline-flex;
+      align-items: center;
+
+      &:hover{
+        #{$this}__clear-btn-text{
+          color: $mySin;
+        }
+      }
+    }
+
+    #{$this}__clear-btn-icon{
+      color: $mySin;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-right: .5em;
+    }
+
+    #{$this}__clear-btn-text{
+      font: 700 1.3rem/ 1 $headings-font-family;
+      text-transform: uppercase;
+      @include animate(color);
     }
   }
 
@@ -381,10 +420,14 @@
   }
 
   &__info-block{
-    margin-bottom: 2rem;
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
 
     @include media(">=lg"){
-      margin-bottom: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
@@ -418,6 +461,14 @@
           #{$this}__cell {
             padding-top: 2.2rem;
             padding-bottom: 2.2rem;
+          }
+        }
+
+        &--clear{
+          text-align: right;
+
+          #{$this}__cell{
+            padding: 1.5rem 0 0;
           }
         }
       }

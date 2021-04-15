@@ -1,14 +1,79 @@
 ---
-layout: account
+layout: default
 title: account
 ---
 
-<h2 class="h3">Найдено в заказах</h2>
-<table class="table table--build-xl account__table">
-    {{> table-returns-founded }}
-</table>
+<div class="container">
 
-<h2 class="h3">История возвратов</h2>
-<table class="table table--build-xl account__table">
-    {{> table-returns-history }}
-</table>
+    <div class="page__pre">
+        <nav class="crumbs crumbs--white page__crumbs">
+            <ul class="crumbs__list">
+                <li class="crumbs__item">
+                    <a href="/" class="crumbs__link">Главная</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#" class="crumbs__link">Заказы</a>
+                </li>
+                <li class="crumbs__item crumbs__item--active">
+                    <span>Возвраты</span>
+                </li>
+            </ul>
+        </nav>
+    </div><!--page pre-->
+
+    <div class="page__content-holder content-holder">
+
+        <ul class="tabs account__tabs tabs--theme--dark">
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="product-info">Незакрытые заказы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Все заказы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Резервы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Счета</a>
+            </li>
+            <li class="tabs__item tabs__item--active">
+                <a class="tabs__link" href="#" data-tab-label="comments">Возвраты</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Текущие заказы</a>
+            </li>
+        </ul><!-- tabs -->
+
+        <div class="content-holder__body account">
+
+            <h2 class="h3">Создать новый возврат</h2>
+            <div class="account__order-search order-search">
+                <form class="order-search__form" action="" method="post">
+                    <label class="form-row order-search__form-row">
+                        <div class="form-row__label">P/N позиции для возврата</div>
+                        <input class="form-row__control" type="text" name="model name">
+                    </label>
+                    <button type="submit" class="order-search__submit btn btn--plain btn--style--wired-default">
+                        Найти
+                    </button>
+                </form>
+                <a href="#" class="order-search__return-list-btn btn btn--style--default btn--disabled">
+                    <i class="btn__icon icon icon--refresh"></i>
+                    <span class="btn__text">Список возвратов: 0</span>
+                </a>
+            </div><!--order-search-->
+
+            <h2 class="h3">Найдено в заказах</h2>
+            <table class="table table--build-xl account__table">
+                {{> table-returns-founded }}
+            </table>
+
+            <h2 class="h3">История возвратов</h2>
+            <table class="table table--build-xl account__table">
+                {{> table-returns-history }}
+            </table>
+
+        </div><!--content holder body-->
+
+    </div><!--content holder-->
+</div>

@@ -507,7 +507,7 @@
 </header>
 <main class="page__main">
     
-    <div class="container container--medium">
+    <div class="container">
     
         <div class="page__pre">
             <nav class="crumbs crumbs--white page__crumbs">
@@ -516,192 +516,417 @@
                         <a href="/" class="crumbs__link">Главная</a>
                     </li>
                     <li class="crumbs__item">
-                        <span>Профиль</span>
+                        <a href="#" class="crumbs__link">Заказы</a>
+                    </li>
+                    <li class="crumbs__item crumbs__item--active">
+                        <span>Возвраты</span>
                     </li>
                 </ul>
             </nav>
-        </div><!-- page pre -->
+        </div><!--page pre-->
     
-        <div class="content-holder page__content-holder content-holder--finance">
+        <div class="page__content-holder content-holder">
     
-            <div class="content-holder__body user-settings">
+            <ul class="tabs account__tabs tabs--theme--dark">
+                <li class="tabs__item">
+                    <a class="tabs__link" href="#" data-tab-label="product-info">Незакрытые заказы</a>
+                </li>
+                <li class="tabs__item">
+                    <a class="tabs__link" href="#" data-tab-label="comments">Все заказы</a>
+                </li>
+                <li class="tabs__item">
+                    <a class="tabs__link" href="#" data-tab-label="comments">Резервы</a>
+                </li>
+                <li class="tabs__item">
+                    <a class="tabs__link" href="#" data-tab-label="comments">Счета</a>
+                </li>
+                <li class="tabs__item tabs__item--active">
+                    <a class="tabs__link" href="#" data-tab-label="comments">Возвраты</a>
+                </li>
+                <li class="tabs__item">
+                    <a class="tabs__link" href="#" data-tab-label="comments">Текущие заказы</a>
+                </li>
+            </ul><!-- tabs -->
     
-                <div class="user-settings__content">
-                    <form method="post" action="" class="user-settings__form form">
+            <div class="content-holder__body account">
     
-                        <div class="user-settings__form-group">
-                            <h2 class="h4 form__title">
-                                <i class="form__title-icon icon icon--user--circled"></i>
-                                <span class="form__title-text">Личные данные</span>
-                            </h2>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Фамилия</div>
-                                <input class="form-row__control" type="text" autocomplete="family-name" name="last name">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Имя</div>
-                                <input class="form-row__control" type="text" autocomplete="given-name" name="first name">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Отчество</div>
-                                <input class="form-row__control" type="text" autocomplete="additional-name" name="middle name">
-                            </div>
-                            <label class="form__row form-row">
-                                <div class="form-row__label">Должность</div>
-                                <select class="select2 select2--theme--default">
-                                    <option value="" disabled selected>Выбрать</option>
-                                    <option value="">Менеджер</option>
-                                    <option value="">Директор</option>
-                                    <option value="">Бухгалтер</option>
-                                </select>
-                            </label>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Телефон</div>
-                                <input class="form-row__control" type="text" autocomplete="tel" name="tel">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">E-mail</div>
-                                <input class="form-row__control" type="email" autocomplete="email" name="email">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Skype</div>
-                                <input class="form-row__control" type="email" name="skype">
-                            </div>
-                        </div><!-- user settings form group -->
+                <h2 class="h3">Товары к возврату</h2>
+                <table class="table table--build-xl account__table">
+                    <tbody class="table__tbody">
+                    
+                        <tr class="table__row-head">
+                            <th class="table__cell-head">PN</th>
+                            <th class="table__cell-head">Производитель</th>
+                            <th class="table__cell-head">Наименование</th>
+                            <th class="table__cell-head">Кол-во</th>
+                            <th class="table__cell-head">Цена, грн</th>
+                            <th class="table__cell-head">Номер заказа</th>
+                            <th class="table__cell-head table__cell-head--hidden">Дополнительно</th>
+                            <th class="table__cell-head table__cell-head--hidden">Удалить</th>
+                        </tr><!--table row head-->
+                    
+                        <tr class="table__row table__row--toggler">
+                            <td class="table__cell" data-col-name="PN">
+                                <div class="table__cell-inner">1C-Original</div>
+                            </td>
+                            <td class="table__cell" data-col-name="Производитель">
+                                <div class="table__cell-inner">1C-Original</div>
+                            </td>
+                            <td class="table__cell table__cell--wide" data-col-name="Наименование">
+                                <div class="table__cell-inner">
+                                    <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
+                                        Корпус оригинальный после 1 цикла Canon i-SENSYS M F211/ 212/ 216/ 217/ 226/ 229/ HP LJ Pro M201/
+                                        202/ 225, Canon 737/ CF283X, картридж первопроходный VIRGIN!
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="table__cell" data-col-name="Кол-во">
+                                <div class="table__cell-inner">2</div>
+                            </td>
+                            <td class="table__cell" data-col-name="Цена, грн">
+                                <div class="table__cell-inner">
+                                    <b class="text text--bigger--115 text--nowrap">200.00</b>
+                                </div>
+                            </td>
+                            <td class="table__cell" data-col-name="Номер заказа">
+                                <div class="table__cell-inner">453789</div>
+                            </td>
+                            <td class="table__cell table__cell--dropdown">
+                                <div class="table__cell-inner">
+                                    <div class="table__dropdown">
+                                        <span class="table__dropdown-text">Свернуть</span>
+                                        <span class="table__dropdown-text table__dropdown-text--active">Развернуть</span>
+                                        <i class="table__dropdown-icon icon icon--arrow--tiangle--down"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table__cell table__cell--delete">
+                                <div class="table__cell-inner">
+                                    <button class="table__delete">
+                                        <i class="icon icon--cancel"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr><!--table row toggler-->
+                    
+                        <tr class="table__row-sub">
+                            <td colspan="12" class="table__cell-sub">
+                    
+                                <div class="table__cell-sub-content table__cell-sub-content--returns">
+                    
+                                    <div class="table__dropdown table__dropdown--sub">
+                                        <button class="table__dropdown-btn">
+                                            <span class="table__dropdown-text table__dropdown-text--active">Свернуть</span>
+                                            <i class="table__dropdown-icon icon--arrow--up"></i>
+                                        </button>
+                                    </div><!--table dropdown-->
+                    
+                                    <div class="table__sub-form form form--col2">
+                                        <div class="form__group">
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Комплектность товара</div>
+                                                <select class="select2 select2--theme--default">
+                                                    <option value="" selected disabled>Выбрать</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </label>
+                    
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Состояние товара</div>
+                                                <select class="select2 select2--theme--default">
+                                                    <option value="" selected disabled>Выбрать</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </label>
+                    
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Причина возврата</div>
+                                                <select class="select2 select2--theme--default">
+                                                    <option value="" selected disabled>Выбрать</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </label>
+                                        </div><!-- form group-->
+                    
+                                        <div class="form__group">
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Модель устройства, в котором использовалась запчасть</div>
+                                                <input class="form-row__control" type="text" name="model name">
+                                            </label>
+                                            <div class="form__row form-row form__row--fluid">
+                                                <div class="form-row__label">Подробное описание причины возврата</div>
+                                                <textarea class="form-row__control" name=""></textarea>
+                                            </div>
+                                        </div><!-- form group-->
+                                    </div><!-- form -->
+                    
+                                    <div class="table__add-file add-file">
+                                        <div class="add-file__main">
+                                            <input type="file" class="add-file__input" multiple accept="image/jpeg,image/png,video/avi,video/mp4,video/mp4,application/pdf,application/msword,application/excel,text/plain">
+                                            <button class="add-file__btn btn btn--style--wired-default">
+                                                <i class="btn__icon icon icon--file-add"></i>
+                                                <span class="btn__text">Добавить файл</span>
+                                            </button>
+                                            <div class="add-file__desc">
+                                                <div class="add-file__desc-title">
+                                                    Прикрепите документы (сканы отпечатков, фотографии товара и пр.)
+                                                </div>
+                                                <div class="add-file__desc-text">
+                                                    Загрузке подлежат документы (pdf, doc, docx, txt, xls, xlsx), изображения (jpg, png) и
+                                                    видео (avi, mpeg, mp4) размером до 5 мб
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-file__list">
+                                            <div class="add-file__clear">Очистить список</div>
+                                        </div>
+                                    </div><!-- add file -->
+                    
+                                    <div class="table__info-block info-block info-block--danger">
+                                        <i class="icon info-block__icon icon--alert--triangle"></i>
+                                        <div class="info-block__text">
+                                            <ul class="info-block__list">
+                                                <li class="info-block__list-item">При жалобе на качество при печати/ брак (фотобарабаны, валы, картриджи и пр.) -
+                                                    обязателен скан отпечатка тестовой страницы принтера, на которой будет видна модель
+                                                    принтера! Сканы плохих отпечатков в виде текста и другой информации могут
+                                                    рассматриваться только как дополнительные.
+                                                </li>
+                                                <li class="info-block__list-item">При жалобе на чипы/ брак сначала убедитесь, что регион Вашего принтера и чипа идентичны!
+                                                    Обязательна тестовая страницы + дословный текст ошибки (№ ошибки) на дисплее принтера
+                                                    или фото дисплея, а также конфигурационная страница.
+                                                </li>
+                                                <li class="info-block__list-item">При жалобе на заводской брак/ механическое повреждение - обязательно фото товара/
+                                                    поврежденного/ дефектного места!
+                                                </li>
+                                                <li class="info-block__list-item">Обратите внимание, возможно отклонение товара при недостаточном/ неточном описании
+                                                    проблемы или отсутствии сканов/ фотографий
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                    
+                                </div><!--table row subcontent-->
+                    
+                            </td>
+                        </tr><!--table row sub-->
+                    
+                        <tr class="table__row table__row--toggler">
+                            <td class="table__cell" data-col-name="PN">
+                                <div class="table__cell-inner">WD-MRSH278AG</div>
+                            </td>
+                            <td class="table__cell" data-col-name="Производитель">
+                                <div class="table__cell-inner">WELLDO</div>
+                            </td>
+                            <td class="table__cell table__cell--wide" data-col-name="Наименование">
+                                <div class="table__cell-inner">
+                                    <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
+                                        Вал магнитный оболочка WELLDO HP LJ P1005/ 1006/ 1007/ 1008/ 1102/ 1505/ 1560/ 1566/ 1606/ M1212/
+                                        1214/ 1217/ 1120/ 1132/ 1522/ 1536/ M125/ 127/ Canon MF4410/ 4430/ 4450/ 4550/ 4570/ 4580/ 4730/
+                                        4750/ 4780/ 4870/ 4890/ LBP-3010/ 3020/ 3100/ 3250/ 6000/ 6020/ 6200/ CB435A/ CB436A/ CE278A/
+                                        CE285A/ Canon 712/ 713/ 725/ 726/ 728, Silver GLOSSY Coating - OEM технология! Для получения
+                                        эталонных от печатков рекомендуется использовать оригинальный магнитный сердечник!
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="table__cell" data-col-name="Кол-во">
+                                <div class="table__cell-inner">8</div>
+                            </td>
+                            <td class="table__cell" data-col-name="Цена, грн">
+                                <div class="table__cell-inner">
+                                    <b class="text text--bigger--115 text--nowrap">314.12</b>
+                                </div>
+                            </td>
+                            <td class="table__cell" data-col-name="Номер заказа">
+                                <div class="table__cell-inner">435223</div>
+                            </td>
+                            <td class="table__cell table__cell--dropdown">
+                                <div class="table__cell-inner">
+                                    <div class="table__dropdown">
+                                        <span class="table__dropdown-text">Свернуть</span>
+                                        <span class="table__dropdown-text table__dropdown-text--active">Развернуть</span>
+                                        <i class="table__dropdown-icon icon icon--arrow--tiangle--down"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table__cell table__cell--delete">
+                                <div class="table__cell-inner">
+                                    <button class="table__delete">
+                                        <i class="icon icon--cancel"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr><!--table row toggler-->
+                    
+                        <tr class="table__row-sub">
+                            <td colspan="12" class="table__cell-sub">
+                    
+                                <div class="table__cell-sub-content table__cell-sub-content--returns">
+                    
+                                    <div class="table__dropdown table__dropdown--sub">
+                                        <button class="table__dropdown-btn">
+                                            <span class="table__dropdown-text table__dropdown-text--active">Свернуть</span>
+                                            <i class="table__dropdown-icon icon--arrow--up"></i>
+                                        </button>
+                                    </div><!--table dropdown-->
+                    
+                                    <div class="table__sub-form form form--col2">
+                                        <div class="form__group">
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Комплектность товара</div>
+                                                <select class="select2 select2--theme--default">
+                                                    <option value="" selected disabled>Выбрать</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </label>
+                    
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Состояние товара</div>
+                                                <select class="select2 select2--theme--default">
+                                                    <option value="" selected disabled>Выбрать</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </label>
+                    
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Причина возврата</div>
+                                                <select class="select2 select2--theme--default">
+                                                    <option value="" selected disabled>Выбрать</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </label>
+                                        </div><!-- form group-->
+                    
+                                        <div class="form__group">
+                                            <label class="form__row form-row">
+                                                <div class="form-row__label">Модель устройства, в котором использовалась запчасть</div>
+                                                <input class="form-row__control" type="text" name="model name">
+                                            </label>
+                                            <div class="form__row form-row form__row--fluid">
+                                                <div class="form-row__label">Подробное описание причины возврата</div>
+                                                <textarea class="form-row__control" name=""></textarea>
+                                            </div>
+                                        </div><!-- form group-->
+                                    </div><!-- form -->
+                    
+                                    <div class="table__add-file add-file">
+                                        <div class="add-file__main">
+                                            <input type="file" class="add-file__input" multiple accept="image/jpeg,image/png,video/avi,video/mp4,video/mp4,application/pdf,application/msword,application/excel,text/plain">
+                                            <button class="add-file__btn btn btn--style--wired-default">
+                                                <i class="btn__icon icon icon--file-add"></i>
+                                                <span class="btn__text">Добавить файл</span>
+                                            </button>
+                                            <div class="add-file__desc">
+                                                <div class="add-file__desc-title">
+                                                    Прикрепите документы (сканы отпечатков, фотографии товара и пр.)
+                                                </div>
+                                                <div class="add-file__desc-text">
+                                                    Загрузке подлежат документы (pdf, doc, docx, txt, xls, xlsx), изображения (jpg, png) и
+                                                    видео (avi, mpeg, mp4) размером до 5 мб
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-file__list">
+                                            <div class="add-file__clear">Очистить список</div>
+                                        </div>
+                                    </div><!-- add file -->
+                    
+                                    <div class="table__info-block info-block info-block--danger">
+                                        <i class="icon info-block__icon icon--alert--triangle"></i>
+                                        <div class="info-block__text">
+                                            <ul class="info-block__list">
+                                                <li class="info-block__list-item">При жалобе на качество при печати/ брак (фотобарабаны, валы, картриджи и пр.) -
+                                                    обязателен скан отпечатка тестовой страницы принтера, на которой будет видна модель
+                                                    принтера! Сканы плохих отпечатков в виде текста и другой информации могут
+                                                    рассматриваться только как дополнительные.
+                                                </li>
+                                                <li class="info-block__list-item">При жалобе на чипы/ брак сначала убедитесь, что регион Вашего принтера и чипа идентичны!
+                                                    Обязательна тестовая страницы + дословный текст ошибки (№ ошибки) на дисплее принтера
+                                                    или фото дисплея, а также конфигурационная страница.
+                                                </li>
+                                                <li class="info-block__list-item">При жалобе на заводской брак/ механическое повреждение - обязательно фото товара/
+                                                    поврежденного/ дефектного места!
+                                                </li>
+                                                <li class="info-block__list-item">Обратите внимание, возможно отклонение товара при недостаточном/ неточном описании
+                                                    проблемы или отсутствии сканов/ фотографий
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                    
+                                </div><!--table row subcontent-->
+                    
+                            </td>
+                        </tr><!--table row sub-->
+                    
+                        <tr class="table__row table__row--clear">
+                            <td class="table__cell" colspan="8">
+                                <button class="table__clear-btn">
+                                    <i class="table__clear-btn-icon icon icon--trash"></i>
+                                    <span class="table__clear-btn-text">Очистить список</span>
+                                </button>
+                            </td>
+                        </tr>
+                    
+                    </tbody>            </table>
     
-                        <div class="user-settings__form-group">
-                            <h2 class="h4 form__title">
-                                <i class="form__title-icon icon icon--building"></i>
-                                <span class="form__title-text">Данные предприятия</span>
-                            </h2>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Физический адрес</div>
-                                <input class="form-row__control" type="text" autocomplete="street-address" name="enterprise address">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Почтовый адрес</div>
-                                <input class="form-row__control" type="text" autocomplete="street-address" name="enterprise post address">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Веб-сайт</div>
-                                <input class="form-row__control" type="text" name="enterprise website">
-                            </div>
-                            <div class="form__row form-row">
-                                <div class="form-row__label">Телефон</div>
-                                <input class="form-row__control" type="tel" name="enterprise tel">
-                            </div>
-                        </div><!-- user settings form group -->
+                <h2 class="h4">Отсылка возврата нашей компании:</h2>
+                <div class="table__sub-form form form--col2 form--col2--return">
+                    <div class="form__group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Возврат уже отослан нашей компании:</div>
+                            <select class="select2 select2--theme--default">
+                                <option value="" selected disabled>Выбрать</option>
+                                <option value="">Да</option>
+                                <option value="">Нет</option>
+                            </select>
+                        </label>
     
-                        <ul class="user-settings__static-info-list">
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Название партнера</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">PrintStore</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Плательщик по умолчанию</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">PrintStore</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Форма собственности</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">Юридическое лицо</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Регион</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">Киев</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Юридический адрес</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">Киев, б-р Дружбы Народов, 47, оф. 317</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">ИНН</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">5348938432432904</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Свидетельство плательщика НДС</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">78655687219213</span>
-                                </span>
-                            </li>
-                            <li class="user-settings__static-info-item">
-                                <span class="user-settings__static-attr">
-                                    <span class="user-settings__static-attr-inner">Код ОКПО</span>
-                                </span>
-                                <span class="user-settings__static-param">
-                                    <span class="user-settings__static-param-inner">2134742342</span>
-                                </span>
-                            </li>
-                        </ul><!-- user settings static info -->
+                        <label class="form__row form-row form-row--input-icon">
+                            <i class="form-row__icon icon icon--calendar"></i>
+                            <div class="form-row__label">Дата отсылки</div>
+                            <input class="form-row__control datepicker-return-date" readonly data-position='bottom center'
+                                   type="text" name="sending date">
+                        </label>
     
-                    </form>
-                </div><!-- user settings content -->
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Номер декларации</div>
+                            <input class="form-row__control" type="text" name="declaration">
+                        </label>
+                    </div><!-- form group-->
     
-                <aside class="user-settings__sb">
-    
-                    <div class="user-settings__sb-group">
-                        <h3 class="h4 user-settings__sb-title">Ваш менеджер</h3>
-                        <div class="user-settings__sb-group-body">
-                            <p>
-                                <b>
-                                    Александр<br>
-                                    <a href="mailto:aleksandr@dwgroup.ua">aleksandr@dwgroup.ua</a>
-                                </b>
-                            </p>
-                            <p>
-                                <b>
-                                    +38 (044) 227-07-73<br>
-                                    +38 (044) 227-07-73
-                                </b>
-                            </p>
+                    <div class="form__group">
+                        <div class="form__row form-row form__row--fluid">
+                            <div class="form-row__label">Комментарий к возврату</div>
+                            <textarea class="form-row__control" name=""></textarea>
                         </div>
-                        <a href="#" class="btn btn--style--wired-default">
-                            Запросить замену
-                        </a>
-                    </div>
+                    </div><!-- form group-->
+                </div><!-- form -->
     
-                    <div class="user-settings__sb-group">
-                        <h3 class="h4 user-settings__sb-title">Безопасность</h3>
-                        <div class="user-settings__sb-group-body">
-                            <a href="#" class="btn btn--style--wired-default" data-modal-id="modal-password">
-                                Сменить пароль
-                            </a>
-                        </div>
-                    </div>
+            </div><!--content holder body-->
     
-                </aside><!-- user settings sidebar -->
+            <div class="content-holder__footer">
+                <div class="control-pad control-pad--cart">
+                    <a class="control-pad__btn btn btn--style--wired-default" href="#">Вернуться назад</a>
+                    <button class="control-pad__btn btn btn--style--default btn--size--lg" data-modal-id="modal-info">
+                        Создать возврат
+                    </button>
+                </div><!-- control pad -->
+            </div><!--content holder footer-->
     
-            </div><!-- content holder body user-settings-->
-    
-        </div><!-- content holder -->
-    
+        </div><!--content holder-->
     </div>
-    
 </main>
 
 <div class="footer page__footer">

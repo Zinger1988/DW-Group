@@ -9,7 +9,7 @@ h6, .h6,
 .h {
   font-family: $headings-font-family;
   font-weight: bold;
-  margin: 0 0 0.75em;
+  margin: 0 0 1em;
   color: $headings-color;
 }
 
@@ -33,6 +33,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: $h4-font-size;
+  margin: 0 0 1.25em;
 }
 
 h5, .h5 {

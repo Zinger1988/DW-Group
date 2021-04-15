@@ -1,0 +1,42 @@
+.order-search{
+
+  @include media(">=md"){
+    display: flex;
+    align-items: center;
+  }
+
+  &__form{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include media(">=md"){
+      margin-right: 5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-row {
+    flex-grow: 1;
+
+    .form-row__control[type="text"] {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: none;
+    }
+  }
+
+  &__submit.btn{
+    min-height: 4.4rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &__return-list-btn{
+
+    @include media(">=md"){
+      flex-shrink: 0;
+    }
+  }
+
+}

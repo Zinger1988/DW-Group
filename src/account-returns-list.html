@@ -1,0 +1,99 @@
+---
+layout: default
+title: account
+---
+
+<div class="container">
+
+    <div class="page__pre">
+        <nav class="crumbs crumbs--white page__crumbs">
+            <ul class="crumbs__list">
+                <li class="crumbs__item">
+                    <a href="/" class="crumbs__link">Главная</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#" class="crumbs__link">Заказы</a>
+                </li>
+                <li class="crumbs__item crumbs__item--active">
+                    <span>Возвраты</span>
+                </li>
+            </ul>
+        </nav>
+    </div><!--page pre-->
+
+    <div class="page__content-holder content-holder">
+
+        <ul class="tabs account__tabs tabs--theme--dark">
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="product-info">Незакрытые заказы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Все заказы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Резервы</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Счета</a>
+            </li>
+            <li class="tabs__item tabs__item--active">
+                <a class="tabs__link" href="#" data-tab-label="comments">Возвраты</a>
+            </li>
+            <li class="tabs__item">
+                <a class="tabs__link" href="#" data-tab-label="comments">Текущие заказы</a>
+            </li>
+        </ul><!-- tabs -->
+
+        <div class="content-holder__body account">
+
+            <h2 class="h3">Товары к возврату</h2>
+            <table class="table table--build-xl account__table">
+                {{> table-returns-list }}
+            </table>
+
+            <h2 class="h4">Отсылка возврата нашей компании:</h2>
+            <div class="table__sub-form form form--col2 form--col2--return">
+                <div class="form__group">
+                    <label class="form__row form-row">
+                        <div class="form-row__label">Возврат уже отослан нашей компании:</div>
+                        <select class="select2 select2--theme--default">
+                            <option value="" selected disabled>Выбрать</option>
+                            <option value="">Да</option>
+                            <option value="">Нет</option>
+                        </select>
+                    </label>
+
+                    <label class="form__row form-row form-row--input-icon">
+                        <i class="form-row__icon icon icon--calendar"></i>
+                        <div class="form-row__label">Дата отсылки</div>
+                        <input class="form-row__control datepicker-return-date" readonly data-position='bottom center'
+                               type="text" name="sending date">
+                    </label>
+
+                    <label class="form__row form-row">
+                        <div class="form-row__label">Номер декларации</div>
+                        <input class="form-row__control" type="text" name="declaration">
+                    </label>
+                </div><!-- form group-->
+
+                <div class="form__group">
+                    <div class="form__row form-row form__row--fluid">
+                        <div class="form-row__label">Комментарий к возврату</div>
+                        <textarea class="form-row__control" name=""></textarea>
+                    </div>
+                </div><!-- form group-->
+            </div><!-- form -->
+
+        </div><!--content holder body-->
+
+        <div class="content-holder__footer">
+            <div class="control-pad control-pad--cart">
+                <a class="control-pad__btn btn btn--style--wired-default" href="#">Вернуться назад</a>
+                <button class="control-pad__btn btn btn--style--default btn--size--lg" data-modal-id="modal-info">
+                    Создать возврат
+                </button>
+            </div><!-- control pad -->
+        </div><!--content holder footer-->
+
+    </div><!--content holder-->
+</div>

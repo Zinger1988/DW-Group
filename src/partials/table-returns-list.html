@@ -8,6 +8,7 @@
         <th class="table__cell-head">Цена, грн</th>
         <th class="table__cell-head">Номер заказа</th>
         <th class="table__cell-head table__cell-head--hidden">Дополнительно</th>
+        <th class="table__cell-head table__cell-head--hidden">Удалить</th>
     </tr><!--table row head-->
 
     <tr class="table__row table__row--toggler">
@@ -45,10 +46,17 @@
                 </div>
             </div>
         </td>
+        <td class="table__cell table__cell--delete">
+            <div class="table__cell-inner">
+                <button class="table__delete">
+                    <i class="icon icon--cancel"></i>
+                </button>
+            </div>
+        </td>
     </tr><!--table row toggler-->
 
     <tr class="table__row-sub">
-        <td colspan="11" class="table__cell-sub">
+        <td colspan="12" class="table__cell-sub">
 
             <div class="table__cell-sub-content table__cell-sub-content--returns">
 
@@ -147,14 +155,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="control-pad control-pad--return">
-                    <button class="control-pad__btn btn btn--style--default btn--size--lg" href="#">Вернуть</button>
-                    <a href="#" class="control-pad__btn btn btn--style--wired-default btn--size--lg btn--disabled">
-                        <i class="btn__icon icon icon--refresh"></i>
-                        <span class="btn__text">Список возвратов: 0</span>
-                    </a>
                 </div>
 
             </div><!--table row subcontent-->
@@ -200,10 +200,17 @@
                 </div>
             </div>
         </td>
+        <td class="table__cell table__cell--delete">
+            <div class="table__cell-inner">
+                <button class="table__delete">
+                    <i class="icon icon--cancel"></i>
+                </button>
+            </div>
+        </td>
     </tr><!--table row toggler-->
 
     <tr class="table__row-sub">
-        <td colspan="11" class="table__cell-sub">
+        <td colspan="12" class="table__cell-sub">
 
             <div class="table__cell-sub-content table__cell-sub-content--returns">
 
@@ -304,14 +311,18 @@
                     </div>
                 </div>
 
-                <div class="control-pad control-pad--return">
-                    <button class="control-pad__btn btn btn--style--default btn--size--lg" href="#">Добавить в список возвратов</button>
-                    <button class="control-pad__btn btn btn--style--wired-default btn--size--lg" href="#">К списку возвратов</button>
-                </div>
-
             </div><!--table row subcontent-->
 
         </td>
     </tr><!--table row sub-->
+
+    <tr class="table__row table__row--clear">
+        <td class="table__cell" colspan="8">
+            <button class="table__clear-btn">
+                <i class="table__clear-btn-icon icon icon--trash"></i>
+                <span class="table__clear-btn-text">Очистить список</span>
+            </button>
+        </td>
+    </tr>
 
 </tbody>

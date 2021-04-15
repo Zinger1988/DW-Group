@@ -711,7 +711,226 @@
     </div><!-- footer bottom -->
 
 </div>
-<div class="modal modal--search close-modal" id="modal-search">
+<div class="modal close-modal" id="modal-preview">
+    <div class="modal__body modal__body--size--lg">
+        <div class="modal__header">
+            <h3 class="modal__header-title">Предпросмотр</h3>
+            <button class="modal__header-close">
+                <i class="icon icon--cancel close-modal"></i>
+                <span>Закрыть</span>
+            </button>
+        </div>
+        <div class="modal__content">
+
+            <div class="product-card">
+
+                <div class="product-card__preview-img">
+                    <img class="product-card__preview-img-item" src="assets/img/catalog/01.jpg" alt="image">
+                </div>
+
+                <div class="product-card__info tip-holder">
+        
+                    <div class="product-card__item-rating item-rating">
+                        <div class="item-rating__mark" data-mark="4.6"></div>
+                        <a class="item-rating__link" href="#">
+                            <span class="item-rating__link-pre">отзывы:</span>
+                            <span class="item-rating__link-val">3</span>
+                        </a>
+                    </div>
+        
+                    <div class="product-card__part-number">ВЭД-код: 0123456789</div>
+                    <div class="product-card__part-number">Код товара: QWERTYUIOPASDFGHJKLZXCVB</div>
+        
+                    <h1 class="product-card__name">
+                        WELLDO Вал магнитный в сборе WELLDO HP LJ P1005/ 1006/ 1007/ 1008/ 1102/ 1505/
+                        1560/ 1566/ 1606/ M1212/ 1214/ 1217/ 1120/ 1132/ 1522/ 1536/ M125/ 127/ Canon
+                        MF4410 /4430/ 4450/ 4550/ 4570/ 4580/ 4730/ 4750/ 4780/ 4870/ 4890/ LBP-3010/
+                        3020/ 3100/ 3250/ 6000/ 6020/ 6200/ CB435A/ CB436A/ CE278A/ CE285A/ Canon 712/
+                        713/ 725/ 726/ 728, Silver GLOSSY Coating - OEM технология! + комплект втулок
+                    </h1>
+        
+                    <div class="product-card__holder">
+        
+                        <div class="product-card__price">
+                            <div class="product-card__product-price product-price">
+                                <div class="product-price__item">
+                                    <span class="product-price__value">999.99</span>
+                                    <span class="product-price__currency">&#8372;</span>
+                                </div>
+                                <div class="product-price__item product-price__item--old">
+                                        <span class="product-price__value">99 999.99</span>
+                                        <span class="product-price__currency">&#8372;</span>
+                                    </div>
+                            </div>
+                            <div class="product-card__availability">
+                                Наличие: <span class="text text--marker--warning">Достаточно</span>
+                            </div>
+                        </div><!-- product card price-->
+        
+                        <a href="#" class="product-card__fav-add fav-add">
+                            <span class="fav-add__text">В избранное</span>
+                            <i class="fav-add__icon icon icon--favorite--solid"></i>
+                        </a>
+        
+                        <div class="product-card__wished-price wished-price">
+                            <img class="wished-price__img" src="assets/img/public/banknote.svg" alt="image">
+                            <div class="wished-price__text">
+                                Дорого? Сообщите нам желаемую стоимость:
+                            </div>
+                            <input type="text" class="wished-price__input" value="999.99">
+                            <button class="wished-price__btn">Ok</button>
+                        </div><!-- product card wished price-->
+        
+                        <hr class="product-card__holder-separator">
+        
+                        <div class="product-card__controls">
+                            <div class="product-card__quantity item-quantity">
+                                <button class="item-quantity__btn item-quantity__btn--dec">-</button>
+                                <button class="item-quantity__btn item-quantity__btn--inc">+</button>
+                                <input class="item-quantity__input" type="number" value="1" min="1">
+                            </div>
+        
+                            <button class="product-card__buy-btn btn btn--plain btn--style--orange">
+                                <i class="icon icon--delivery"></i>
+                                <span class="btn__text">Предзаказ</span>
+                            </button>
+                        </div><!-- product card product-card controls-->
+        
+                    </div><!-- product card holder-->
+        
+                    <div class="product-card__baloon-tip baloon-tip" data-tip-for="product-card__buy-btn">
+                        <i class="baloon-tip__icon icon--info"></i>
+                        <span class="baloon-tip__text">Ожидается: 12.03.2021</span>
+                    </div>
+        
+                    <div class="product-card__accordion accordion">
+        
+                        <div class="accordion__item">
+        
+                            <div class="accordion__title">
+                                <div class="accordion__title-text">Описание</div>
+                                <i class="accordion__title-toggler">+</i>
+                            </div>
+        
+                            <div class="accordion__body">
+        
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus harum
+                                    inventore culpa maxime reiciendis beatae reprehenderit exercitationem
+                                    quo tempora sit. Dolor nam magnam necessitatibus quidem aliquam maiores
+                                    reprehenderit minima eaque.
+                                </p>
+        
+                            </div><!-- accordion body -->
+        
+                        </div><!-- accordion item -->
+        
+                        <div class="accordion__item">
+        
+                            <div class="accordion__title">
+                                <div class="accordion__title-text">Совместимость</div>
+                                <i class="accordion__title-toggler">+</i>
+                            </div>
+        
+                            <div class="accordion__body">
+        
+                                <div class="chars-table">
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Для принтера</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">
+                                                HP LJ 1320/ 1160/ 1000/ 1010/ 1012/ 1015/ 1018/ 1020
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Для картриджа</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">M125 / M127 / M201 / M225 MFP, M1212 /
+                                                M1213</span>
+                                        </span>
+                                    </div>
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Назначение</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">Заправка картриджа</span>
+                                        </span>
+                                    </div>
+                                </div><!-- chars table -->
+        
+                            </div><!-- accordion body -->
+        
+                        </div><!-- accordion item -->
+        
+                        <div class="accordion__item">
+        
+                            <div class="accordion__title">
+                                <div class="accordion__title-text">Весогабаритные характеристики, упаковка</div>
+                                <i class="accordion__title-toggler">+</i>
+                            </div>
+        
+                            <div class="accordion__body">
+        
+                                <div class="chars-table">
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Размеры (ВхШхГ), см.</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">0х0х0</span>
+                                        </span>
+                                    </div>
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Упаковка Master Box, шт/коробка</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">12</span>
+                                        </span>
+                                    </div>
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Упаковка Master Box, вес
+                                                (грамм)</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">13200</span>
+                                        </span>
+                                    </div>
+                                    <div class="chars-table__item">
+                                        <span class="chars-table__attr">
+                                            <span class="chars-table__text-inner">Ресурс, грамм</span>
+                                        </span>
+                                        <span class="chars-table__param">
+                                            <span class="chars-table__text-inner">1000</span>
+                                        </span>
+                                    </div>
+                                </div><!-- chars table -->
+        
+                            </div><!-- accordion body -->
+        
+                        </div><!-- accordion item -->
+        
+                    </div><!-- accordion -->
+        
+                </div><!-- product card info-->
+            </div>
+
+        </div><!-- modal content -->
+        <div class="modal__footer">
+            <div class="control-pad control-pad--modal">
+                <button class="control-pad__btn btn btn--style--wired-default close-modal" href="#">Закрыть</button>
+                <a class="control-pad__btn btn btn--style--default" href="#">Подробнее о товаре</a>
+            </div><!-- control pad -->
+        </div>
+    </div>
+</div><div class="modal modal--search close-modal" id="modal-search">
     <div class="modal__body modal__body--size--lg modal__body--side-img">
         <div class="modal__header">
             <h3 class="modal__header-title">Расширенный поиск</h3>
