@@ -165,6 +165,19 @@ $(document).ready(function () {
         });
     });
 
+    const carouselBrand = new Swiper('.carousel-brands .swiper', {
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        loop: false,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper__pagination',
+        }
+    });
+
     // siteJS ---------------------------------------
 
     let siteJS = {
@@ -200,7 +213,11 @@ $(document).ready(function () {
             this.accordion();
             this.baloonTip();
             this.passwordToggler();
-            this.fileAdd()
+            this.fileAdd();
+            this.indexVideo();
+        },
+        indexVideo: function(){
+
         },
         fileAdd: function(){
             const wrapper = $('.add-file');

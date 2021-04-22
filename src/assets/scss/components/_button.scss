@@ -142,6 +142,12 @@
     }
   }
 
+  &--style--gradient-orange{
+    background: rgb(242,149,29);
+    background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
+    color: #fff;
+  }
+
   &--size{
     
     &--lg{

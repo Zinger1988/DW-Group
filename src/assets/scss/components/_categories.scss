@@ -1,0 +1,162 @@
+.categories{
+  background: rgb(51,30,77);
+  background: linear-gradient(0deg, rgba(51,30,77,1) 0%, rgba(51,30,77,0) 100%);
+
+  &__list{
+    @extend %listreset;
+    display: grid;
+    justify-content: center;
+    background: rgb(72,70,170);
+    background: linear-gradient(-90deg, rgba(72,70,170,.7) 0%, rgba(139,55,188,.7) 100%);
+    color: $white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+
+    @include media(">=sm"){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(">=lg"){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 0;
+    }
+  }
+
+  &__list-item{
+    display: grid;
+    grid-template: minmax(10rem, 1fr) / 8rem 1fr;
+    grid-gap: 0 1rem;
+    align-items: center;
+    padding: 2rem 2.5rem;
+    position: relative;
+
+    @include media(">=sm"){
+      grid-template: 25vw auto/ auto;
+      grid-gap: 1rem 0;
+      justify-items: center;
+      text-align: center;
+    }
+
+    @include media(">=700px"){
+      grid-template: minmax(10rem, 1fr) / 8rem 1fr;
+      grid-gap: 0 1rem;
+      align-items: center;
+      justify-items: start;
+      text-align: left;
+    }
+
+    @include media(">=md"){
+      grid-template: minmax(11rem, 1fr) / 11rem 1fr;
+    }
+
+    @include media(">=lg"){
+      grid-template: 11vw auto/ auto;
+      grid-gap: 1rem 0;
+      justify-items: center;
+      text-align: center;
+      padding: 1rem 1.5rem 2rem;
+
+      &::after{
+        left: 100%;
+        bottom: 1rem;
+        width: 1px;
+        height: calc(100% - 2rem);
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 25%, rgba(255,255,255,0.25) 75%, rgba(255,255,255,0) 100%);
+      }
+
+      &:last-child::after{
+        display: none;
+      }
+    }
+
+    @include media(">=xl"){
+      grid-template: minmax(10rem, 1fr) / 8rem 1fr;
+      grid-gap: 0 1rem;
+      align-items: center;
+      justify-items: start;
+      text-align: left;
+      padding: 2rem 1.5rem;
+    }
+
+    @include media(">=1420px"){
+      grid-template: minmax(10rem, 1fr) / 10rem 1fr;
+    }
+
+    @include media(">=1640px"){
+      grid-template: minmax(14rem, 1fr) / 14rem 1fr;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      left: 2.5rem;
+      bottom: 0;
+      width: calc(100% - 5rem);
+      height: 1px;
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 25%, rgba(255,255,255,0.25) 75%, rgba(255,255,255,0) 100%);
+    }
+  }
+
+  &__list-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &__img-item{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    @include media(">=lg"){
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 125%;
+      width: auto;
+      object-fit: unset;
+    }
+
+    @include media(">=xl"){
+      left: 0;
+      transform: unset;
+    }
+  }
+
+  &__list-text{
+    @include media(">=sm"){
+      align-self: end;
+    }
+    @include media(">=700px"){
+      align-self: unset;
+    }
+    @include media(">=lg"){
+      align-self: end;
+    }
+    @include media(">=xl"){
+      align-self: unset;
+    }
+  }
+
+  &__list-title{
+    text-transform: uppercase;
+    font: 900 2rem/1.214 $headings-font-family;
+    margin-bottom: .642em;
+
+    @include media(">=1640px"){
+      font-size: 2.5rem;
+    }
+  }
+
+  &__btn{
+    font-size: 1.2rem;
+
+    @include media(">=1640px"){
+      font-size: 1.3rem;
+    }
+  }
+}

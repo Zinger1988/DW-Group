@@ -1,0 +1,223 @@
+.index-page{
+
+  &__part{
+
+    &--space{
+      background-color: #331E4D;
+      color: $white;
+      position: relative;
+      overflow: hidden;
+
+      &::before,
+      &::after{
+        content: "";
+        position: absolute;
+        background: #331E4D url("../img/public/open/bg/01.jpg") top center / contain no-repeat;
+        width: 70rem;
+        height: 70rem;
+        z-index: 0;
+      }
+
+      &::after{
+        right: 0;
+        transform: translateX(50%) rotate(0);
+        top: 0;
+        //animation: 180s linear infinite spin2;
+      }
+      &::before{
+        left: 0;
+        transform: translateX(-50%) rotate(0);
+        bottom: 0;
+        //animation: 120s linear infinite spin;
+      }
+    }
+  }
+
+  &__about{
+    position: relative;
+    z-index: 5;
+    padding-top: 3rem;
+
+    @include media(">=md"){
+      padding-top: 4rem;
+    }
+
+    @include media(">=xxl"){
+      padding-top: 5rem;
+    }
+
+    @include media(">=xxxl"){
+      padding-top: 6rem;
+    }
+  }
+}
+
+.about{
+
+  &__video{
+    position: relative;
+    background-color: $black;
+    border-radius: 6px;
+    margin-bottom: 5rem;
+
+    @include media(">=md"){
+      margin-bottom: 7rem;
+    }
+
+    @include media(">=xxl"){
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__video-plug{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: #331E4D url("../img/public/open/bg/02.jpg") center / cover no-repeat;
+    border-radius: 6px;
+  }
+
+  &__title{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: $white;
+    text-transform: uppercase;
+    z-index: 11;
+    width: 100%;
+    margin: 0;
+    font-size: calc(3.4rem + (110 - 34)*((100vw - 36rem)/(1340 - 360)));
+    font-weight: 700;
+    font-family: $headings-font-family;
+    opacity: .4;
+
+    @include media(">=xxl"){
+      font-size: 11rem;
+    }
+  }
+
+  &__video-inner{
+    max-width: 78.2rem;
+    margin: 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  &__video-btn{
+    @extend %buttonreset;
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: calc(1.6rem + (30 - 16)*((100vw - 36rem)/(1340 - 360)));
+    background: rgb(242,149,29);
+    background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
+    box-shadow: 0 6px 18px rgba(0,0,0,.16);
+
+    @include media(">=xl"){
+      font-size: 3rem;
+    }
+  }
+
+  &__body{
+    background-color: rgba(255,255,255,.15);
+    backdrop-filter: blur(3px);
+    color: $white;
+    border-radius: 6px;
+    padding: 2rem;
+  }
+
+  &__carousel-brands{
+    margin-bottom: 2rem;
+    padding-bottom: .2rem;
+  }
+
+  &__desc{
+    font-size: 1.2rem;
+  }
+}
+
+.carousel-brands{
+  overflow: hidden;
+
+  .swiper-slide{
+    width: 14rem;
+    margin-right: 3rem;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  .carousel-brands__img{
+    display: block;
+    width: 100%;
+  }
+
+  .swiper-wrapper{
+    margin-bottom: 2.5rem;
+  }
+
+  .swiper__pagination-wrapper{
+    display: flex;
+    align-items: center;
+
+    &::before,
+    &::after{
+      content: "";
+      flex-grow: 1;
+      border-top: 1px dotted rgba(255,255,255,.3);
+    }
+  }
+
+  .swiper__pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .swiper-pagination-bullet{
+    width: .6rem;
+    height: .6rem;
+    background-color: $white;
+    opacity: 1;
+    margin: 0 .7rem;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: #23CBA6;
+    box-shadow: 0 0 0 2px #23CBA6, 0 0 6px 2px #23CBA6;
+  }
+
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-50%) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: translateX(50%) rotate(0);
+  }
+  100% {
+    transform: translateX(50%) rotate(-360deg);
+  }
+}
