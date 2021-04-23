@@ -7,7 +7,7 @@
   overflow-x: hidden;
 
   @include media('>=xl'){
-    &:not(&--open)::before{
+    &:not(&--index)::before{
       content: "";
       position: absolute;
       top: 0;

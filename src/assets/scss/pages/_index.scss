@@ -1,4 +1,7 @@
 .index-page{
+  perspective: 2px;
+  height: 100vh;
+  overflow-y: auto;
 
   &__part{
 
@@ -9,35 +12,64 @@
       overflow: hidden;
       padding-bottom: 3rem;
 
+      @include media(">=sm"){
+        &::before,
+        &::after{
+          width: 180%;
+        }
+      }
+
+      @include media(">=md"){
+        &::before,
+        &::after{
+          width: 120%;
+        }
+      }
+
       @include media(">=lg"){
         padding-bottom: 4rem;
+
+        &::before,
+        &::after{
+          width: 105%;
+        }
       }
 
       @include media(">=xl"){
         padding-bottom: 5rem;
+
+        &::before,
+        &::after{
+          width: 95%;
+        }
+      }
+
+      @include media(">=xxxl"){
+        &::before,
+        &::after{
+          width: 80%;
+        }
       }
 
       &::before,
       &::after{
         content: "";
         position: absolute;
-        background: #331E4D url("../img/public/open/bg/01.png") center / contain no-repeat;
-        width: 70rem;
-        height: 70rem;
+        top: 0;
+        width: 200%;
+        height: 100%;
         z-index: 1;
       }
 
       &::after{
-        right: 0;
-        transform: translateX(50%) rotate(0);
-        top: 0;
-        //animation: 180s linear infinite spin2;
+        right: -60%;
+        background: url("../img/public/open/bg/01.png") center top / contain no-repeat;
+        transform: translateZ(-1px) scale(1);
       }
       &::before{
-        left: 0;
-        transform: translateX(-50%) rotate(0);
-        bottom: 0;
-        //animation: 120s linear infinite spin;
+        left: -80%;
+        background: url("../img/public/open/bg/01.png") bottom right / contain no-repeat;
+        transform: translateZ(-2px) scale(1.5);
       }
     }
   }
@@ -413,23 +445,5 @@
     @include media(">=xl"){
       font-size: 1.8rem;
     }
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: translateX(-50%) rotate(0);
-  }
-  100% {
-    transform: translateX(-50%) rotate(360deg);
-  }
-}
-
-@keyframes spin2 {
-  0% {
-    transform: translateX(50%) rotate(0);
-  }
-  100% {
-    transform: translateX(50%) rotate(-360deg);
   }
 }
