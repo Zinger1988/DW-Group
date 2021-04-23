@@ -148,6 +148,12 @@
     color: #fff;
   }
 
+  &--style--gradient-violet{
+    background: rgb(112,26,180);
+    background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 100%);
+    color: #fff;
+  }
+
   &--size{
     
     &--lg{
