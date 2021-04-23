@@ -8,8 +8,6 @@ $(document).ready(function () {
         maxDate: new Date(),
     });
 
-    new WOW().init();
-
     // Select 2 ---------------------------------------
 
     const select2Themes = [
