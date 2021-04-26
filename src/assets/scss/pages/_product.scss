@@ -268,6 +268,16 @@
     }
   }
 
+  &__buy-btn-icon{
+    font-size: 1.4em;
+    margin-right: .3em;
+    line-height: 1;
+
+    @include media(">=md"){
+      font-size: 1.7em;
+    }
+  }
+
   &__quantity{
     width: 100%;
 

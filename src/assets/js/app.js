@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    // Datepicker -------------------------------------
+
     $('.datepicker-reconciliation').datepicker({
         maxDate: new Date(),
     });
@@ -130,6 +132,38 @@ $(document).ready(function () {
         }
     });
 
+    const carouselPlane = new Swiper('.carousel-section--layout--plane .swiper', {
+        loop: true,
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        breakpoints: {
+            1900: {
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+            },
+            1600: {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+            },
+            1357: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+            788: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            547: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            }
+        }
+    });
+
     $('.carousel-section__item').each(function () {
         const arrows = $(this).find('.carousel-section__arrows-btn');
         const carousel = $(this).find('.swiper').prop('swiper');
@@ -177,6 +211,26 @@ $(document).ready(function () {
             el: '.swiper__pagination',
         }
     });
+
+    // WOW.js -----------------------------------------
+
+    let wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animate__animated', // animation css class (default is animated)
+            offset:       100,          // distance to the element when triggering the animation (default is 0)
+            mobile:       true,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: ".index-page",    // optional scroll container selector, otherwise use window,
+            resetAnimation: true,     // reset animation on end (default is true)
+        }
+    );
+
+    wow.init();
 
     // siteJS ---------------------------------------
 

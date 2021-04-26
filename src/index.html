@@ -16,7 +16,7 @@ title: index
 
         <ul class="categories__list">
 
-            <li class="categories__list-item">
+            <li class="categories__list-item wow animate__zoomIn">
                 <div class="categories__list-img">
                     <img src="assets/img/public/open/product-categories/shaft.png" alt="Запчасти" class="categories__img-item">
                 </div>
@@ -28,7 +28,7 @@ title: index
                 </div>
             </li><!--categories list item-->
 
-            <li class="categories__list-item">
+            <li class="categories__list-item wow animate__zoomIn" data-wow-delay=".15s">
                 <div class="categories__list-img">
                     <img src="assets/img/public/open/product-categories/toner.png" alt="Тонеры" class="categories__img-item">
                 </div>
@@ -40,7 +40,7 @@ title: index
                 </div>
             </li><!--categories list item-->
 
-            <li class="categories__list-item">
+            <li class="categories__list-item wow animate__zoomIn" data-wow-delay=".3s">
                 <div class="categories__list-img">
                     <img src="assets/img/public/open/product-categories/cartridge.png" alt="Картриджи" class="categories__img-item">
                 </div>
@@ -52,7 +52,7 @@ title: index
                 </div>
             </li><!--categories list item-->
 
-            <li class="categories__list-item">
+            <li class="categories__list-item wow animate__zoomIn" data-wow-delay=".45s">
                 <div class="categories__list-img">
                     <img src="assets/img/public/open/product-categories/opc.png" alt="Расходные материалы" class="categories__img-item">
                 </div>
@@ -74,7 +74,7 @@ title: index
     <section class="index-page__about about">
         <div class="container container--narrow">
 
-            <div class="about__video">
+            <div class="about__video wow animate__fadeIn">
 
                 <div class="about__video-plug">
                     <h2 class="about__title">О компании</h2>
@@ -87,11 +87,11 @@ title: index
                 </div>
 
                 <button class="about__video-btn">
-                    <i class="icon icon--arrow--tiangle--right"></i>
+                    <i class="icon icon--arrow--tiangle-alt--right"></i>
                 </button>
             </div><!--about video-->
 
-            <div class="about__body">
+            <div class="about__body wow animate__fadeIn">
 
                 <div class="about__carousel-brands carousel-brands">
                     <div class="swiper">
@@ -175,7 +175,7 @@ title: index
                     <a href="#" class="about__controls-btn btn btn--plain btn--style--gradient-orange">
                         <span class="btn__text">Стать партнером</span>
                     </a>
-                    <a href="#" class="about__controls-btn btn btn--plain btn--style--gradient-violet">
+                    <a href="#" class="about__controls-btn btn btn--plain btn--size--lg btn--style--gradient-violet">
                         <span class="btn__text">Подробнее о нас</span>
                     </a>
                 </div><!--about footer-->
@@ -190,28 +190,28 @@ title: index
             <h2 class="advantages__title">Наши преимущества</h2>
 
             <ul class="advantages__list">
-                <li class="advantages__list-item">
+                <li class="advantages__list-item wow animate__backInLeft">
                     <div class="advantages__list-count">
                         <div class="advantages__list-count-num">1</div>
                         <img class="advantages__list-count-img" src="assets/img/public/open/advantages/01.png" alt="image">
                     </div>
                     <div class="advantages__list-text">Широкий ассортимент товаров</div>
                 </li>
-                <li class="advantages__list-item">
+                <li class="advantages__list-item wow animate__backInDown">
                     <div class="advantages__list-count">
                         <div class="advantages__list-count-num">2</div>
                         <img class="advantages__list-count-img" src="assets/img/public/open/advantages/02.png" alt="image">
                     </div>
                     <div class="advantages__list-text">Удобное расположение склада</div>
                 </li>
-                <li class="advantages__list-item">
+                <li class="advantages__list-item wow animate__backInUp">
                     <div class="advantages__list-count">
                         <div class="advantages__list-count-num">3</div>
                         <img class="advantages__list-count-img" src="assets/img/public/open/advantages/03.png" alt="image">
                     </div>
                     <div class="advantages__list-text">Cистема скидок и программа лояльности</div>
                 </li>
-                <li class="advantages__list-item">
+                <li class="advantages__list-item wow animate__backInRight">
                     <div class="advantages__list-count">
                         <div class="advantages__list-count-num">4</div>
                         <img class="advantages__list-count-img" src="assets/img/public/open/advantages/04.png" alt="image">
@@ -224,3 +224,7 @@ title: index
     </section><!--advantages-->
 
 </div>
+
+<section class="index-page__carousel-section carousel-section carousel-section--layout--plane carousel-section--theme--index wow animate__fadeIn" data-wow-delay="0.25s">
+    {{> carousel-index }}
+</section>

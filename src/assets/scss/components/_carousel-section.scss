@@ -118,7 +118,7 @@
     }
 
     &:hover{
-        color: $mySin;
+      color: $mySin;
     }
   }
 
@@ -128,6 +128,22 @@
     position: relative;
     z-index: 10;
     overflow: hidden;
+
+    @include media(">=md"){
+      &:not(:last-child){
+        margin-bottom: 4rem;
+      }
+    }
+
+    @include media(">=xxxl"){
+      &:not(:last-child){
+        margin-bottom: 5rem;
+      }
+    }
+
+    &:not(:last-child){
+      margin-bottom: 3rem;
+    }
 
     .swiper{
       overflow: hidden;
@@ -144,6 +160,10 @@
         height: 100%;
       }
     }
+  }
+
+  &__footer{
+    text-align: center;
   }
 
   @include media('>=sm'){
@@ -275,6 +295,81 @@
         }
       }
     }
+  }
+
+  &--layout--plane{
+    overflow-x: hidden;
+    background: none;
+
+    .product-tile{
+      @include media(">=xxl") {
+        margin: 0 .5rem;
+        outline: none;
+      }
+    }
+
+    .product-tile__inner{
+      @include media(">=xxl") {
+        border-radius: 6px;
+        box-shadow: 0 3px 12px rgba($mineShaft, .14);
+      }
+    }
+
+    .swiper{
+      @include media(">=xxl") {
+        overflow: visible;
+      }
+    }
+
+    .swiper-wrapper{
+      @include media(">=xxl") {
+        padding-bottom: 1.2rem;
+      }
+    }
+
+    #{$this}__body{
+      @include media(">=xxl") {
+        box-shadow: none;
+        border-radius: 0;
+        overflow: visible;
+      }
+    }
+
+    #{$this}__header{
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    #{$this}__title{
+      font-family: $headings-font-family;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0;
+      margin: 0 2rem;
+      width: auto;
+
+      @include media(">=md"){
+        margin: 0 4rem;
+      }
+
+      @include media(">=xl"){
+        margin: 0 6rem;
+      }
+    }
+
+    #{$this}__arrows-btn{
+      flex-shrink: 0;
+    }
+
+    #{$this}__arrows-btn .icon {
+      font-size: 1rem;
+
+      @include media(">=md"){
+        font-size: 1.2rem;
+      }
+    }
+
   }
 
   &--theme--dark{

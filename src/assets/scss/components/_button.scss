@@ -45,113 +45,152 @@
     margin: 0 .6em;
   }
 
-  &--style--default{
-    background-color: $mySin;
-    @include animate(box-shadow);
+  &--style{
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba($mySin,.3);
-    }
-  }
-
-  &--style--wired-default{
-    box-shadow: inset 0 0 0 2px $mySin;
-    @include animate(background-color);
-
-    &:hover{
+    &--default{
       background-color: $mySin;
+      @include animate(box-shadow);
+
+      &:hover{
+        box-shadow: 0 0 0 6px rgba($mySin,.3);
+      }
     }
-  }
 
-  &--style--grey{
-    background-color: $mercury;
-    @include animate(background-color);
+    &--wired-default{
+      box-shadow: inset 0 0 0 2px $mySin;
+      @include animate(background-color);
 
-    &:hover{
-      background-color: $tiara;
+      &:hover{
+        background-color: $mySin;
+      }
     }
-  }
 
-  &--style--darkgreen{
-    background-color: $forestGreen;
-    color: $white;
-    @include animate(box-shadow);
+    &--grey{
+      background-color: $mercury;
+      @include animate(background-color);
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba($forestGreen, .3);
+      &:hover{
+        background-color: $tiara;
+      }
     }
-  }
 
-  &--style--wired-grey{
-    background-color: $white;
-    box-shadow: inset 0 0 0 2px $mercury;
-    @include animate(box-shadow);
+    &--darkgreen{
+      background-color: $forestGreen;
+      color: $white;
+      @include animate(box-shadow);
 
-    &:hover{
-      box-shadow: inset 0 0 0 2px $tiara;
+      &:hover{
+        box-shadow: 0 0 0 6px rgba($forestGreen, .3);
+      }
     }
-  }
 
-  &--style--green{
-    background-color: #7CBF49;
-    color: $white;
-    @include animate(box-shadow);
+    &--wired-grey{
+      background-color: $white;
+      box-shadow: inset 0 0 0 2px $mercury;
+      @include animate(box-shadow);
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba(#7CBF49, .3);
+      &:hover{
+        box-shadow: inset 0 0 0 2px $tiara;
+      }
     }
-  }
 
-  &--style--orange{
-    background-color: $mySin;
-    color: $white;
-    @include animate(box-shadow);
+    &--green{
+      background-color: #7CBF49;
+      color: $white;
+      @include animate(box-shadow);
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba($mySin, .3);
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#7CBF49, .3);
+      }
     }
-  }
 
-  &--style--lightblue{
-    background-color: #61ACDE;
-    color: $white;
-    @include animate(box-shadow);
+    &--orange{
+      background-color: $mySin;
+      color: $white;
+      @include animate(box-shadow);
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba(#61ACDE, .3);
+      &:hover{
+        box-shadow: 0 0 0 6px rgba($mySin, .3);
+      }
     }
-  }
 
-  &--style--lightgreen{
-    background-color: #49BFA3;
-    color: $white;
-    @include animate(box-shadow);
+    &--lightblue{
+      background-color: #61ACDE;
+      color: $white;
+      @include animate(box-shadow);
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba(#49BFA3, .3);
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#61ACDE, .3);
+      }
     }
-  }
 
-  &--style--darkgrey{
-    background-color: #5C747E;
-    color: $white;
-    @include animate(box-shadow);
+    &--lightgreen{
+      background-color: #49BFA3;
+      color: $white;
+      @include animate(box-shadow);
 
-    &:hover{
-      box-shadow: 0 0 0 6px rgba(#5C747E, .3);
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#49BFA3, .3);
+      }
     }
-  }
 
-  &--style--gradient-orange{
-    background: rgb(242,149,29);
-    background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
-    color: #fff;
-  }
+    &--darkgrey{
+      background-color: #5C747E;
+      color: $white;
+      @include animate(box-shadow);
 
-  &--style--gradient-violet{
-    background: rgb(112,26,180);
-    background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 100%);
-    color: #fff;
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#5C747E, .3);
+      }
+    }
+
+    &--gradient-orange{
+      background: rgb(242,149,29);
+      background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      @include animate(box-shadow);
+
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#F27F1D, .3);
+      }
+    }
+
+    &--gradient-violet{
+      background: rgb(112,26,180);
+      background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 100%);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      @include animate(box-shadow);
+
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#467BAD, .3);
+      }
+    }
+
+    &--gradient-green{
+      background: rgb(124,191,73);
+      background: linear-gradient(90deg, rgba(124,191,73,1) 0%, rgba(51,163,33,1) 100%);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      @include animate(box-shadow);
+
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#58b135, .3);
+      }
+    }
+
+    &--gradient-darkgreen{
+      background: rgb(41,145,33);
+      background: linear-gradient(90deg, rgba(6,117,86,1) 0%, rgba(41,145,33,1) 100%);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      @include animate(box-shadow);
+
+      &:hover{
+        box-shadow: 0 0 0 6px rgba(#18833c, .3);
+      }
+    }
   }
 
   &--size{

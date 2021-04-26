@@ -63,12 +63,12 @@
 
       &::after{
         right: -60%;
-        background: url("../img/public/open/bg/01.png") center top / contain no-repeat;
+        background: url("../img/public/open/bg/01.jpg") center top / contain no-repeat;
         transform: translateZ(-1px) scale(1);
       }
       &::before{
         left: -80%;
-        background: url("../img/public/open/bg/01.png") bottom right / contain no-repeat;
+        background: url("../img/public/open/bg/01.jpg") bottom right / contain no-repeat;
         transform: translateZ(-2px) scale(1.5);
       }
     }
@@ -110,6 +110,42 @@
 
     .advantages__title{
       color: $white;
+    }
+  }
+
+  &__carousel-section{
+
+    @include media(">=xxl"){
+      padding: 8rem 0;
+      background:
+              url("../img/public/offset-white-top.jpg") no-repeat right top/ 65.3rem auto;
+    }
+
+    @include media(">=xxxl"){
+      padding: 10rem 0;
+      background:
+              url("../img/public/offset-white-top.jpg") no-repeat right top/ 65.3rem auto,
+              url("../img/public/offset-white-bottom.jpg") no-repeat left bottom/ 65.3rem auto;
+    }
+
+    .carousel-section__header{
+      @include media(">=xxxl") {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .carousel-section__title{
+      color: #331E4D;
+
+      @include media(">=xxxl"){
+        font-size: 4.25rem;
+      }
+    }
+
+    .carousel-section__footer .btn{
+      @include media(">=lg"){
+        font-size: 1.4rem;
+      }
     }
   }
 }

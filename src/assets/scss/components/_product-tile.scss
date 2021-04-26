@@ -2,6 +2,8 @@
   position: relative;
   outline: 1px solid $mercury;
 
+  $this: &;
+
   &__inner{
     padding: 2rem 2.3rem 2rem;
     background-color: $white;
@@ -80,6 +82,14 @@
     position: relative;
   }
 
+  &__footer-btn-icon{
+    font-size: 1.4em;
+
+    @include media(">=md"){
+      font-size: 2em;
+    }
+  }
+
   &__availability{
     color: #98A3B3;
     font-size: 1.3rem;
@@ -106,4 +116,13 @@
     }
   }
 
+  &--open{
+    #{$this}__name{
+      margin-bottom: 0;
+    }
+
+    #{$this}__price{
+      margin: 0 0 auto;
+    }
+  }
 }

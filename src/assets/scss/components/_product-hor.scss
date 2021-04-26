@@ -344,6 +344,15 @@
             }
         }
 
+        .product-hor__controls-btn-icon{
+            font-size: 1.4em;
+            line-height: 1;
+
+            @include media(">=lg"){
+                font-size: 1.7em;
+            }
+        }
+
         .product-hor__item-quantity{
             width: 100%;
     
