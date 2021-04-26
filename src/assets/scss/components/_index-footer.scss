@@ -1,0 +1,82 @@
+.index-footer{
+  background-color: #331E4D;
+  color: $white;
+  padding: 1.5rem 0;
+
+  @include media(">=sm"){
+    padding: 2.5rem 0;
+  }
+
+  @include media(">=sm"){
+    padding: 1.5rem 0;
+  }
+
+  @include media(">=lg"){
+    padding: 1rem 0;
+  }
+
+  &__container{
+    display: grid;
+    justify-items: center;
+    grid-gap: 2rem 1rem;
+
+    @include media(">=md"){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo{
+    width: 14rem;
+  }
+
+  &__contacts{
+    @extend %listreset;
+
+    @include media(">=lg"){
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__contacts-item{
+    line-height: 1.285;
+    display: flex;
+    align-items: center;
+    margin-bottom: .75rem;
+
+    @include media(">=lg"){
+      margin: 0 2rem;
+    }
+
+    @include media(">=xxxl"){
+      font-size: 1.8rem;
+      margin: 0 3rem;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts-icon{
+    color: #25C7A7;
+    font-size: 2rem;
+    margin-right: 1rem;
+
+    @include media(">=xxxl"){
+      font-size: 2.5rem;
+    }
+  }
+
+  &__contacts-link{
+    color: $white;
+    @include animate(text-decoration, .15s);
+
+    &:hover,
+    &:focus{
+      text-decoration-color: $white;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.socials{
+  @extend %listreset;
+  font-size: 0;
+
+  $this: &;
+
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: $white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid $outerSpaceDarken;
+    @include animate(border-color color);
+
+    &:hover,
+    &:focus{
+      color: $mySin;
+      border-color: $mySin;
+      text-decoration-color: transparent;
+    }
+
+    .icon{
+      font-size: 1.6rem;
+    }
+  }
+
+  &--index{
+    #{$this}__link{
+      @include animate(background-color);
+      background-color: #39379B;
+      border: none;
+
+      &:hover,
+      &:focus{
+        color: $white;
+        background-color: lighten(#39379B, 15%);
+      }
+    }
+  }
+}
