@@ -2,6 +2,8 @@
   background: $outerSpace;
   color: $white;
 
+  $this: &;
+
   &__top{
     border-bottom: 1px dotted $outerSpaceDarken;
 
@@ -15,16 +17,6 @@
     border-bottom: 1px solid $outerSpaceDarken;
     position: relative;
     z-index: 50;
-
-    &-container{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-
-      @include media('>=lg'){
-        flex-wrap: nowrap;
-      }
-    }
 
     .holder{
       order: 1;
@@ -47,6 +39,16 @@
     }
   }
 
+  &__middle-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    @include media('>=lg'){
+      flex-wrap: nowrap;
+    }
+  }
+
   &__catalog-btn{
     width: 100%;
     background: none;
@@ -64,18 +66,37 @@
     cursor: pointer;
     @include animate(background-color color);
 
+    @include media('>=lg'){
+      padding: .5rem 3rem;
+      width: auto;
+      margin: 0 1.5rem 0 0;
+
+      &.active{
+        background-color: $mySin;
+        color: $outerSpace;
+      }
+    }
+
+    @include media('>=xl'){
+      font-size: 1.3rem;
+      height: 4.3rem;
+
+      .icon{
+        margin-right: .8em;
+      }
+    }
+
     &:hover{
       background-color: $mySin;
       color: $outerSpace;
 
-      ~.header__search-btn{
+      ~ #{$this}__search-btn{
         color: rgba($outerSpace, .5);
 
         &::before{
           border-left: 1px solid rgba($outerSpace, .25);
         }
       }
-
     }
 
     &:focus{
@@ -86,29 +107,6 @@
       font-size: 1.5rem;
       margin-right: .5em;
     }
-
-    @include media('>=lg'){
-      padding: .5rem 3rem;
-      width: auto;
-      margin: 0 1.5rem 0 0;
-
-      &.active{
-        background-color: $mySin;
-        color: $outerSpace;
-      }
-
-    }
-
-    @include media('>=xl'){
-      font-size: 1.3rem;
-      height: 4.3rem;
-
-      .icon{
-        margin-right: .8em;
-      }
-
-    }
-
   }
 
   &__search-btn{
@@ -127,15 +125,6 @@
     border-radius: 0 4px 4px 0;
     @include animate(color background-color);
 
-    &:hover{
-      color: $white;
-      background-color: $mySin;
-
-      &::before{
-        border-left: 1px solid $mySin;
-      }
-    }
-
     @include media('>=lg'){
       display: none;
     }
@@ -148,6 +137,15 @@
       height: calc(100% - 16px);
       border-left: 1px solid $outerSpaceDarken;
       @include animate(border);
+    }
+
+    &:hover{
+      color: $white;
+      background-color: $mySin;
+
+      &::before{
+        border-left: 1px solid $mySin;
+      }
     }
 
     .icon{
@@ -169,7 +167,6 @@
       margin-right: 4.5rem;
       width: 16rem;
     }
-
   }
 
   &__controls{
@@ -194,52 +191,6 @@
     @include media('>=xl'){
       border: none;
       width: auto;
-    }
-
-    &-item{
-      display: flex;
-      border-right: 1px solid $outerSpaceDarken;
-      width: 33.333%;
-
-      &:last-child{
-        border: none;
-      }
-
-      @include media('>=xl'){
-        width: auto;
-        border: none;
-        margin-right: 1.5rem;
-
-        &:last-child{
-          margin-right: 0;
-        }
-
-        &--menu{
-          display: none;
-        }
-      }
-
-      &.active .header__controls-btn {
-        cursor: pointer;
-        color: #fff;
-        border-color: $mySin;
-
-        &-count{
-          display: block;
-        }
-
-      }
-
-      &:not(.active):hover .header__controls-btn{
-        color: $white;
-
-        @include media('<xl'){
-          background-color: rgba($raven, .5);
-        }
-        @include media('>=xl'){
-          border: 2px solid $raven;
-        }
-      }
     }
 
     &-btn{
@@ -337,6 +288,51 @@
 
   }
 
+  &__controls-item{
+    display: flex;
+    border-right: 1px solid $outerSpaceDarken;
+    width: 33.333%;
+
+    &:last-child{
+      border: none;
+    }
+
+    @include media('>=xl'){
+      width: auto;
+      border: none;
+      margin-right: 1.5rem;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &--menu{
+        display: none;
+      }
+    }
+
+    &.active .header__controls-btn {
+      cursor: pointer;
+      color: #fff;
+      border-color: $mySin;
+
+      &-count{
+        display: block;
+      }
+    }
+
+    &:not(.active):hover .header__controls-btn{
+      color: $white;
+
+      @include media('<xl'){
+        background-color: rgba($raven, .5);
+      }
+      @include media('>=xl'){
+        border: 2px solid $raven;
+      }
+    }
+  }
+
   &__main-nav{
     position: fixed;
     left: 0;
@@ -369,17 +365,11 @@
       &.active{
         display: block;
       }
-
     }
   }
 
   &__search{
     position: relative;
-
-    &-close{
-      @extend %buttonreset;
-      display: none;
-    }
 
     @include media('<lg'){
       display: none;
@@ -388,26 +378,6 @@
       top: 0;
       width: 100%;
       z-index: 5 ;
-
-      &-close{
-        display: block;
-        position: absolute;
-        width: 5rem;
-        height: 100%;
-        right: 0;
-        top: 0;
-        font-size: 2.3rem;
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 8px;
-          height: calc(100% - 16px);
-          border-left: 1px solid rgba($mineShaft, .15);
-        }
-
-      }
 
       &.active{
         display: block;
@@ -419,13 +389,11 @@
         &:focus{
           padding-right: 6rem;
         }
-
       }
 
       .search__extended{
         right: 6.4rem;
       }
-
     }
 
     @include media('>=lg'){
@@ -434,65 +402,67 @@
 
     @include media('>=xl'){
 
-
       .search__input{
         padding: 1.15rem 1.15rem 1.15rem 5rem;
       }
-
     }
-
   }
 
-  .header__account-nav{
-    .account-nav__list{
-      padding-left: 1rem;
+  &__search-close{
+    @extend %buttonreset;
+    display: none;
 
-      @include media('>=sm'){
-        padding-left: 2.2rem;
-      }
+    @include media('<lg'){
+      display: block;
+      position: absolute;
+      width: 5rem;
+      height: 100%;
+      right: 0;
+      top: 0;
+      font-size: 2.3rem;
 
-      @include media('>=md'){
-        padding-left: 2.1rem;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        height: calc(100% - 16px);
+        border-left: 1px solid rgba($mineShaft, .15);
       }
+    }
+  }
 
-      @include media('>=lg'){
-        padding-left: 2.9rem;
-      }
+  .account-nav__list{
+    padding-left: 1rem;
 
-      @include media('>=xl'){
-        padding-left: 0;
-        padding-right: 3.3rem;
-      }
-      @include media('>=xxl'){
-        padding-right: 3.7rem;
-      }
-      @include media('>=xxl'){
-        padding-right: 6rem;
-      }
+    @include media('>=sm'){
+      padding-left: 2.2rem;
+    }
+
+    @include media('>=md'){
+      padding-left: 2.1rem;
+    }
+
+    @include media('>=lg'){
+      padding-left: 2.9rem;
+    }
+
+    @include media('>=xl'){
+      padding-left: 0;
+      padding-right: 3.3rem;
+    }
+
+    @include media('>=xxl'){
+      padding-right: 3.7rem;
+    }
+
+    @include media('>=xxxl'){
+      padding-right: 6rem;
     }
   }
 
   &__bottom{
     padding: .9rem 0 0;
-
-    .container {
-      padding-right: 0;
-      @include media('<xl'){
-          padding-left: 0;
-      }
-    }
-
-    .header__labels{
-      flex-wrap: nowrap;
-      flex-shrink: 0;
-      padding-right: 3rem;
-    }
-
-    @include media('<xl'){
-      .header__labels{
-        display: none;
-      }
-    }
 
     @include media('>=xl'){
       .container {
@@ -510,9 +480,130 @@
       }
     }
 
+    .container {
+      padding-right: 0;
+      @include media('<xl'){
+        padding-left: 0;
+      }
+    }
+
+    #{$this}__labels{
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      padding-right: 3rem;
+
+      @include media('<xl'){
+        display: none;
+      }
+    }
+  }
+
+  &--index{
+
+    #{$this}__middle{
+      background-color: #2A295A;
+      border: none;
+    }
+
+    #{$this}__logo{
+      width: 15rem;
+      margin-right: 2.5rem;
+
+      @include media('>=md'){
+        margin-right: 2.5rem;
+        width: 17rem;
+      }
+
+      @include media('>=lg'){
+        margin-right: 4.5rem;
+        width: 17.5rem;
+      }
+
+      @include media('>=xl'){
+        margin-right: 6rem;
+        width: 13.4rem;
+      }
+    }
+
+    #{$this}__controls{
+      border: 2px solid $mySin;
+      width: 16rem;
+      max-width: none;
+      flex-grow: 0;
+
+      @include media('>=md'){
+        width: 18rem;
+      }
+
+      @include media('>=lg'){
+        width: 20rem;
+      }
+
+      @include media('>=xl'){
+        border: none;
+        width: auto;
+      }
+
+      &-btn{
+        color: $white;
+
+        @include media('>=xl'){
+          border: none;
+          background: rgb(242,149,29);
+          background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
+          box-shadow: 0 0 10px rgba(0,0,0,.15);
+          @include animate(box-shadow);
+        }
+      }
+    }
+
+    #{$this}__controls-item{
+      width: 50%;
+
+      @include media('>=xl'){
+        width: auto;
+      }
+
+      &:not(.active):hover .header__controls-btn{
+
+        @include media('<xl'){
+          background-color: rgba($raven, .5);
+        }
+
+        @include media('>=xl'){
+          border: none;
+          box-shadow: 0 0 0 6px rgba(#F27F1D, .3);
+        }
+      }
+    }
+
+    #{$this}__catalog-btn{
+      border: none;
+      background: rgb(112,26,180);
+      background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 100%);
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      @include animate(box-shadow);
+
+      @include media('>=lg'){
+        width: 100%;
+
+        &.active{
+          background-color: inherit;
+          color: inherit;
+          box-shadow: 0 0 0 6px rgba(#467BAD, .3);
+        }
+      }
+
+      @include media('>=xl'){
+        width: auto;
+      }
+
+      &:hover{
+        background-color: inherit;
+        color: inherit;
+        box-shadow: 0 0 0 6px rgba(#467BAD, .3);
+      }
+    }
+
   }
 }
-
-//.hover-device .header__controls-item:hover .header__controls-dropdown{
-//  display: block;
-//}
