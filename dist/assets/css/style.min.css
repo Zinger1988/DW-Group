@@ -9197,6 +9197,19 @@ html {
   box-shadow: 0 0 0 6px rgba(70, 123, 173, 0.3);
 }
 
+.header--index .main-nav {
+  background-color: #2A295A;
+}
+
+.header--index .select2-container--default .select2--theme--outerSpace {
+  background-color: #2A295A;
+  border: 1px solid #3A3956;
+}
+
+.header--index .main-nav__filter-desc {
+  color: #8C8BC2;
+}
+
 .footer {
   background: #242E2C url("../img/public/footer-offset.jpg") right top/auto 100% no-repeat;
   color: #fff;
@@ -14698,6 +14711,14 @@ html {
     background-color: inherit;
     color: inherit;
     box-shadow: 0 0 0 6px rgba(70, 123, 173, 0.3);
+  }
+
+  .header--index .main-nav {
+    border-top: 1px solid #3A3956;
+  }
+
+  .header--index .main-nav__link:hover {
+    background-color: rgba(0, 0, 0, 0.15);
   }
 
   .footer {

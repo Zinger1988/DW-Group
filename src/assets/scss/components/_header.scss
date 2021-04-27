@@ -605,5 +605,27 @@
       }
     }
 
+    .main-nav{
+      background-color: #2A295A;
+
+      @include media(">=lg"){
+        border-top: 1px solid #3A3956;
+      }
+    }
+
+    .select2-container--default .select2--theme--outerSpace{
+      background-color: #2A295A;
+      border: 1px solid #3A3956;
+    }
+
+    .main-nav__link:hover {
+      @include media(">=lg") {
+        background-color: rgba($black, .15);
+      }
+    }
+
+    .main-nav__filter-desc {
+      color: #8C8BC2;
+    }
   }
 }
