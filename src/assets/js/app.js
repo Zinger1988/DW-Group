@@ -141,11 +141,11 @@ $(document).ready(function () {
                 slidesPerView: 6,
                 slidesPerGroup: 6,
             },
-            1600: {
+            1440: {
                 slidesPerView: 5,
                 slidesPerGroup: 5,
             },
-            1357: {
+            1340: {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
             },
@@ -225,7 +225,7 @@ $(document).ready(function () {
                 // the callback is fired every time an animation is started
                 // the argument that is passed in is the DOM node being animated
             },
-            scrollContainer: ".index-page",    // optional scroll container selector, otherwise use window,
+            scrollContainer: null,    // optional scroll container selector, otherwise use window,
             resetAnimation: true,     // reset animation on end (default is true)
         }
     );

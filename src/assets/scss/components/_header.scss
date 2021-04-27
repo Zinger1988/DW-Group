@@ -8,7 +8,6 @@
     @include media('>=xl'){
       border-bottom-style: solid;
     }
-
   }
 
   &__middle{
@@ -25,7 +24,6 @@
       @include media('>=lg'){
         flex-wrap: nowrap;
       }
-
     }
 
     .holder{
@@ -46,9 +44,7 @@
         display: flex;
         align-items: flex-end;
       }
-
     }
-
   }
 
   &__catalog-btn{
