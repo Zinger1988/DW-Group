@@ -3,7 +3,72 @@
   //height: 100vh;
   //overflow-y: auto;
 
+  //&__part-bokeh1{
+  //  content: "";
+  //  position: absolute;
+  //  width: 100vw;
+  //  height: 100vw;
+  //  z-index: 1;
+  //  left: 50%;
+  //  top: 50%;
+  //  transform: translate(-50%,-50%);
+  //  background: url("../img/public/open/bg/bokeh1.png") center / contain no-repeat;
+  //  animation: 180s linear infinite spin;
+  //  opacity: .5;
+  //}
+  //
+  //&__part-bokeh2{
+  //  content: "";
+  //  position: absolute;
+  //  width: 120vw;
+  //  height: 120vw;
+  //  z-index: 1;
+  //  left: 50%;
+  //  top: 50%;
+  //  transform: translate(-50%,-50%);
+  //  background: url("../img/public/open/bg/bokeh2.png") center / contain no-repeat;
+  //  animation: 100s linear infinite spinReverse;
+  //}
+  //
+  //&__part-bokeh3{
+  //  content: "";
+  //  position: absolute;
+  //  width: 100vw;
+  //  height: 100vw;
+  //  z-index: 1;
+  //  left: 50%;
+  //  top: 50%;
+  //  transform: translate(-50%,-50%);
+  //  background: url("../img/public/open/bg/bokeh3.png") center / contain no-repeat;
+  //  animation: 140s linear infinite spinReverse;
+  //}
+  //
+  //@keyframes spin {
+  //  0% {
+  //    transform: translate(-50%,-50%) rotate(0);
+  //  }
+  //  100% {
+  //    transform: translate(-50%,-50%) rotate(360deg);
+  //  }
+  //}
+  //
+  //@keyframes spinReverse {
+  //  0% {
+  //    transform: translate(-50%,-50%) rotate(0);
+  //  }
+  //  100% {
+  //    transform: translate(-50%,-50%) rotate(-360deg);
+  //  }
+  //}
+
   &__part{
+
+    &--bokeh{
+      background: url("../img/public/open/bg/03.jpg") center / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+
+    }
 
     &--space{
       background-color: #331E4D;
@@ -12,64 +77,46 @@
       overflow: hidden;
       padding-bottom: 3rem;
 
-      @include media(">=sm"){
-        &::before,
-        &::after{
-          width: 180%;
-        }
-      }
-
-      @include media(">=md"){
-        &::before,
-        &::after{
-          width: 120%;
-        }
-      }
-
       @include media(">=lg"){
         padding-bottom: 4rem;
-
-        &::before,
-        &::after{
-          width: 105%;
-        }
       }
 
       @include media(">=xl"){
         padding-bottom: 5rem;
 
-        &::before,
-        &::after{
-          width: 95%;
+        &::before{
+          width: 160rem;
         }
       }
 
-      @include media(">=xxxl"){
-        &::before,
+      @include media(">=1600px"){
+        &::before{
+          background: url("../img/public/open/bg/01.jpg") right bottom no-repeat;
+          transform: translateX(-50%);
+        }
+
         &::after{
-          width: 80%;
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          z-index: 1;
+          width: 160rem;
+          background: url("../img/public/open/bg/01.jpg") left top no-repeat;
+          transform: translateX(50%);
         }
       }
 
-      &::before,
-      &::after{
+      &::before{
         content: "";
         position: absolute;
         top: 0;
-        width: 200%;
+        left: 0;
+        width: 100%;
         height: 100%;
         z-index: 1;
-      }
-
-      &::after{
-        right: -60%;
-        background: url("../img/public/open/bg/01.jpg") center top / contain no-repeat;
-        transform: translateZ(-1px) scale(1);
-      }
-      &::before{
-        left: -80%;
-        background: url("../img/public/open/bg/01.jpg") bottom right / contain no-repeat;
-        transform: translateZ(-2px) scale(1.5);
+        background: url("../img/public/open/bg/01.jpg") fixed center no-repeat;
       }
     }
   }
@@ -79,6 +126,17 @@
     z-index: 5;
     padding-top: 3rem;
     margin-bottom: 5rem;
+
+    &::before{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 30rem;
+      background: linear-gradient(180deg, #331e4d 0%, rgba(51, 30, 77, 0) 100%);
+    }
 
     @include media(">=md"){
       padding-top: 4rem;
@@ -101,6 +159,11 @@
       padding-top: 6rem;
       margin-bottom: 9rem;
     }
+  }
+
+  &__categories{
+    position: relative;
+    z-index: 5;
   }
 
   &__advantages{

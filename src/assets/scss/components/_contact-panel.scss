@@ -55,7 +55,7 @@
     @include media('>=xl'){
 
       &{
-        padding: 1.4rem 0;
+        padding: 1rem 0;
       }
 
       #{$this}__title-bordered,

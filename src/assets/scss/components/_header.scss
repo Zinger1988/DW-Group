@@ -392,7 +392,7 @@
       }
 
       .search__extended{
-        right: 6.4rem;
+        right: 5rem;
       }
     }
 
@@ -415,20 +415,15 @@
     @include media('<lg'){
       display: block;
       position: absolute;
-      width: 5rem;
-      height: 100%;
-      right: 0;
-      top: 0;
-      font-size: 2.3rem;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 8px;
-        height: calc(100% - 16px);
-        border-left: 1px solid rgba($mineShaft, .15);
-      }
+      width: 3.4rem;
+      height: 3.4rem;
+      right: .8rem;
+      top: .8rem;
+      font-size: 1.6rem;
+      line-height: 1;
+      border-radius: 50%;
+      color: $outerSpace;
+      border: 1px solid $mySin;
     }
   }
 
@@ -499,109 +494,110 @@
   }
 
   &--index{
+    background-color: #2A295A;
 
-    #{$this}__middle{
-      background-color: #2A295A;
-      border: none;
+    &.page__header{
+      margin-bottom: 0;
     }
 
-    #{$this}__logo{
-      width: 15rem;
-      margin-right: 2.5rem;
+    #{$this}__top{
+      border-bottom: 1px dotted #3A3956;
+    }
 
-      @include media('>=md'){
-        margin-right: 2.5rem;
-        width: 17rem;
-      }
-
-      @include media('>=lg'){
-        margin-right: 4.5rem;
-        width: 17.5rem;
-      }
-
-      @include media('>=xl'){
-        margin-right: 6rem;
-        width: 13.4rem;
-      }
+    .contact-panel__item-icon {
+      color: rgba(255,255,255,.3);
     }
 
     #{$this}__controls{
-      border: 2px solid $mySin;
-      width: 16rem;
-      max-width: none;
-      flex-grow: 0;
-
-      @include media('>=md'){
-        width: 18rem;
-      }
-
-      @include media('>=lg'){
-        width: 20rem;
-      }
+      border: 2px solid rgba(255,255,255,.3);
 
       @include media('>=xl'){
         border: none;
-        width: auto;
       }
 
       &-btn{
         color: $white;
 
         @include media('>=xl'){
-          border: none;
-          background: rgb(242,149,29);
-          background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
-          box-shadow: 0 0 10px rgba(0,0,0,.15);
-          @include animate(box-shadow);
+          height: 4.3rem;
+          border: 2px solid rgba(255,255,255,.3);
+          border-radius: 4px;
+          padding: .5rem 2rem;
         }
       }
     }
 
     #{$this}__controls-item{
-      width: 50%;
+      border-right: 1px solid rgba(255,255,255,.3);
 
       @include media('>=xl'){
-        width: auto;
+        border: none;
+      }
+
+      &:last-child{
+        border: none;
       }
 
       &:not(.active):hover .header__controls-btn{
-
-        @include media('<xl'){
-          background-color: rgba($raven, .5);
-        }
+        color: $white;
+        background-color: rgba(255,255,255,.3);
 
         @include media('>=xl'){
-          border: none;
-          box-shadow: 0 0 0 6px rgba(#F27F1D, .3);
+          border: 2px solid transparent;
         }
       }
+    }
+
+    #{$this}__middle{
+      background-color: #2A295A;
+      border: none;
     }
 
     #{$this}__catalog-btn{
       border: none;
       background: rgb(112,26,180);
-      background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 100%);
+      background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 50%, rgba(151,89,205,1) 100%);
+      background-size: 200%;
+      background-position: 0 center;
       box-shadow: 0 0 10px rgba(0,0,0,.15);
-      @include animate(box-shadow);
+      @include animate(background-position background-size);
 
-      @include media('>=lg'){
-        width: 100%;
-
-        &.active{
-          background-color: inherit;
-          color: inherit;
-          box-shadow: 0 0 0 6px rgba(#467BAD, .3);
-        }
-      }
-
-      @include media('>=xl'){
-        width: auto;
+      &.active{
+        background-color: inherit;
+        color: inherit;
+        background-size: 400%;
+        background-position: 100% center;
       }
 
       &:hover{
         background-color: inherit;
         color: inherit;
-        box-shadow: 0 0 0 6px rgba(#467BAD, .3);
+        background-position: 100% center;
+
+        ~ #{$this}__search-btn{
+          color: $white;
+
+          &::before{
+            border-left: 1px solid $white;
+          }
+        }
+      }
+    }
+
+    #{$this}__search-btn{
+      color: $white;
+
+      &::before{
+        border-left: 1px solid rgba(255,255,255,.4);
+      }
+
+      &:hover{
+        color: $white;
+        background-color: rgba(0,0,0,.2);
+
+        &::before{
+          border-left: 1px solid transparent;
+        }
       }
     }
 
