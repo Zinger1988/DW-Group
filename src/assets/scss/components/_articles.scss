@@ -1,0 +1,226 @@
+.articles{
+
+  @include media(">=656px"){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.6rem;
+  }
+
+  @include media(">=900px"){
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  $this: &;
+
+  &__item{
+    position: relative;
+    background: #4B5EAB;
+    border-radius: 6px;
+    margin-bottom: 1.6rem;
+    color: $white;
+
+    @include media(">=656px"){
+      display: grid;
+      grid-template-rows: auto 1fr;
+      margin-bottom: 0;
+    }
+
+    @include media(">=xl"){
+      &:nth-child(8n - 5),
+      &:nth-child(8n - 3){
+        grid-area: span 2;
+        grid-template: 1.57fr 1fr / auto;
+
+        #{$this}__img{
+          padding: 0;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(4n){
+        grid-area: auto/ span 2;
+        grid-template: auto / 1fr 1fr;
+        height: 26rem;
+
+        #{$this}__img{
+          padding: 0;
+          height: 100%;
+          border-radius: 6px 0 0 6px;
+        }
+
+        #{$this}__img-item{
+          border-radius: 6px 0 0 6px;
+        }
+      }
+    }
+
+    &--discount{
+      background-color: #FF761A;
+    }
+
+    &--company{
+      background-color: #4DAB36;
+    }
+
+    &--new{
+      background-color: #8E439F;
+    }
+  }
+
+  &__top{
+    @extend %linkreset;
+    display: block;
+    position: relative;
+  }
+
+  &__meta{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 5;
+    left: 0;
+    top: 2rem;
+    width: calc(100% - 1.5rem);
+
+    @include media(">=xl"){
+      width: calc(100% - 2rem);
+    }
+  }
+
+  &__labels{
+    .item-labels__item{
+      border-radius: 0 1.4rem 1.4rem 0;
+      padding: .5em 1.5rem;
+      text-transform: uppercase;
+      background-color: #F64A27;
+      font-size: 1.1rem;
+      line-height: 1;
+
+      @include media(">=xl"){
+        padding: .5em 3rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__date{
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    line-height: 1;
+    padding: .23em .923em .23em .384rem;
+    border-radius: 1.2rem;
+    color: $base-text-color;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+
+    @include media(">=xl"){
+      font-size: 1.3rem;
+      margin-left: 2rem;
+    }
+  }
+
+  &__date-icon{
+    font-size: 1.384em;
+    line-height: 1;
+    margin-right: .384em;
+    color: $raven;
+
+    @include media(">=xl"){
+      font-size: 1.7rem;
+    }
+  }
+
+  &__date-text{
+    font-weight: 700;
+  }
+
+  &__img{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 27% 0;
+    background-color: $black;
+    border-radius: 6px 6px 0 0;
+
+    @include media(">=656px"){
+      padding: 33% 0;
+    }
+
+    @include media(">=656px"){
+      padding: 25% 0;
+    }
+  }
+
+  &__img-item{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .65;
+    border-radius: 6px 6px 0 0;
+    @include animate(opacity);
+
+    &:hover{
+      opacity: .85;
+    }
+  }
+
+  &__title{
+    @extend %linkreset;
+    display: block;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.272;
+    margin-bottom: .77em;
+    color: $white;
+
+    @include media(">=656px"){
+      font-size: 2.2rem;
+    }
+  }
+
+  &__body{
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+
+    @include media(">=xl"){
+      padding: 2.8rem 3rem 2rem;
+    }
+  }
+
+  &__short-desc{
+    font-size: 1.2rem;
+    line-height: 1.333;
+    opacity: .6;
+    margin-bottom: 2rem;
+
+    > *:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__tags{
+    line-height: 2.8rem;
+    align-self: end;
+  }
+
+  &__tags-item{
+    @extend %linkreset;
+    display: inline-block;
+    background-color: rgba(255,255,255,.15);
+    font-size: 1.1rem;
+    line-height: 1.2;
+    padding: .6rem 1rem;
+    border-radius: 3px;
+    @include animate(background-color);
+
+    &:hover{
+      background-color: rgba(255,255,255,.4);
+    }
+  }
+}
