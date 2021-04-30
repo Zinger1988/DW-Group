@@ -544,11 +544,11 @@ $(document).ready(function () {
         },
         filterSidebar(){
             $(document.body).append('<div class="sb-filter-overlay sidebar-toggle"></div>');
-            $('.sidebar-toggle').click(function () {
+            $('.sidebar-toggle, .blog-filter-toggle').click(function () {
                 if(!$('.sidebar-filter').hasClass('active')){
                     siteJS.helpers.elemFadeIn('.sb-filter-overlay', 'active');
                     $('.sidebar-filter').addClass('active');
-                    $('.content-holder--catalog').addClass('sidebar-opened');
+                    $('.content-holder').addClass('sidebar-opened');
                 } else {
                     siteJS.helpers.elemFadeOut('.sb-filter-overlay', 'active');
                     $('.sidebar-filter').removeClass('active');

@@ -5,32 +5,27 @@
   z-index: 10;
   box-shadow: 0 3px 12px rgba($mineShaft, .14);
 
+  @include media('<xl'){
+    &.sidebar-opened{
+      position: static;
+    }
+  }
+
+  $this: &;
+
   &__header{
     border-bottom: 1px solid $mercury;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
 
-    $this: &;
-
     @include media('>=sm'){
       padding-left: 2.5rem;
       padding-right: 2.5rem;
-
-      &--settings{
-        padding: 0;
-      }
     }
 
     @include media('>=lg'){
       padding: 1.5rem 4rem;
-    }
-
-    &-title{
-      font-size: 2.2rem;
-      line-height: 1.363;
-      font-weight: 500;
-      margin: 0;
     }
 
     &--settings{
@@ -39,259 +34,297 @@
       flex-wrap: wrap;
       padding: 0;
 
+      @include media('>=sm') {
+        padding: 0;
+      }
+
       @include media('>=lg'){
         flex-wrap: nowrap;
         padding: 0;
       }
+    }
+  }
 
-      #{$this}-btn{
-        @extend %buttonreset;
+  &__header-title{
+    font-size: 2.2rem;
+    line-height: 1.363;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__header-btn{
+    @extend %buttonreset;
+    font-size: 0;
+    background-color: $mySin;
+    color: $white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 6px 0 0 0;
+    line-height: 1;
+    flex-shrink: 0;
+    @include animate(background-color);
+
+    @include media('>=lg'){
+      width: 6rem;
+      height: 6rem;
+    }
+
+    &:hover{
+      background-color: darken($mySin, 10%);
+    }
+
+    &.sidebar-toggle{
+      @include media('>=xl'){
         display: none;
-        font-size: 0;
-        background-color: $mySin;
-        color: $white;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 6px 0 0 0;
-        line-height: 1;
-        flex-shrink: 0;
-
-        @include media('>=lg'){
-          width: 6rem;
-          height: 6rem;
-        }
-
-        @include media('<xl'){
-          display: block;
-        }
-
-        .icon{
-          font-size: 2.3rem;
-        }
       }
+    }
 
-      #{$this}-title{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        flex: 1;
-        min-width: 0;
-        padding: 1rem 1.5rem;
-
-        @include media('>=sm'){
-          padding-left: 2.5rem;
-          padding-right: 2.5rem;
-        }
-
-        @include media('>=lg'){
-          padding-top: 1.5rem;
-          padding-bottom: 1.5rem;
-        }
-      }
-
-      #{$this}-settings-bar{
-        border-top: 1px solid $mercury;
-        width: 100%;
-        flex-shrink: 0;
-        display: flex;
+    &.blog-filter-toggle{
+      @include media('>=xl'){
+        width: auto;
         align-items: center;
-        padding: 1rem 1.5rem;
+        display: flex;
+        padding: 1rem 4rem;
 
-        @include media('>=sm'){
-          padding-left: 2.5rem;
-          padding-right: 2.5rem;
+        #{$this}__header-btn-text{
+          font-size: 1.3rem;
+          line-height: 1;
+          text-transform: uppercase;
+          font-weight: 700;
         }
 
-        @include media('>=lg'){
-          width: auto;
-          padding: 0;
-          border: none;
-          flex: 0 0 auto;
-        }
-      }
-
-      #{$this}-select-alt{
-        padding-right: 1.5rem;
-        border-right: 1px dotted $tiara;
-        margin-right: 1.5rem;
-
-        @include media('>=sm'){
-          padding-right: 2rem;
-          margin-right: 2.5rem;
-        }
-
-        @include media('>=md'){
-          .select-alt__textbox{
-            padding-top: .75rem;
-            padding-bottom: .75rem;
-          }
-        }
-
-        @include media('>=xxxl'){
-
-          &{
-            display: flex;
-            align-items: center;
-
-            .select-alt__textbox{
-              font-size: 1.3rem;
-
-              &-pre{
-                margin-right: 1rem;
-                cursor: default;
-              }
-
-              &-value{
-                display: none;
-              }
-            }
-
-            .select-alt__option-list,
-            .select-alt__option-list.active{
-              position: static;
-              background: none;
-              box-shadow: none;
-              border-radius: 0;
-              display: flex;
-              align-items: center;
-              min-width: 0;
-            }
-
-            .select-alt__option-item{
-              padding: .3rem 1rem;
-              border: none;
-              font-size: 1.3rem;
-              border-radius: 3px;
-              font-weight: 700;
-
-              &:not(:last-child){
-                margin-right: 1rem;
-              }
-
-              &.selected{
-                background-color: $mySin;
-              }
-            }
-          }
-        }
-      }
-
-      #{$this}-layout-switch{
-        margin-left: auto;
-
-        @include media(">=lg"){
+        #{$this}__header-btn-icon{
+          font-size: 2rem;
           margin-right: 1rem;
         }
       }
+    }
+  }
 
-      #{$this}-calendar{
-        width: 100%;
+  &__header-btn-icon{
+    font-size: 2.3rem;
+  }
 
-        @include media(">=lg"){
-          display: flex;
-          align-items: center;
-        }
+  &__header-btn-text{
+    font-size: 0;
+  }
+
+  &__header-title{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+    padding: 1rem 1.5rem;
+
+    @include media('>=sm'){
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    @include media('>=lg'){
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__header-settings-bar{
+    border-top: 1px solid $mercury;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    @include media('>=sm'){
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    @include media('>=lg'){
+      width: auto;
+      padding: 0;
+      border: none;
+      flex: 0 0 auto;
+    }
+  }
+
+  &__header-select-alt{
+    padding-right: 1.5rem;
+    border-right: 1px dotted $tiara;
+    margin-right: 1.5rem;
+
+    @include media('>=sm'){
+      padding-right: 2rem;
+      margin-right: 2.5rem;
+    }
+
+    @include media('>=md'){
+      .select-alt__textbox{
+        padding-top: .75rem;
+        padding-bottom: .75rem;
       }
+    }
 
-      #{$this}-calendar-pre{
+    @include media('>=xxxl'){
+      display: flex;
+      align-items: center;
+
+      .select-alt__textbox{
         font-size: 1.3rem;
-        font-weight: bold;
-        margin-bottom: .75rem;
-
-        @include media(">=lg"){
-          margin-right: 2rem;
-          margin-bottom: 0;
-        }
       }
 
-      #{$this}-calendar-body{
+      .select-alt__textbox-pre{
+        margin-right: 1rem;
+        cursor: default;
+      }
+
+      .select-alt__textbox-value{
+        display: none;
+      }
+
+      .select-alt__option-list,
+      .select-alt__option-list.active{
+        position: static;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
         display: flex;
         align-items: center;
+        min-width: 0;
       }
 
-      #{$this}-calendar-item{
-        width: calc(50% - 2rem);
-        position: relative;
+      .select-alt__option-item{
+        padding: .3rem 1rem;
+        border: none;
+        font-size: 1.3rem;
+        border-radius: 3px;
+        font-weight: 700;
 
-        @include media(">=lg"){
-          width: auto;
+        &:not(:last-child){
+          margin-right: 1rem;
         }
 
-        &::before{
-          content: "\e837";
-          font: 1.6rem/1 "Fontello";
-          color: #C8CFD8;
-          position: absolute;
-          left: 1.5rem;
-          top: 50%;
-          transform: translateY(-50%);
-
-          @include media(">=lg"){
-            left: 2.8rem;
-          }
-        }
-
-        &:first-child{
-          #{$this}-calendar-input{
-            border-radius: 3px 0 0 3px;
-
-            @include media(">=lg"){
-              border-radius: 0;
-            }
-          }
+        &.selected{
+          background-color: $mySin;
         }
       }
+    }
+  }
 
-      #{$this}-calendar-input{
-        width: 100%;
-        height: 4rem;
-        border-color: #E9E9E9;
-        border-radius: 0;
-        border-right: 0;
-        font-size: 1.4rem;
-        line-height: 1;
-        padding: 1.3rem 1.3rem 1.3rem 4rem;
-        @include animate(border background-color);
-        cursor: pointer;
+  &__header-layout-switch{
+    margin-left: auto;
+
+    @include media(">=lg"){
+      margin-right: 1rem;
+    }
+  }
+
+  &__header-calendar{
+    width: 100%;
+
+    @include media(">=lg"){
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__header-calendar-pre{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: .75rem;
+
+    @include media(">=lg"){
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__header-calendar-body{
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-calendar-item{
+    width: calc(50% - 2rem);
+    position: relative;
+
+    @include media(">=lg"){
+      width: auto;
+    }
+
+    &::before{
+      content: "\e837";
+      font: 1.6rem/1 "Fontello";
+      color: #C8CFD8;
+      position: absolute;
+      left: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include media(">=lg"){
+        left: 2.8rem;
+      }
+    }
+
+    &:first-child{
+      #{$this}__header-calendar-input{
+        border-radius: 3px 0 0 3px;
 
         @include media(">=lg"){
-          width: 18rem;
-          height: 6rem;
           border-radius: 0;
-          border-top: none;
-          border-bottom: none;
-          padding: 1.3rem 1.3rem 1.3rem 5.6rem;
-        }
-
-        &:focus{
-          border-color: #E9E9E9;
-          background-color: #F1F1F1;
         }
       }
+    }
+  }
 
-      #{$this}-calendar-btn{
-        @extend %buttonreset;
-        width: 4rem;
-        height: 4rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font: 500 13px $headings-font-family;
-        background-color: $mySin;
-        border-radius: 0 3px 3px 0;
-        @include animate(background-color);
+  & &__header-calendar-input{
+    width: 100%;
+    height: 4rem;
+    border-color: #E9E9E9;
+    border-radius: 0;
+    border-right: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 1.3rem 1.3rem 1.3rem 4rem;
+    @include animate(border background-color);
+    cursor: pointer;
 
-        @include media(">=lg"){
-          width: 6rem;
-          height: 6rem;
-          border-radius: 0 6px 0 0;
-        }
+    @include media(">=lg"){
+      width: 18rem;
+      height: 6rem;
+      border-radius: 0;
+      border-top: none;
+      border-bottom: none;
+      padding: 1.3rem 1.3rem 1.3rem 5.6rem;
+    }
 
-        &:hover{
-          background-color: darken($mySin, 9%);
-        }
-      }
+    &:focus{
+      border-color: #E9E9E9;
+      background-color: #F1F1F1;
+    }
+  }
 
+  &__header-calendar-btn{
+    @extend %buttonreset;
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font: 500 13px $headings-font-family;
+    background-color: $mySin;
+    border-radius: 0 3px 3px 0;
+    @include animate(background-color);
+
+    @include media(">=lg"){
+      width: 6rem;
+      height: 6rem;
+      border-radius: 0 6px 0 0;
+    }
+
+    &:hover{
+      background-color: darken($mySin, 9%);
     }
   }
 
@@ -320,6 +353,195 @@
 
     @include media('>=lg'){
       padding: 2.5rem 4rem 4rem;
+    }
+  }
+
+  &--catalog, &--blog{
+    #{$this}__sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      z-index: 200;
+      @include animate(transform);
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+
+    #{$this}__sidebar-close-btn{
+      @extend %buttonreset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: $outerSpace;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 2rem;
+
+      .icon{
+        color: $mySin;
+        font-size: 1.8rem;
+        line-height: 1;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &--catalog {
+
+    @include media('>=xl'){
+      display: flex;
+
+      #{$this}__inner{
+        flex: 1;
+        min-width: calc(100% - 294px);
+      }
+
+      #{$this}__pagination{
+        margin-top: auto;
+      }
+    }
+
+    #{$this}__sidebar {
+      @include media('>=xl'){
+        &, &.active{
+          height: auto;
+          flex-shrink: 0;
+          z-index: unset;
+          position: static;
+          width: 294px;
+          transform: translateX(0);
+          border-right: 1px solid $mercury;
+          overflow: unset;
+          background: none;
+        }
+      }
+    }
+
+    #{$this}__sidebar-close-btn{
+      @include media('>=xl'){
+        display: none;
+      }
+    }
+
+    .product-list{
+      @include media('>=xl'){
+        padding: 0 3.3rem 0 2rem;
+      }
+
+      @include media('>=xxl'){
+        padding: 0 3.7rem 0 2.2rem;
+      }
+
+      @include media('>=xxxl'){
+        padding: 0 4rem 0 3rem;
+      }
+    }
+  }
+
+  &--blog{
+    @include media('>=xl') {
+
+      #{$this}__header{
+        position: relative;
+      }
+
+      #{$this}__header-btn{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      #{$this}__header-title {
+        text-align: center;
+      }
+
+      #{$this}__sidebar {
+        position: absolute;
+        left: 0;
+        top: calc(100% + 1px);
+        height: auto;
+        width: 100%;
+        z-index: 20;
+        transform: translateX(0);
+        overflow: unset;
+        box-shadow: 0 6px 12px rgba($black, .05);
+        display: none;
+        grid-template-columns: 1fr 2fr;
+        border-radius: 0 0 6px 6px;
+
+        &.active{
+          display: grid;
+        }
+
+        #{$this}__sidebar-close-btn{
+          position: absolute;
+          right: 3rem;
+          top: 2rem;
+          font-size: 0;
+          padding: 0;
+          border: 1px solid rgba($mySin, 0.5);
+          background: transparent;
+          width: auto;
+          height: auto;
+          border-radius: 50%;
+          @include animate(border);
+
+          &:hover{
+            border: 1px solid rgba($mySin, 1);
+          }
+
+          .icon{
+            display: block;
+            width: 4.4rem;
+            height: 4.4rem;
+            font-size: 1.8rem;
+            line-height: 4.4rem;
+            margin: 0;
+            color: $base-text-color;
+
+            &::before{
+              content: "\e820";
+            }
+          }
+        }
+
+        .sidebar-filter__group {
+          border-bottom: none;
+
+          &--active-items {
+            grid-area: auto/ span 2;
+            border-bottom: 1px solid #E9E9E9;
+            padding-right: 13.2rem;
+
+            .sidebar-filter__group-title {
+              padding: 1rem 3rem 1rem;
+            }
+
+            .sidebar-filter__group-body {
+              padding: .5rem 3rem .5rem;
+            }
+          }
+        }
+
+        .sidebar-filter__group-body{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+          grid-gap: 0 2rem;
+        }
+      }
+    }
+
+    #{$this}__body{
+      padding-bottom: 0;
     }
   }
 

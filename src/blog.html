@@ -18,10 +18,20 @@ title: blog
         </nav>
     </div><!--page pre-->
 
-    <div class="page__content-holder content-holder">
+    <div class="page__content-holder content-holder content-holder--blog">
 
-        <div class="content-holder__header">
+        <div class="content-holder__header content-holder__header--settings">
+
+            <button class="content-holder__header-btn blog-filter-toggle">
+                <i class="content-holder__header-btn-icon icon icon--equalizer--outline"></i>
+                <span class="content-holder__header-btn-text">Фильтры</span>
+            </button>
+
             <h1 class="content-holder__header-title">Новости</h1>
+
+            <div class="sidebar-filter content-holder__sidebar">
+                {{> blog-filter }}
+            </div>
         </div><!-- page content header -->
 
         <div class="content-holder__body blog">
