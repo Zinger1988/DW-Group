@@ -77,4 +77,58 @@
             transform: translate(-50%, -50%) rotate(0);
         }
     }
+
+    &--faq{
+
+        #{$this}__title{
+            padding: 1.1rem 3rem 1.1rem 2rem;
+            border: 1px solid rgba($mercury, .75);
+            border-left: none;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+            @include animate(border background-color);
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                background-color: $mySin;
+                border-radius: 3px 0 0 3px;
+            }
+
+            @include media(">=md"){
+                border-radius: 6px;
+                padding: 1.3rem 4rem 1.3rem 2rem;
+
+                &::before{
+                    border-radius: 6px 0 0 6px;
+                }
+            }
+
+            &:hover{
+                border: 1px solid rgba($mercury, .75);
+                border-left: none;
+            }
+        }
+
+        #{$this}__item--active {
+
+            #{$this}__title {
+                background-color: $mySin;
+                border-color: transparent;
+
+                &::before{
+                    display: none;
+                }
+            }
+        }
+
+        .accordion__body {
+            padding-top: 0;
+            padding-bottom: 2rem;
+        }
+    }
 }

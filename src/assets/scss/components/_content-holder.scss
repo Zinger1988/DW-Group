@@ -42,6 +42,25 @@
         flex-wrap: nowrap;
         padding: 0;
       }
+
+      #{$this}__header-title{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+        min-width: 0;
+        padding: 1rem 1.5rem;
+
+        @include media('>=sm'){
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+
+        @include media('>=lg'){
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+      }
     }
   }
 
@@ -107,25 +126,6 @@
 
   &__header-btn-text{
     font-size: 0;
-  }
-
-  &__header-title{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex: 1;
-    min-width: 0;
-    padding: 1rem 1.5rem;
-
-    @include media('>=sm'){
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
-
-    @include media('>=lg'){
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
   }
 
   &__header-settings-bar{
@@ -534,8 +534,8 @@
 
         .sidebar-filter__group-body{
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-          grid-gap: 0 2rem;
+          grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+          grid-gap: 0 5rem;
         }
       }
     }

@@ -1,0 +1,15 @@
+.delivery-payment{
+  @include media(">=md"){
+    font-size: 1.5rem;
+  }
+
+  &__delivery-services{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include media(">=md"){
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

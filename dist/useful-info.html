@@ -507,7 +507,7 @@
 </header>
 <main class="page__main">
     
-    <div class="container">
+    <div class="container container--narrow">
     
         <div class="page__pre">
             <nav class="crumbs crumbs--white page__crumbs">
@@ -516,519 +516,702 @@
                         <a href="/" class="crumbs__link">Главная</a>
                     </li>
                     <li class="crumbs__item crumbs__item--active">
-                        <span>Новости</span>
+                        <span>Полезная информация</span>
                     </li>
                 </ul>
             </nav>
         </div><!--page pre-->
     
-        <div class="page__content-holder content-holder content-holder--blog">
+        <div class="page__content-holder content-holder">
     
-            <div class="content-holder__header content-holder__header--settings">
-    
-                <button class="content-holder__header-btn blog-filter-toggle">
-                    <i class="content-holder__header-btn-icon icon icon--equalizer--outline"></i>
-                    <span class="content-holder__header-btn-text">Фильтры</span>
-                </button>
-    
-                <h1 class="content-holder__header-title">Новости</h1>
-    
-                <div class="sidebar-filter content-holder__sidebar">
-                    <button class="content-holder__sidebar-close-btn sidebar-toggle">
-                        <i class="icon icon--arrow--left"></i>
-                        <span>Скрыть</span>
-                    </button>
-                    
-                    <!--#region catalog sidebar group -->
-                    <div class="sidebar-filter__group sidebar-filter__group--active-items">
-                        <div class="sidebar-filter__group-title disabled">
-                            <span class="sidebar-filter__group-title-text">Активные фильтры</span>
-                        </div>
-                    
-                        <div class="sidebar-filter__group-body">
-                            <div class="sidebar-filter__active">
-                                <button class="sidebar-filter__active-item">
-                                    <span class="sidebar-filter__active-item-text">3М</span>
-                                </button>
-                                <button class="sidebar-filter__active-item">
-                                    <span class="sidebar-filter__active-item-text">Foshan Yat Sing</span>
-                                </button>
-                                <button class="sidebar-filter__active-item">
-                                    <span class="sidebar-filter__active-item-text">Новости магазина</span>
-                                </button>
-                                <button class="sidebar-filter__active-item sidebar-filter__active-item--reset">
-                                    <span class="sidebar-filter__active-item-text">Сбросить все фильтры</span>
-                                </button>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    <!--#endregion catalog sidebar group -->
-                    
-                    <div class="sidebar-filter__group">
-                    
-                        <div class="sidebar-filter__group-title active">
-                            <span class="sidebar-filter__group-title-text">Категория</span>
-                            <span class="sidebar-filter__group-title-toggler"></span>
-                        </div>
-                    
-                        <div class="sidebar-filter__group-body">
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="123">Новинки</span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="23">Акции</span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="14">Поставки товаров</span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="21">Новости магазина</span>
-                            </label>
-                        </div>
-                    
-                    </div><!-- catalog sidebar group -->
-                    
-                    <div class="sidebar-filter__group">
-                    
-                        <div class="sidebar-filter__group-title active">
-                            <span class="sidebar-filter__group-title-text">Производитель</span>
-                            <span class="sidebar-filter__group-title-toggler"></span>
-                        </div>
-                    
-                        <div class="sidebar-filter__group-body">
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="123">
-                                                1C Original
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="23">
-                                                3М
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="14">
-                                                Hanp
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="21">
-                                                Foshan Yat Sing
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="42">
-                                                IPM
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="56">
-                                                Katun
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="125">
-                                                Kuroki
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="21">
-                                                MK-Imaging, Delacamp
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="34">
-                                                Printermayin
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="13">
-                                                Static Control
-                                            </span>
-                            </label>
-                    
-                        </div>
-                    
-                    </div><!-- catalog sidebar group -->            </div>
+            <div class="content-holder__header">
+                <h1 class="content-holder__header-title">Полезная информация</h1>
             </div><!-- page content header -->
     
-            <div class="content-holder__body blog">
-    
-                <section class="blog__articles articles">
-    
-                    <article class="articles__item articles__item--discount">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__labels labels">
-                                    <div class="item-labels__item item-labels__item--discount">Акция</div>
-                                </div><!--labels-->
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/01.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Мини-акция «Зарядись от магнитных валов Welldo»</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Равным образом укрепление  требуют от нас анализа направлений развития. Задача
-                                    организации, в особенности же новая модель деятельности способствует подготовки и
-                                    реализации дальнейших направлений развития.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Термопленки / Ролики захвата бумаги</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
-                            </div>
-                        </div><!--articles body-->
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/02.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие новой поставки Welldo. Картриджи и тонер.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    sучастие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Тонеры / Картриджи</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item articles__item--company">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/03.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">С праздником весны! График работы в праздничные дни!</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Поздравляем Вас с наступающим Днем международной солидарности трудящихся и желаем,
-                                    чтобы Ваша работа приносила Вам не только деньги, но и удовольствие!
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Новости компании</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item articles__item--new">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__labels labels">
-                                    <div class="item-labels__item item-labels__item--new">Новинка</div>
-                                </div><!--labels-->
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/04.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Картриджи Static Control, продлевающие жизнь.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    участие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Новинки</a>
-                                <a href="#" class="articles__tags-item">Картриджи</a>
-                                <a href="#" class="articles__tags-item">Static Control</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/06.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие поставки Welldo! термопленки, ролики.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Повседневная практика показывает, что рамки и место обучения кадров представляет собой
-                                    интересный эксперимент проверки систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Термопленки / Ролики захвата бумаги</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
-                            </div>
-                        </div><!--articles body-->
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/07.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие поставки Wellchip!</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Повседневная практика показывает, что постоянное информационно-пропагандистское
-                                    обеспечение нашей деятельности играет важную роль в формировании направлений
-                                    прогрессивного развития. Идейные соображения высшего порядка, а также новая модель
-                                    организационной деятельности играет важную роль в формировании дальнейших направлений
-                                    развития.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Чипы</a>
-                                <a href="#" class="articles__tags-item">Wellchip</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/05.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие поставки Welldo! Тонер.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    участие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров/ новинки</a>
-                                <a href="#" class="articles__tags-item">Тонер</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item articles__item--new">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__labels labels">
-                                    <div class="item-labels__item item-labels__item--new">Новинка</div>
-                                </div><!--labels-->
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/04.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Картриджи Static Control, продлевающие жизнь.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    участие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Новинки</a>
-                                <a href="#" class="articles__tags-item">Картриджи</a>
-                                <a href="#" class="articles__tags-item">Static Control</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                </section><!--articles-->
-    
-                <nav class="pagination pagination--bottom content-holder__pagination">
-                    <span class="pagination__btn pagination__btn--disabled">
-                        <i class="pagination__btn-icon icon--arrow--angle--left"></i>
-                        <span class="pagination__btn-text">Предыдущая страница</span>
-                    </span>
-                    
-                    <ul class="pagination__list">
-                        <li class="pagination__list-item pagination__list-item--active">
-                            <a href="#" class="pagination__list-link">1</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">2</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">3</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">4</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">5</a>
-                        </li>
-                    </ul>
-                    
-                    <a href="#" class="pagination__btn">
-                        <span class="pagination__btn-text">Следующая страница</span>
-                        <i class="pagination__btn-icon icon--arrow--angle--right"></i>
-                    </a>            </nav><!--pagination-->
+            <div class="content-holder__body">
+    
+                <div class="accordion accordion--faq">
+    
+                    <div class="accordion__item accordion__item--active">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Foshan Yat Sing</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body" style="display: block">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/foshan.svg" alt="Foshan Yat Sing" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Полный каталог продукции</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Инструкция для использования CH-LRRec-500</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item accordion__item--active">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Hanp/ Baiksan</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body" style="display: block">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/hanp.svg" alt="Hanp/ Baiksan" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Полный каталог продукции, сайт</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Полный каталог продукции, октябрь 2016</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Многоцелевые салфетки, спецификация</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Результаты тестов THP1320UNIVERSAL в HP LJ 1320</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Результаты тестов THP1320UNIVERSAL в HP LJ P2015</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости фотобарабанов HANP, июнь 2016</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">ULC corporation/ Dinamick</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/dinamick.svg" alt="ULC corporation/ Dinamick" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Полный каталог продукции</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Code Number для ULC OPC Drum</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Wellchip</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/wellchip.svg" alt="Wellchip" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости универсального чипа CHPJ11A</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости универсального чипа CHPJ11X</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости универсального чипа CHPJ24KCMY</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости универсального чипа CHPJ31KCMY</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости универсального чипа CHPJ41-6KCMY</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">IPM Toner</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/ipm.svg" alt="IPM toner" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, март 2021</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, расходные материалы для копировальных аппаратов, март 2021</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, расходные материалы для принтеров, март 2021</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, ноябрь 2020</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, сентябрь 2020</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, декабрь 2019</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, январь 2019</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, октябрь 2018</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, сентябрь 2018</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, июнь 2018</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, март 2018</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, февраль 2015</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, сентябрь 2015</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, февраль 2016</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, апрель 2016</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, сентябрь 2016</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, февраль 2017</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Что нового у IPM, сентябрь 2017</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Знакомство с IPM, видео</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости IPM для универсальных тонеров Hewlett Packard</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости IPM для универсальных тонеров Samsung/Lexmark/Oki</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости IPM для универсального тонера IPM-HYBRID</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости IPM для универсальных тонеров KYOCERA</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости IPM Kyocera Mita TK-130 Universal (TSKM111H/TDKM111N)</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости IPM для универсального тонера IPM-CARBON</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Veaye</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/veaye.svg" alt="Veaye" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, пакеты Air Bag</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, лезвия очистки/дозирования</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, чека картриджа</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, валы магнитные</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, фотобарабаны</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, валы первичные</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог, мелкие детали картриджей</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Printermayin</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/printermayin.svg" alt="Printermayin" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог картриджей PrinterMayin 2019</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Полный каталог продукции, сайт</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Полный каталог продукции</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Новинки</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Гарантия эксклюзивных поставок</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Dipol Innovation</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/dipol.svg" alt="Dipol Innovation" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Описание смазки Dipoil Supra FX2B</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Паспорт безопасности для смазки Dipoil Supra FX2B</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Uninet</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/uninet.svg" alt="Uninet" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сайт UniNet</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Таблица совместимости универсального тонера UniNet для OKI и рекомендации к заправке</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Aeroton</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/aeroton.svg" alt="Aeroton" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Техпаспорт и рекомендации</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Welldo</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/welldo.svg" alt="Welldo" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Сертификаты</span>
+                                            </a>
+                                        </li>
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Описание продукции WELLDO, гарантия!</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                    <div class="accordion__item">
+    
+                        <div class="accordion__title">
+                            <div class="accordion__title-text">Katun</div>
+                            <i class="accordion__title-toggler">+</i>
+                        </div>
+    
+                        <div class="accordion__body">
+    
+                            <div class="faq-item">
+                                <div class="faq-item__logo">
+                                    <img src="assets/img/logos/katun.svg" alt="Katun" class="faq-item__logo-img">
+                                </div>
+                                <div class="faq-item__desc">
+                                    <ul class="faq-item__list">
+                                        <li class="faq-item__list-item">
+                                            <a href="#" class="faq-item__link">
+                                                <i class="icon icon--link faq-item__link-icon"></i>
+                                                <span class="faq-item__link-text">Каталог аксессуаров KATUN</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- faq item -->
+    
+                        </div><!-- accordion body -->
+    
+                    </div><!-- accordion item -->
+    
+                </div><!-- accordion -->
     
             </div><!--content holder body-->
     

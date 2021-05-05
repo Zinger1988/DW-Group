@@ -507,7 +507,7 @@
 </header>
 <main class="page__main">
     
-    <div class="container">
+    <div class="container container--narrow">
     
         <div class="page__pre">
             <nav class="crumbs crumbs--white page__crumbs">
@@ -516,519 +516,84 @@
                         <a href="/" class="crumbs__link">Главная</a>
                     </li>
                     <li class="crumbs__item crumbs__item--active">
-                        <span>Новости</span>
+                        <span>Доставка и оплата</span>
                     </li>
                 </ul>
             </nav>
         </div><!--page pre-->
     
-        <div class="page__content-holder content-holder content-holder--blog">
+        <div class="page__content-holder content-holder">
     
-            <div class="content-holder__header content-holder__header--settings">
-    
-                <button class="content-holder__header-btn blog-filter-toggle">
-                    <i class="content-holder__header-btn-icon icon icon--equalizer--outline"></i>
-                    <span class="content-holder__header-btn-text">Фильтры</span>
-                </button>
-    
-                <h1 class="content-holder__header-title">Новости</h1>
-    
-                <div class="sidebar-filter content-holder__sidebar">
-                    <button class="content-holder__sidebar-close-btn sidebar-toggle">
-                        <i class="icon icon--arrow--left"></i>
-                        <span>Скрыть</span>
-                    </button>
-                    
-                    <!--#region catalog sidebar group -->
-                    <div class="sidebar-filter__group sidebar-filter__group--active-items">
-                        <div class="sidebar-filter__group-title disabled">
-                            <span class="sidebar-filter__group-title-text">Активные фильтры</span>
-                        </div>
-                    
-                        <div class="sidebar-filter__group-body">
-                            <div class="sidebar-filter__active">
-                                <button class="sidebar-filter__active-item">
-                                    <span class="sidebar-filter__active-item-text">3М</span>
-                                </button>
-                                <button class="sidebar-filter__active-item">
-                                    <span class="sidebar-filter__active-item-text">Foshan Yat Sing</span>
-                                </button>
-                                <button class="sidebar-filter__active-item">
-                                    <span class="sidebar-filter__active-item-text">Новости магазина</span>
-                                </button>
-                                <button class="sidebar-filter__active-item sidebar-filter__active-item--reset">
-                                    <span class="sidebar-filter__active-item-text">Сбросить все фильтры</span>
-                                </button>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    <!--#endregion catalog sidebar group -->
-                    
-                    <div class="sidebar-filter__group">
-                    
-                        <div class="sidebar-filter__group-title active">
-                            <span class="sidebar-filter__group-title-text">Категория</span>
-                            <span class="sidebar-filter__group-title-toggler"></span>
-                        </div>
-                    
-                        <div class="sidebar-filter__group-body">
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="123">Новинки</span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="23">Акции</span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="14">Поставки товаров</span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="21">Новости магазина</span>
-                            </label>
-                        </div>
-                    
-                    </div><!-- catalog sidebar group -->
-                    
-                    <div class="sidebar-filter__group">
-                    
-                        <div class="sidebar-filter__group-title active">
-                            <span class="sidebar-filter__group-title-text">Производитель</span>
-                            <span class="sidebar-filter__group-title-toggler"></span>
-                        </div>
-                    
-                        <div class="sidebar-filter__group-body">
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="123">
-                                                1C Original
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="23">
-                                                3М
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="14">
-                                                Hanp
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="" checked>
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="21">
-                                                Foshan Yat Sing
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="42">
-                                                IPM
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="56">
-                                                Katun
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="125">
-                                                Kuroki
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="21">
-                                                MK-Imaging, Delacamp
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="34">
-                                                Printermayin
-                                            </span>
-                            </label>
-                    
-                            <label class="checkbox-radio checkbox-radio--count sidebar-filter__checkbox-radio">
-                                <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                <span class="checkbox-radio__toggler"></span>
-                                <span class="checkbox-radio__label" data-count="13">
-                                                Static Control
-                                            </span>
-                            </label>
-                    
-                        </div>
-                    
-                    </div><!-- catalog sidebar group -->            </div>
+            <div class="content-holder__header">
+                <h1 class="content-holder__header-title">Доставка и оплата</h1>
             </div><!-- page content header -->
     
-            <div class="content-holder__body blog">
+            <div class="content-holder__body">
     
-                <section class="blog__articles articles">
+                <div class="delivery-payment">
+                    <p>
+                        <b>
+                            Наша компания осуществляет доставку груза практически любой курьерской службой Украины. На данный
+                            момент, самыми популярными являются:
+                        </b>
+                    </p>
     
-                    <article class="articles__item articles__item--discount">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__labels labels">
-                                    <div class="item-labels__item item-labels__item--discount">Акция</div>
-                                </div><!--labels-->
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/01.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Мини-акция «Зарядись от магнитных валов Welldo»</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Равным образом укрепление  требуют от нас анализа направлений развития. Задача
-                                    организации, в особенности же новая модель деятельности способствует подготовки и
-                                    реализации дальнейших направлений развития.
-                                </p>
+                    <div class="delivery-services delivery-payment__delivery-services">
+                        <div class="delivery-services__item delivery-services__item--np">
+                            <div class="delivery-services__logo">
+                                <img src="assets/img/public/delivery_services/np.svg" class="delivery-services__logo-item" alt="Новая Почта">
                             </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Термопленки / Ролики захвата бумаги</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
+                            <div class="delivery-services__name">Новая Почта</div>
+                        </div>
+                        <div class="delivery-services__item delivery-services__item--delivery">
+                            <div class="delivery-services__logo">
+                                <img src="assets/img/public/delivery_services/delivery.svg" class="delivery-services__logo-item" alt="Деливери">
                             </div>
-                        </div><!--articles body-->
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/02.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие новой поставки Welldo. Картриджи и тонер.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    sучастие в формировании систем массового участия.
-                                </p>
+                            <div class="delivery-services__name">Деливери</div>
+                        </div>
+                        <div class="delivery-services__item delivery-services__item--autolux">
+                            <div class="delivery-services__logo">
+                                <img src="assets/img/public/delivery_services/autolux.svg" class="delivery-services__logo-item" alt="Автолюкс">
                             </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Тонеры / Картриджи</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
+                            <div class="delivery-services__name">Автолюкс</div>
+                        </div>
+                        <div class="delivery-services__item delivery-services__item--nochnoy-express">
+                            <div class="delivery-services__logo">
+                                <img src="assets/img/public/delivery_services/nochnoy_express.svg" class="delivery-services__logo-item" alt="Ночной Экспресс">
                             </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item articles__item--company">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/03.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">С праздником весны! График работы в праздничные дни!</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Поздравляем Вас с наступающим Днем международной солидарности трудящихся и желаем,
-                                    чтобы Ваша работа приносила Вам не только деньги, но и удовольствие!
-                                </p>
+                            <div class="delivery-services__name">Ночной Экспресс</div>
+                        </div>
+                        <div class="delivery-services__item delivery-services__item--vash-chas">
+                            <div class="delivery-services__logo">
+                                <img src="assets/img/public/delivery_services/vash_chas.svg" class="delivery-services__logo-item" alt="Ваш Час">
                             </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Новости компании</a>
-                            </div>
-                        </div><!--articles body-->
+                            <div class="delivery-services__name">Ваш Час</div>
+                        </div>
+                    </div><!-- delivery services -->
     
-                    </article><!--article item-->
-    
-                    <article class="articles__item articles__item--new">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__labels labels">
-                                    <div class="item-labels__item item-labels__item--new">Новинка</div>
-                                </div><!--labels-->
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/04.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Картриджи Static Control, продлевающие жизнь.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    участие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Новинки</a>
-                                <a href="#" class="articles__tags-item">Картриджи</a>
-                                <a href="#" class="articles__tags-item">Static Control</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/06.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие поставки Welldo! термопленки, ролики.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Повседневная практика показывает, что рамки и место обучения кадров представляет собой
-                                    интересный эксперимент проверки систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Термопленки / Ролики захвата бумаги</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
-                            </div>
-                        </div><!--articles body-->
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/07.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие поставки Wellchip!</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Повседневная практика показывает, что постоянное информационно-пропагандистское
-                                    обеспечение нашей деятельности играет важную роль в формировании направлений
-                                    прогрессивного развития. Идейные соображения высшего порядка, а также новая модель
-                                    организационной деятельности играет важную роль в формировании дальнейших направлений
-                                    развития.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров / Новинки</a>
-                                <a href="#" class="articles__tags-item">Чипы</a>
-                                <a href="#" class="articles__tags-item">Wellchip</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/05.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Прибытие поставки Welldo! Тонер.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    участие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Поставки товаров/ новинки</a>
-                                <a href="#" class="articles__tags-item">Тонер</a>
-                                <a href="#" class="articles__tags-item">Welldo</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                    <article class="articles__item articles__item--new">
-                        <a href="#" class="articles__top">
-    
-                            <div class="articles__meta">
-    
-                                <div class="articles__labels labels">
-                                    <div class="item-labels__item item-labels__item--new">Новинка</div>
-                                </div><!--labels-->
-    
-                                <div class="articles__date">
-                                    <i class="icon icon--clock articles__date-icon"></i>
-                                    <time datetime="2020-06-15" class="articles__date-text">15.06.2020</time>
-                                </div><!--date-->
-    
-                            </div><!--header-->
-    
-                            <picture class="articles__img">
-                                <source srcset="assets/img/blog/04.jpg">
-                                <img class="articles__img-item" alt="image">
-                            </picture><!--articles img-->
-    
-                        </a><!--article top-->
-    
-                        <div class="articles__body">
-                            <a href="#" class="articles__title">Картриджи Static Control, продлевающие жизнь.</a>
-                            <div class="articles__short-desc">
-                                <p>
-                                    Новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
-                                    участие в формировании систем массового участия.
-                                </p>
-                            </div>
-                            <div class="articles__tags">
-                                <a href="#" class="articles__tags-item">Новинки</a>
-                                <a href="#" class="articles__tags-item">Картриджи</a>
-                                <a href="#" class="articles__tags-item">Static Control</a>
-                            </div>
-                        </div><!--articles body-->
-    
-                    </article><!--article item-->
-    
-                </section><!--articles-->
-    
-                <nav class="pagination pagination--bottom content-holder__pagination">
-                    <span class="pagination__btn pagination__btn--disabled">
-                        <i class="pagination__btn-icon icon--arrow--angle--left"></i>
-                        <span class="pagination__btn-text">Предыдущая страница</span>
-                    </span>
-                    
-                    <ul class="pagination__list">
-                        <li class="pagination__list-item pagination__list-item--active">
-                            <a href="#" class="pagination__list-link">1</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">2</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">3</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">4</a>
-                        </li>
-                        <li class="pagination__list-item">
-                            <a href="#" class="pagination__list-link">5</a>
-                        </li>
-                    </ul>
-                    
-                    <a href="#" class="pagination__btn">
-                        <span class="pagination__btn-text">Следующая страница</span>
-                        <i class="pagination__btn-icon icon--arrow--angle--right"></i>
-                    </a>            </nav><!--pagination-->
+                    <p>
+                        Стоимость доставки груза в регионы <b>компенсируется</b> при заказе товара на сумму 500$ и более.
+                        Компенсация зачисляется на баланс компании после того как будет выслан скан декларации на адрес
+                        <a href="mailto:delivery@dwgroup.com.ua">delivery@dwgroup.com.ua</a> и указан номер заказа, по которому
+                        была отгрузка.<br>
+                        Стоимость доставки груза по Киеву – от 100 грн. При заказе товара на сумму 250$ и выше доставка
+                        осуществляется <b>бесплатно</b>.
+                    </p>
+                    <p>
+                        Для наиболее оперативной обработки Вашего заказа и доставки груза, пожалуйста, указывайте способ оплаты,
+                        желаемые тип доставки и дату отсылки при формировании заказа, либо уточните детали заранее связавшись с
+                        менеджерами отдела продаж!
+                    </p>
+                    <p>
+                        Просьба учитывать возможные задержки груза в связи с превышением кредита, просрочкой оплаты и другими
+                        оговоренными условиями сотрудничества! Также, не забывайте вовремя присылать доверенность для выписки
+                        документов перед отсылкой заказа!
+                    </p>
+                    <p>
+                        Наши сотрудники постараются в кратчайшие сроки обработать и организовать доставку Вашего заказа, а
+                        также с удовольствием выслушают и обсудят все Ваши пожелания!
+                    </p>
+                </div><!--delivery payment-->
     
             </div><!--content holder body-->
     
