@@ -7543,6 +7543,12 @@ button.swiper-pagination-bullet {
 
 /* '' */
 
+.icon--skype:before {
+  content: '\e847';
+}
+
+/* '' */
+
 h1,
 .h1,
 h2,
@@ -7973,6 +7979,7 @@ input[type='submit'] {
 .socials,
 .index-footer__contacts,
 .faq-item__list,
+.iconic-list,
 .finance-info__folder-list,
 .user-settings__static-info-list,
 .advantages__list {
@@ -8369,28 +8376,12 @@ html {
   width: calc(50% - 15px);
 }
 
-.contact-panel__item {
+.contact-panel__list-item {
   line-height: 1.285;
   margin-bottom: 1.2rem;
 }
 
-.contact-panel__item:last-child {
-  margin: 0;
-}
-
-.contact-panel__item-icon {
-  color: #818C98;
-  font-size: 2rem;
-  margin-right: 1rem;
-}
-
-.contact-panel__list--contacts .contact-panel__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.contact-panel__list--contacts .contact-panel__item:last-child {
+.contact-panel__list-item:last-child {
   margin: 0;
 }
 
@@ -8407,10 +8398,6 @@ html {
   position: absolute;
   right: 0;
   top: 2rem;
-}
-
-.contact-panel--footer .contact-panel__item-icon {
-  color: #FFB41E;
 }
 
 .contact-panel__link {
@@ -13025,6 +13012,33 @@ html {
   margin-right: .6em;
 }
 
+.iconic-list__item {
+  line-height: 1.285;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.iconic-list__item:last-child {
+  margin: 0;
+}
+
+.iconic-list__icon {
+  color: #FFB41E;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.iconic-list__link {
+  color: inherit;
+  transition: text-decoration 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.iconic-list__link:hover {
+  color: #FFB41E;
+  text-decoration-color: #FFB41E;
+}
+
 .page {
   min-height: 100vh;
   line-height: 1.571;
@@ -13896,6 +13910,124 @@ html {
   margin-bottom: 2rem;
 }
 
+.contacts__group {
+  margin-bottom: 3rem;
+}
+
+.contacts__title-bordered {
+  margin-bottom: 2rem;
+}
+
+.contacts__iconic-list {
+  margin-bottom: 2rem;
+}
+
+.contacts__iconic-list .iconic-list__item {
+  margin-bottom: .5rem;
+}
+
+.contacts__staff-item {
+  display: flex;
+  border-radius: 7px;
+  background-color: #ffffff;
+  border-right: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1.25rem;
+}
+
+.contacts__staff-item .iconic-list__item {
+  margin-bottom: .5rem;
+}
+
+.contacts__staff-img {
+  padding: 1.25rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  background: #ffb41e;
+  background: linear-gradient(0deg, #ffb41e 0%, #ffcd68 100%);
+  border-radius: 7px 0 0 7px;
+}
+
+.contacts__staff-img-item {
+  display: block;
+  width: 7rem;
+}
+
+.contacts__positions-info {
+  padding: 1.3rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacts__positions-info-header {
+  margin-bottom: 1rem;
+}
+
+.contacts__staff-name {
+  font: 700 1.6rem/1.222 "Muller", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+.contacts__staff-position {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #8F8F8F;
+}
+
+.contacts__staff-list .iconic-list__item {
+  margin-bottom: .5rem;
+}
+
+.contacts__staff-list .iconic-list__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-right: .75rem;
+  color: #ABB7C8;
+}
+
+.contacts__staff-list .iconic-list__text {
+  font-size: 1.2rem;
+}
+
+.contacts__staff-item--leader {
+  color: #ffffff;
+  background: #414547;
+  background: url("../img/public/dots-pattern.png"), linear-gradient(180deg, #414547 0%, #2f3133 100%);
+}
+
+.contacts__staff-item--iconic-list {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  align-self: center;
+}
+
+.contacts__map {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.contacts__map-item {
+  position: absolute;
+  right: 0;
+  top: -8rem;
+  width: 100%;
+  height: calc(100% + 8rem);
+  border: none;
+}
+
+.contacts__map-label {
+  margin: 1rem 1rem 40rem;
+  background-color: #ffffff;
+  border-radius: 7px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 5;
+}
+
 @media (min-width: 434px) {
   .advantages__list-count-num {
     font-size: 13.5rem;
@@ -14367,9 +14499,6 @@ html {
 
   .contact-panel--footer .contact-panel__list {
     width: auto;
-  }
-
-  .contact-panel--footer .contact-panel__list--contacts {
     margin-bottom: 2.8rem;
   }
 
@@ -15064,6 +15193,20 @@ html {
   .delivery-payment__delivery-services {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .contacts__group {
+    margin-bottom: 5rem;
+  }
+
+  .contacts__staff {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.2rem;
+  }
+
+  .contacts__staff-item {
+    margin-bottom: 0;
   }
 }
 
@@ -15913,6 +16056,44 @@ html {
   .blog__articles {
     margin-bottom: 4.5rem;
   }
+
+  .contacts__staff-item {
+    border-radius: 16px;
+  }
+
+  .contacts__staff-img {
+    border-radius: 16px 0 0 16px;
+    padding: 2.5rem;
+  }
+
+  .contacts__staff-img-item {
+    width: 11rem;
+  }
+
+  .contacts__positions-info {
+    padding: 2.5rem;
+  }
+
+  .contacts__staff-name {
+    font-size: 1.8rem;
+  }
+
+  .contacts__staff-position {
+    font-size: 1.3rem;
+  }
+
+  .contacts__staff-list .iconic-list__item {
+    margin-bottom: .7rem;
+  }
+
+  .contacts__staff-list .iconic-list__icon {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+
+  .contacts__staff-list .iconic-list__text {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 1260px) {
@@ -15935,11 +16116,11 @@ html {
     align-items: center;
   }
 
-  .contact-panel--header .contact-panel__item {
+  .contact-panel--header .contact-panel__list-item {
     margin: 0 0 0 2.5rem;
   }
 
-  .contact-panel--header .contact-panel__list--contacts .contact-panel__item {
+  .contact-panel--header .contact-panel__list .iconic-list__item {
     margin: 0 2.5rem 0 0;
   }
 

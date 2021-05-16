@@ -1,0 +1,181 @@
+.contacts{
+
+  $this: &;
+
+  &__group{
+    margin-bottom: 3rem;
+
+    @include media(">=md"){
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title-bordered{
+    margin-bottom: 2rem;
+  }
+
+  &__iconic-list{
+    margin-bottom: 2rem;
+
+    .iconic-list__item{
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__staff{
+    @include media(">=md"){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.2rem;
+    }
+  }
+
+  &__staff-item{
+    display: flex;
+    border-radius: 7px;
+    background-color: $white;
+    border-right: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+    margin-bottom: 1.25rem;
+
+    @include media(">=md"){
+      margin-bottom: 0;
+    }
+
+    @include media(">=lg"){
+      border-radius: 16px;
+    }
+
+    .iconic-list__item{
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__staff-img{
+    padding: 1.25rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background: rgb(255,180,30);
+    background: linear-gradient(0deg, rgba(255,180,30,1) 0%, rgba(255,205,104,1) 100%);
+    border-radius: 7px 0 0 7px;
+
+    @include media(">=lg"){
+      border-radius: 16px 0 0 16px;
+      padding: 2.5rem;
+    }
+  }
+
+  &__staff-img-item{
+    display: block;
+    width: 7rem;
+
+    @include media(">=lg"){
+      width: 11rem;
+    }
+  }
+
+  &__positions-info{
+    padding: 1.3rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(">=lg"){
+      padding: 2.5rem;
+    }
+  }
+
+  &__positions-info-header{
+    margin-bottom: 1rem;
+  }
+
+  &__staff-name{
+    font: 700 1.6rem/ 1.222 $headings-font-family;
+
+    @include media(">=lg"){
+      font-size: 1.8rem;
+    }
+  }
+
+  &__staff-position{
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #8F8F8F;
+
+    @include media(">=lg"){
+      font-size: 1.3rem;
+    }
+  }
+
+  &__staff-list{
+
+    .iconic-list__item{
+      margin-bottom: .5rem;
+
+      @include media(">=lg"){
+        margin-bottom: .7rem;
+      }
+    }
+
+    .iconic-list__icon{
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-right: .75rem;
+      color: #ABB7C8;
+
+      @include media(">=lg"){
+        font-size: 1.8rem;
+        margin-right: 1rem;
+      }
+    }
+
+    .iconic-list__text{
+      font-size: 1.2rem;
+
+      @include media(">=lg"){
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__staff-item--leader{
+    color: $white;
+    background: rgb(65,69,71);
+    background:
+            url("../img/public/dots-pattern.png"),
+            linear-gradient(180deg, rgba(65,69,71,1) 0%, rgba(47,49,51,1) 100%);
+  }
+
+  &__staff-item--iconic-list{
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    align-self: center;
+  }
+
+  &__map{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__map-item{
+    position: absolute;
+    right: 0;
+    top: -8rem;
+    width: 100%;
+    height: calc(100% + 8rem);
+    border: none;
+  }
+
+  &__map-label{
+    margin: 1rem 1rem 40rem;
+    background-color: $white;
+    border-radius: 7px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+    position: relative;
+    z-index: 5;
+  }
+}

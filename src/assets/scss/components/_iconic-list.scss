@@ -1,0 +1,31 @@
+.iconic-list{
+  @extend %listreset;
+
+  &__item{
+    line-height: 1.285;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__icon{
+    color: $mySin;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  &__link{
+    color: inherit;
+    @include animate(text-decoration color, .15s);
+
+    &:hover{
+      color: $mySin;
+      text-decoration-color: $mySin;
+    }
+  }
+
+}
