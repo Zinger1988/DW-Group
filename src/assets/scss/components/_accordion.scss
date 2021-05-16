@@ -50,11 +50,11 @@
             height: .2rem;
             border-radius: .1rem;
             background-color: #506661;
+            @include animate(background-color transform);
         }
 
         &::after{
             transform: translate(-50%, -50%) rotate(90deg);
-            @include animate(transform);
         }
     }
 
@@ -111,10 +111,27 @@
             &:hover{
                 border: 1px solid rgba($mercury, .75);
                 border-left: none;
+                background-color: rgba($mercury, .45);
+
+                #{$this}__title-toggler{
+                    &::before,
+                    &::after{
+                        background-color: $mySin;
+                    }
+                }
             }
         }
 
         #{$this}__item--active {
+
+            &:hover{
+                #{$this}__title-toggler{
+                    &::before,
+                    &::after{
+                        background-color: $white;
+                    }
+                }
+            }
 
             #{$this}__title {
                 background-color: $mySin;
@@ -122,6 +139,13 @@
 
                 &::before{
                     display: none;
+                }
+            }
+
+            #{$this}__title-toggler{
+                &::before,
+                &::after{
+                    background-color: $white;
                 }
             }
         }
