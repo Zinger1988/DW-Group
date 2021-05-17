@@ -507,7 +507,7 @@
 </header>
 <main class="page__main">
     
-    <div class="container">
+    <div class="container container--narrow">
     
         <div class="page__pre">
             <nav class="crumbs crumbs--white page__crumbs">
@@ -515,11 +515,8 @@
                     <li class="crumbs__item">
                         <a href="/" class="crumbs__link">Главная</a>
                     </li>
-                    <li class="crumbs__item">
-                        <a href="#" class="crumbs__link">Заказы</a>
-                    </li>
                     <li class="crumbs__item crumbs__item--active">
-                        <span>Счета</span>
+                        <span>Контакты</span>
                     </li>
                 </ul>
             </nav>
@@ -527,471 +524,66 @@
     
         <div class="page__content-holder content-holder">
     
-            <ul class="tabs account__tabs tabs--theme--dark">
-                <li class="tabs__item">
-                    <a class="tabs__link" href="#" data-tab-label="product-info">Незакрытые заказы</a>
-                </li>
-                <li class="tabs__item">
-                    <a class="tabs__link" href="#" data-tab-label="comments">Все заказы</a>
-                </li>
-                <li class="tabs__item">
-                    <a class="tabs__link" href="#" data-tab-label="comments">Резервы</a>
-                </li>
-                <li class="tabs__item tabs__item--active">
-                    <a class="tabs__link" href="#" data-tab-label="comments">Счета</a>
-                </li>
-                <li class="tabs__item">
-                    <a class="tabs__link" href="#" data-tab-label="comments">Возвраты</a>
-                </li>
-                <li class="tabs__item">
-                    <a class="tabs__link" href="#" data-tab-label="comments">Текущие заказы</a>
-                </li>
-            </ul><!-- tabs -->
+            <div class="content-holder__header">
+                <h1 class="content-holder__header-title">Контактная информация</h1>
+            </div><!-- page content header -->
     
-            <div class="content-holder__body account">
+            <div class="content-holder__body contacts">
     
-                <h1 class="h3">Счета</h1>
-                <table class="table table--build-xl account__table">
-                    <tbody class="table__tbody">
-                    
-                        <tr class="table__row-head">
-                            <th class="table__cell-head">№ заказа</th>
-                            <th class="table__cell-head">Дата счета</th>
-                            <th class="table__cell-head">Дата выдачи</th>
-                            <th class="table__cell-head">Статус</th>
-                            <th class="table__cell-head">Плательщик</th>
-                            <th class="table__cell-head">Сумма счета, грн</th>
-                            <th class="table__cell-head">Баланс по счету, грн</th>
-                            <th class="table__cell-head table__cell-head--hidden">Дополнительно</th>
-                        </tr><!--table row head-->
-                    
-                        <tr class="table__row table__row--toggler">
-                            <td class="table__cell" data-col-name="№ заказа">
-                                <div class="table__cell-inner">132300</div>
-                            </td>
-                            <td class="table__cell" data-col-name="Дата счета">
-                                <div class="table__cell-inner">
-                                    <span class="text text--nowrap">07/07/2020</span>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Дата выдачи">
-                                <div class="table__cell-inner">
-                                    <span class="text text--nowrap">08/07/2020</span>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Cтатус">
-                                <div class="table__cell-inner">
-                                    <span class="order-status order-status--danger">Выписан</span>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Плательщик">
-                                <div class="table__cell-inner">
-                                    Тестовая организация DW
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Сумма счета, грн">
-                                <div class="table__cell-inner">
-                                    <b class="text text--nowrap text--bigger--115">1 849.54</b>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Баланс по счету, грн">
-                                <div class="table__cell-inner">
-                                    <b class="text text--nowrap text--bigger--115">1 849.54</b>
-                                </div>
-                            </td>
-                            <td class="table__cell table__cell--dropdown">
-                                <div class="table__cell-inner">
-                                    <div class="table__dropdown">
-                                        <span class="table__dropdown-text">Свернуть</span>
-                                        <span class="table__dropdown-text table__dropdown-text--active">Развернуть</span>
-                                        <i class="table__dropdown-icon icon icon--arrow--tiangle--down"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr><!--table row toggler-->
-                    
-                        <tr class="table__row-sub">
-                            <td colspan="11" class="table__cell-sub">
-                    
-                                <div class="table__cell-sub-content">
-                                    <div class="table__dropdown table__dropdown--sub">
-                                        <button class="table__dropdown-btn">
-                                            <span class="table__dropdown-text table__dropdown-text--active">Свернуть</span>
-                                            <i class="table__dropdown-icon icon--arrow--up"></i>
-                                        </button>
-                                    </div><!--table dropdown-->
-                    
-                                    <table class="table table__cell-sub-table">
-                                        <tbody class="table__tbody">
-                                            <tr class="table__row-head">
-                                                <th class="table__cell-head table__cell-head--hidden">Отметить</th>
-                                                <th class="table__cell-head">PN</th>
-                                                <th class="table__cell-head">ВЭД-код</th>
-                                                <th class="table__cell-head">Производитель</th>
-                                                <th class="table__cell-head">Наименование</th>
-                                                <th class="table__cell-head">Цена без НДС, грн</th>
-                                                <th class="table__cell-head">Кол-во</th>
-                                                <th class="table__cell-head">Сумма без НДС, грн</th>
-                                                <th class="table__cell-head">Кол-во разн.</th>
-                                            </tr>
-                    
-                                            <tr class="table__row">
-                                                <td class="table__cell table__cell--check">
-                                                    <label class="checkbox-radio checkbox-radio--table">
-                                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                                        <span class="checkbox-radio__toggler"></span>
-                                                        <span class="checkbox-radio__label">Отметить</span>
-                                                    </label>
-                                                </td>
-                                                <td class="table__cell" data-col-name="PN">
-                                                    <div class="table__cell-inner">37839</div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="ВЭД-код">
-                                                    <div class="table__cell-inner">8443999090</div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Производитель">
-                                                    <div class="table__cell-inner">KATUN</div>
-                                                </td>
-                                                <td class="table__cell table__cell--wide" data-col-name="Наименование">
-                                                    <div class="table__cell-inner">
-                                                        <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
-                                                            Вал заряда KATUN Ricoh Aficio 1015/ 1018/ 1022/ 1113/
-                                                            2015/ 2018/ 2020/ 2510/ 3025, MP1500/ 1600/ 1900/ 2000/
-                                                            2001/ 2014/ 2352/ 2500/ 2501/ 2510/ 2550
-                                                        </a>
-                                                        <div class="table__availability">Наличие: <span class="text text--marker--ok">много</span></div>
-                                                    </div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Цена без НДС, грн">
-                                                    <div class="table__cell-inner">
-                                                        <b class="text text--bigger--115 text--nowrap">370.20</b>
-                                                    </div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Кол-во">
-                                                    <div class="table__cell-inner">1</div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Сумма без НДС, грн">
-                                                    <div class="table__cell-inner">
-                                                        <b class="text text--bigger--115 text--nowrap">370.20</b>
-                                                    </div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Кол-во разн.">
-                                                    <div class="table__cell-inner">0</div>
-                                                </td>
-                                            </tr>
-                    
-                                            <tr class="table__row">
-                                                <td class="table__cell table__cell--check">
-                                                    <label class="checkbox-radio checkbox-radio--table">
-                                                        <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                                        <span class="checkbox-radio__toggler"></span>
-                                                        <span class="checkbox-radio__label">Отметить</span>
-                                                    </label>
-                                                </td>
-                                                <td class="table__cell" data-col-name="PN">
-                                                    <div class="table__cell-inner">50788</div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="ВЭД-код">
-                                                    <div class="table__cell-inner">8443999090</div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Производитель">
-                                                    <div class="table__cell-inner">KATUN</div>
-                                                </td>
-                                                <td class="table__cell table__cell--wide" data-col-name="Наименование">
-                                                    <div class="table__cell-inner">
-                                                        <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
-                                                            Вал тефлоновый KATUN Ricoh Aficio 2051/ 2060/ 2075, MP5500/ 6500/ 7500/ 6000/
-                                                            7000/ 8000/ 6001/ 7001/ 8001/ 6002/ 7502/ 6503/ 7503, Gestetner DSM
-                                                        </a>
-                                                        <div class="table__availability">Наличие: <span class="text text--marker--warning">достаточно</span></div>
-                                                    </div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Цена без НДС, грн">
-                                                    <div class="table__cell-inner">
-                                                        <b class="text text--bigger--115 text--nowrap">1171,08</b>
-                                                    </div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Кол-во">
-                                                    <div class="table__cell-inner">1</div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Сумма без НДС, грн">
-                                                    <div class="table__cell-inner">
-                                                        <b class="text text--bigger--115 text--nowrap">1171,08</b>
-                                                    </div>
-                                                </td>
-                                                <td class="table__cell" data-col-name="Кол-во разн.">
-                                                    <div class="table__cell-inner">0</div>
-                                                </td>
-                                            </tr>
-                    
-                                        </tbody>
-                                    </table>
-                    
-                                    <div class="order-summary table__order-summary">
-                    
-                                        <div class="order-summary__product-price product-price">
-                                            <div class="product-price__pre">Итого, к оплате</div>
-                                            <div class="product-price__item">
-                                                <span class="product-price__value">1849.54</span>
-                                                <span class="product-price__currency">&#8372;</span>
-                                            </div>
-                                        </div>
-                    
-                                        <ul class="order-summary__list">
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Всего позиций</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">2</span>
-                                                </div>
-                                            </li>
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Всего товаров, шт</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">2</span>
-                                                </div>
-                                            </li>
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Доверенность</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">нет</span>
-                                                </div>
-                                            </li>
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Расходная с подписью</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">нет</span>
-                                                </div>
-                                            </li>
-                                        </ul><!-- order-summary list -->
-                    
-                                    </div><!-- order-summary -->
-                                </div>
-                            </td>
-                        </tr><!--table row sub-->
-                    
-                        <tr class="table__row table__row--toggler">
-                            <td class="table__cell" data-col-name="№ заказа">
-                                <div class="table__cell-inner">213678</div>
-                            </td>
-                            <td class="table__cell" data-col-name="Дата счета">
-                                <div class="table__cell-inner">
-                                    <span class="text text--nowrap">13/07/2020</span>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Дата выдачи">
-                                <div class="table__cell-inner">
-                                    <span class="text text--nowrap">14/07/2020</span>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Cтатус">
-                                <div class="table__cell-inner">
-                                    <span class="order-status order-status--danger">Выписан</span>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Плательщик">
-                                <div class="table__cell-inner">
-                                    Тестовая организация DW
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Сумма счета, грн">
-                                <div class="table__cell-inner">
-                                    <b class="text text--nowrap text--bigger--115">657.56</b>
-                                </div>
-                            </td>
-                            <td class="table__cell" data-col-name="Баланс по счету, грн">
-                                <div class="table__cell-inner">
-                                    <b class="text text--nowrap text--bigger--115">657.56</b>
-                                </div>
-                            </td>
-                            <td class="table__cell table__cell--dropdown">
-                                <div class="table__cell-inner">
-                                    <div class="table__dropdown">
-                                        <span class="table__dropdown-text">Свернуть</span>
-                                        <span class="table__dropdown-text table__dropdown-text--active">Развернуть</span>
-                                        <i class="table__dropdown-icon icon icon--arrow--tiangle--down"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr><!--table row toggler-->
-                    
-                        <tr class="table__row-sub">
-                            <td colspan="11" class="table__cell-sub">
-                    
-                                <div class="table__cell-sub-content">
-                                    <div class="table__dropdown table__dropdown--sub">
-                                        <button class="table__dropdown-btn">
-                                            <span class="table__dropdown-text table__dropdown-text--active">Свернуть</span>
-                                            <i class="table__dropdown-icon icon--arrow--up"></i>
-                                        </button>
-                                    </div><!--table dropdown-->
-                    
-                                    <table class="table table__cell-sub-table">
-                                        <tbody class="table__tbody">
-                                        <tr class="table__row-head">
-                                            <th class="table__cell-head table__cell-head--hidden">Отметить</th>
-                                            <th class="table__cell-head">PN</th>
-                                            <th class="table__cell-head">ВЭД-код</th>
-                                            <th class="table__cell-head">Производитель</th>
-                                            <th class="table__cell-head">Наименование</th>
-                                            <th class="table__cell-head">Цена без НДС, грн</th>
-                                            <th class="table__cell-head">Кол-во</th>
-                                            <th class="table__cell-head">Сумма без НДС, грн</th>
-                                            <th class="table__cell-head">Кол-во разн.</th>
-                                        </tr>
-                    
-                                        <tr class="table__row">
-                                            <td class="table__cell table__cell--check">
-                                                <label class="checkbox-radio checkbox-radio--table">
-                                                    <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                                    <span class="checkbox-radio__toggler"></span>
-                                                    <span class="checkbox-radio__label">Отметить</span>
-                                                </label>
-                                            </td>
-                                            <td class="table__cell" data-col-name="PN">
-                                                <div class="table__cell-inner">37839</div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="ВЭД-код">
-                                                <div class="table__cell-inner">8443999090</div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Производитель">
-                                                <div class="table__cell-inner">KATUN</div>
-                                            </td>
-                                            <td class="table__cell table__cell--wide" data-col-name="Наименование">
-                                                <div class="table__cell-inner">
-                                                    <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
-                                                        Вал заряда KATUN Ricoh Aficio 1015/ 1018/ 1022/ 1113/
-                                                        2015/ 2018/ 2020/ 2510/ 3025, MP1500/ 1600/ 1900/ 2000/
-                                                        2001/ 2014/ 2352/ 2500/ 2501/ 2510/ 2550
-                                                    </a>
-                                                    <div class="table__availability">Наличие: <span class="text text--marker--ok">много</span></div>
-                                                </div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Цена без НДС, грн">
-                                                <div class="table__cell-inner">
-                                                    <b class="text text--bigger--115 text--nowrap">370.20</b>
-                                                </div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Кол-во">
-                                                <div class="table__cell-inner">1</div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Сумма без НДС, грн">
-                                                <div class="table__cell-inner">
-                                                    <b class="text text--bigger--115 text--nowrap">370.20</b>
-                                                </div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Кол-во разн.">
-                                                <div class="table__cell-inner">0</div>
-                                            </td>
-                                        </tr>
-                    
-                                        <tr class="table__row">
-                                            <td class="table__cell table__cell--check">
-                                                <label class="checkbox-radio checkbox-radio--table">
-                                                    <input class="checkbox-radio__input" type="checkbox" name="" value="">
-                                                    <span class="checkbox-radio__toggler"></span>
-                                                    <span class="checkbox-radio__label">Отметить</span>
-                                                </label>
-                                            </td>
-                                            <td class="table__cell" data-col-name="PN">
-                                                <div class="table__cell-inner">50788</div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="ВЭД-код">
-                                                <div class="table__cell-inner">8443999090</div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Производитель">
-                                                <div class="table__cell-inner">KATUN</div>
-                                            </td>
-                                            <td class="table__cell table__cell--wide" data-col-name="Наименование">
-                                                <div class="table__cell-inner">
-                                                    <a href="#" class="table__product-name text-overflow" data-text-max-row="3" data-modal-id="modal-preview">
-                                                        Вал тефлоновый KATUN Ricoh Aficio 2051/ 2060/ 2075, MP5500/ 6500/ 7500/ 6000/
-                                                        7000/ 8000/ 6001/ 7001/ 8001/ 6002/ 7502/ 6503/ 7503, Gestetner DSM
-                                                    </a>
-                                                    <div class="table__availability">Наличие: <span class="text text--marker--warning">достаточно</span></div>
-                                                </div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Цена без НДС, грн">
-                                                <div class="table__cell-inner">
-                                                    <b class="text text--bigger--115 text--nowrap">1171,08</b>
-                                                </div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Кол-во">
-                                                <div class="table__cell-inner">1</div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Сумма без НДС, грн">
-                                                <div class="table__cell-inner">
-                                                    <b class="text text--bigger--115 text--nowrap">1171,08</b>
-                                                </div>
-                                            </td>
-                                            <td class="table__cell" data-col-name="Кол-во разн.">
-                                                <div class="table__cell-inner">0</div>
-                                            </td>
-                                        </tr>
-                    
-                                        </tbody>
-                                    </table>
-                    
-                                    <div class="order-summary table__order-summary">
-                    
-                                        <div class="order-summary__product-price product-price">
-                                            <div class="product-price__pre">Итого, к оплате</div>
-                                            <div class="product-price__item">
-                                                <span class="product-price__value">1849.54</span>
-                                                <span class="product-price__currency">&#8372;</span>
-                                            </div>
-                                        </div>
-                    
-                                        <ul class="order-summary__list">
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Всего позиций</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">2</span>
-                                                </div>
-                                            </li>
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Всего товаров, шт</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">2</span>
-                                                </div>
-                                            </li>
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Доверенность</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">нет</span>
-                                                </div>
-                                            </li>
-                                            <li class="order-summary__list-item">
-                                                <div class="order-summary__list-attr">
-                                                    <span class="order-summary__list-inner">Расходная с подписью</span>
-                                                </div>
-                                                <div class="order-summary__list-param">
-                                                    <span class="order-summary__list-inner">нет</span>
-                                                </div>
-                                            </li>
-                                        </ul><!-- order-summary list -->
-                    
-                                    </div><!-- order-summary -->
-                                </div>
-                            </td>
-                        </tr><!--table row sub-->
-                    
-                    </tbody>            </table>
+                <ul class="iconic-list contacts__iconic-list">
+                    <li class="iconic-list__item">
+                        <i class="iconic-list__icon icon icon--phone--circled"></i>
+                        <span class="iconic-list__text">
+                            <b>Телефон:</b>
+                            <a class="iconic-list__link" href="tel:+380442270773">38 044 227 07 73</a>
+                        </span>
+                    </li>
+                    <li class="iconic-list__item">
+                        <i class="iconic-list__icon icon icon--email--circled"></i>
+                        <span class="iconic-list__text">
+                            <b>Web:</b>
+                            <a class="iconic-list__link" href="tel:+380442270773">www.dwgroup.ua</a>
+                        </span>
+                    </li>
+                </ul><!-- iconic list -->
+    
+                <div class="title-bordered contacts__title-bordered">
+                    <h3 class="title-bordered__heading">Написать нам</h3>
+                </div>
+    
+                <div class="form form--col2">
+                    <div class="form__group">
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Ваше имя</div>
+                            <input class="form-row__control" type="text" name="name">
+                        </label>
+    
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Email</div>
+                            <input class="form-row__control" type="email" name="email">
+                        </label>
+    
+                        <label class="form__row form-row">
+                            <div class="form-row__label">Телефон</div>
+                            <input class="form-row__control" type="text" name="tel">
+                        </label>
+                    </div><!-- form group-->
+    
+                    <div class="form__group">
+                        <div class="form-row form__row form__row--fluid">
+                            <div class="form-row__label">Текст вашего сообщения</div>
+                            <textarea class="form-row__control" name=""></textarea>
+                        </div>
+                    </div><!-- form group-->
+                </div><!-- form -->
     
             </div><!--content holder body-->
+    
+            <div class="content-holder__footer">
+                <div class="control-pad control-pad--cart">
+                    <a class="control-pad__btn btn btn--style--default" href="#">Отправить</a>
+                </div><!-- control pad -->
+            </div><!-- content holder footer -->
     
         </div><!--content holder-->
     </div>

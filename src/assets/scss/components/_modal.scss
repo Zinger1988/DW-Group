@@ -118,6 +118,11 @@
     }
   }
 
+  &__img{
+    display: block;
+    width: 100%;
+  }
+
   &__content:not(:last-child){
     margin-bottom: 2rem;
 

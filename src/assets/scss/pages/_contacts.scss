@@ -12,6 +12,10 @@
 
   &__title-bordered{
     margin-bottom: 2rem;
+
+    @include media(">=lg"){
+      margin-bottom: 3rem;
+    }
   }
 
   &__iconic-list{
@@ -22,7 +26,7 @@
     }
   }
 
-  &__staff{
+  &__grid{
     @include media(">=md"){
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -30,20 +34,11 @@
     }
   }
 
-  &__staff-item{
-    display: flex;
-    border-radius: 7px;
-    background-color: $white;
-    border-right: 15px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+  &__grid-item{
     margin-bottom: 1.25rem;
 
     @include media(">=md"){
       margin-bottom: 0;
-    }
-
-    @include media(">=lg"){
-      border-radius: 16px;
     }
 
     .iconic-list__item{
@@ -51,7 +46,125 @@
     }
   }
 
-  &__staff-img{
+  &__map{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @include media(">=lg"){
+      border-radius: 30px;
+    }
+  }
+
+  &__map-item{
+    position: absolute;
+    right: 0;
+    bottom: calc(-50% + 8rem);
+    width: 100%;
+    height: 150%;
+    border: none;
+
+    @include media(">=lg"){
+      width: 150%;
+      left: -50%;
+      height: calc(100% + 8rem);
+      top: -8rem;
+      bottom: auto;
+    }
+  }
+
+  &__map-label{
+    margin: 1rem 1rem 40rem;
+    background-color: $white;
+    border-radius: 7px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+
+    @include media(">=lg"){
+      margin: 2rem 2rem 2rem calc(50% - 2rem);
+      border-radius: 16px;
+      width: 50%;
+    }
+  }
+
+  &__map-photo{
+    height: 19rem;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.25rem;
+    position: relative;
+    background-color: $black;
+    cursor: pointer;
+    color: $white;
+
+    @include media(">=lg"){
+      padding: 2.5rem;
+    }
+  }
+
+  &__map-title{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+  }
+
+  &__map-title-icon{
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    text-align: center;
+    color: $mySin;
+    background-color: $white;
+    line-height: 3rem;
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+
+    @include media(">=lg"){
+      width: 4rem;
+      height: 4rem;
+      line-height: 4rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__map-title-text{
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+    @include media(">=lg"){
+      font-size: 1.4rem;
+    }
+  }
+
+  &__map-photo-item{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    object-fit: cover;
+  }
+}
+
+.staff-card{
+  display: flex;
+  border-radius: 7px;
+  background-color: $white;
+  box-shadow: 0 3px 12px rgba(0,0,0,.12);
+
+  @include media(">=lg"){
+    border-radius: 16px;
+  }
+
+  $this: &;
+
+  &__img{
     padding: 1.25rem;
     flex-shrink: 0;
     display: flex;
@@ -66,7 +179,7 @@
     }
   }
 
-  &__staff-img-item{
+  &__img-item{
     display: block;
     width: 7rem;
 
@@ -75,7 +188,7 @@
     }
   }
 
-  &__positions-info{
+  &__info{
     padding: 1.3rem 2rem;
     flex-grow: 1;
     display: flex;
@@ -83,15 +196,49 @@
     justify-content: center;
 
     @include media(">=lg"){
-      padding: 2.5rem;
+      padding: 1.6rem 2.5rem;
     }
   }
 
-  &__positions-info-header{
+  &__info-header{
     margin-bottom: 1rem;
   }
 
-  &__staff-name{
+  &__note{
+    display: inline-flex;
+    background-color: $curiousBlue;
+    align-items: center;
+    color: $white;
+    padding: .3rem 1rem .3rem .5rem;
+    margin-bottom: .75rem;
+    border-radius: 15px;
+
+    @include media(">=lg"){
+      padding: .5rem 1.5rem .5rem .75rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__note-icon{
+    font-size: 1.4rem;
+    margin-right: .5rem;
+    line-height: 1;
+
+    @include media(">=lg"){
+      font-size: 1.6rem;
+      margin-right: .7rem;
+    }
+  }
+
+  &__note-text{
+    font-size: 1.1rem;
+
+    @include media(">=lg"){
+      font-size: 1.2rem;
+    }
+  }
+
+  &__name{
     font: 700 1.6rem/ 1.222 $headings-font-family;
 
     @include media(">=lg"){
@@ -99,7 +246,7 @@
     }
   }
 
-  &__staff-position{
+  &__position{
     font-size: 1.2rem;
     line-height: 1.2;
     color: #8F8F8F;
@@ -109,7 +256,7 @@
     }
   }
 
-  &__staff-list{
+  &__list{
 
     .iconic-list__item{
       margin-bottom: .5rem;
@@ -140,7 +287,7 @@
     }
   }
 
-  &__staff-item--leader{
+  &--leader{
     color: $white;
     background: rgb(65,69,71);
     background:
@@ -148,34 +295,19 @@
             linear-gradient(180deg, rgba(65,69,71,1) 0%, rgba(47,49,51,1) 100%);
   }
 
-  &__staff-item--iconic-list{
+  &--iconic-list{
     background: none;
     box-shadow: none;
     border-radius: 0;
     align-self: center;
   }
 
-  &__map{
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-  }
+  &--map{
+    border-radius: 0;
+    box-shadow: none;
 
-  &__map-item{
-    position: absolute;
-    right: 0;
-    top: -8rem;
-    width: 100%;
-    height: calc(100% + 8rem);
-    border: none;
-  }
-
-  &__map-label{
-    margin: 1rem 1rem 40rem;
-    background-color: $white;
-    border-radius: 7px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.12);
-    position: relative;
-    z-index: 5;
+    #{$this}__img{
+      border-radius: 0;
+    }
   }
 }
