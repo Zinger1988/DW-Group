@@ -551,6 +551,7 @@
             <div class="content-holder__body account">
     
                 <h1 class="h3">Текущие заказы</h1>
+    
                 <table class="table table--build-xl account__table">
                     <tbody class="table__tbody">
                     
@@ -579,14 +580,16 @@
                                 </div>
                             </td>
                             <td class="table__cell" data-col-name="Примечание">
-                                <div class="table__cell-inner">-</div>
+                                <div class="table__cell-inner">
+                                    <span class="table__text text text--smaller--085">Комментарий к заказу</span>
+                                </div>
                             </td>
                             <td class="table__cell" data-col-name="Сделать текущим">
                                 <div class="table__cell-inner">
                                     <label class="checkbox-radio checkbox-radio--table table__status-radio">
                                         <input class="checkbox-radio__input" type="radio" name="current order" value="" checked>
                                         <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label">Сделать текущим</span>
+                                        <span class="checkbox-radio__label text text--nowrap">Сделать текущим</span>
                                     </label>
                                 </div>
                             </td>
@@ -758,6 +761,13 @@
                                             </li>
                                         </ul><!-- order-summary list -->
                     
+                                        <div class="order-summary__note">
+                                            <div class="form-row order-summary__note-comment">
+                                                <div class="form-row__label">Комментарий к заказу</div>
+                                                <textarea class="form-row__control" name="">Комментарий к заказу</textarea>
+                                            </div>
+                                        </div><!-- order-summary note -->
+                    
                                     </div><!-- order-summary -->
                                 </div>
                             </td>
@@ -778,14 +788,19 @@
                                 </div>
                             </td>
                             <td class="table__cell" data-col-name="Примечание">
-                                <div class="table__cell-inner">-</div>
+                                <div class="table__cell-inner">
+                                    <span class="table__text text text--smaller--085">
+                                        Дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки
+                                        существенных финансовых и административных условий.
+                                    </span>
+                                </div>
                             </td>
                             <td class="table__cell" data-col-name="Сделать текущим">
                                 <div class="table__cell-inner">
                                     <label class="checkbox-radio checkbox-radio--table table__status-radio">
                                         <input class="checkbox-radio__input" type="radio" name="current order" value="">
                                         <span class="checkbox-radio__toggler"></span>
-                                        <span class="checkbox-radio__label">Сделать текущим</span>
+                                        <span class="checkbox-radio__label text text--nowrap">Сделать текущим</span>
                                     </label>
                                 </div>
                             </td>
@@ -953,6 +968,13 @@
                                             </li>
                                         </ul><!-- order-summary list -->
                     
+                                        <div class="order-summary__note">
+                                            <div class="form-row order-summary__note-comment">
+                                                <div class="form-row__label">Комментарий к заказу</div>
+                                                <textarea class="form-row__control" name="">Дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки существенных финансовых и административных условий.</textarea>
+                                            </div>
+                                        </div><!-- order-summary note -->
+                    
                                     </div><!-- order-summary -->
                                 </div>
                             </td>
@@ -961,6 +983,14 @@
                     </tbody>            </table>
     
             </div><!--content holder body-->
+    
+            <div class="content-holder__footer">
+                <div class="control-pad">
+                    <button class="control-pad__btn btn btn--style--wired-default btn--size--lg">
+                        Создать заказ
+                    </button>
+                </div><!-- control pad -->
+            </div><!--content holder footer-->
     
         </div><!--content holder-->
     </div>

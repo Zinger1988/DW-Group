@@ -597,7 +597,15 @@
                                 </div>
                             </td>
                             <td class="table__cell" data-col-name="Кол-во">
-                                <div class="table__cell-inner">2</div>
+                                <div class="table__cell-inner">
+                                    <div class="table__quantity-input">
+                                        <button class="table__quantity-input-btn table__quantity-input-btn--dec">-</button>
+                                        <label class="form-row table__quantity-input-label">
+                                            <input class="form-row__control" type="number" name="" value="8">
+                                        </label>
+                                        <button class="table__quantity-input-btn table__quantity-input-btn--inc">+</button>
+                                    </div>
+                                </div>
                             </td>
                             <td class="table__cell" data-col-name="Цена, грн">
                                 <div class="table__cell-inner">
@@ -752,7 +760,15 @@
                                 </div>
                             </td>
                             <td class="table__cell" data-col-name="Кол-во">
-                                <div class="table__cell-inner">8</div>
+                                <div class="table__cell-inner">
+                                    <div class="table__quantity-input">
+                                        <button class="table__quantity-input-btn table__quantity-input-btn--dec">-</button>
+                                        <label class="form-row table__quantity-input-label">
+                                            <input class="form-row__control" type="number" name="" value="8">
+                                        </label>
+                                        <button class="table__quantity-input-btn table__quantity-input-btn--inc">+</button>
+                                    </div>
+                                </div>
                             </td>
                             <td class="table__cell" data-col-name="Цена, грн">
                                 <div class="table__cell-inner">
@@ -1040,6 +1056,17 @@
                     
                                         </tbody>
                                     </table>
+                    
+                                    <div class="order-summary table__order-summary">
+                    
+                                        <div class="order-summary__controls">
+                                            <button class="order-summary__controls-btn">
+                                                <i class="order-summary__controls-icon icon icon--printer"></i>
+                                                <span class="order-summary__controls-text">Распечатать заказ</span>
+                                            </button>
+                                        </div><!-- order-summary controls -->
+                    
+                                    </div><!-- order-summary -->
                                 </div>
                             </td>
                         </tr><!--table row sub-->
@@ -1182,6 +1209,17 @@
                     
                                         </tbody>
                                     </table>
+                    
+                                    <div class="order-summary table__order-summary">
+                    
+                                        <div class="order-summary__controls">
+                                            <button class="order-summary__controls-btn">
+                                                <i class="order-summary__controls-icon icon icon--printer"></i>
+                                                <span class="order-summary__controls-text">Распечатать заказ</span>
+                                            </button>
+                                        </div><!-- order-summary controls -->
+                    
+                                    </div><!-- order-summary -->
                                 </div>
                             </td>
                         </tr><!--table row sub-->
@@ -1189,6 +1227,38 @@
                     </tbody>            </table>
     
             </div><!--content holder body-->
+    
+            <div class="content-holder__footer">
+                <nav class="pagination pagination--footer">
+                    <span class="pagination__btn pagination__btn--disabled">
+                        <i class="pagination__btn-icon icon--arrow--angle--left"></i>
+                        <span class="pagination__btn-text">Предыдущая страница</span>
+                    </span>
+    
+                    <ul class="pagination__list">
+                        <li class="pagination__list-item pagination__list-item--active">
+                            <a href="#" class="pagination__list-link">1</a>
+                        </li>
+                        <li class="pagination__list-item">
+                            <a href="#" class="pagination__list-link">2</a>
+                        </li>
+                        <li class="pagination__list-item">
+                            <a href="#" class="pagination__list-link">3</a>
+                        </li>
+                        <li class="pagination__list-item">
+                            <a href="#" class="pagination__list-link">4</a>
+                        </li>
+                        <li class="pagination__list-item">
+                            <a href="#" class="pagination__list-link">5</a>
+                        </li>
+                    </ul>
+    
+                    <a href="#" class="pagination__btn">
+                        <span class="pagination__btn-text">Следующая страница</span>
+                        <i class="pagination__btn-icon icon--arrow--angle--right"></i>
+                    </a>
+                </nav>
+            </div><!--content holder footer-->
     
         </div><!--content holder-->
     </div>

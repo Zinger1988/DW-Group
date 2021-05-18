@@ -8,13 +8,10 @@
 
     $this: &;
 
-    @include media(">=xl"){
-        flex-wrap: nowrap;
-    }
-
     &__list{
         @extend %listreset;
         flex: 1 0 auto;
+        max-width: 100%;
 
         @include media(">=md"){
             align-self: center;
@@ -164,6 +161,49 @@
         }
     }
 
+    &__note{
+        width: 100%;
+        flex-shrink: 0;
+        border-top: 1px dashed #E9E9E9;
+        padding-top: 1rem;
+        margin-top: 1rem;
+
+        @include media(">=md"){
+            order: 1;
+        }
+
+        @include media(">=lg"){
+            order: 999;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__note-item{
+        font-size: 1.2rem;
+        margin: 0 0 .5rem;
+
+        @include media(">=sm"){
+            font-size: 1.3rem;
+        }
+
+        @include media(">=lg"){
+            font-size: 1.4rem;
+        }
+    }
+
+    &__note-subtitle{
+        display: block;
+    }
+
+    &__note-text{
+        display: block;
+    }
+
+    &__note-comment .form-row__control{
+        min-height: 10rem;
+    }
+
     &__controls{
         display: flex;
         flex-direction: column;
@@ -174,6 +214,10 @@
         padding: 1.5rem;
         border-radius: 4px;
         background-color: #F9F9F9;
+
+        @include media(">=md"){
+            order: 999;
+        }
 
         @include media(">=lg"){
             width: auto;

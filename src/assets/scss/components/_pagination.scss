@@ -11,6 +11,10 @@
     border-bottom: 1px solid $mercury;
   }
 
+  &--footer{
+    padding: 0;
+  }
+
   &__btn{
     @extend %linkreset;
     height: 3.5rem;
@@ -94,7 +98,5 @@
       font-weight: 700;
       position: relative;
     }
-
   }
-
 }

@@ -57,20 +57,20 @@ $(document).ready(function () {
         loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-      });
+    });
 
-      const galleryTop = new Swiper('.gallery__main', {
+    const galleryTop = new Swiper('.gallery__main', {
         spaceBetween: 0,
         loop: true,
         loopedSlides: 5, //looped slides should be the same
         navigation: {
-          nextEl: '.gallery__btn--next',
-          prevEl: '.gallery__btn--prev',
+            nextEl: '.gallery__btn--next',
+            prevEl: '.gallery__btn--prev',
         },
         thumbs: {
-          swiper: galleryThumbs,
+            swiper: galleryThumbs,
         },
-      });
+    });
 
     const carouselWide = new Swiper('.carousel-section--layout--wide .swiper', {
         loop: false,
@@ -363,7 +363,7 @@ $(document).ready(function () {
             }
         },
         accordion(){
-            
+
             const accordionItem = $('.accordion__item');
 
             accordionItem.each(function(){
@@ -398,7 +398,8 @@ $(document).ready(function () {
 
                 if(!$(e.target).closest('.checkbox-radio').length &&
                     !($(e.target).prop('tagName').toLowerCase() === 'a') &&
-                    !($(e.target).closest('.btn').length)){
+                    !($(e.target).closest('.btn').length) &&
+                    !($(e.target).closest('.table__quantity-input').length)){
 
                     if(currentSubContent.is(":hidden")){
                         currentToggler.addClass('table__row--toggler--active');

@@ -5,6 +5,17 @@
     &__btn{
         width: 100%;
         margin: 0 0 1rem;
+
+        @include media(">=md"){
+            width: auto;
+            margin: 0 1rem;
+        }
+    }
+
+    @include media(">=md"){
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &--cart,
@@ -18,11 +29,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            #{$this}__btn{
-                width: auto;
-                margin: 0 1rem;
-            }
         }
     }
 

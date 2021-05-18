@@ -130,6 +130,17 @@ a {
     }
   }
 
+  &--smaller{
+
+    &--075{
+      font-size: 75%;
+    }
+
+    &--085{
+      font-size: 85%;
+    }
+  }
+
   &--nowrap{
     white-space: nowrap;
   }
