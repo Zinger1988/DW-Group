@@ -9231,7 +9231,7 @@ html {
   line-height: 1;
   border: 2px solid #303D3B;
   border-right-width: 1px;
-  border-left: none;
+  border-left-width: 0;
   transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
@@ -9279,7 +9279,7 @@ html {
 
 .header__controls-item:first-child .header__controls-btn {
   border-radius: 4px 0 0 4px;
-  border-left: 2px solid #303D3B;
+  border-left-width: 2px;
 }
 
 .header__controls-item:last-child .header__controls-btn {
@@ -9353,20 +9353,8 @@ html {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.header--index .header__controls {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
 .header--index .header__controls-btn {
-  color: #ffffff;
-}
-
-.header--index .header__controls-item {
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.header--index .header__controls-item:last-child {
-  border: none;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .header--index .header__controls-item:not(.active):hover .header__controls-btn {
@@ -16763,13 +16751,9 @@ html {
 
   .header--index .header__controls-btn {
     height: 4.3rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     padding: .5rem 2rem;
-  }
-
-  .header--index .header__controls-item {
-    border: none;
   }
 
   .header--index .header__controls-item:not(.active):hover .header__controls-btn {

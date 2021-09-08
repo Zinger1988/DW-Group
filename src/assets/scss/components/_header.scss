@@ -208,7 +208,7 @@
       line-height: 1;
       border: 2px solid $outerSpaceDarken;
       border-right-width: 1px;
-      border-left: none;
+      border-left-width: 0;
       @include animate(color border background-color);
 
       &--cart{
@@ -304,7 +304,7 @@
 
       #{$this}__controls-btn{
         border-radius: 4px 0 0 4px;
-        border-left: 2px solid $outerSpaceDarken;
+        border-left-width: 2px;
       }
     }
 
@@ -536,18 +536,17 @@
     }
 
     #{$this}__controls{
-      border: 2px solid rgba(255,255,255,.3);
 
       @include media('>=xl'){
         border: none;
       }
 
       &-btn{
-        color: $white;
+        border-color: rgba(255,255,255,.3);
 
         @include media('>=xl'){
           height: 4.3rem;
-          border: 2px solid rgba(255,255,255,.3);
+          border-color: rgba(255,255,255,.3);
           border-radius: 4px;
           padding: .5rem 2rem;
         }
@@ -555,15 +554,6 @@
     }
 
     #{$this}__controls-item{
-      border-right: 1px solid rgba(255,255,255,.3);
-
-      @include media('>=xl'){
-        border: none;
-      }
-
-      &:last-child{
-        border: none;
-      }
 
       &:not(.active):hover .header__controls-btn{
         color: $white;
