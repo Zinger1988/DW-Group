@@ -25,6 +25,9 @@ $(document).ready(function () {
             options: {
                 minimumResultsForSearch: -1,
             }
+        },
+        {
+            name: 'select2--search'
         }
     ];
 
@@ -38,13 +41,13 @@ $(document).ready(function () {
         $(result).select2({width: '100%', ...currentOptions});
     });
 
-    $(".select2--theme--outerSpace").select2(
-        {
-            width: '100%',
-            minimumResultsForSearch: -1,
-            selectionCssClass : "select2--theme--outerSpace"
-        }
-    );
+    // $(".select2--theme--outerSpace").select2(
+    //     {
+    //         width: '100%',
+    //         minimumResultsForSearch: -1,
+    //         selectionCssClass : "select2--theme--outerSpace"
+    //     }
+    // );
 
 
     // Swiper ---------------------------------------
@@ -52,7 +55,7 @@ $(document).ready(function () {
     const galleryThumbs = new Swiper('.gallery__thumbs', {
         spaceBetween: 0,
         slidesPerView: 'auto',
-        loop: true,
+        loop: false,
         freeMode: true,
         loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
@@ -61,7 +64,7 @@ $(document).ready(function () {
 
     const galleryTop = new Swiper('.gallery__main', {
         spaceBetween: 0,
-        loop: true,
+        loop: false,
         loopedSlides: 5, //looped slides should be the same
         navigation: {
             nextEl: '.gallery__btn--next',
@@ -638,7 +641,7 @@ let siteJS = {
         });
 
         modal.click(function (e) {
-            if($(e.target).hasClass('close-modal')){
+            if($(e.target).hasClass('close-modal') || $(e.target).closest('.close-modal').length){
                 siteJS.helpers.elemFadeOut($(this), 'active');
             }
         });

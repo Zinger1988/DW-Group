@@ -37,4 +37,18 @@
       padding-right: 3.8rem;
     }
   }
+
+  &--required{
+    #{$this}__label{
+      color: red;
+    }
+
+    #{$this}__control{
+      border: 1px solid red;
+    }
+
+    .select2-selection{
+      border: 1px solid red;
+    }
+  }
 }

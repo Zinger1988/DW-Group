@@ -49,6 +49,11 @@ textarea {
     margin: 0;
   }
 
+  &.required,
+  &.required:focus{
+    border: 1px solid red;
+  }
+
   @include placeholder {
     color: $placeholder-color;
     opacity: 1;
