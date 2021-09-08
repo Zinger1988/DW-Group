@@ -1,8 +1,20 @@
 .gallery{
     border: 1px solid #E9E9E9;
     border-radius: 6px;
+    position: relative;
 
     $this: &;
+    
+    &__item-labels{
+        position: absolute;
+        right: 0;
+        top: 1.5rem;
+        z-index: 15;
+
+        .item-labels__item{
+            font-size: 1.4rem;
+        }
+    }
 
     &__main{
         overflow: hidden;

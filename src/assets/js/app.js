@@ -236,6 +236,10 @@ $(document).ready(function () {
     wow.init();
 
     // siteJS ---------------------------------------
+
+    initLightSelect(".light-select", {
+        isSearch: true
+    });
 });
 
 let siteJS = {
@@ -641,7 +645,7 @@ let siteJS = {
         });
 
         modal.click(function (e) {
-            if($(e.target).hasClass('close-modal') || $(e.target).closest('.close-modal').length){
+            if($(e.target).hasClass('close-modal')){
                 siteJS.helpers.elemFadeOut($(this), 'active');
             }
         });

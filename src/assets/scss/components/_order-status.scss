@@ -11,19 +11,76 @@
   &--danger{
     background-color: $mandy;
   }
+
   &--warning{
     background-color: $pumpkin;
   }
+
   &--ok{
     background-color: $limeade;
   }
+
   &--darkGrey{
     background-color: $nevada;
   }
+
   &--curiouslBlue{
     background-color: $curiousBlue;
   }
+
   &--conifer{
     background-color: $conifer;
+  }
+
+  &--light-green {
+    background-color: #7cbf49
+  }
+
+  &--brown {
+    background-color: #785656
+  }
+
+  &--orange {
+    background-color: #de9954
+  }
+
+  &--light-grey {
+    background-color: #a8a8a8
+  }
+
+  &--violet {
+    background-color: #a156db
+  }
+
+  &--dark-green {
+    background-color: #299121
+  }
+
+  &--dark-blue {
+    background-color: #5752f7
+  }
+
+  &--light-blue {
+    background-color: #5fd6e3
+  }
+
+  &--dark-dark-blue {
+    background-color: #5752f7
+  }
+
+  &--dark-grey {
+    background-color: #515657
+  }
+
+  &--yellow {
+    background-color: #a8a86f
+  }
+
+  &--rose {
+    background-color: #a86f9e
+  }
+
+  &--red {
+    background-color: #e33279
   }
 }

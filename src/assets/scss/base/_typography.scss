@@ -109,17 +109,41 @@ a {
     &--primary{
       color: $mySin;
     }
+
     &--danger{
       color: $mandy;
     }
+
     &--warning{
       color: $pumpkin;
     }
+
     &--ok{
       color: $limeade;
     }
+
     &--darkgrey{
       color: $nevada;
+    }
+
+    &--darkgreen {
+      color: #299121;
+    }
+
+    &--lightgreen {
+      color: #7cbf49;
+    }
+
+    &--orange {
+      color: orange;
+    }
+
+    &--red {
+      color: red;
+    }
+
+    &--darkgrey{
+      color:#5c747e;
     }
   }
 

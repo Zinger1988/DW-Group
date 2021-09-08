@@ -55,6 +55,14 @@
     margin-bottom: 3rem;
   }
 
+  &__labels{
+    margin: 0 0 1rem;
+
+    @include media(">=xl"){
+      display: none;
+    }
+  }
+
   &__filter{
     margin-bottom: 2rem;
 

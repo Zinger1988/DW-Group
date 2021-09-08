@@ -71,12 +71,9 @@
       font-size: 1.8rem;
       margin-right: 1rem;
       @include animate(color);
-
-      @include media('>=lg'){
-        font-size: 2.2rem;
-      }
     }
 
+    &.active,
     &:hover{
       color: $white;
 
@@ -90,6 +87,7 @@
         color: $lavender;
       }
 
+      &.active,
       &:hover {
         background-color: $lavender;
         border-color: $lavender;
@@ -121,6 +119,7 @@
         color: $curiousBlue;
       }
 
+      &.active,
       &:hover {
         background-color: $curiousBlue;
         border-color: $curiousBlue;
@@ -152,6 +151,7 @@
         color: $conifer;
       }
 
+      &.active,
       &:hover {
         background-color: $conifer;
         border-color: $conifer;
@@ -183,6 +183,7 @@
         color: $mySin;
       }
 
+      &.active,
       &:hover {
         background-color: $mySin;
         border-color: $mySin;
@@ -213,6 +214,7 @@
         color: $mandy;
       }
 
+      &.active,
       &:hover {
         background-color: $mandy;
         border-color: $mandy;

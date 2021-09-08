@@ -2,19 +2,17 @@
   background-color: $white;
 
   &__tabs{
-
-    &:after{
-      content: "";
-      position: absolute;
-      right: -1px;
-      top: 0;
-      height: 100%;
-      width: 1px;
-      background-color: $white;
-    }
+    padding-right: 1.25rem;
 
     .tabs__item {
       flex: 1 0 auto;
+
+      .tabs__link{
+        @include media(">=md"){
+          padding: 2.3rem 2.25rem 2.3rem 2.25rem;
+          text-align: center;
+        }
+      }
     }
   }
 

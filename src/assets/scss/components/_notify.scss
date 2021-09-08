@@ -1,0 +1,22 @@
+.notify{
+  display: inline-block;
+  line-height: 1;
+
+  $this: &;
+
+  &__icon{
+    font-size: 1.6rem;
+  }
+
+  &__text{
+    font-size: 1.4rem;
+  }
+
+  &.active{
+    color: $white;
+
+    #{$this}__icon{
+      color: $mandy;
+    }
+  }
+}
