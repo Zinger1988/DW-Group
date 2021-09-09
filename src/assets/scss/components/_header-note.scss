@@ -1,0 +1,19 @@
+.header-note{
+
+  &__pre{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: $regentGray;
+    font-weight: 700;
+    margin: 0 0 .25rem;
+  }
+
+  &__body{
+    font-size: 1.2rem;
+  }
+
+  &__link{
+    color: $mySin;
+    text-decoration: none;
+  }
+}

@@ -13,9 +13,10 @@
   }
 
   &__icon{
-    color: $regentGray;
+    color: $mySin;
     font-size: 2rem;
     margin-right: 1rem;
+    line-height: 1;
   }
 
   &__link{
@@ -26,6 +27,10 @@
       color: $mySin;
       text-decoration-color: $mySin;
     }
+  }
+
+  &__header-note{
+    margin-top: .3rem;
   }
 
 }

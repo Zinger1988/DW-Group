@@ -10,7 +10,6 @@
 
   &__list{
     @extend %listreset;
-    width: calc(50% - 15px);
   }
 
   &__list-item{
@@ -36,6 +35,58 @@
       top: 2rem;
     }
 
+    #{$this}__body{
+      display: block;
+
+      @include media('>=md'){
+        display: flex;
+        align-items: flex-start;
+      }
+
+      @include media('>=xl'){
+        align-items: center;
+        justify-content: flex-end;
+
+        .iconic-list{
+          margin-right: auto;
+        }
+      }
+    }
+
+    #{$this}__lang-selector{
+      margin: 0 0 1.5rem 3rem;
+
+      @include media('>=md'){
+        order: 1;
+        margin: 0 0 0 3rem;
+      }
+    }
+
+    #{$this}__list{
+      width: 100%;
+      margin: 0 0 2rem;
+
+      .iconic-list__icon{
+        color: $regentGray;
+      }
+
+      @include media('>=md'){
+        margin: 0;
+      }
+
+      &:not(.iconic-list){
+        padding-left: 3rem;
+
+        @include media('>=xl'){
+          padding: 0;
+        }
+      }
+
+      &:last-child{
+        margin: 0;
+      }
+    }
+
     @include media('>=xl'){
       padding: 1rem 0;
 
@@ -48,14 +99,40 @@
         width: auto;
         display: flex;
         align-items: center;
+
+        &:not(.iconic-list){
+          flex-shrink: 0;
+        }
+      }
+
+      #{$this}__list-item{
+        margin: 0 0 0 2rem;
+      }
+
+      #{$this}__link{
+        font-size: 1.25rem;
+      }
+
+      #{$this}__list .iconic-list__item{
+        margin: 0 2.5rem 0 0;
+      }
+    }
+
+    @include media('>=xxl'){
+
+      #{$this}__link{
+        font-size: 1.3rem;
       }
 
       #{$this}__list-item{
         margin: 0 0 0 2.5rem;
       }
+    }
 
-      #{$this}__list .iconic-list__item{
-        margin: 0 2.5rem 0 0;
+    @include media('>=xxxl'){
+
+      #{$this}__link{
+        font-size: 1.4rem;
       }
     }
   }

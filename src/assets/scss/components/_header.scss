@@ -535,6 +535,10 @@
       color: rgba(255,255,255,.3);
     }
 
+    .contact-panel__lang-selector{
+      background-color: rgba(#1E2625, .5);
+    }
+
     #{$this}__controls{
 
       @include media('>=xl'){
@@ -650,6 +654,15 @@
     }
 
     .notify__icon{
+      font-size: 1.3rem;
+      opacity: .75;
+
+      @include media(">=xl"){
+        font-size: 1.6rem;
+      }
+    }
+
+    .notify__count{
       display: none;
 
       @include media(">=xl"){
@@ -657,11 +670,9 @@
       }
     }
 
-    .notify__count{
-      font-size: 1.6rem;
-
-      @include media(">=xl"){
-        font-size: 1.4rem;
+    &.active{
+      .notify__icon{
+        opacity: 1;
       }
     }
   }
