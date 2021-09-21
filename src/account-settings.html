@@ -42,7 +42,7 @@ title: account
                             <div class="form-row__label">Отчество</div>
                             <input class="form-row__control" type="text" autocomplete="additional-name" name="middle name">
                         </div>
-                        <label class="form__row form-row form-row--required">
+                        <label class="form__row form-row">
                             <div class="form-row__label">Должность</div>
                             <select class="select2 select2--search">
                                 <option value="" disabled selected>Выбрать</option>
@@ -51,15 +51,24 @@ title: account
                                 <option value="">Бухгалтер</option>
                             </select>
                         </label>
-                        <label class="form__row form-row form-row--required">
-                            <div class="form-row__label">Должность</div>
-                            <select class="light-select">
+                        <div class="form__row form-row form-row--required">
+                            <div class="form-row__label">Город</div>
+                            <select class="carrier-delivery-city">
                                 <option value="" disabled selected>Выбрать</option>
                                 <option value="">Менеджер</option>
                                 <option value="">Директор</option>
                                 <option value="">Бухгалтер</option>
                             </select>
-                        </label>
+                        </div>
+                        <div class="form__row form-row">
+                            <div class="form-row__label">Отделение</div>
+                            <select class="carrier-delivery-department" disabled>
+                                <option value="" disabled selected>Выбрать</option>
+                                <option value="">Менеджер</option>
+                                <option value="">Директор</option>
+                                <option value="">Бухгалтер</option>
+                            </select>
+                        </div>
                         <div class="form__row form-row">
                             <div class="form-row__label">Телефон</div>
                             <input class="form-row__control" type="text" autocomplete="tel" name="tel">

@@ -234,12 +234,6 @@ $(document).ready(function () {
     );
 
     wow.init();
-
-    // siteJS ---------------------------------------
-
-    initLightSelect(".light-select", {
-        isSearch: true
-    });
 });
 
 let siteJS = {
@@ -277,6 +271,124 @@ let siteJS = {
         this.passwordToggler();
         this.fileAdd();
         this.indexVideo();
+        this.lightSelect();
+    },
+    lightSelect: function(){
+        const setThrottle = throttleLimiter(1000);
+
+        const hideHandlder1 = function () {
+            const bodyElem = document.querySelector("body");
+            bodyElem.classList.remove("select-overlay");
+
+            const activeElemData = this.state._activeElemData;
+
+            if (this.state._isModified) {
+                LightSelect.replaceItems(this, this.state.defaultState, -1);
+                const matchingElem = this.state.defaultState.find(
+                    (element) => element.value === activeElemData.value
+                );
+
+                if (!matchingElem) {
+                    LightSelect.appendItems(
+                        this,
+                        [activeElemData],
+                        this.state.defaultState.length
+                    );
+                } else {
+                    LightSelect.setActiveOption(this, matchingElem.index);
+                }
+            }
+        };
+
+        const getData = async function ({ instance, url, bodyParams }) {
+            try {
+                const formData = new FormData();
+                formData.append("name", instance.rendered._searchControl.value);
+                bodyParams.forEach((param) => formData.append(param.name, param.value));
+                LightSelect.preloaderShow(instance);
+                LightSelect.replaceItems(
+                    instance,
+                    await getJSON(url).then((data) => {
+                        return data.map(({ id, name }) => ({
+                            value: id,
+                            text: name
+                        }));
+                    }),
+                    -1
+                );
+            } catch (e) {
+                console.error(e.message);
+            } finally {
+                LightSelect.preloaderRemove(instance);
+            }
+        };
+
+        initLightSelect(".carrier-delivery-city", {
+            isSearch: true
+        });
+
+        const carrierDeliveryCity = document.querySelector(".carrier-delivery-city");
+        carrierDeliveryCity.LightSelect.onHide = hideHandlder1;
+        carrierDeliveryCity.LightSelect.onChange = function () {
+            LightSelect.enable(carrierDeliveryDepartment.LightSelect);
+
+            if (carrierDeliveryDepartment.LightSelect.state._isModified) {
+                LightSelect.replaceItems(
+                    carrierDeliveryDepartment.LightSelect,
+                    carrierDeliveryDepartment.LightSelect.state.defaultState,
+                    0
+                );
+            }
+        };
+
+        carrierDeliveryCity.LightSelect.onSearchInput = async function () {
+            if (this.rendered._searchControl.value.length >= 3) {
+                await setThrottle(
+                    getData.bind(null, {
+                        instance: this,
+                        url: "https://zinger1988.github.io/fakeDB/regions.json",
+                        bodyParams: [
+                            {
+                                name: "carrier_id",
+                                value: 2
+                            }
+                        ]
+                    })
+                );
+            } else if (this.state._isModified) {
+                this.state._isModified = false;
+                LightSelect.replaceItems(this, this.state.defaultState, -1);
+            }
+        };
+
+        initLightSelect(".carrier-delivery-department", {
+            isSearch: true
+        });
+        const carrierDeliveryDepartment = document.querySelector(".carrier-delivery-department");
+        carrierDeliveryDepartment.LightSelect.onSearchInput = async function () {
+            if (this.rendered._searchControl.value.length >= 3) {
+                await setThrottle(
+                    getData.bind(null, {
+                        instance: this,
+                        url: "https://zinger1988.github.io/fakeDB/departments.json",
+                        bodyParams: [
+                            {
+                                name: "carrier_id",
+                                value: 2
+                            },
+                            {
+                                name: "region_id",
+                                value: carrierDeliveryCity.LightSelect.state._activeElemData.value
+                            }
+                        ]
+                    })
+                );
+            } else if (this.state._isModified) {
+                this.state._isModified = false;
+                LightSelect.replaceItems(this, this.state.defaultState, -1);
+            }
+        };
+
     },
     indexVideo: function(){
 

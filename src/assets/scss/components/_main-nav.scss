@@ -157,4 +157,36 @@
     }
   }
 
+  .lightSelect__title{
+    border-color: #394240;
+
+    &--active{
+      border-color: #4c5755;
+      border-radius: 3px 3px 0 0;
+
+      .lightSelect__arrow-item{
+        color: $white;
+      }
+    }
+  }
+
+  .lightSelect__list-item{
+    color: $mineShaft;
+  }
+
+  .lightSelect__dropdown{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    max-width: none;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    transform: none;
+    border: none;
+    box-shadow: 0 .4rem 1.4rem rgba($black,.2);
+  }
+
+  .lightSelect__list{
+    max-height: 29.4rem;
+  }
 }

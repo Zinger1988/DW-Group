@@ -58,7 +58,7 @@
 
       @include media('>=md'){
         order: 1;
-        margin: 0 0 0 3rem;
+        margin: 0 0 0 2rem;
       }
     }
 
@@ -162,5 +162,39 @@
       text-decoration-color: $mySin;
     }
   }
+}
 
+.contact-panel-list-btn{
+  display: inline-flex;
+  align-items: center;
+  border-radius: 3px;
+  font-size: 1.1rem !important;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: .8rem 1.3rem .8rem 1rem;
+  @include animate(background-color);
+  font-weight: 600;
+  background-color: $mySin;
+  color: $mineShaft;
+  margin: 0 0 0 3rem;
+  flex-shrink: 0;
+
+  $this: &;
+
+  @include media('>=md'){
+    order: 2;
+    margin: 0 0 0 2rem;
+  }
+
+  &:hover{
+    text-decoration-color: transparent;
+    color: $mineShaft;
+    background-color: darken($mySin,10%);
+  }
+
+  &__icon{
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0 .75rem 0 0;
+  }
 }

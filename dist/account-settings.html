@@ -12,7 +12,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/public/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/public/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/public/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/public/site.webmanifest">
     <link rel="mask-icon" href="assets/img/public/safari-pinned-tab.svg" color="#f2951d">
     <link rel="shortcut icon" href="assets/img/public/favicon.ico">
     
@@ -81,6 +80,11 @@
                             <a class="contact-panel__link" href="#">Контакты</a>
                         </li>
                     </ul>
+    
+                    <a href="#" class="contact-panel-list-btn">
+                        <i class="contact-panel-list-btn__icon icon icon--undo"></i>
+                        <span class="contact-panel-list-btn__text">Старый сайт</span>
+                    </a>
                 </div>
     
             </div><!-- contact panel -->
@@ -411,11 +415,23 @@
 
             <div class="main-nav__filter">
                 <div class="main-nav__filter-select">
-                    <select class="select2 select2--theme--outerSpace main-nav__select2" name="nav-producer">
+<!--                    <select class="select2 select2&#45;&#45;theme&#45;&#45;outerSpace main-nav__select2" name="nav-producer">-->
+<!--                        <option value="" selected>Все производители</option>-->
+<!--                        <option value="1">1С Original</option>-->
+<!--                        <option value="1">3М</option>-->
+<!--                        <option value="1">Hanp</option>-->
+<!--                        <option value="1">Foshan Yat Sing</option>-->
+<!--                        <option value="1">IPM</option>-->
+<!--                        <option value="1">Katun</option>-->
+<!--                    </select>-->
+                    <select class="light-select main-nav__light-select" name="nav-producer">
                         <option value="" selected>Все производители</option>
                         <option value="1">1С Original</option>
                         <option value="1">3М</option>
                         <option value="1">Hanp</option>
+                        <option value="1">Foshan Yat Sing</option>
+                        <option value="1">IPM</option>
+                        <option value="1">Katun</option>
                         <option value="1">Foshan Yat Sing</option>
                         <option value="1">IPM</option>
                         <option value="1">Katun</option>
@@ -586,7 +602,7 @@
                                 <div class="form-row__label">Отчество</div>
                                 <input class="form-row__control" type="text" autocomplete="additional-name" name="middle name">
                             </div>
-                            <label class="form__row form-row form-row--required">
+                            <label class="form__row form-row">
                                 <div class="form-row__label">Должность</div>
                                 <select class="select2 select2--search">
                                     <option value="" disabled selected>Выбрать</option>
@@ -595,15 +611,24 @@
                                     <option value="">Бухгалтер</option>
                                 </select>
                             </label>
-                            <label class="form__row form-row form-row--required">
-                                <div class="form-row__label">Должность</div>
-                                <select class="light-select">
+                            <div class="form__row form-row form-row--required">
+                                <div class="form-row__label">Город</div>
+                                <select class="carrier-delivery-city">
                                     <option value="" disabled selected>Выбрать</option>
                                     <option value="">Менеджер</option>
                                     <option value="">Директор</option>
                                     <option value="">Бухгалтер</option>
                                 </select>
-                            </label>
+                            </div>
+                            <div class="form__row form-row">
+                                <div class="form-row__label">Отделение</div>
+                                <select class="carrier-delivery-department" disabled>
+                                    <option value="" disabled selected>Выбрать</option>
+                                    <option value="">Менеджер</option>
+                                    <option value="">Директор</option>
+                                    <option value="">Бухгалтер</option>
+                                </select>
+                            </div>
                             <div class="form__row form-row">
                                 <div class="form-row__label">Телефон</div>
                                 <input class="form-row__control" type="text" autocomplete="tel" name="tel">

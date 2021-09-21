@@ -62,6 +62,7 @@ class LightSelect{
 
         // closing a dropdown if click event detected elsewhere but not on lightSelect DOM-elements
         window.addEventListener('click', (e) => {
+            console.log(e.target);
             if(e.target.closest('.lightSelect') === _container){
                 e.stopPropagation();
             } else {
@@ -246,13 +247,15 @@ class LightSelect{
     }
 
     static show(instance){
-        const {rendered: {_container, _title, _dropdown, _searchControl}, state: {search}} = instance;
+        const {rendered: {_container, _title, _dropdown, _searchControl}, state: {search}, source: {_select}} = instance;
         let { state } = instance;
 
 
         if(state.disabled || state._isOpened) return
 
-        document.body.classList.add('select-overlay');
+        if(!_select.classList.contains('main-nav__light-select')){
+            document.body.classList.add('select-overlay');
+        }
 
         state._isOpened = true;
         _container.classList.add('lightSelect--active');
