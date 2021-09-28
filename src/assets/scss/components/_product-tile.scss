@@ -52,12 +52,12 @@
   }
 
   &__name{
-    color: inherit;
     display: block;
     font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 1.3rem;
     color: $base-text-color;
+    word-break: break-all;
 
     &:hover,
     &:focus{

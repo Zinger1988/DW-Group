@@ -105,7 +105,6 @@
 
         .text-overflow__toggle{
             justify-content: flex-start;
-            text-transform: none;
             text-transform: uppercase;
             font-size: 1rem;
         }
@@ -122,6 +121,7 @@
         width: 100%;
         flex-shrink: 0;
         color: inherit;
+        word-break: break-all;
 
         @include media(">=sm"){
             margin-bottom: 1.5rem;

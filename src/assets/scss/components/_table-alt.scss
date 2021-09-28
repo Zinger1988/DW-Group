@@ -108,6 +108,7 @@
         margin-left: 6.26rem;
         display: block;
         color: inherit;
+        word-break: break-all;
 
         @include media(">=md"){
             margin-left: 10rem;

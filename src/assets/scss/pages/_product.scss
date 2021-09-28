@@ -127,6 +127,7 @@
     font: 1.4rem/ 1.4 $base-font-family;
     font-weight: normal;
     margin: 0 0 2rem;
+    word-break: break-all;
 
     @include media(">=md"){
       font-size: 1.5rem;

@@ -478,6 +478,7 @@
     display: block;
     overflow: hidden;
     position: relative;
+    word-break: break-all;
     
     &:not(:last-child){
       margin-bottom: 1rem;
