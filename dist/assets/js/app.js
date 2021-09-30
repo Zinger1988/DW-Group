@@ -271,7 +271,7 @@ let siteJS = {
         this.passwordToggler();
         this.fileAdd();
         this.indexVideo();
-        this.lightSelect();
+        // this.lightSelect();
     },
     lightSelect: function(){
         const setThrottle = throttleLimiter(1000);

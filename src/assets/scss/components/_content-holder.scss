@@ -416,12 +416,16 @@
           flex-shrink: 0;
           z-index: unset;
           position: static;
-          width: 294px;
+          width: 286px;
           transform: translateX(0);
           border-right: 1px solid $mercury;
           overflow: unset;
           background: none;
         }
+      }
+
+      @include media('>=xxxl'){
+        width: 294px;
       }
     }
 
@@ -555,6 +559,19 @@
       @include media(">=xl"){
         margin-bottom: 4rem;
       }
+    }
+  }
+
+  &--bonus{
+    background-color: #331E4D;
+    background-image: url("../img/bonus/bonus-bt-top.jpg"), url("../img/bonus/bonus-bt-bottom.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom left;
+    background-size: 100% auto, 100% auto;
+    color: $white;
+
+    #{$this}__body{
+      padding: 2.5rem 1.5rem 1.5rem;
     }
   }
 }

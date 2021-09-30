@@ -1,0 +1,46 @@
+.bonus-chart{
+  position: relative;
+  
+  &__scale{
+    display: block;
+    width: 100%;
+  }
+
+  &__pointer{
+    position: absolute;
+    width: 36.35%;
+    left: 13.65%;
+    top: calc(50% - .75rem);
+    transform: rotate(0deg);
+    transform-origin: right center;
+  }
+
+  &__pointer-img{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $white;
+    border-radius: 50%;
+  }
+
+  &__total{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+
+  &__total-pre{
+    font-size: 1.1rem;
+    line-height: 1;
+    margin: 0 0 .5rem;
+  }
+
+  &__total-value{
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 700;
+    color: $mySin;
+  }
+}
