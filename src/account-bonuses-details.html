@@ -1,0 +1,66 @@
+---
+layout: default
+title: account
+---
+
+<div class="container container--narrow">
+
+    <div class="page__pre">
+        <nav class="crumbs crumbs--white page__crumbs">
+            <ul class="crumbs__list">
+                <li class="crumbs__item">
+                    <a href="/" class="crumbs__link">Главная</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#" class="crumbs__link">Бонусы</a>
+                </li>
+                <li class="crumbs__item">
+                    <span>Детали работы программы лояльности</span>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- page pre -->
+
+    <section class="content-holder page__content-holder content-holder--bonus">
+
+        <div class="content-holder__header">
+            <h1 class="content-holder__header-title">Детали работы программы лояльности</h1>
+        </div>
+
+        <div class="content-holder__body">
+
+            <div class="bonus">
+
+                <div class="bonus__summary">
+                    <div class="bonus__summary-item">
+                        <div class="bonus__summary-label">Ваш стаж (мес)</div>
+                        <div class="bonus__summary-value">2</div>
+                    </div>
+                    <div class="bonus__summary-item">
+                        <div class="bonus__summary-label">Баллов за апрель 2021</div>
+                        <div class="bonus__summary-value">0.00</div>
+                    </div>
+                    <div class="bonus__summary-item">
+                        <div class="bonus__summary-label">Всего, баллов</div>
+                        <div class="bonus__summary-value text--marker--primary">2.15</div>
+                    </div>
+                </div>
+
+                <div class="baloon-tip baloon-tip--static bonus__baloon-tip">
+                    <i class="baloon-tip__icon icon--info"></i>
+                    <span class="baloon-tip__text">Уважаемые партнеры, следующее открытие магазина призов состоится ориентировочно 10/05/2021!</span>
+                </div>
+
+                <div class="bonus__details-table">
+                    <table class="table table--build-lg bonus__details-table-item">
+                        {{> bonus-table }}
+                    </table>
+                </div>
+
+            </div><!-- bonus -->
+
+        </div><!-- content holder body -->
+
+    </section><!-- content holder -->
+
+</div>

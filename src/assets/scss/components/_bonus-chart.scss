@@ -8,19 +8,28 @@
 
   &__pointer{
     position: absolute;
-    width: 36.35%;
-    left: 13.65%;
-    top: calc(50% - .75rem);
+    width: 41%;
+    left: 9%;
+    top: calc(50% - 1.25rem);
     transform: rotate(0deg);
     transform-origin: right center;
+
+    @include media(">=md"){
+      top: calc(50% - 1.5rem);
+      width: 40.5%;
+      left: 9.5%;
+    }
   }
 
   &__pointer-img{
     display: block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: $white;
-    border-radius: 50%;
+    height: 2.5rem;
+    object-fit: contain;
+    object-position: left center;
+
+    @include media(">=md"){
+      height: 3rem;
+    }
   }
 
   &__total{
@@ -35,6 +44,10 @@
     font-size: 1.1rem;
     line-height: 1;
     margin: 0 0 .5rem;
+
+    @include media(">=md"){
+      font-size: 1.4rem;
+    }
   }
 
   &__total-value{
@@ -42,5 +55,9 @@
     line-height: 1;
     font-weight: 700;
     color: $mySin;
+
+    @include media(">=md"){
+      font-size: 3rem;
+    }
   }
 }

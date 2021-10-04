@@ -5,8 +5,20 @@
   &__section{
     margin: 0 0 5rem;
 
+    @include media(">=lg"){
+      margin: 0 0 7rem;
+    }
+
     &:last-child{
       margin: 0;
+    }
+
+    &--main{
+      @include media(">=lg"){
+        margin: 0 0 4rem;
+        display: flex;
+        align-items: center;
+      }
     }
 
     &--faq{
@@ -16,6 +28,10 @@
       padding: 3.5rem 1.75rem 1.75rem;
       position: relative;
       box-shadow: 0 3px 12px rgba($black,.12);
+
+      @include media(">=lg"){
+        padding: 5rem 4rem 4rem;
+      }
 
       #{$this}__title-heading{
         color: $base-text-color;
@@ -37,6 +53,10 @@
         font: 2rem/1 'Fontello';
         background: rgb(254,131,60);
         background: linear-gradient(0deg, rgba(254,131,60,1) 0%, rgba(247,186,41,1) 100%);
+
+        @include media(">=md"){
+          font-size: 2.6rem;
+        }
       }
     }
   }
@@ -46,6 +66,10 @@
     justify-content: center;
     align-items: center;
     margin: 0 0 2rem;
+
+    @include media(">=md"){
+      margin: 0 0 3rem;
+    }
 
     &::before,
     &::after{
@@ -67,6 +91,10 @@
     #{$this}__title-heading{
       margin: 0;
       padding: 0 2rem;
+
+      @include media(">=md"){
+        padding: 0 4rem;
+      }
     }
   }
 
@@ -75,11 +103,22 @@
     color: $white;
     margin: 0 0 2rem;
     text-align: center;
+
+    @include media(">=md"){
+      font-size: 2.6rem;
+    }
   }
 
   &__bonus-chart{
     max-width: 44.8rem;
     margin: 0 auto;
+
+    @include media(">=lg"){
+      width: 44%;
+      flex-shrink: 0;
+      margin: 0 5rem 0 0;
+      align-self: flex-start;
+    }
   }
 
   &__main-title{
@@ -88,10 +127,23 @@
     font-weight: 900;
     margin: 0 0 .5em;
     font-size: 2.4rem;
+
+    @include media(">=md"){
+      font-size: 3.6rem;
+    }
+
+    @include media(">=lg"){
+      text-align: left;
+    }
   }
 
   &__main-desc{
     margin: 0 0 1rem;
+
+    @include media(">=md"){
+      font-size: 1.5rem;
+      margin: 0 0 3rem;
+    }
   }
 
   &__summary{
@@ -101,6 +153,10 @@
     overflow: hidden;
     border: 1px solid rgba($white,.1);
     margin: 0 0 2rem;
+
+    @include media(">=md"){
+      margin: 0 0 3rem;
+    }
   }
 
   &__summary-item{
@@ -108,23 +164,44 @@
     padding: 0 1.5rem;
     margin: .9rem 0;
     border-right: 1px dotted rgba($white,.1);
+
+    &:last-child{
+      border: none;
+    }
+
+    @include media(">=md"){
+      padding: 0 3rem;
+      margin: 1.1rem 0;
+    }
   }
 
   &__summary-label{
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1;
     margin: 0 0 .8rem;
+
+    @include media(">=md"){
+      font-size: 1.2rem;
+    }
   }
 
   &__summary-value{
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1;
+
+    @include media(">=md"){
+      font-size: 2.4rem;
+    }
   }
 
   &__main-controls{
     display: flex;
     flex-direction: column;
+
+    @include media(">=md"){
+      flex-direction: row;
+    }
   }
 
   &__main-controls-btn{
@@ -132,6 +209,19 @@
 
     &:last-child{
       margin: 0;
+    }
+
+    @include media(">=md"){
+      flex: 1 0;
+      margin: 0 2rem;
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
     }
   }
 
@@ -143,12 +233,26 @@
     border-radius: 8px;
     border: 1px solid rgba($white,.1);
     padding: 1.75rem;
+
+    @include media(">=md"){
+      padding: 3rem;
+    }
+
+    @include media(">=lg"){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1.4rem 4rem;
+    }
   }
 
   &__conditions-item{
     margin: 0 0 1rem;
     position: relative;
     padding-left: 2rem;
+
+    @include media(">=lg"){
+      margin: 0;
+    }
 
     &::before{
       counter-increment: conditions;
@@ -164,10 +268,15 @@
     border-radius: 8px;
     border: 1px solid rgba($white,.1);
     padding: .75rem;
+
+    @include media(">=md"){
+      padding: 1.2rem;
+    }
   }
 
   &__table-item{
     border-collapse: collapse;
+    width: 100%;
   }
 
   &__table-cell{
@@ -177,6 +286,11 @@
     border-bottom: 1px dotted #44335C;
     border-right: 1px dotted #44335C;
 
+    @include media(">=md"){
+      font-size: 1.4rem;
+      padding: 1.2rem 1rem;
+    }
+
     &:last-child{
       border-right: none;
     }
@@ -184,6 +298,7 @@
     &--head{
       background-color: #291740;
       border-bottom: none;
+      font-weight: 700;
 
       &:first-child{
         border-radius: 4px 0 0 0;
@@ -197,5 +312,35 @@
 
   &__table-row:last-child &__table-cell{
     border-bottom: none;
+  }
+
+  &__baloon-tip{
+    border: 1px solid #61ACDE;
+    color: $white;
+    margin: 0 0 2.5rem;
+
+    &:last-child{
+      margin: 0;
+    }
+
+    .baloon-tip__icon{
+      color: $mySin;
+    }
+  }
+
+  &__prizes-table{
+    margin: 0 0 2.5rem;
+  }
+
+  &__details-table{
+    background-color: $white;
+    color: $base-text-color;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 0 2.5rem;
+
+    &:last-child{
+      margin: 0;
+    }
   }
 }

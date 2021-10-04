@@ -21,7 +21,7 @@
     }
 }
 
-.hover-device .baloon-tip{
+.hover-device .baloon-tip:not(.baloon-tip--static){
     position: absolute;
     display: none;
     bottom: calc(100% + 10px);

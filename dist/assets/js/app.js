@@ -271,7 +271,32 @@ let siteJS = {
         this.passwordToggler();
         this.fileAdd();
         this.indexVideo();
+        this.bonusChart();
         // this.lightSelect();
+    },
+    bonusChart: function(){
+        const chart = document.querySelector('.bonus-chart');
+
+        if(!chart) return;
+
+        const partnershipDuration = +chart.getAttribute('data-partnership-month');
+        const pointer = document.querySelector('.bonus-chart__pointer');
+
+        if(partnershipDuration <= 6){
+            pointer.style = `transform: rotate(${-60 + partnershipDuration * 20}deg)`;
+        }
+
+        if(partnershipDuration > 6 && partnershipDuration <= 12){
+            pointer.style = `transform: rotate(${partnershipDuration * 10}deg)`;
+        }
+
+        if(partnershipDuration > 12 && partnershipDuration <= 24){
+            pointer.style = `transform: rotate(${60 + partnershipDuration * 5}deg)`;
+        }
+
+        if(partnershipDuration > 24){
+            pointer.style = `transform: rotate(240deg)`;
+        }
     },
     lightSelect: function(){
         const setThrottle = throttleLimiter(1000);

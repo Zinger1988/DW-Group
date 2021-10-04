@@ -564,14 +564,26 @@
 
   &--bonus{
     background-color: #331E4D;
-    background-image: url("../img/bonus/bonus-bt-top.jpg"), url("../img/bonus/bonus-bt-bottom.jpg");
+    background-image: url("../img/bonus/bonus-bg-top.jpg"), url("../img/bonus/bonus-bg-bottom.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom left;
     background-size: 100% auto, 100% auto;
     color: $white;
 
+    #{$this}__header{
+      border-bottom: 1px solid rgba($mercury,.1);
+    }
+
+    #{$this}__header-title{
+      color: $white;
+    }
+
     #{$this}__body{
       padding: 2.5rem 1.5rem 1.5rem;
+
+      @include media(">=lg"){
+        padding: 4rem;
+      }
     }
   }
 }
