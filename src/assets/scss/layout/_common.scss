@@ -1,7 +1,7 @@
 .page {
   min-height: 100vh;
   line-height: 1.571;
-  font-size: 14px;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -66,28 +66,28 @@
       }
     }
 
-    &--fixed{
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background-color: $outerSpace;
-      z-index: 101;
-      box-shadow: 0 0 1.5rem rgba($mineShaft, .8);
-
-      @include media('<md') {
-        .header__bottom{
-          display: none;
-        }
-      }
-
-      @include media('>=xl'){
-        .header__top,
-        .header__top.active{
-          display: none;
-        }
-      }
-    }
+    //&--fixed{
+    //  position: fixed;
+    //  width: 100%;
+    //  top: 0;
+    //  left: 0;
+    //  background-color: $outerSpace;
+    //  z-index: 101;
+    //  box-shadow: 0 0 1.5rem rgba($mineShaft, .8);
+    //
+    //  @include media('<md') {
+    //    .header__bottom{
+    //      display: none;
+    //    }
+    //  }
+    //
+    //  @include media('>=xl'){
+    //    .header__top,
+    //    .header__top.active{
+    //      display: none;
+    //    }
+    //  }
+    //}
 
     @include media('<xxl'){
       margin-bottom: 2rem;

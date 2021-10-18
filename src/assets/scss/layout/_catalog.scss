@@ -12,7 +12,7 @@
     display: block;
   }
 
-  @include media('>=xl'){
+  @include media('>=xxxl'){
     &,
     &.active{
       display: none !important;

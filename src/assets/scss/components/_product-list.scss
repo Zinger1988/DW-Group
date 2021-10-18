@@ -1,6 +1,8 @@
 .product-list{
     padding: 0 1.5rem;
 
+  $this: &;
+
     @include media(">=sm"){
         padding: 0 2.2rem;
     }
@@ -10,18 +12,23 @@
     }
 
     @include media('>=lg'){
-      padding: 0 2.9rem;
+      padding: 0 1.5rem;
     }
     
     @include media('>=xl'){
-      padding: 0 3.3rem;
+      padding: 0 2rem;
     }
     
     @include media('>=xxl'){
-      padding: 0 4rem;
+      padding: 0 2.5rem;
     }
     
     &__title-bordered{
       margin-bottom: 2rem;
     }
+}
+
+.product-list.product-list--cart{
+  padding: 0;
+  margin: 0 0 2rem;
 }

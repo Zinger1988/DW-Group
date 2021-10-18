@@ -2,25 +2,23 @@
     padding: 1.6rem 0;
     position: relative;
     @extend %clearfix;
-    
+
+    $this: &;
+
     @include media(">=lg"){
         display: grid;
         grid-template-columns: 7rem 1fr 18.5rem 29rem;
         grid-template-areas:
                 "img desc price controls"
-                "img footer footer footer";
-        grid-gap: 1rem 1rem ;
+                "img footer price controls";
+        grid-gap: 0 1rem ;
         align-items: start;
-        padding: 1rem 0 .7rem;
+        padding: .5rem 0 .4rem;
 
         &::after{
             display: none;
         }
     }
-
-    //@include media(">=xxxl"){
-    //    padding-right: 4rem;
-    //}
 
     &:not(:last-child){
         border-bottom: 1px dotted $mercury;
@@ -44,17 +42,17 @@
             }
 
             @include media(">=lg"){
-                font-size: 1.1rem;
-                padding: .4rem 1.1rem .4rem;
+                font-size: 1rem;
+                padding: .3rem .7rem .3rem;
                 border-radius: 0 9px 9px 0;
-                margin-bottom: .3rem;
+                margin-bottom: .2rem;
             }
         }
 
         @include media(">=lg"){
             position: absolute;
             left: 0;
-            top: 8.6rem;
+            top: 5.5rem;
             transform: translateY(-100%);
             z-index: 5;
         }
@@ -85,8 +83,8 @@
         object-fit: cover;
 
         @include media(">=lg"){
-            width: 7rem;
-            height: 7rem;
+            width: 4.6rem;
+            height: 4.6rem;
         }
     }
 
@@ -102,7 +100,7 @@
         @include media(">=lg"){
             margin: 0;
             grid-area: desc;
-            align-self: center;
+            align-self: end;
         }
 
         //@include media(">=xxl"){
@@ -135,13 +133,25 @@
         color: inherit;
         word-break: break-all;
 
+        &--desk{
+            display: none;
+        }
+
         @include media(">=sm"){
             margin-bottom: 1.5rem;
         }
 
         @include media(">=lg"){
-            margin-bottom: 0;
+            margin-bottom: .2rem;
             font-size: 1.3rem;
+
+            &--mob{
+                display: none;
+            }
+
+            &--desk{
+                display: block;
+            }
         }
 
         @include media(">=xxxl"){
@@ -169,7 +179,7 @@
             grid-area: footer;
         }
     }
-    
+
     &__part-number,
     &__availability{
         color: #98A3B3;
@@ -198,6 +208,10 @@
         @include media(">=sm"){
             margin-bottom: .7rem;
         }
+
+        @include media(">=lg"){
+            margin-bottom: .4rem;
+        }
     }
 
     &__availability{
@@ -205,6 +219,10 @@
 
         @include media(">=sm"){
             margin-bottom: .7rem;
+        }
+
+        @include media(">=lg"){
+            margin-bottom: .4rem;
         }
     }
 
@@ -218,7 +236,7 @@
 
         .item-rating__link{
             font-size: 1.1rem;
-            
+
             @include media(">=sm"){
                 font-size: 1.3rem;
             }
@@ -263,7 +281,7 @@
         min-width: 0;
 
         @include media(">=lg"){
-            min-height: 4.5rem;
+            min-height: 4rem;
             justify-content: center;
             display: flex;
             flex-direction: column;
@@ -363,7 +381,7 @@
             @include media("<sm"){
                 font-size: 1.2rem;
             }
-    
+
             @include media(">=sm"){
                 width: 20rem;
                 flex: 0 0 auto;
@@ -374,6 +392,8 @@
             @include media(">=lg"){
                 width: 18rem;
                 font-size: 1.1rem;
+                padding: 1.2rem 1.5rem;
+                min-height: 0;
             }
 
             //@include media(">=xxxl"){
@@ -387,36 +407,39 @@
             line-height: 1;
 
             @include media(">=lg"){
-                font-size: 1.7em;
+                font-size: 1.6rem;
             }
         }
 
         .product-hor__item-quantity{
             width: 100%;
-    
+
             @include media(">=sm"){
                 width: 14rem;
                 flex: 0 0 auto;
             }
-    
+
             .item-quantity__input{
                 @include media("<sm"){
                     height: 4.2rem;
                 }
-    
+
                 @include media(">=sm"){
                     height: 5rem;
                     border-radius: 3px 0 0 3px;
                 }
 
                 @include media(">=lg"){
-                    height: 4.5rem;
+                    height: 4rem;
                     border-radius: 0 0 3px 3px;
                 }
+            }
 
-                //@include media(">=xxxl"){
-                //    height: 5rem;
-                //}
+            .item-quantity__btn{
+                @include media(">=lg"){
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
             }
 
             @include media(">=lg"){
@@ -433,11 +456,12 @@
 
         @include media(">=lg"){
             top: 1rem;
+            left: -.5rem;
         }
 
         .fav-add__icon{
             @include media(">=lg"){
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
         }
 
@@ -453,4 +477,20 @@
         //}
     }
 
+    &--cart{
+        @include media(">=lg"){
+            grid-template-columns: 7rem 1fr 18.5rem 15rem;
+        }
+
+        #{$this}__controls-btn{
+            @include media(">=lg"){
+                width: 4rem;
+                min-width: 0;
+
+                .btn__text {
+                    display: none;
+                }
+            }
+        }
+    }
 }

@@ -1,4 +1,5 @@
-.baloon-tip{
+.baloon-tip,
+.baloon-tip-static{
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -21,7 +22,7 @@
     }
 }
 
-.hover-device .baloon-tip:not(.baloon-tip--static){
+.hover-device .baloon-tip{
     position: absolute;
     display: none;
     bottom: calc(100% + 10px);
@@ -58,7 +59,7 @@
         overflow: hidden;
         text-transform: uppercase;
     }
-    
+
     &--active{
         display: block;
     }

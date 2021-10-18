@@ -256,7 +256,7 @@ let siteJS = {
         this.typeDisplay();
         this.setRatingMark();
         this.mainMenu();
-        this.fixedHeader();
+        // this.fixedHeader();
         this.secondaryNav();
         this.headerSearch();
         this.headerDropdown();
@@ -631,6 +631,7 @@ let siteJS = {
             const itemLineHeight = parseFloat(window.getComputedStyle(this).lineHeight);
             const itemTextMaxRow = parseInt($(this).data('textMaxRow'));
             let toggler = current.find('.text-overflow__toggle');
+            let togglerHeight = toggler.height();
 
             if(!toggler.length){
                 current.append(`<div class="text-overflow__toggle">
@@ -641,32 +642,24 @@ let siteJS = {
                                 </div>`);
 
                 toggler = current.find('.text-overflow__toggle');
+                togglerHeight = toggler.height();
 
                 toggler.click(function (e) {
                     e.preventDefault();
                     e.stopPropagation();
 
                     $('.text-block-overflow--active').not(current)
-                        .innerHeight(itemLineHeight * itemTextMaxRow + toggler.height() + 'px')
-                        // .animate({
-                        //     height: itemLineHeight * itemTextMaxRow + toggler.height() + 'px'
-                        // }, 200)
+                        .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
                         .removeClass('text-overflow--expanded');
 
                     if(current.hasClass('text-overflow--expanded')){
                         current
-                            .innerHeight(itemLineHeight * itemTextMaxRow + toggler.height() + 'px')
-                            // .animate({
-                            //     height: itemLineHeight * itemTextMaxRow + toggler.height() + 'px'
-                            // }, 200)
+                            .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
                             .removeClass('text-overflow--expanded');
                         toggler.removeClass('active');
                     } else {
                         current
                             .innerHeight($(current).prop('scrollHeight') + toggler.outerHeight() + 'px')
-                            // .animate({
-                            //     height: $(current).prop('scrollHeight') + toggler.outerHeight() + 'px'
-                            // }, 200)
                             .addClass('text-overflow--expanded');
                         toggler.addClass('active');
                     }
@@ -675,9 +668,14 @@ let siteJS = {
 
             toggler.removeClass('active');
 
+            if(current.hasClass('text-overflow-exception')){
+                togglerHeight = 0;
+                toggler.addClass('text-overflow__toggle--right')
+            }
+
             if(itemLineHeight * itemTextMaxRow <= $(current).prop('scrollHeight')){
                 current
-                    .innerHeight(itemLineHeight * itemTextMaxRow + toggler.height() + 'px')
+                    .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
                     .addClass('text-block-overflow--active');
                 toggler.addClass('text-overflow__toggle--visible');
             } else {

@@ -3,6 +3,8 @@
   overflow: hidden;
   position: relative;
 
+  $this: &;
+
   &__toggle{
     cursor: pointer;
     position: absolute;
@@ -16,11 +18,19 @@
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%);
 
-
     &--visible{
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    &--right{
+      left: auto;
+      right: 0;
+      width: auto;
+      padding-left: 3rem;
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 24%);
     }
   }
 
@@ -49,6 +59,10 @@
       transform: rotate(180deg);
     }
 
+    #{$this}__toggle--right{
+      left: 0;
+      right: auto;
+      padding-left: 0;
+    }
   }
-
 }

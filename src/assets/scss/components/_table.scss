@@ -585,8 +585,8 @@
         &--toggler{
 
           #{$this}__cell {
-            padding-top: 2.2rem;
-            padding-bottom: 2.2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
         }
 
@@ -627,7 +627,7 @@
 
       #{$this}__cell {
         display: table-cell;
-        padding: 1.2rem 2rem;
+        padding: .7rem 2rem;
         @include animate(padding);
 
         &[data-col-name]::before {
