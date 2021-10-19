@@ -9327,7 +9327,7 @@ html {
 
 .header__logo {
   width: 8rem;
-  margin-right: 2.5rem;
+  margin-right: 1rem;
 }
 
 .header__controls {
@@ -9360,6 +9360,13 @@ html {
 
 .header__controls-btn--cart {
   cursor: default;
+  flex: 2 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header__controls-btn--cart .header__controls-btn-text {
+  margin-left: .2em;
 }
 
 .header__controls-btn--profile .header__controls-btn-icon {
@@ -9367,7 +9374,7 @@ html {
 }
 
 .header__controls-btn .header__controls-btn-icon {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
 }
 
 .header__controls-btn-text {
@@ -9376,8 +9383,18 @@ html {
 
 .header__controls-btn-count {
   display: none;
-  font-size: 1.6rem;
-  margin-left: .5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  position: absolute;
+  padding: .3rem .3rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: #333333;
+  min-width: 1.8rem;
+  font-weight: 700;
 }
 
 .header__controls-dropdown {
@@ -9397,7 +9414,7 @@ html {
 
 .header__controls-item {
   display: flex;
-  width: 33.333%;
+  flex: 1 0 25%;
 }
 
 .header__controls-item:first-child .header__controls-btn {
@@ -9415,6 +9432,11 @@ html {
   color: #fff;
   border-color: #35AC45;
   background-color: #35AC45;
+}
+
+.header__controls-item.active .header__controls-btn-text {
+  display: block;
+  white-space: nowrap;
 }
 
 .header__controls-item.active .header__controls-btn-count {
@@ -13529,6 +13551,7 @@ html {
 .notify {
   display: inline-block;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .notify__icon {
@@ -15246,6 +15269,10 @@ html {
     padding: 0 22px;
   }
 
+  .header__controls-btn .header__controls-btn-icon {
+    font-size: 2.6rem;
+  }
+
   .header__controls-dropdown {
     width: 40rem;
   }
@@ -15792,12 +15819,11 @@ html {
   }
 
   .header__logo {
-    margin-right: 1.5rem;
     width: 9.5rem;
   }
 
   .header__controls {
-    width: 27rem;
+    width: 30rem;
     flex-grow: 0;
   }
 
@@ -16723,8 +16749,12 @@ html {
   }
 
   .header__controls {
-    width: 22.1rem;
+    width: 26rem;
     max-width: none;
+  }
+
+  .header__controls-btn-count {
+    padding: .3rem .5rem;
   }
 
   .header__main-nav {
@@ -17792,6 +17822,10 @@ html {
   .header__controls {
     border: none;
     width: auto;
+  }
+
+  .header__controls-btn--cart .header__controls-btn-text {
+    font-size: 1.6rem;
   }
 
   .header__controls-btn {

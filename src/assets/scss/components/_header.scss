@@ -155,10 +155,9 @@
 
   &__logo{
     width: 8rem;
-    margin-right: 2.5rem;
+    margin-right: 1rem;
 
     @include media('>=md'){
-      margin-right: 1.5rem;
       width: 9.5rem;
     }
 
@@ -178,12 +177,12 @@
     position: relative;
 
     @include media('>=md'){
-      width: 27rem;
+      width: 30rem;
       flex-grow: 0;
     }
 
     @include media('>=lg'){
-      width: 22.1rem;
+      width: 26rem;
       max-width: none;
     }
 
@@ -213,6 +212,17 @@
 
       &--cart{
         cursor: default;
+        flex: 2 0 auto;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+        #{$this}__controls-btn-text{
+          margin-left: .2em;
+
+          @include media(">=xl"){
+            font-size: 1.6rem;
+          }
+        }
       }
 
       &--profile{
@@ -241,7 +251,11 @@
       }
 
       #{$this}__controls-btn-icon{
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+
+        @include media('>=sm'){
+          font-size: 2.6rem;
+        }
 
         @include media('>=xl'){
           margin-right: .7rem;
@@ -259,10 +273,23 @@
 
       &-count{
         display: none;
-        font-size: 1.6rem;
-        margin-left: .5rem;
-      }
+        font-size: 1.2rem;
+        line-height: 1;
+        position: absolute;
+        padding: .3rem .3rem;
+        border-radius: 1rem;
+        background-color: yellow;
+        top: 0;
+        right: 0;
+        transform: translate(50%,-50%);
+        color: $base-text-color;
+        min-width: 1.8rem;
+        font-weight: 700;
 
+        @include media(">=lg"){
+          padding: .3rem .5rem;
+        }
+      }
     }
 
     &-dropdown{
@@ -297,7 +324,7 @@
 
   &__controls-item{
     display: flex;
-    width: 33.333%;
+    flex: 1 0 25%;
 
     &:first-child{
 
@@ -341,6 +368,11 @@
       color: #fff;
       border-color: #35AC45;
       background-color: #35AC45;
+
+      &-text{
+        display: block;
+        white-space: nowrap;
+      }
 
       &-count{
         display: block;
