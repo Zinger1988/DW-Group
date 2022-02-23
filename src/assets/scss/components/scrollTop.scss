@@ -1,0 +1,38 @@
+.scrollTop{
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  z-index: 100;
+  display: none;
+  color: $white;
+  text-align: center;
+  border-radius: .4rem;
+  cursor: pointer;
+  background: rgb(242,149,29);
+  background: linear-gradient(90deg, rgba(242,149,29,1) 0%, rgba(242,107,29,1) 100%);
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  @include animate(box-shadow);
+
+  @include media(">=sm"){
+    right: 3rem;
+    bottom: 3rem;
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  &__icon{
+    font-size: 1.2rem;
+    line-height: 4.2rem;
+
+    @include media(">=sm"){
+      font-size: 1.6rem;
+      line-height: 5.6rem;
+    }
+  }
+
+  &:hover{
+    box-shadow: 0 0 0 6px rgba(#F27F1D, .3);
+  }
+}

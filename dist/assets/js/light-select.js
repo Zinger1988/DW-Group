@@ -209,6 +209,25 @@ class LightSelect{
         }
     }
 
+    static reset(instance){
+        const {source: {_select}, rendered: {_list}, state: {defaultState} } = instance;
+
+        _list.innerHTML = "";
+        _select.innerHTML = "";
+
+        defaultState.forEach(({value, text, disabled, index}) => {
+            _list.innerHTML += `<div class="lightSelect__list-item" data-disabled="${disabled}" data-value="${value}" data-index="${index}">${text}</div>`;
+
+            const option = document.createElement("option");
+            option.disabled = !!disabled;
+            option.value = value;
+            option.textContent = text;
+            _select.append(option);
+        })
+
+        LightSelect.setActiveOption(instance, 0);
+    }
+
     static appendItems(instance, itemsArr, activeIndex = 0){
         const {source: {_select}, rendered: {_list} } = instance;
 

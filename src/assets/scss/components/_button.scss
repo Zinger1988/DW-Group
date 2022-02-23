@@ -84,6 +84,18 @@
       }
     }
 
+    &--wired{
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $mercury;
+      color: $mercury;
+      @include animate(box-shadow color);
+
+      &:hover{
+        box-shadow: inset 0 0 0 2px $tiara;
+        color: $tiara;
+      }
+    }
+
     &--wired-grey{
       background-color: $white;
       box-shadow: inset 0 0 0 2px $mercury;
@@ -91,6 +103,66 @@
 
       &:hover{
         box-shadow: inset 0 0 0 2px $tiara;
+      }
+    }
+
+    &--wired-green{
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $forestGreen;
+      color: $forestGreen;
+      @include animate(background-color color);
+
+      &:hover{
+        background-color: $forestGreen;
+        color: $white;
+      }
+    }
+
+    &--wired-darkorange{
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px darkorange;
+      color: darkorange;
+      @include animate(background-color color);
+
+      &:hover{
+        background-color: darkorange;
+        color: $white;
+      }
+    }
+
+    &--wired-lightblue{
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $havelockBlue;
+      color: $havelockBlue;
+      @include animate(background-color color);
+
+      &:hover{
+        background-color: $havelockBlue;
+        color: $white;
+      }
+    }
+
+    &--wired-graygreen{
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $nevada;
+      color: $nevada;
+      @include animate(background-color color);
+
+      &:hover{
+        background-color: $nevada;
+        color: $white;
+      }
+    }
+
+    &--wired-lightgreen{
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $puertoRico;
+      color: $puertoRico;
+      @include animate(background-color color);
+
+      &:hover{
+        background-color: $puertoRico;
+        color: $white;
       }
     }
 

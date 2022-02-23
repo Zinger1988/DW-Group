@@ -272,7 +272,26 @@ let siteJS = {
         this.fileAdd();
         this.indexVideo();
         this.bonusChart();
+        this.scrollToTop();
         // this.lightSelect();
+    },
+    scrollToTop: function () {
+
+        const button = $('#scrollTop');
+
+        if(!button.length) return;
+
+        $(window).scroll(function () {
+            $(this).scrollTop() > 100
+                ? button.slideDown()
+                : button.slideUp();
+        });
+        button.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
     },
     bonusChart: function(){
         const chart = document.querySelector('.bonus-chart');
@@ -487,13 +506,18 @@ let siteJS = {
         })
     },
     baloonTip(){
+
         if($(document.body).hasClass("hover-device")){
             const tips = $('.baloon-tip');
 
             tips.each(function(){
                 const tip = $(this);
                 const tipTarget = tip.closest('.tip-holder').find('.' + tip.data('tipFor'));
-                tipTarget.append(tip)
+                tipTarget.append(tip);
+
+                tip.click(function (e) {
+                    e.stopPropagation();
+                })
 
                 tipTarget.mouseenter(function(e){
                     if(!$(e.target).hasClass('baloon-tip')){
@@ -673,7 +697,7 @@ let siteJS = {
                 toggler.addClass('text-overflow__toggle--right')
             }
 
-            if(itemLineHeight * itemTextMaxRow <= $(current).prop('scrollHeight')){
+            if(Math.ceil(itemLineHeight * itemTextMaxRow) < $(current).prop('scrollHeight')){
                 current
                     .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
                     .addClass('text-block-overflow--active');

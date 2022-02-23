@@ -121,7 +121,7 @@
     }
 
     &__baloon-tip{
-        margin-bottom: 1em;
+        margin-bottom: 0;
     }
 
     &__name{
@@ -385,8 +385,7 @@
             @include media(">=sm"){
                 width: 20rem;
                 flex: 0 0 auto;
-                margin-bottom: 0;
-                border-radius: 0 3px 3px 0;
+                margin: 0 0 0 .75rem;
             }
 
             @include media(">=lg"){
@@ -426,12 +425,10 @@
 
                 @include media(">=sm"){
                     height: 5rem;
-                    border-radius: 3px 0 0 3px;
                 }
 
                 @include media(">=lg"){
                     height: 4rem;
-                    border-radius: 0 0 3px 3px;
                 }
             }
 

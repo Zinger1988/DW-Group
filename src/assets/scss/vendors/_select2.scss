@@ -641,3 +641,7 @@
   font-size: 1rem;
   color: $mineShaft;
 }
+
+.select2-container--open.select2-container--above{
+  z-index: 5;
+}
