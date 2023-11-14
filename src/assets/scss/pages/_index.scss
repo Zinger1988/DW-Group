@@ -64,9 +64,35 @@
   &__part{
 
     &--bokeh{
-      background: url("../img/public/open/bg/03.jpg") center / cover no-repeat;
+      background-image: url("../img/public/open/bg/03.jpg");
       position: relative;
       overflow: hidden;
+      background-position: center;
+      background-size: cover;
+
+      &[data-class*='river']{
+        background-image:
+                url('../img/mainSlider/1/fog-top.png'),
+                url('../img/mainSlider/1/bg2.jpg');
+        background-repeat: no-repeat, repeat;
+        background-position: center top, center;
+        background-size: 100% auto, 450px;
+
+        @include media(">=xl"){
+          background-image:
+                  url('../img/mainSlider/1/fog-top.png'),
+                  url('../img/mainSlider/1/fog-bottom.png'),
+                  url('../img/mainSlider/1/bg2.jpg');
+          background-repeat: no-repeat, no-repeat, repeat;
+          background-position: center top, center bottom, center;
+          background-size: 100% auto, 100% auto, 550px;
+        }
+      }
+
+      &[data-class*='ecoflow']{
+        background: rgb(26,26,26);
+        background: radial-gradient(circle, rgba(26,26,26,1) 0%, rgba(0,0,0,1) 100%);
+      }
     }
 
     &--space{

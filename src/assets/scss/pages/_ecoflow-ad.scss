@@ -1,0 +1,237 @@
+.ecoflow-ad{
+  background: url("../img/blog/ef-ad/bg.jpg") center / cover;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  max-width: 76.8rem;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include media(">=sm"){
+    padding: 4rem 3rem;
+  }
+
+  @include media(">=md"){
+    padding: 6rem 5rem;
+  }
+
+  &__logo{
+    display: block;
+    width: 24rem;
+    margin: 0 auto 4rem;
+
+    @include media(">=md"){
+      width: 36rem;
+    }
+  }
+
+  &__subtitle{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 2rem;
+
+    @include media(">=md"){
+      flex-direction: row;
+      justify-content: center;
+      gap: 4rem;
+      font-size: 1.9rem;
+      margin: 0 0 3rem;
+    }
+
+    &-item{
+      margin: 0 0 2rem;
+      position: relative;
+      color: #ffff00;
+
+      &:hover{
+        text-decoration-color: #ffff00;
+      }
+
+      @include media(">=md"){
+        margin: 0;
+      }
+
+      &::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -1rem;
+        transform: translate(-50%, 0);
+        width: 2rem;
+        height: .1rem;
+        background-color: #ffff00;
+
+        @include media(">=md"){
+          margin: 0;
+          height: 2rem;
+          width: .1rem;
+          left: auto;
+          right: -2rem;
+          bottom: 50%;
+          transform: translate(0, 50%);
+        }
+      }
+
+      &:last-child{
+        margin: 0;
+
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__desc{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 0 3rem;
+
+    @include media(">=sm"){
+      font-size: 1.3rem;
+      margin: 0 0 4rem;
+    }
+
+    @include media(">=md"){
+      font-size: 1.8rem;
+      margin: 0 0 4rem;
+    }
+  }
+
+  &__footer{
+    padding: 3rem 0 0;
+    position: relative;
+    z-index: 5;
+
+    @include media(">=md"){
+      padding: 5rem 0 0;
+    }
+
+    .river-slide__btn{
+      position: relative;
+      transform: none;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.ef-item{
+  display: flex;
+  align-items: center;
+  margin: 0 0 4rem;
+  position: relative;
+  z-index: 5;
+
+  &__img{
+    width: 7rem;
+    flex: 0 0 auto;
+    margin: 0 1.5rem 0 0;
+
+    @include media(">=sm"){
+      width: 10rem;
+      margin: 0 2rem 0 0;
+    }
+
+    @include media(">=md"){
+      width: 20rem;
+      margin: 0 4rem 0 0;
+    }
+  }
+
+  &__img-item{
+    display: block;
+    width: 100%;
+  }
+
+  &__text{
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+
+    @include media(">=sm"){
+      font-size: 1.3rem;
+    }
+
+    @include media(">=md"){
+      font-size: 1.8rem;
+    }
+  }
+
+  &__text-label{
+    display: block;
+    width: 7rem;
+    margin: 0 0 1rem;
+
+    @include media(">=md"){
+      width: 18rem;
+      margin: 0 0 2rem;
+    }
+  }
+
+  &__list{
+    @extend %listreset;
+    font-weight: bold;
+  }
+}
+
+.ef-various{
+  position: relative;
+
+  &__rays{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: .8;
+  }
+
+  &__title{
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 2rem;
+    position: relative;
+    z-index: 5;
+
+    @include media(">=sm"){
+      margin: 0 0 3rem;
+    }
+
+    @include media(">=md"){
+      font-size: 2.4rem;
+    }
+  }
+
+  &__holder{
+    @extend %listreset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 5;
+
+    @include media(">=md"){
+      gap: 3rem;
+    }
+  }
+
+  &__img{
+    height: 6rem;
+    flex: 0 0 auto;
+
+    @include media(">=sm"){
+      height: 8rem;
+    }
+
+    @include media(">=md"){
+      height: 12rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .item-labels{
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 
   &__item{
     text-align: center;
@@ -25,6 +26,21 @@
     &--top {
       color: #fff;
       background-color: #92dc5a
+    }
+
+    &--delivery {
+      color: #fff;
+      background-color: #ff6600
+    }
+
+    &--gift {
+      color: #fff;
+      background-color: #8d14ff
+    }
+
+    &--custom {
+      color: #fff;
+      background-color: #11d281
     }
   }
 }

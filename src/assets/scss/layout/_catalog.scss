@@ -12,6 +12,15 @@
     display: block;
   }
 
+  &.blog-sb-overlay{
+    @include media('>=xl'){
+      &,
+      &.active{
+        display: none !important;
+      }
+    }
+  }
+
   @include media('>=xxxl'){
     &,
     &.active{

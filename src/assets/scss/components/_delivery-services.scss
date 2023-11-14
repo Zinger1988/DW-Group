@@ -1,11 +1,19 @@
 .delivery-services{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
 
   @include media(">=md"){
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+  }
+
+  @include media(">=lg"){
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media(">=xl"){
+    grid-template-columns: repeat(5, 1fr);
   }
 
   &__item{

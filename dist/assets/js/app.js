@@ -52,6 +52,35 @@ $(document).ready(function () {
 
     // Swiper ---------------------------------------
 
+    const mainSlider = new Swiper('.main-banner', {
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        loop: true,
+        pagination: {
+            el: '.main-banner__pagination',
+            type: 'bullets',
+        },
+        navigation: {
+            nextEl: '.main-banner__next',
+            prevEl: '.main-banner__prev',
+        },
+        on: {
+            init: function () {
+                setMainSliderBg(this);
+            },
+            slideChange: function () {
+                setMainSliderBg(this);
+            }
+        },
+    });
+
+    function setMainSliderBg(slider) {
+        const wrapper = document.querySelector('.index-page__part--bokeh');
+        const activeSlide = slider.slides[slider.activeIndex];
+        const slideClass = activeSlide.dataset['class'];
+        wrapper.setAttribute('data-class', slideClass);
+    }
+
     const galleryThumbs = new Swiper('.gallery__thumbs', {
         spaceBetween: 0,
         slidesPerView: 'auto',
@@ -711,7 +740,7 @@ let siteJS = {
 
     },
     filterSidebar(){
-        $(document.body).append('<div class="sb-filter-overlay sidebar-toggle"></div>');
+        $(document.body).append('<div class="sb-filter-overlay blog-sb-overlay sidebar-toggle"></div>');
         $('.sidebar-toggle, .blog-filter-toggle').click(function () {
             if(!$('.sidebar-filter').hasClass('active')){
                 siteJS.helpers.elemFadeIn('.sb-filter-overlay', 'active');

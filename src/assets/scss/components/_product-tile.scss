@@ -1,57 +1,73 @@
-.product-tile{
+.product-tile {
   position: relative;
   outline: 1px solid $mercury;
 
   $this: &;
 
-  &__inner{
+  &__inner {
     padding: 2rem 2.3rem 2rem;
     background-color: $white;
     display: flex;
     flex-direction: column;
+
+    &--ad {
+      padding: 0;
+      position: relative;
+      box-shadow: none;
+    }
   }
 
-  &__primary{
+  &__primary {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
   }
 
-  &__fav-add{
+  &__fav-add {
     position: absolute;
     left: 2.3rem;
     top: 2rem;
     z-index: 15;
   }
 
-  &__item-labels{
+  &__item-labels {
     position: absolute;
     right: 0;
     top: 2rem;
+    z-index: 5;
   }
 
-  &__img{
+  &__img {
     @extend %linkreset;
     display: block;
-    margin-bottom: 1rem;
+    width: 20rem;
+    height: 20rem;
 
-    &-item{
+    margin: 0 auto 1rem;
+    position: relative;
+
+    &-item {
       display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
       width: 100%;
+      height: 100%;
+      object-fit: contain;
       max-width: 24rem;
-      margin: 0 auto;
+      transform: translateX(-50%);
 
-      @include media('>=sm'){
+      @include media('>=sm') {
         max-width: 17rem;
       }
     }
   }
 
-  &__item-rating{
+  &__item-rating {
     margin-bottom: 1rem;
   }
 
-  &__name{
+  &__name {
     display: block;
     font-size: 1.3rem;
     line-height: 1.6;
@@ -60,12 +76,12 @@
     word-break: break-all;
 
     &:hover,
-    &:focus{
+    &:focus {
       text-decoration-color: inherit;
     }
   }
 
-  &__price{
+  &__price {
     margin: auto 0;
     display: grid;
     grid-template-columns: minmax(50%, max-content) 1fr;
@@ -73,24 +89,24 @@
     padding: 1rem 0;
   }
 
-  &__baloon-tip{
+  &__baloon-tip {
     margin-top: .3rem;
   }
 
-  &__footer-btn{
+  &__footer-btn {
     margin-top: .7rem;
     position: relative;
   }
 
-  &__footer-btn-icon{
+  &__footer-btn-icon {
     font-size: 1.4em;
 
-    @include media(">=md"){
+    @include media(">=md") {
       font-size: 2em;
     }
   }
 
-  &__availability{
+  &__availability {
     color: #98A3B3;
     font-size: 1.3rem;
     line-height: 1;
@@ -98,31 +114,43 @@
     margin-bottom: .3rem;
   }
 
-  &__item-quantity{
+  &__item-quantity {
     margin-top: 1rem;
     margin-bottom: 1.3rem;
     display: block;
     width: 100%;
   }
 
-  &__part-number{
+  &__part-number {
     font-size: 1.2rem;
     line-height: 1.4;
     text-align: center;
     color: $regentGray;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 0.5rem;
     }
   }
 
-  &--open{
-    #{$this}__name{
+  &--open {
+    #{$this}__name {
       margin-bottom: 0;
     }
 
-    #{$this}__price{
+    #{$this}__price {
       margin: 0 0 auto;
     }
+  }
+
+  &__banner {
+    display: block;
+    width: 100%;
+  }
+
+  &__banner-img {
+    display: block;
+    width: 100%;
+    min-height: 511px;
+    object-fit: cover;
   }
 }

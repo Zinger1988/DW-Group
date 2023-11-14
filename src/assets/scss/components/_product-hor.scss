@@ -80,7 +80,7 @@
         display: block;
         width: 8rem;
         height: 8rem;
-        object-fit: cover;
+        object-fit: contain;
 
         @include media(">=lg"){
             width: 4.6rem;

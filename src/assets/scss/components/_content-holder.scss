@@ -572,4 +572,25 @@
       }
     }
   }
+
+  &--post{
+
+    #{$this}__header{
+      flex-wrap: wrap;
+
+      @include media(">lg"){
+        flex-wrap: nowrap;
+      }
+    }
+
+    #{$this}__header-title{
+      flex: 1 0 100%;
+      margin: 0 0 1rem;
+
+      @include media(">lg"){
+        flex: 1 auto;
+        margin: 0;
+      }
+    }
+  }
 }

@@ -465,6 +465,11 @@
   &__order-summary{
     padding-left: 1rem;
     padding-right: 1rem;
+    margin: 0 0 2rem;
+
+    &:last-child{
+      margin: 0;
+    }
 
     $this: ".order-summary";
 
