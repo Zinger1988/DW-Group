@@ -1,56 +1,54 @@
-.gallery{
+.gallery {
     border: 1px solid #E9E9E9;
     border-radius: 6px;
     position: relative;
 
     $this: &;
-    
-    &__item-labels{
+
+    &__item-labels {
         position: absolute;
         right: 0;
         top: 1.5rem;
         z-index: 15;
 
-        .item-labels__item{
+        .item-labels__item {
             font-size: 1.4rem;
         }
     }
 
-    &__main{
+    &__main {
         overflow: hidden;
         border-bottom: 1px solid #E9E9E9;
         position: relative;
 
-        .swiper-slide{
-            padding: 1rem;
+        .swiper-slide {
+            padding: 50% 0;
+            position: relative;
         }
 
-        #{$this}__main-img{
+        #{$this}__main-img {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
             display: block;
-            width: 100%;
-            max-width: 250px;
+            width: calc(100% - 2rem);
+            height: calc(100% - 2rem);
             margin: 0 auto;
-
-            @include media(">=sm"){
-                max-width: 300px;
-            }
-
-            @include media(">=md"){
-                max-width: 380px;
-            }
+            object-fit: contain;
         }
     }
 
-    &__thumbs{
+    &__thumbs {
         overflow: hidden;
         cursor: grab;
         position: relative;
 
-        .swiper-slide{
-            padding: 1rem 0;
+        .swiper-slide {
             width: 8rem;
+            height: 8rem;
+            position: relative;
 
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 left: 50%;
@@ -62,20 +60,23 @@
             }
         }
 
-        .swiper-slide-thumb-active::after{
+        .swiper-slide-thumb-active::after {
             width: 100%;
             left: 0;
         }
 
-        #{$this}__thumbs-img{
+        #{$this}__thumbs-img {
+            position: absolute;
+            left: 0;
+            top: 1rem;
             display: block;
             width: 100%;
-            max-width: 80px;
-            margin: 0 auto;
+            height: calc(100% - 2rem);
+            object-fit: contain;
         }
     }
 
-    &__btn{
+    &__btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -91,109 +92,109 @@
         @extend %buttonreset;
         @include animate(box-shadow);
 
-        @include media(">=sm"){
+        @include media(">=sm") {
             width: 4rem;
             height: 8rem;
             line-height: 8rem;
         }
 
-        @include media(">=lg"){
+        @include media(">=lg") {
             width: 3rem;
             height: 6rem;
             line-height: 6rem;
         }
 
-        @include media(">=xl"){
+        @include media(">=xl") {
             width: 3.5rem;
             height: 7rem;
             line-height: 7rem;
         }
 
-        &:hover{
+        &:hover {
             box-shadow: 0 0 0 1rem rgba($mySin, .3);
 
-            @include media(">=sm"){
+            @include media(">=sm") {
                 box-shadow: 0 0 0 1.4rem rgba($mySin, .3);
             }
 
-            @include media(">=lg"){
+            @include media(">=lg") {
                 box-shadow: 0 0 0 1rem rgba($mySin, .3);
             }
 
-            @include media(">=xl"){
+            @include media(">=xl") {
                 box-shadow: 0 0 0 1.2rem rgba($mySin, .3);
             }
         }
 
-        &--prev{
+        &--prev {
             left: 0;
             border-radius: 0 3rem 3rem 0;
             padding-right: .5rem;
 
-            @include media(">=sm"){
+            @include media(">=sm") {
                 border-radius: 0 4rem 4rem 0;
                 padding-right: .9rem;
             }
 
-            @include media(">=lg"){
+            @include media(">=lg") {
                 border-radius: 0 3rem 3rem 0;
                 padding-right: .5rem;
             }
 
-            @include media(">=xl"){
+            @include media(">=xl") {
                 border-radius: 0 3.5rem 3.5rem 0;
                 padding-right: .75rem;
             }
         }
 
-        &--next{
+        &--next {
             right: 0;
             border-radius: 3rem 0 0 3rem;
             padding-left: .5rem;
 
-            @include media(">=sm"){
+            @include media(">=sm") {
                 border-radius: 4rem 0 0 4rem;
                 padding-left: .9rem;
             }
 
-            @include media(">=lg"){
+            @include media(">=lg") {
                 border-radius: 3rem 0 0 3rem;
                 padding-left: .5rem;
             }
 
-            @include media(">=xl"){
+            @include media(">=xl") {
                 border-radius: 3.5rem 0 0 3.5rem;
                 padding-left: .75rem;
             }
         }
     }
 
-    &__btn-icon{
+    &__btn-icon {
         font-size: 1.3rem;
 
-        @include media(">=sm"){
+        @include media(">=sm") {
             font-size: 1.7rem;
         }
 
-        @include media(">=sm"){
+        @include media(">=sm") {
             font-size: 1.3rem;
         }
 
-        @include media(">=xl"){
+        @include media(">=xl") {
             font-size: 1.4rem;
         }
     }
 }
 
-.hover-device .gallery__main{
-    
-    .gallery__btn{
+.hover-device .gallery__main {
+
+    .gallery__btn {
         opacity: 0;
         @include animate(opacity box-shadow);
     }
-    
-    &:hover{
-        .gallery__btn{
+
+    &:hover {
+        .gallery__btn {
             opacity: 1;
         }
     }
