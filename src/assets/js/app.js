@@ -740,7 +740,9 @@ let siteJS = {
 
     },
     filterSidebar(){
-        $(document.body).append('<div class="sb-filter-overlay blog-sb-overlay sidebar-toggle"></div>');
+        const isBlogPage = $('.blog').length > 0 ? 'blog-sb-overlay': '';
+
+        $(document.body).append(`<div class="sb-filter-overlay ${isBlogPage} sidebar-toggle"></div>`);
         $('.sidebar-toggle, .blog-filter-toggle').click(function () {
             if(!$('.sidebar-filter').hasClass('active')){
                 siteJS.helpers.elemFadeIn('.sb-filter-overlay', 'active');

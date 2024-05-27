@@ -12,19 +12,35 @@
     }
 
     @include media('>=lg'){
-      padding: 0 1.5rem;
-    }
-    
-    @include media('>=xl'){
-      padding: 0 2rem;
-    }
-    
-    @include media('>=xxl'){
-      padding: 0 2.5rem;
+      padding: 0;
+
+      .product-hor{
+        
+        &:nth-child(odd){
+          background-color: rgba(245, 246, 246,1);
+
+          .text-overflow__toggle{
+            background: $tiara;
+            background: linear-gradient(0deg, rgba(245, 246, 246,1) 15%, rgba(245, 246, 246,0) 100%);
+          }
+        }
+      }
     }
     
     &__title-bordered{
       margin-bottom: 2rem;
+
+      @include media('>=lg'){
+        padding: 0 1.5rem;
+      }
+
+      @include media('>=xl'){
+        padding: 0 2rem;
+      }
+
+      @include media('>=xxl'){
+        padding: 0 2.5rem;
+      }
     }
 }
 

@@ -1,46 +1,50 @@
-.item-labels{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.item-labels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-  &__item{
-    text-align: center;
-    font-size: 1.3rem;
-    line-height: 1;
-    padding: .5rem 1.5rem .6rem;
-    border-radius: 14px 0 0 14px;
-    background-color: $regentGray;
-    margin-bottom: .5rem;
+    &__item {
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1;
+        padding: 0.5rem 1.5rem 0.6rem;
+        border-radius: 14px 0 0 14px;
+        background-color: $regentGray;
+        margin-bottom: 0.5rem;
 
+        &--discount {
+            color: $white;
+            background-color: $mandy;
+        }
 
-    &--discount{
-      color: $white;
-      background-color: $mandy;
+        &--new {
+            color: $white;
+            background-color: $curiousBlue;
+        }
+
+        &--top {
+            color: #fff;
+            background-color: #92dc5a;
+        }
+
+        &--delivery {
+            color: #fff;
+            background-color: #ff6600;
+        }
+
+        &--gift {
+            color: #fff;
+            background-color: #8d14ff;
+        }
+
+        &--custom {
+            color: #fff;
+            background-color: #11d281;
+        }
+
+        &--writeOff {
+            color: #fff;
+            background-color: $lavender;
+        }
     }
-
-    &--new{
-      color: $white;
-      background-color: $curiousBlue;
-    }
-
-    &--top {
-      color: #fff;
-      background-color: #92dc5a
-    }
-
-    &--delivery {
-      color: #fff;
-      background-color: #ff6600
-    }
-
-    &--gift {
-      color: #fff;
-      background-color: #8d14ff
-    }
-
-    &--custom {
-      color: #fff;
-      background-color: #11d281
-    }
-  }
 }

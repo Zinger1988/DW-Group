@@ -1,60 +1,67 @@
-.labels{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
-  &__item{
-    font-size: 1.1rem;
-    line-height: 1;
-    white-space: nowrap;
-    margin: 0 .7rem 1rem 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: .6rem 1.5rem;
-    border-radius: 1.2rem;
-    text-decoration: none;
-    @include animate('background-color');
+    &__item {
+        font-size: 1.1rem;
+        line-height: 1;
+        white-space: nowrap;
+        margin: 0 0.7rem 1rem 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 0.6rem 1.5rem;
+        border-radius: 1.2rem;
+        text-decoration: none;
+        @include animate('background-color');
 
-    &:hover{
-      text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--discount {
+            color: #fff;
+            background-color: rgba($mandy, 0.3);
+
+            &:hover {
+                background-color: rgba($mandy, 1);
+            }
+        }
+
+        &--top {
+            color: #fff;
+            background-color: rgba($conifer, 0.3);
+
+            &:hover {
+                background-color: rgba($conifer, 1);
+            }
+        }
+
+        &--new {
+            color: #fff;
+            background-color: rgba($curiousBlue, 0.3);
+
+            &:hover {
+                background-color: rgba($curiousBlue, 1);
+            }
+        }
+
+        &--waiting {
+            color: #fff;
+            background-color: rgba($regentGray, 0.3);
+
+            &:hover {
+                background-color: rgba($regentGray, 1);
+            }
+        }
+
+        &--writeOff {
+            color: #fff;
+            background-color: rgba($lavender, 0.3);
+
+            &:hover {
+                background-color: rgba($lavender, 1);
+            }
+        }
     }
-
-    &--discount{
-      color: #fff;
-      background-color: rgba($mandy, .3);
-
-      &:hover{
-        background-color: rgba($mandy, 1);
-      }
-    }
-
-    &--top{
-      color: #fff;
-      background-color: rgba($conifer, .3);
-
-      &:hover{
-        background-color: rgba($conifer, 1);
-      }
-    }
-
-    &--new{
-      color: #fff;
-      background-color: rgba($curiousBlue, .3);
-
-      &:hover{
-        background-color: rgba($curiousBlue, 1);
-      }
-    }
-
-    &--waiting{
-      color: #fff;
-      background-color: rgba($regentGray, .3);
-
-      &:hover{
-        background-color: rgba($regentGray, 1);
-      }
-    }
-
-  }
-
 }

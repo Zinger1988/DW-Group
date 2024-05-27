@@ -56,10 +56,23 @@
   }
 
   &__labels{
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
+    padding: 0 0 2rem;
+    border-bottom: 1px solid rgba($raven, .3);
 
     @include media(">=xl"){
       display: none;
+    }
+  }
+
+  &__category{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    @include media('>=lg'){
+      max-width: 74rem;
+      margin-bottom: 3rem;
     }
   }
 

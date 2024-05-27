@@ -1,55 +1,60 @@
-.product-hor{
+.product-hor {
     padding: 1.6rem 0;
     position: relative;
     @extend %clearfix;
 
     $this: &;
 
-    @include media(">=lg"){
+    @include media('>=lg') {
         display: grid;
         grid-template-columns: 7rem 1fr 18.5rem 29rem;
         grid-template-areas:
-                "img desc price controls"
-                "img footer price controls";
-        grid-gap: 0 1rem ;
+            'img desc price controls'
+            'img footer price controls';
+        grid-gap: 0 1rem;
         align-items: start;
-        padding: .5rem 0 .4rem;
+        padding: 0.5rem 1.5rem 0.4rem;
 
-        &::after{
+        &::after {
             display: none;
         }
     }
 
-    &:not(:last-child){
+    @include media('>=xl') {
+        padding: 0.5rem 3rem 0.4rem;
+    }
+
+    &:not(:last-child) {
         border-bottom: 1px dotted $mercury;
     }
 
-    &__item-labels{
+    &__item-labels {
         float: left;
         clear: left;
+        align-items: flex-start;
 
-        .item-labels__item{
+        .item-labels__item {
             font-size: 1.1rem;
-            padding: .4rem 1.1rem .4rem;
+            padding: 0.4rem 1.1rem 0.4rem;
             border-radius: 0 9px 9px 0;
-            margin-bottom: .3rem;
+            margin-bottom: 0.3rem;
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 font-size: 1.3rem;
-                padding: .5rem 1.5rem .6rem;
+                padding: 0.5rem 1.5rem 0.6rem;
                 border-radius: 0 14px 14px 0;
-                margin-bottom: .5rem;
+                margin-bottom: 0.5rem;
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 font-size: 1rem;
-                padding: .3rem .7rem .3rem;
+                padding: 0.3rem 0.7rem 0.3rem;
                 border-radius: 0 9px 9px 0;
-                margin-bottom: .2rem;
+                margin-bottom: 0.2rem;
             }
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             position: absolute;
             left: 0;
             top: 5.5rem;
@@ -58,15 +63,15 @@
         }
     }
 
-    &__img{
+    &__img {
         float: left;
-        margin-bottom: .6rem;
+        margin-bottom: 0.6rem;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             margin-bottom: 1rem;
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             float: none;
             display: flex;
             flex-direction: column;
@@ -76,28 +81,28 @@
         }
     }
 
-    &__img-item{
+    &__img-item {
         display: block;
         width: 8rem;
         height: 8rem;
         object-fit: contain;
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             width: 4.6rem;
             height: 4.6rem;
         }
     }
 
-    &__desc{
+    &__desc {
         margin-left: 9.5rem;
         display: flex;
         flex-wrap: wrap;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             margin-left: 12rem;
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             margin: 0;
             grid-area: desc;
             align-self: end;
@@ -113,18 +118,18 @@
         //    width: calc(100% - 58.5rem);
         //}
 
-        .text-overflow__toggle{
+        .text-overflow__toggle {
             justify-content: flex-start;
             text-transform: uppercase;
             font-size: 1rem;
         }
     }
 
-    &__baloon-tip{
+    &__baloon-tip {
         margin-bottom: 0;
     }
 
-    &__name{
+    &__name {
         font-size: 1.4rem;
         line-height: 1.35;
         margin-bottom: 1.25rem;
@@ -133,135 +138,135 @@
         color: inherit;
         word-break: break-all;
 
-        &--desk{
+        &--desk {
             display: none;
         }
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             margin-bottom: 1.5rem;
         }
 
-        @include media(">=lg"){
-            margin-bottom: .2rem;
+        @include media('>=lg') {
+            margin-bottom: 0.2rem;
             font-size: 1.3rem;
 
-            &--mob{
+            &--mob {
                 display: none;
             }
 
-            &--desk{
+            &--desk {
                 display: block;
             }
         }
 
-        @include media(">=xxxl"){
+        @include media('>=xxxl') {
             font-size: 1.4rem;
         }
 
         &:hover,
-        &:focus{
+        &:focus {
             text-decoration-color: inherit;
         }
     }
 
-    &__desc-footer{
+    &__desc-footer {
         display: flex;
         align-items: baseline;
         flex-wrap: wrap;
         margin: 0 0 1.25rem 9.5rem;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             margin: 0 0 1.25rem 12rem;
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             margin: 0;
             grid-area: footer;
         }
     }
 
     &__part-number,
-    &__availability{
-        color: #98A3B3;
+    &__availability {
+        color: #98a3b3;
         font-size: 1.1rem;
         line-height: 1.35;
         padding-right: 2rem;
         flex: 0 0 auto;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             font-size: 1.2rem;
             padding-right: 3rem;
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             font-size: 1.1rem;
         }
 
-        @include media(">=xxxl"){
+        @include media('>=xxxl') {
             font-size: 1.2rem;
         }
     }
 
-    &__part-number{
-        margin-bottom: .4rem;
+    &__part-number {
+        margin-bottom: 0.4rem;
 
-        @include media(">=sm"){
-            margin-bottom: .7rem;
+        @include media('>=sm') {
+            margin-bottom: 0.7rem;
         }
 
-        @include media(">=lg"){
-            margin-bottom: .4rem;
-        }
-    }
-
-    &__availability{
-        margin-bottom: .4rem;
-
-        @include media(">=sm"){
-            margin-bottom: .7rem;
-        }
-
-        @include media(">=lg"){
-            margin-bottom: .4rem;
+        @include media('>=lg') {
+            margin-bottom: 0.4rem;
         }
     }
 
-    &__item-rating{
+    &__availability {
+        margin-bottom: 0.4rem;
+
+        @include media('>=sm') {
+            margin-bottom: 0.7rem;
+        }
+
+        @include media('>=lg') {
+            margin-bottom: 0.4rem;
+        }
+    }
+
+    &__item-rating {
         font-size: 1.1rem;
         padding-right: 2rem;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             padding-right: 3rem;
         }
 
-        .item-rating__link{
+        .item-rating__link {
             font-size: 1.1rem;
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 font-size: 1.3rem;
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 font-size: 1.1rem;
             }
 
-            @include media(">=xxxl"){
+            @include media('>=xxxl') {
                 font-size: 1.2rem;
             }
         }
     }
 
-    &__price{
+    &__price {
         display: flex;
         align-items: flex-start;
         margin-left: 9.5rem;
         margin-bottom: 2rem;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             margin-left: 12rem;
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             margin: 0;
             justify-content: center;
             grid-area: price;
@@ -276,11 +281,11 @@
         //}
     }
 
-    &__product-price{
+    &__product-price {
         flex: 0 1 auto;
         min-width: 0;
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             min-height: 4rem;
             justify-content: center;
             display: flex;
@@ -293,21 +298,21 @@
         //    min-height: 9rem;
         //}
 
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-right: 2rem;
         }
 
-        .product-price__pre{
+        .product-price__pre {
             font-size: 1.1rem;
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 font-size: 1.2rem;
-                margin-bottom: .6rem;
+                margin-bottom: 0.6rem;
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 font-size: 1rem;
-                margin-bottom: .3rem;
+                margin-bottom: 0.3rem;
             }
 
             //@include media(">=xxl"){
@@ -315,15 +320,15 @@
             //}
         }
 
-        .product-price__item{
+        .product-price__item {
             font-size: 1.6rem;
             margin: 0;
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 font-size: 1.9rem;
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 font-size: 1.5rem;
             }
 
@@ -332,17 +337,17 @@
             //}
         }
 
-        .product-price__item--old{
+        .product-price__item--old {
             font-size: 1.2rem;
-            margin-left: .5rem;
+            margin-left: 0.5rem;
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 font-size: 1.3rem;
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 font-size: 1.2rem;
-                margin-top: .3rem;
+                margin-top: 0.3rem;
                 margin-left: 0;
             }
 
@@ -352,11 +357,11 @@
         }
     }
 
-    &__controls{
+    &__controls {
         margin-left: 9.5rem;
         max-width: 20rem;
 
-        @include media(">=sm"){
+        @include media('>=sm') {
             margin-left: 12rem;
             display: flex;
             flex-direction: row-reverse;
@@ -365,30 +370,30 @@
             max-width: none;
         }
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             margin: 0;
             grid-area: controls;
             align-self: center;
         }
 
-        .product-hor__controls-btn{
+        .product-hor__controls-btn {
             display: flex;
             width: 100%;
             margin-bottom: 0.5rem;
             position: relative;
             z-index: 5;
 
-            @include media("<sm"){
+            @include media('<sm') {
                 font-size: 1.2rem;
             }
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 width: 20rem;
                 flex: 0 0 auto;
-                margin: 0 0 0 .75rem;
+                margin: 0 0 0 0.75rem;
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 width: 18rem;
                 font-size: 1.1rem;
                 padding: 1.2rem 1.5rem;
@@ -401,63 +406,69 @@
             //}
         }
 
-        .product-hor__controls-btn-icon{
+        .product-hor__controls-btn-icon {
             font-size: 1.4em;
             line-height: 1;
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 font-size: 1.6rem;
             }
         }
 
-        .product-hor__item-quantity{
+        .product-hor__item-quantity {
             width: 100%;
 
-            @include media(">=sm"){
+            @include media('>=sm') {
                 width: 14rem;
                 flex: 0 0 auto;
             }
 
-            .item-quantity__input{
-                @include media("<sm"){
+            .item-quantity__input {
+                background-color: $mercury;
+
+                @include media('<sm') {
                     height: 4.2rem;
                 }
 
-                @include media(">=sm"){
+                @include media('>=sm') {
                     height: 5rem;
                 }
 
-                @include media(">=lg"){
+                @include media('>=lg') {
                     height: 4rem;
                 }
             }
 
-            .item-quantity__btn{
-                @include media(">=lg"){
+            .item-quantity__btn {
+                @include media('>=lg') {
                     width: 3.2rem;
                     height: 3.2rem;
                 }
             }
 
-            @include media(">=lg"){
+            @include media('>=lg') {
                 width: 11rem;
             }
         }
     }
 
-    &__fav-add{
+    &__fav-add {
         position: absolute;
         left: 0;
         top: 1.6rem;
         z-index: 5;
 
-        @include media(">=lg"){
+        @include media('>=lg') {
             top: 1rem;
-            left: -.5rem;
+            left: 0.5rem;
         }
 
-        .fav-add__icon{
-            @include media(">=lg"){
+        @include media('>=xl') {
+            left: 2rem;
+        }
+
+        .fav-add__icon {
+            @include media('>=lg') {
                 font-size: 1.8rem;
             }
         }
@@ -474,13 +485,13 @@
         //}
     }
 
-    &--cart{
-        @include media(">=lg"){
+    &--cart {
+        @include media('>=lg') {
             grid-template-columns: 7rem 1fr 18.5rem 15rem;
         }
 
-        #{$this}__controls-btn{
-            @include media(">=lg"){
+        #{$this}__controls-btn {
+            @include media('>=lg') {
                 width: 4rem;
                 min-width: 0;
 
