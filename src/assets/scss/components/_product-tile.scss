@@ -57,7 +57,7 @@
       max-width: 24rem;
       transform: translateX(-50%);
 
-      @include media('>=sm') {
+      @include media(">=sm") {
         max-width: 17rem;
       }
     }
@@ -90,11 +90,11 @@
   }
 
   &__baloon-tip {
-    margin-top: .3rem;
+    margin-top: 0.3rem;
   }
 
   &__footer-btn {
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     position: relative;
   }
 
@@ -107,11 +107,11 @@
   }
 
   &__availability {
-    color: #98A3B3;
+    color: #98a3b3;
     font-size: 1.3rem;
     line-height: 1;
     font-weight: 500;
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
   }
 
   &__item-quantity {
