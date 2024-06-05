@@ -1,14 +1,13 @@
 $(document).ready(function () {
-
     // Datepicker -------------------------------------
 
     $('.datepicker-reconciliation').datepicker({
         maxDate: new Date(),
-    });
+    })
 
     $('.datepicker-return-date').datepicker({
         maxDate: new Date(),
-    });
+    })
 
     // Select 2 ---------------------------------------
 
@@ -17,29 +16,29 @@ $(document).ready(function () {
             name: 'select2--theme--outerSpace',
             options: {
                 minimumResultsForSearch: -1,
-                selectionCssClass : "select2--theme--outerSpace",
-            }
+                selectionCssClass: 'select2--theme--outerSpace',
+            },
         },
         {
             name: 'select2--theme--default',
             options: {
                 minimumResultsForSearch: -1,
-            }
+            },
         },
         {
-            name: 'select2--search'
-        }
-    ];
+            name: 'select2--search',
+        },
+    ]
 
     $(select2Themes).each(function (key, val) {
-        let currentClass = val.name;
-        let currentOptions = val.options || {};
+        let currentClass = val.name
+        let currentOptions = val.options || {}
         let result = $('.select2').filter(function () {
             return $(this).hasClass(currentClass)
-        });
+        })
 
-        $(result).select2({width: '100%', ...currentOptions});
-    });
+        $(result).select2({ width: '100%', ...currentOptions })
+    })
 
     // $(".select2--theme--outerSpace").select2(
     //     {
@@ -48,7 +47,6 @@ $(document).ready(function () {
     //         selectionCssClass : "select2--theme--outerSpace"
     //     }
     // );
-
 
     // Swiper ---------------------------------------
 
@@ -66,19 +64,19 @@ $(document).ready(function () {
         },
         on: {
             init: function () {
-                setMainSliderBg(this);
+                setMainSliderBg(this)
             },
             slideChange: function () {
-                setMainSliderBg(this);
-            }
+                setMainSliderBg(this)
+            },
         },
-    });
+    })
 
     function setMainSliderBg(slider) {
-        const wrapper = document.querySelector('.index-page__part--bokeh');
-        const activeSlide = slider.slides[slider.activeIndex];
-        const slideClass = activeSlide.dataset['class'];
-        wrapper.setAttribute('data-class', slideClass);
+        const wrapper = document.querySelector('.index-page__part--bokeh')
+        const activeSlide = slider.slides[slider.activeIndex]
+        const slideClass = activeSlide.dataset['class']
+        wrapper.setAttribute('data-class', slideClass)
     }
 
     const galleryThumbs = new Swiper('.gallery__thumbs', {
@@ -89,7 +87,7 @@ $(document).ready(function () {
         loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-    });
+    })
 
     const galleryTop = new Swiper('.gallery__main', {
         spaceBetween: 0,
@@ -102,7 +100,7 @@ $(document).ready(function () {
         thumbs: {
             swiper: galleryThumbs,
         },
-    });
+    })
 
     const carouselWide = new Swiper('.carousel-section--layout--wide .swiper', {
         loop: false,
@@ -128,9 +126,9 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
-            }
-        }
-    });
+            },
+        },
+    })
 
     const carouselRegular = new Swiper('.carousel-section--layout--regular .swiper', {
         loop: false,
@@ -160,9 +158,9 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
-            }
-        }
-    });
+            },
+        },
+    })
 
     const carouselPlane = new Swiper('.carousel-section--layout--plane .swiper', {
         loop: true,
@@ -192,44 +190,57 @@ $(document).ready(function () {
             320: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
-            }
-        }
-    });
+            },
+        },
+    })
 
     $('.carousel-section__item').each(function () {
-        const arrows = $(this).find('.carousel-section__arrows-btn');
-        const carousel = $(this).find('.swiper').prop('swiper');
-        const counter = $(this).find('.carousel-section__counter');
-        const counterActive = counter.find('.carousel-section__counter-active');
-        const counterTotal = counter.find('.carousel-section__counter-total');
+        const arrows = $(this).find('.carousel-section__arrows-btn')
+        const carousel = $(this).find('.swiper').prop('swiper')
+        const counter = $(this).find('.carousel-section__counter')
+        const counterActive = counter.find('.carousel-section__counter-active')
+        const counterTotal = counter.find('.carousel-section__counter-total')
 
-        function setSwiperIndex(swiperInstance){
-            counterActive.text(setActiveIndex(Math.ceil((swiperInstance.activeIndex + swiperInstance.params.slidesPerView) / swiperInstance.params.slidesPerView)));
-            counterTotal.text(setActiveIndex(Math.ceil((swiperInstance.slides.length / swiperInstance.params.slidesPerView))));
+        function setSwiperIndex(swiperInstance) {
+            counterActive.text(
+                setActiveIndex(
+                    Math.ceil(
+                        (swiperInstance.activeIndex + swiperInstance.params.slidesPerView) /
+                            swiperInstance.params.slidesPerView
+                    )
+                )
+            )
+            counterTotal.text(
+                setActiveIndex(Math.ceil(swiperInstance.slides.length / swiperInstance.params.slidesPerView))
+            )
         }
 
-        setSwiperIndex(carousel);
+        setSwiperIndex(carousel)
 
         carousel.on('activeIndexChange', function () {
-            counterActive.text(setActiveIndex(Math.ceil((carousel.activeIndex + carousel.params.slidesPerView) / carousel.params.slidesPerView)));
-        });
+            counterActive.text(
+                setActiveIndex(
+                    Math.ceil((carousel.activeIndex + carousel.params.slidesPerView) / carousel.params.slidesPerView)
+                )
+            )
+        })
 
         carousel.on('breakpoint', function () {
-            setSwiperIndex(carousel);
-        });
+            setSwiperIndex(carousel)
+        })
 
         function setActiveIndex(index) {
-            return index + 1 <= 9? '0' + index: index;
+            return index + 1 <= 9 ? '0' + index : index
         }
 
         arrows.click(function () {
-            if($(this).hasClass('swiper-next')) {
-                carousel.slideNext();
-            } else if ($(this).hasClass('swiper-prev')){
-                carousel.slidePrev();
+            if ($(this).hasClass('swiper-next')) {
+                carousel.slideNext()
+            } else if ($(this).hasClass('swiper-prev')) {
+                carousel.slidePrev()
             }
-        });
-    });
+        })
+    })
 
     const carouselBrand = new Swiper('.carousel-brands .swiper', {
         spaceBetween: 0,
@@ -241,839 +252,817 @@ $(document).ready(function () {
         watchSlidesProgress: true,
         pagination: {
             el: '.swiper__pagination',
-        }
-    });
+        },
+    })
 
     // WOW.js -----------------------------------------
 
-    let wow = new WOW(
-        {
-            boxClass:     'wow',      // animated element css class (default is wow)
-            animateClass: 'animate__animated', // animation css class (default is animated)
-            offset:       100,          // distance to the element when triggering the animation (default is 0)
-            mobile:       true,       // trigger animations on mobile devices (default is true)
-            live:         true,       // act on asynchronously loaded content (default is true)
-            callback:     function(box) {
-                // the callback is fired every time an animation is started
-                // the argument that is passed in is the DOM node being animated
-            },
-            scrollContainer: null,    // optional scroll container selector, otherwise use window,
-            resetAnimation: true,     // reset animation on end (default is true)
-        }
-    );
+    let wow = new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animate__animated', // animation css class (default is animated)
+        offset: 100, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+    })
 
-    wow.init();
-});
+    wow.init()
+})
 
 let siteJS = {
     onload: document.addEventListener('DOMContentLoaded', function () {
-        siteJS.init();
-        window.addEventListener("resize", siteJS.resizeThrottler, false);
+        siteJS.init()
+        window.addEventListener('resize', siteJS.resizeThrottler, false)
     }),
     resizeTimeout: null,
-    resizeThrottler: function(){
-        if ( !siteJS.resizeTimeout ) {
-            siteJS.resizeTimeout = setTimeout(function() {
-                siteJS.resizeTimeout = null;
-                siteJS.textBlockOverflow();
-                siteJS.productGrid();
-            }, 500);
+    resizeThrottler: function () {
+        if (!siteJS.resizeTimeout) {
+            siteJS.resizeTimeout = setTimeout(function () {
+                siteJS.resizeTimeout = null
+                siteJS.textBlockOverflow()
+                siteJS.productGrid()
+            }, 500)
         }
     },
     init() {
-        this.sidebarGroup();
-        this.typeDisplay();
-        this.setRatingMark();
-        this.mainMenu();
+        this.sidebarGroup()
+        this.typeDisplay()
+        this.setRatingMark()
+        this.mainMenu()
         // this.fixedHeader();
-        this.secondaryNav();
-        this.headerSearch();
-        this.headerDropdown();
-        this.modal();
-        this.selectAlt();
-        this.filterSidebar();
-        this.textBlockOverflow();
-        this.productGrid();
-        this.tableSub();
-        this.accordion();
-        this.baloonTip();
-        this.passwordToggler();
-        this.fileAdd();
-        this.indexVideo();
-        this.bonusChart();
-        this.scrollToTop();
+        this.secondaryNav()
+        this.headerSearch()
+        this.headerDropdown()
+        this.modal()
+        this.selectAlt()
+        this.filterSidebar()
+        this.textBlockOverflow()
+        this.productGrid()
+        this.tableSub()
+        this.accordion()
+        this.baloonTip()
+        this.passwordToggler()
+        this.fileAdd()
+        this.indexVideo()
+        this.bonusChart()
+        this.scrollToTop()
         // this.lightSelect();
+        this.testWebp(function (support) {
+            if (support == true) {
+                document.querySelector('body').classList.add('webp')
+            } else {
+                document.querySelector('body').classList.add('no-webp')
+            }
+        })
+    },
+    testWebp: function (callback) {
+        let webP = new Image()
+        webP.onload = webP.onerror = function () {
+            callback(webP.height == 2)
+        }
+        webP.src =
+            'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
     },
     scrollToTop: function () {
+        const button = $('#scrollTop')
 
-        const button = $('#scrollTop');
-
-        if(!button.length) return;
+        if (!button.length) return
 
         $(window).scroll(function () {
-            $(this).scrollTop() > 100
-                ? button.slideDown()
-                : button.slideUp();
-        });
+            $(this).scrollTop() > 100 ? button.slideDown() : button.slideUp()
+        })
         button.click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 400);
-            return false;
-        });
+            $('body,html').animate(
+                {
+                    scrollTop: 0,
+                },
+                400
+            )
+            return false
+        })
     },
-    bonusChart: function(){
-        const chart = document.querySelector('.bonus-chart');
+    bonusChart: function () {
+        const chart = document.querySelector('.bonus-chart')
 
-        if(!chart) return;
+        if (!chart) return
 
-        const partnershipDuration = +chart.getAttribute('data-partnership-month');
-        const pointer = document.querySelector('.bonus-chart__pointer');
+        const partnershipDuration = +chart.getAttribute('data-partnership-month')
+        const pointer = document.querySelector('.bonus-chart__pointer')
 
-        if(partnershipDuration <= 6){
-            pointer.style = `transform: rotate(${-60 + partnershipDuration * 20}deg)`;
+        if (partnershipDuration <= 6) {
+            pointer.style = `transform: rotate(${-60 + partnershipDuration * 20}deg)`
         }
 
-        if(partnershipDuration > 6 && partnershipDuration <= 12){
-            pointer.style = `transform: rotate(${partnershipDuration * 10}deg)`;
+        if (partnershipDuration > 6 && partnershipDuration <= 12) {
+            pointer.style = `transform: rotate(${partnershipDuration * 10}deg)`
         }
 
-        if(partnershipDuration > 12 && partnershipDuration <= 24){
-            pointer.style = `transform: rotate(${60 + partnershipDuration * 5}deg)`;
+        if (partnershipDuration > 12 && partnershipDuration <= 24) {
+            pointer.style = `transform: rotate(${60 + partnershipDuration * 5}deg)`
         }
 
-        if(partnershipDuration > 24){
-            pointer.style = `transform: rotate(240deg)`;
+        if (partnershipDuration > 24) {
+            pointer.style = `transform: rotate(240deg)`
         }
     },
-    lightSelect: function(){
-        const setThrottle = throttleLimiter(1000);
+    lightSelect: function () {
+        const setThrottle = throttleLimiter(1000)
 
         const hideHandlder1 = function () {
-            const bodyElem = document.querySelector("body");
-            bodyElem.classList.remove("select-overlay");
+            const bodyElem = document.querySelector('body')
+            bodyElem.classList.remove('select-overlay')
 
-            const activeElemData = this.state._activeElemData;
+            const activeElemData = this.state._activeElemData
 
             if (this.state._isModified) {
-                LightSelect.replaceItems(this, this.state.defaultState, -1);
-                const matchingElem = this.state.defaultState.find(
-                    (element) => element.value === activeElemData.value
-                );
+                LightSelect.replaceItems(this, this.state.defaultState, -1)
+                const matchingElem = this.state.defaultState.find((element) => element.value === activeElemData.value)
 
                 if (!matchingElem) {
-                    LightSelect.appendItems(
-                        this,
-                        [activeElemData],
-                        this.state.defaultState.length
-                    );
+                    LightSelect.appendItems(this, [activeElemData], this.state.defaultState.length)
                 } else {
-                    LightSelect.setActiveOption(this, matchingElem.index);
+                    LightSelect.setActiveOption(this, matchingElem.index)
                 }
             }
-        };
+        }
 
         const getData = async function ({ instance, url, bodyParams }) {
             try {
-                const formData = new FormData();
-                formData.append("name", instance.rendered._searchControl.value);
-                bodyParams.forEach((param) => formData.append(param.name, param.value));
-                LightSelect.preloaderShow(instance);
+                const formData = new FormData()
+                formData.append('name', instance.rendered._searchControl.value)
+                bodyParams.forEach((param) => formData.append(param.name, param.value))
+                LightSelect.preloaderShow(instance)
                 LightSelect.replaceItems(
                     instance,
                     await getJSON(url).then((data) => {
                         return data.map(({ id, name }) => ({
                             value: id,
-                            text: name
-                        }));
+                            text: name,
+                        }))
                     }),
                     -1
-                );
+                )
             } catch (e) {
-                console.error(e.message);
+                console.error(e.message)
             } finally {
-                LightSelect.preloaderRemove(instance);
+                LightSelect.preloaderRemove(instance)
             }
-        };
+        }
 
-        initLightSelect(".carrier-delivery-city", {
-            isSearch: true
-        });
+        initLightSelect('.carrier-delivery-city', {
+            isSearch: true,
+        })
 
-        const carrierDeliveryCity = document.querySelector(".carrier-delivery-city");
-        carrierDeliveryCity.LightSelect.onHide = hideHandlder1;
+        const carrierDeliveryCity = document.querySelector('.carrier-delivery-city')
+        carrierDeliveryCity.LightSelect.onHide = hideHandlder1
         carrierDeliveryCity.LightSelect.onChange = function () {
-            LightSelect.enable(carrierDeliveryDepartment.LightSelect);
+            LightSelect.enable(carrierDeliveryDepartment.LightSelect)
 
             if (carrierDeliveryDepartment.LightSelect.state._isModified) {
                 LightSelect.replaceItems(
                     carrierDeliveryDepartment.LightSelect,
                     carrierDeliveryDepartment.LightSelect.state.defaultState,
                     0
-                );
+                )
             }
-        };
+        }
 
         carrierDeliveryCity.LightSelect.onSearchInput = async function () {
             if (this.rendered._searchControl.value.length >= 3) {
                 await setThrottle(
                     getData.bind(null, {
                         instance: this,
-                        url: "https://zinger1988.github.io/fakeDB/regions.json",
+                        url: 'https://zinger1988.github.io/fakeDB/regions.json',
                         bodyParams: [
                             {
-                                name: "carrier_id",
-                                value: 2
-                            }
-                        ]
+                                name: 'carrier_id',
+                                value: 2,
+                            },
+                        ],
                     })
-                );
+                )
             } else if (this.state._isModified) {
-                this.state._isModified = false;
-                LightSelect.replaceItems(this, this.state.defaultState, -1);
+                this.state._isModified = false
+                LightSelect.replaceItems(this, this.state.defaultState, -1)
             }
-        };
+        }
 
-        initLightSelect(".carrier-delivery-department", {
-            isSearch: true
-        });
-        const carrierDeliveryDepartment = document.querySelector(".carrier-delivery-department");
+        initLightSelect('.carrier-delivery-department', {
+            isSearch: true,
+        })
+        const carrierDeliveryDepartment = document.querySelector('.carrier-delivery-department')
         carrierDeliveryDepartment.LightSelect.onSearchInput = async function () {
             if (this.rendered._searchControl.value.length >= 3) {
                 await setThrottle(
                     getData.bind(null, {
                         instance: this,
-                        url: "https://zinger1988.github.io/fakeDB/departments.json",
+                        url: 'https://zinger1988.github.io/fakeDB/departments.json',
                         bodyParams: [
                             {
-                                name: "carrier_id",
-                                value: 2
+                                name: 'carrier_id',
+                                value: 2,
                             },
                             {
-                                name: "region_id",
-                                value: carrierDeliveryCity.LightSelect.state._activeElemData.value
-                            }
-                        ]
+                                name: 'region_id',
+                                value: carrierDeliveryCity.LightSelect.state._activeElemData.value,
+                            },
+                        ],
                     })
-                );
+                )
             } else if (this.state._isModified) {
-                this.state._isModified = false;
-                LightSelect.replaceItems(this, this.state.defaultState, -1);
+                this.state._isModified = false
+                LightSelect.replaceItems(this, this.state.defaultState, -1)
             }
-        };
-
+        }
     },
-    indexVideo: function(){
-
-    },
-    fileAdd: function(){
-        const wrapper = $('.add-file');
+    indexVideo: function () {},
+    fileAdd: function () {
+        const wrapper = $('.add-file')
 
         wrapper.each(function () {
-
-            const inputFile = $(this).find('.add-file__input');
-            const addFileBtn = $(this).find('.add-file__btn');
-            const fileListOutput = $(this).find('.add-file__list');
-            const reset = $(this).find('.add-file__clear');
+            const inputFile = $(this).find('.add-file__input')
+            const addFileBtn = $(this).find('.add-file__btn')
+            const fileListOutput = $(this).find('.add-file__list')
+            const reset = $(this).find('.add-file__clear')
 
             reset.click(() => {
-                inputFile.value = "";
-                fileListOutput
-                    .removeClass('active')
-                    .find('.add-file__list-item, .add-file__error')
-                    .remove();
+                inputFile.value = ''
+                fileListOutput.removeClass('active').find('.add-file__list-item, .add-file__error').remove()
             })
 
-            addFileBtn.click(() => inputFile.click());
+            addFileBtn.click(() => inputFile.click())
 
             inputFile.change(function () {
+                inputFile.value = ''
+                fileListOutput.find('.add-file__list-item, .add-file__error').remove()
+                reset.removeClass('hidden')
 
-                inputFile.value = "";
-                fileListOutput.find('.add-file__list-item, .add-file__error').remove();
-                reset.removeClass('hidden');
+                const filesArr = Array.from(inputFile.get(0).files)
+                const fragment = document.createDocumentFragment()
 
-                const filesArr = Array.from(inputFile.get(0).files);
-                const fragment = document.createDocumentFragment();
-
-                const filesSize = filesArr.reduce((acc, {size}) => {
+                const filesSize = filesArr.reduce((acc, { size }) => {
                     return acc + size
                 }, 0)
 
-                if(filesSize > 5120000){
-                    reset.addClass('hidden');
-                    fileListOutput
-                        .addClass('active')
-                        .append('<div class="add-file__error">File is too big</div>');
-                    inputFile.value = "";
-                    return;
+                if (filesSize > 5120000) {
+                    reset.addClass('hidden')
+                    fileListOutput.addClass('active').append('<div class="add-file__error">File is too big</div>')
+                    inputFile.value = ''
+                    return
                 }
 
-                filesArr.forEach(({name}) => {
-                    $(fragment).append(`<div class="add-file__list-item">${name}</div>`);
+                filesArr.forEach(({ name }) => {
+                    $(fragment).append(`<div class="add-file__list-item">${name}</div>`)
                 })
 
-                if(inputFile.val()){
-                    fileListOutput.prepend(fragment);
-                    fileListOutput.addClass('active');
+                if (inputFile.val()) {
+                    fileListOutput.prepend(fragment)
+                    fileListOutput.addClass('active')
                 }
-            })
-        });
-    },
-    passwordToggler(){
-
-        const toggleWrap = $('.password-toggle');
-
-        toggleWrap.each(function() {
-            const btn = $(this).find('.password-toggle__btn');
-            const control = $(this).find('.password-toggle__control');
-
-            btn.click(function() {
-                $(this).toggleClass('password-toggle__btn--active')
-                let attrValue = control.attr('type') === 'password'? 'text': 'password';
-                control.attr('type', attrValue);
             })
         })
     },
-    baloonTip(){
+    passwordToggler() {
+        const toggleWrap = $('.password-toggle')
 
-        if($(document.body).hasClass("hover-device")){
-            const tips = $('.baloon-tip');
+        toggleWrap.each(function () {
+            const btn = $(this).find('.password-toggle__btn')
+            const control = $(this).find('.password-toggle__control')
 
-            tips.each(function(){
-                const tip = $(this);
-                const tipTarget = tip.closest('.tip-holder').find('.' + tip.data('tipFor'));
-                tipTarget.append(tip);
+            btn.click(function () {
+                $(this).toggleClass('password-toggle__btn--active')
+                let attrValue = control.attr('type') === 'password' ? 'text' : 'password'
+                control.attr('type', attrValue)
+            })
+        })
+    },
+    baloonTip() {
+        if ($(document.body).hasClass('hover-device')) {
+            const tips = $('.baloon-tip')
+
+            tips.each(function () {
+                const tip = $(this)
+                const tipTarget = tip.closest('.tip-holder').find('.' + tip.data('tipFor'))
+                tipTarget.append(tip)
+                tips.attr('style', '')
 
                 tip.click(function (e) {
-                    e.stopPropagation();
+                    e.stopPropagation()
                 })
 
-                tipTarget.mouseenter(function(e){
-                    if(!$(e.target).hasClass('baloon-tip')){
-                        siteJS.helpers.elemFadeIn(tip, 'baloon-tip--active');
+                tipTarget.mouseenter(function (e) {
+                    if (!$(e.target).hasClass('baloon-tip')) {
+                        siteJS.helpers.elemFadeIn(tip, 'baloon-tip--active')
                     }
                 })
 
-                tipTarget.mouseleave(function(){
-                    siteJS.helpers.elemFadeOut(tip, 'baloon-tip--active');
+                tipTarget.mouseleave(function () {
+                    siteJS.helpers.elemFadeOut(tip, 'baloon-tip--active')
                 })
             })
+        } else {
+            const tips = $('.baloon-tip')
+            tips.attr('style', '')
         }
     },
-    accordion(){
+    accordion() {
+        const accordionItem = $('.accordion__item')
 
-        const accordionItem = $('.accordion__item');
+        accordionItem.each(function () {
+            const currentItem = $(this)
+            const title = $(this).find('.accordion__title')
+            const body = $(this).find('.accordion__body')
 
-        accordionItem.each(function(){
-            const currentItem = $(this);
-            const title = $(this).find('.accordion__title');
-            const body = $(this).find('.accordion__body');
-
-            title.click(function(){
+            title.click(function () {
                 body.slideToggle({
-                    complete: function() {
-                        currentItem.toggleClass('accordion__item--active');
-                    }
-                });
+                    complete: function () {
+                        currentItem.toggleClass('accordion__item--active')
+                    },
+                })
             })
-        });
-
+        })
     },
-    tableSub(){
-
-        const tableRowToggler = $('.table__row--toggler');
-        const tableSubContentBtn = $('.table__dropdown-btn');
+    tableSub() {
+        const tableRowToggler = $('.table__row--toggler')
+        const tableSubContentBtn = $('.table__dropdown-btn')
 
         tableRowToggler.click(function (e) {
-            e.stopPropagation();
+            e.stopPropagation()
 
-            const currentToggler = $(this);
-            const otherTogglers = $('.table__row--toggler').not(currentToggler);
-            const currentSubRow = $(this).next('.table__row-sub');
-            const otherSubRow = $('.table__row-sub').not(currentSubRow);
-            const currentSubContent = currentSubRow.find('.table__cell-sub-content');
-            const otherSubContent = $('.table__cell-sub-content').not(currentSubContent);
+            const currentToggler = $(this)
+            const otherTogglers = $('.table__row--toggler').not(currentToggler)
+            const currentSubRow = $(this).next('.table__row-sub')
+            const otherSubRow = $('.table__row-sub').not(currentSubRow)
+            const currentSubContent = currentSubRow.find('.table__cell-sub-content')
+            const otherSubContent = $('.table__cell-sub-content').not(currentSubContent)
 
-            if(!$(e.target).closest('.checkbox-radio').length &&
+            if (
+                !$(e.target).closest('.checkbox-radio').length &&
                 !($(e.target).prop('tagName').toLowerCase() === 'a') &&
-                !($(e.target).closest('.btn').length) &&
-                !($(e.target).closest('.table__quantity-input').length)){
-
-                if(currentSubContent.is(":hidden")){
-                    currentToggler.addClass('table__row--toggler--active');
-                    otherTogglers.removeClass('table__row--toggler--active');
+                !$(e.target).closest('.btn').length &&
+                !$(e.target).closest('.table__quantity-input').length
+            ) {
+                if (currentSubContent.is(':hidden')) {
+                    currentToggler.addClass('table__row--toggler--active')
+                    otherTogglers.removeClass('table__row--toggler--active')
 
                     currentSubContent.slideDown({
                         complete: function () {
-                            $("body,html").animate({
-                                scrollTop: $(this).offset().top - $('.header').outerHeight() - $('.table__row--toggler--active').outerHeight() - 60
-                            }, 400);
-                        }
+                            $('body,html').animate(
+                                {
+                                    scrollTop:
+                                        $(this).offset().top -
+                                        $('.header').outerHeight() -
+                                        $('.table__row--toggler--active').outerHeight() -
+                                        60,
+                                },
+                                400
+                            )
+                        },
                     })
 
-                    currentSubContent.slideDown();
-                    otherSubContent.slideUp();
+                    currentSubContent.slideDown()
+                    otherSubContent.slideUp()
 
-                    currentSubRow.addClass('table__row-sub--active');
-                    otherSubRow.removeClass('table__row-sub--active');
+                    currentSubRow.addClass('table__row-sub--active')
+                    otherSubRow.removeClass('table__row-sub--active')
                 } else {
-                    currentToggler.removeClass('table__row--toggler--active');
-                    currentSubContent.slideUp();
-                    currentSubRow.removeClass('table__row-sub--active');
+                    currentToggler.removeClass('table__row--toggler--active')
+                    currentSubContent.slideUp()
+                    currentSubRow.removeClass('table__row-sub--active')
                 }
 
-                siteJS.textBlockOverflow();
+                siteJS.textBlockOverflow()
             }
         })
 
-        tableSubContentBtn.click(function(){
-            $(this).closest('.table__cell-sub-content').slideUp();
-            $(this).closest('.table__row-sub').prev('.table__row--toggler').removeClass('table__row--toggler--active');
-            $(this).closest('.table__row-sub').removeClass('table__row-sub--active');
+        tableSubContentBtn.click(function () {
+            $(this).closest('.table__cell-sub-content').slideUp()
+            $(this).closest('.table__row-sub').prev('.table__row--toggler').removeClass('table__row--toggler--active')
+            $(this).closest('.table__row-sub').removeClass('table__row-sub--active')
         })
-
     },
-    productGrid(){
-
-        const wrapper = $('.product-grid');
-        const tile = wrapper.find('.product-tile');
+    productGrid() {
+        const wrapper = $('.product-grid')
+        const tile = wrapper.find('.product-tile')
         tile.each(function () {
-            $(this)
-                .removeClass('active')
-                .attr('style','');
+            $(this).removeClass('active').attr('style', '')
             $(this)
                 .find('.product-tile__primary')
-                .attr('style','')
-                .css({ minHeight: $(this).find('.product-tile__primary').height() + 'px'});
-            $(this)
-                .css({ minHeight: $(this).height() + 'px', minWidth: $(this).width() + 'px'});
-        });
+                .attr('style', '')
+                .css({ minHeight: $(this).find('.product-tile__primary').height() + 'px' })
+            $(this).css({ minHeight: $(this).height() + 'px', minWidth: $(this).width() + 'px' })
+        })
 
-        if($(document.body).hasClass('hover-device') && !tile.hasClass('size-watch')){
+        if ($(document.body).hasClass('hover-device') && !tile.hasClass('size-watch')) {
             tile.mouseenter(function () {
-                $(this).addClass('active');
-            });
+                $(this).addClass('active')
+            })
 
             tile.mouseleave(function () {
-                const overflowBlock = $(this).find('.text-overflow');
-                if(overflowBlock.hasClass('text-overflow--expanded')){
+                const overflowBlock = $(this).find('.text-overflow')
+                if (overflowBlock.hasClass('text-overflow--expanded')) {
                     overflowBlock.find('.text-overflow__btn').click()
                 }
-                $(this).removeClass('active');
-            });
-        } else if ($(document.body).hasClass('touch-device') && !tile.hasClass('size-watch')){
+                $(this).removeClass('active')
+            })
+        } else if ($(document.body).hasClass('touch-device') && !tile.hasClass('size-watch')) {
             tile.find('.text-overflow__btn').click(function () {
-                const parentTile = $(this).closest('.product-tile');
-                parentTile.toggleClass('active');
-                tile.not(parentTile).removeClass('active');
-            });
+                const parentTile = $(this).closest('.product-tile')
+                parentTile.toggleClass('active')
+                tile.not(parentTile).removeClass('active')
+            })
         }
 
-        tile.addClass('size-watch');
-
+        tile.addClass('size-watch')
     },
-    textBlockOverflow(target = $('.text-overflow')){
-
+    textBlockOverflow(target = $('.text-overflow')) {
         target.each(function () {
+            const current = $(this)
 
-            const current = $(this);
+            current.innerHeight('0')
+            current.removeClass('text-overflow--expanded')
 
-            current.innerHeight('0');
-            current.removeClass('text-overflow--expanded');
+            const itemLineHeight = parseFloat(window.getComputedStyle(this).lineHeight)
+            const itemTextMaxRow = parseInt($(this).data('textMaxRow'))
+            let toggler = current.find('.text-overflow__toggle')
+            let togglerHeight = toggler.height()
 
-            const itemLineHeight = parseFloat(window.getComputedStyle(this).lineHeight);
-            const itemTextMaxRow = parseInt($(this).data('textMaxRow'));
-            let toggler = current.find('.text-overflow__toggle');
-            let togglerHeight = toggler.height();
-
-            if(!toggler.length){
+            if (!toggler.length) {
                 current.append(`<div class="text-overflow__toggle">
                                     <div class="text-overflow__btn">
                                         <i class="icon icon--arrow--tiangle--down"></i>
                                         <span>Показать все</span>
                                     </div>
-                                </div>`);
+                                </div>`)
 
-                toggler = current.find('.text-overflow__toggle');
-                togglerHeight = toggler.height();
+                toggler = current.find('.text-overflow__toggle')
+                togglerHeight = toggler.height()
 
                 toggler.click(function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+                    e.preventDefault()
+                    e.stopPropagation()
 
-                    $('.text-block-overflow--active').not(current)
+                    $('.text-block-overflow--active')
+                        .not(current)
                         .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
-                        .removeClass('text-overflow--expanded');
+                        .removeClass('text-overflow--expanded')
 
-                    if(current.hasClass('text-overflow--expanded')){
+                    if (current.hasClass('text-overflow--expanded')) {
                         current
                             .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
-                            .removeClass('text-overflow--expanded');
-                        toggler.removeClass('active');
+                            .removeClass('text-overflow--expanded')
+                        toggler.removeClass('active')
                     } else {
                         current
                             .innerHeight($(current).prop('scrollHeight') + toggler.outerHeight() + 'px')
-                            .addClass('text-overflow--expanded');
-                        toggler.addClass('active');
+                            .addClass('text-overflow--expanded')
+                        toggler.addClass('active')
                     }
-                });
+                })
             }
 
-            toggler.removeClass('active');
+            toggler.removeClass('active')
 
-            if(current.hasClass('text-overflow-exception')){
-                togglerHeight = 0;
+            if (current.hasClass('text-overflow-exception')) {
+                togglerHeight = 0
                 toggler.addClass('text-overflow__toggle--right')
             }
 
-            if(Math.ceil(itemLineHeight * itemTextMaxRow) < $(current).prop('scrollHeight')){
+            if (Math.ceil(itemLineHeight * itemTextMaxRow) < $(current).prop('scrollHeight')) {
                 current
                     .innerHeight(itemLineHeight * itemTextMaxRow + togglerHeight + 'px')
-                    .addClass('text-block-overflow--active');
-                toggler.addClass('text-overflow__toggle--visible');
+                    .addClass('text-block-overflow--active')
+                toggler.addClass('text-overflow__toggle--visible')
             } else {
-                current.innerHeight($(current).prop('scrollHeight') + 'px');
-                toggler.removeClass('text-overflow__toggle--visible');
+                current.innerHeight($(current).prop('scrollHeight') + 'px')
+                toggler.removeClass('text-overflow__toggle--visible')
             }
-
-        });
-
+        })
     },
-    filterSidebar(){
-        const isBlogPage = $('.blog').length > 0 ? 'blog-sb-overlay': '';
+    filterSidebar() {
+        const isBlogPage = $('.blog').length > 0 ? 'blog-sb-overlay' : ''
 
-        $(document.body).append(`<div class="sb-filter-overlay ${isBlogPage} sidebar-toggle"></div>`);
+        $(document.body).append(`<div class="sb-filter-overlay ${isBlogPage} sidebar-toggle"></div>`)
         $('.sidebar-toggle, .blog-filter-toggle').click(function () {
-            if(!$('.sidebar-filter').hasClass('active')){
-                siteJS.helpers.elemFadeIn('.sb-filter-overlay', 'active');
-                $('.sidebar-filter').addClass('active');
-                $('.content-holder').addClass('sidebar-opened');
+            if (!$('.sidebar-filter').hasClass('active')) {
+                siteJS.helpers.elemFadeIn('.sb-filter-overlay', 'active')
+                $('.sidebar-filter').addClass('active')
+                $('.content-holder').addClass('sidebar-opened')
             } else {
-                siteJS.helpers.elemFadeOut('.sb-filter-overlay', 'active');
-                $('.sidebar-filter').removeClass('active');
-                $('.content-holder--catalog').removeClass('sidebar-opened');
+                siteJS.helpers.elemFadeOut('.sb-filter-overlay', 'active')
+                $('.sidebar-filter').removeClass('active')
+                $('.content-holder--catalog').removeClass('sidebar-opened')
             }
-        });
+        })
     },
-    selectAlt(){
-
-        const collection = $('.select-alt');
-
-        collection.each(function () {
-            $(this).find('.select-alt__textbox-value')
-                .text($(this).find('.select-alt__option-item.selected').text());
-        });
+    selectAlt() {
+        const collection = $('.select-alt')
 
         collection.each(function () {
+            $(this).find('.select-alt__textbox-value').text($(this).find('.select-alt__option-item.selected').text())
+        })
 
-            const currentSelect = $(this);
-            const textBox = $(this).find('.select-alt__textbox');
-            const valueContainer = $(this).find('.select-alt__textbox-value');
-            const optionList = $(this).find('.select-alt__option-list');
-            const optionItem = $(this).find('.select-alt__option-item');
+        collection.each(function () {
+            const currentSelect = $(this)
+            const textBox = $(this).find('.select-alt__textbox')
+            const valueContainer = $(this).find('.select-alt__textbox-value')
+            const optionList = $(this).find('.select-alt__option-list')
+            const optionItem = $(this).find('.select-alt__option-item')
 
             textBox.click(function () {
-                currentSelect.toggleClass('active');
+                currentSelect.toggleClass('active')
                 if (
                     window.matchMedia('(min-width: 1900px)').matches &&
-                    currentSelect.closest('.content-holder__header').length) {
-                    currentSelect.removeClass('active');
-                    return false;
+                    currentSelect.closest('.content-holder__header').length
+                ) {
+                    currentSelect.removeClass('active')
+                    return false
                 }
-                const externalOptionLists = $('.select-alt__option-list').not(optionList);
-                const externalSelects = $('.select-alt').not(currentSelect);
-                siteJS.helpers.elemFadeToggle(optionList, 'active');
-                siteJS.helpers.elemFadeOut(externalOptionLists, 'active');
-                externalSelects.removeClass('active');
-            });
+                const externalOptionLists = $('.select-alt__option-list').not(optionList)
+                const externalSelects = $('.select-alt').not(currentSelect)
+                siteJS.helpers.elemFadeToggle(optionList, 'active')
+                siteJS.helpers.elemFadeOut(externalOptionLists, 'active')
+                externalSelects.removeClass('active')
+            })
 
             optionItem.click(function () {
-                currentSelect.toggleClass('active');
-                optionItem.not($(this)).removeClass('selected');
-                $(this).addClass('selected');
+                currentSelect.toggleClass('active')
+                optionItem.not($(this)).removeClass('selected')
+                $(this).addClass('selected')
                 if (
                     window.matchMedia('(min-width: 1900px)').matches &&
-                    currentSelect.closest('.content-holder__header').length) {
-                    currentSelect.removeClass('active');
-                    valueContainer.text($(this).text());
-                    return false;
+                    currentSelect.closest('.content-holder__header').length
+                ) {
+                    currentSelect.removeClass('active')
+                    valueContainer.text($(this).text())
+                    return false
                 }
-                valueContainer.text($(this).text());
-                siteJS.helpers.elemFadeOut(optionList, 'active');
+                valueContainer.text($(this).text())
+                siteJS.helpers.elemFadeOut(optionList, 'active')
             })
+        })
 
-        });
+        $(document).bind('mouseup touchend', function (e) {
+            const activeSelect = $('.select-alt.active')
+            const optionList = activeSelect.find('.select-alt__option-list')
 
-        $(document).bind("mouseup touchend", function (e) {
-
-            const activeSelect = $('.select-alt.active');
-            const optionList  = activeSelect.find('.select-alt__option-list');
-
-            if (!activeSelect.is(e.target) &&
-                activeSelect.has(e.target).length === 0) {
-                activeSelect.removeClass('active');
+            if (!activeSelect.is(e.target) && activeSelect.has(e.target).length === 0) {
+                activeSelect.removeClass('active')
                 if (
                     window.matchMedia('(min-width: 1900px)').matches &&
-                    activeSelect.closest('.content-holder__header').length) {
-                    activeSelect.removeClass('active');
-                    return false;
+                    activeSelect.closest('.content-holder__header').length
+                ) {
+                    activeSelect.removeClass('active')
+                    return false
                 }
-                siteJS.helpers.elemFadeOut(optionList, 'active');
+                siteJS.helpers.elemFadeOut(optionList, 'active')
             }
-        });
-
-
+        })
     },
-    modal(){
-        const modalBtn = $('[data-modal-id]');
-        const modal = $('.modal');
+    modal() {
+        const modalBtn = $('[data-modal-id]')
+        const modal = $('.modal')
 
         modalBtn.click(function (e) {
-            e.preventDefault();
-            const modalTarget = '#' + $(this).data('modalId');
-            siteJS.helpers.elemFadeIn(modalTarget, 'active');
-        });
+            e.preventDefault()
+            const modalTarget = '#' + $(this).data('modalId')
+            siteJS.helpers.elemFadeIn(modalTarget, 'active')
+        })
 
         modal.click(function (e) {
-            if($(e.target).hasClass('close-modal')){
-                siteJS.helpers.elemFadeOut($(this), 'active');
+            if ($(e.target).hasClass('close-modal')) {
+                siteJS.helpers.elemFadeOut($(this), 'active')
             }
-        });
+        })
     },
-    headerDropdown(){
-        if($(document.body).hasClass('hover-device')){
+    headerDropdown() {
+        if ($(document.body).hasClass('hover-device')) {
             $('.header__controls-item').mouseenter(function () {
-                const dropdown = $(this).find('.header__controls-dropdown');
-                if(dropdown.length){
-                    siteJS.helpers.elemFadeIn(dropdown, 'active');
-                }
-            });
-            $('.header__controls-item').mouseleave(function () {
-                const dropdown = $(this).find('.header__controls-dropdown');
-                if(dropdown.length){
-                    siteJS.helpers.elemFadeOut(dropdown, 'active');
+                const dropdown = $(this).find('.header__controls-dropdown')
+                if (dropdown.length) {
+                    siteJS.helpers.elemFadeIn(dropdown, 'active')
                 }
             })
-        } else if($(document.body).hasClass('touch-device')){
-
+            $('.header__controls-item').mouseleave(function () {
+                const dropdown = $(this).find('.header__controls-dropdown')
+                if (dropdown.length) {
+                    siteJS.helpers.elemFadeOut(dropdown, 'active')
+                }
+            })
+        } else if ($(document.body).hasClass('touch-device')) {
             $('.header__controls-item .header__controls-btn').click(function () {
-                const dropdown = $(this).closest('.header__controls-item').find('.header__controls-dropdown');
-                if(dropdown.length){
-                    siteJS.helpers.elemFadeToggle(dropdown, 'active');
+                const dropdown = $(this).closest('.header__controls-item').find('.header__controls-dropdown')
+                if (dropdown.length) {
+                    siteJS.helpers.elemFadeToggle(dropdown, 'active')
                 }
-            });
+            })
 
-            $(document).bind("mouseup touchend", function (e) {
-                const dropdown = $('.header__controls-dropdown');
+            $(document).bind('mouseup touchend', function (e) {
+                const dropdown = $('.header__controls-dropdown')
 
-                if (!dropdown.is(e.target) &&
-                    dropdown.hasClass('active') &&
-                    dropdown.has(e.target).length === 0) {
-                    siteJS.helpers.elemFadeOut(dropdown, 'active');
+                if (!dropdown.is(e.target) && dropdown.hasClass('active') && dropdown.has(e.target).length === 0) {
+                    siteJS.helpers.elemFadeOut(dropdown, 'active')
                 }
-            });
+            })
         }
     },
-    headerSearch(){
-        const headerSearch = $('.header__search');
-        const switchEls = $('.header__search-btn, .header__search-close');
-        const searchInput = $('.search__input');
-        const autocompleteList = $('.search__autocomplete');
+    headerSearch() {
+        const headerSearch = $('.header__search')
+        const switchEls = $('.header__search-btn, .header__search-close')
+        const searchInput = $('.search__input')
+        const autocompleteList = $('.search__autocomplete')
 
         searchInput.on('input', function () {
-            if($(this).val().length > 3) {
-                siteJS.helpers.elemFadeIn(autocompleteList, 'active');
+            if ($(this).val().length > 3) {
+                siteJS.helpers.elemFadeIn(autocompleteList, 'active')
             } else {
-                siteJS.helpers.elemFadeOut(autocompleteList, 'active');
+                siteJS.helpers.elemFadeOut(autocompleteList, 'active')
             }
-        });
+        })
 
         switchEls.click(function () {
-            siteJS.helpers.elemFadeToggle(headerSearch, 'active');
-            siteJS.helpers.elemFadeOut(autocompleteList, 'active');
-            searchInput.val('');
-        });
+            siteJS.helpers.elemFadeToggle(headerSearch, 'active')
+            siteJS.helpers.elemFadeOut(autocompleteList, 'active')
+            searchInput.val('')
+        })
 
-        $(document).bind("mouseup touchend", function (e) {
+        $(document).bind('mouseup touchend', function (e) {
             if (window.matchMedia('(max-width: 1259px)').matches) {
-                if (!headerSearch.is(e.target) &&
+                if (
+                    !headerSearch.is(e.target) &&
                     headerSearch.hasClass('active') &&
-                    headerSearch.has(e.target).length === 0) {
-                    siteJS.helpers.elemFadeOut(headerSearch, 'active');
-                    siteJS.helpers.elemFadeOut(autocompleteList, 'active');
-                    searchInput.val('');
+                    headerSearch.has(e.target).length === 0
+                ) {
+                    siteJS.helpers.elemFadeOut(headerSearch, 'active')
+                    siteJS.helpers.elemFadeOut(autocompleteList, 'active')
+                    searchInput.val('')
                 }
             } else {
-                if (!headerSearch.is(e.target) &&
-                    headerSearch.has(e.target).length === 0) {
-                    siteJS.helpers.elemFadeOut(autocompleteList, 'active');
+                if (!headerSearch.is(e.target) && headerSearch.has(e.target).length === 0) {
+                    siteJS.helpers.elemFadeOut(autocompleteList, 'active')
                 }
             }
-        });
+        })
     },
     secondaryNav() {
-        const headerTop = $('.header__top');
-        const switchEls = $('.header__controls-item--menu, .contact-panel__close-btn');
+        const headerTop = $('.header__top')
+        const switchEls = $('.header__controls-item--menu, .contact-panel__close-btn')
 
         $(switchEls).click(function () {
-            if(headerTop.is(':hidden')){
-                siteJS.helpers.elemSlideDown(headerTop, 'active');
+            if (headerTop.is(':hidden')) {
+                siteJS.helpers.elemSlideDown(headerTop, 'active')
             } else {
-                siteJS.helpers.elemSlideUp(headerTop, 'active');
+                siteJS.helpers.elemSlideUp(headerTop, 'active')
             }
-        });
+        })
 
-        $(document).bind("mouseup touchend", function (e) {
+        $(document).bind('mouseup touchend', function (e) {
             if (window.matchMedia('(max-width: 1259px)').matches) {
-                if (!headerTop.is(e.target) &&
-                    headerTop.hasClass('active') &&
-                    headerTop.has(e.target).length === 0) {
-                    siteJS.helpers.elemSlideUp(headerTop, 'active');
+                if (!headerTop.is(e.target) && headerTop.hasClass('active') && headerTop.has(e.target).length === 0) {
+                    siteJS.helpers.elemSlideUp(headerTop, 'active')
                 }
             }
-        });
+        })
     },
     fixedHeader() {
-        const header = $('.page__header');
-        const headerHeight = header.outerHeight();
+        const header = $('.page__header')
+        const headerHeight = header.outerHeight()
 
         $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
-                $(document.body).css('padding-top', headerHeight + 'px');
-                header.addClass('page__header--fixed');
+                $(document.body).css('padding-top', headerHeight + 'px')
+                header.addClass('page__header--fixed')
             } else {
-                header.removeClass('page__header--fixed');
-                $(document.body).attr('style', '');
+                header.removeClass('page__header--fixed')
+                $(document.body).attr('style', '')
             }
-        });
+        })
 
         $(window).on('load', function () {
             if (header.offset().top > 50) {
-                $(document.body).css('padding-top', headerHeight + 'px');
-                header.addClass('page__header--fixed');
+                $(document.body).css('padding-top', headerHeight + 'px')
+                header.addClass('page__header--fixed')
             }
-        });
+        })
     },
-    mainMenu(){
-        $('.page, .page__header').append('<div class="menu-overlay">');
+    mainMenu() {
+        $('.page, .page__header').append('<div class="menu-overlay">')
 
-        const switchEls = $('.header__catalog-btn, .main-nav__close-btn, .menu-overlay');
-        const mainNav = $('.header__main-nav');
+        const switchEls = $('.header__catalog-btn, .main-nav__close-btn, .menu-overlay')
+        const mainNav = $('.header__main-nav')
 
         $(switchEls).click(function () {
-            if (window.matchMedia('(min-width: 1000px)').matches){
-                if(mainNav.is(':hidden')){
-                    siteJS.helpers.elemSlideDown(mainNav, 'active');
-                    switchEls.addClass('active');
+            if (window.matchMedia('(min-width: 1000px)').matches) {
+                if (mainNav.is(':hidden')) {
+                    siteJS.helpers.elemSlideDown(mainNav, 'active')
+                    switchEls.addClass('active')
                 } else {
-                    siteJS.helpers.elemSlideUp(mainNav, 'active');
-                    switchEls.removeClass('active');
+                    siteJS.helpers.elemSlideUp(mainNav, 'active')
+                    switchEls.removeClass('active')
                 }
             } else {
-                mainNav.toggleClass('active');
-                $('.menu-overlay').toggleClass('active');
+                mainNav.toggleClass('active')
+                $('.menu-overlay').toggleClass('active')
             }
-        });
+        })
     },
-    setRatingMark(){
+    setRatingMark() {
         $('.item-rating__mark').each(function () {
+            const MAX = 5
+            const mark = Math.round(parseFloat($(this).data('mark')))
 
-            const MAX = 5;
-            const mark = Math.round(parseFloat($(this).data('mark')));
-
-            for(let i = 1; i <= MAX; i++){
-                if(i <= mark){
-                    $(this).append('<i class="icon--star--solid item-rating__mark-item item-rating__mark-item--active"></i>');
-                    continue;
+            for (let i = 1; i <= MAX; i++) {
+                if (i <= mark) {
+                    $(this).append(
+                        '<i class="icon--star--solid item-rating__mark-item item-rating__mark-item--active"></i>'
+                    )
+                    continue
                 }
-                $(this).append('<i class="icon--star--solid item-rating__mark-item"></i>');
+                $(this).append('<i class="icon--star--solid item-rating__mark-item"></i>')
             }
-
-        });
+        })
     },
-    sidebarGroup(){
-        const sbGroupBtn = $('.sidebar-filter__group-title:not(.disabled)');
+    sidebarGroup() {
+        const sbGroupBtn = $('.sidebar-filter__group-title:not(.disabled)')
 
         sbGroupBtn.each(function () {
-            const sbGroupParent = $(this).closest('.sidebar-filter__group');
-            const sbGroupBody = sbGroupParent.find('.sidebar-filter__group-body');
+            const sbGroupParent = $(this).closest('.sidebar-filter__group')
+            const sbGroupBody = sbGroupParent.find('.sidebar-filter__group-body')
 
             $(this).click(function () {
-                if(sbGroupBody.is(':visible')){
-                    $(this).removeClass('active');
-                    sbGroupBody.slideUp(200);
+                if (sbGroupBody.is(':visible')) {
+                    $(this).removeClass('active')
+                    sbGroupBody.slideUp(200)
                 } else {
-                    $(this).addClass('active');
-                    sbGroupBody.slideDown(200);
+                    $(this).addClass('active')
+                    sbGroupBody.slideDown(200)
                 }
             })
-        });
-
+        })
     },
     typeDisplay() {
-        if ("ontouchstart" in document.documentElement) {
-            document.body.classList.add('touch-device');
+        if ('ontouchstart' in document.documentElement) {
+            document.body.classList.add('touch-device')
         } else {
-            document.body.classList.add('hover-device');
+            document.body.classList.add('hover-device')
         }
     },
     helpers: {
-        elemSlideUp(elem, removeClass = '', durationTime = 200){
+        elemSlideUp(elem, removeClass = '', durationTime = 200) {
             $(elem).slideUp({
                 duration: durationTime,
                 done: function () {
-                    $(this).removeClass(removeClass).attr('style','');
-                }
-            });
+                    $(this).removeClass(removeClass).attr('style', '')
+                },
+            })
         },
-        elemSlideDown(elem, addClass = '', durationTime = 200){
+        elemSlideDown(elem, addClass = '', durationTime = 200) {
             $(elem).slideDown({
                 duration: durationTime,
                 done: function () {
-                    $(this).addClass(addClass).attr('style','');
-                }
-            });
+                    $(this).addClass(addClass).attr('style', '')
+                },
+            })
         },
-        elemFadeIn(elem, addClass = '', durationTime = 200){
+        elemFadeIn(elem, addClass = '', durationTime = 200) {
             $(elem).fadeIn({
                 duration: durationTime,
                 done: function () {
-                    $(this).addClass(addClass).attr('style','');
-                }
-            });
+                    $(this).addClass(addClass).attr('style', '')
+                },
+            })
         },
-        elemFadeOut(elem, removeClass = '', durationTime = 200){
+        elemFadeOut(elem, removeClass = '', durationTime = 200) {
             $(elem).fadeOut({
                 duration: durationTime,
                 done: function () {
-                    $(this).removeClass(removeClass).attr('style','');
-                }
-            });
+                    $(this).removeClass(removeClass).attr('style', '')
+                },
+            })
         },
-        elemFadeToggle(elem, toggleClass = '', durationTime = 200){
+        elemFadeToggle(elem, toggleClass = '', durationTime = 200) {
             $(elem).fadeToggle({
                 duration: durationTime,
                 done: function () {
-                    $(this).hasClass(toggleClass)?
-                        $(this).removeClass(toggleClass):
-                        $(this).addClass(toggleClass);
-                    $(this).attr('style','');
-                }
-            });
+                    $(this).hasClass(toggleClass) ? $(this).removeClass(toggleClass) : $(this).addClass(toggleClass)
+                    $(this).attr('style', '')
+                },
+            })
         },
-        elemSlideToggle(elem, toggleClass = '', durationTime = 200){
+        elemSlideToggle(elem, toggleClass = '', durationTime = 200) {
             $(elem).slideToggle({
                 duration: durationTime,
                 done: function () {
-                    $(this).hasClass(toggleClass)?
-                        $(this).removeClass(toggleClass):
-                        $(this).addClass(toggleClass);
-                    $(this).attr('style','');
-                }
-            });
-        }
-    }
-};
-
-
-
+                    $(this).hasClass(toggleClass) ? $(this).removeClass(toggleClass) : $(this).addClass(toggleClass)
+                    $(this).attr('style', '')
+                },
+            })
+        },
+    },
+}

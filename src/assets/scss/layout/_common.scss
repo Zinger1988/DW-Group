@@ -1,173 +1,177 @@
 .page {
-  min-height: 100vh;
-  line-height: 1.571;
-  font-size: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
+    min-height: 100vh;
+    line-height: 1.571;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 
-  @include media('>=xl'){
-    &:not(&--open)::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 48.5rem;
-      z-index: -1;
-      background: url("../img/public/page_bg.jpg") center / cover;
-    }
-  }
-
-  @include media('>=xxl'){
-    &::before {
-      height: 56rem;
-    }
-  }
-
-  .menu-overlay{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: rgba($white,.75);
-    z-index: 100;
-    @include animate(width);
-
-    &.active{
-      width: 100%;
+    @include media('>=xl') {
+        &:not(&--open)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 48.5rem;
+            z-index: -1;
+            background: rgb(30, 38, 37);
+            background: linear-gradient(
+                0deg,
+                rgba(30, 38, 37, 0) 0%,
+                rgba(30, 38, 37, 1) 65%,
+                rgba(30, 38, 37, 1) 100%
+            );
+        }
     }
 
-    @include media('>=lg'){
-      width: 100%;
-      height: 0;
-      @include animate(height);
+    @include media('>=xxl') {
+        &::before {
+            height: 56rem;
+        }
+    }
 
-      &.active{
+    .menu-overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 0;
         height: 100%;
-      }
+        background: rgba($white, 0.75);
+        z-index: 100;
+        @include animate(width);
 
-    }
-  }
-
-  &__header{
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: $header-z-index;
-
-    @include media('<xl'){
-      .header__top{
-        display: none;
-
-        &.active{
-          display: block;
+        &.active {
+            width: 100%;
         }
-      }
+
+        @include media('>=lg') {
+            width: 100%;
+            height: 0;
+            @include animate(height);
+
+            &.active {
+                height: 100%;
+            }
+        }
     }
 
-    //&--fixed{
-    //  position: fixed;
-    //  width: 100%;
-    //  top: 0;
-    //  left: 0;
-    //  background-color: $outerSpace;
-    //  z-index: 101;
-    //  box-shadow: 0 0 1.5rem rgba($mineShaft, .8);
-    //
-    //  @include media('<md') {
-    //    .header__bottom{
-    //      display: none;
-    //    }
-    //  }
-    //
-    //  @include media('>=xl'){
-    //    .header__top,
-    //    .header__top.active{
-    //      display: none;
-    //    }
-    //  }
-    //}
+    &__header {
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: $header-z-index;
 
-    @include media('<xxl'){
-      margin-bottom: 2rem;
+        @include media('<xl') {
+            .header__top {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+        //&--fixed{
+        //  position: fixed;
+        //  width: 100%;
+        //  top: 0;
+        //  left: 0;
+        //  background-color: $outerSpace;
+        //  z-index: 101;
+        //  box-shadow: 0 0 1.5rem rgba($mineShaft, .8);
+        //
+        //  @include media('<md') {
+        //    .header__bottom{
+        //      display: none;
+        //    }
+        //  }
+        //
+        //  @include media('>=xl'){
+        //    .header__top,
+        //    .header__top.active{
+        //      display: none;
+        //    }
+        //  }
+        //}
+
+        @include media('<xxl') {
+            margin-bottom: 2rem;
+        }
+
+        @include media('<sm') {
+            margin-bottom: 1rem;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: rgba($white, 0.75);
+            z-index: 100;
+            @include animate(width);
+
+            &.active {
+                width: 100%;
+            }
+
+            @include media('>=lg') {
+                display: none;
+            }
+        }
     }
 
-    @include media('<sm'){
-      margin-bottom: 1rem;
+    &__main {
+        flex: 1 0 auto;
     }
 
-    .menu-overlay{
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 0;
-      height: 100%;
-      background: rgba($white,.75);
-      z-index: 100;
-      @include animate(width);
-
-      &.active{
-        width: 100%;
-      }
-
-      @include media('>=lg'){
+    &__pre {
         display: none;
-      }
+
+        @include media('>=xl') {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            .page__crumbs {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .page__summary {
+                flex-shrink: 0;
+                padding-left: 20px;
+                display: flex;
+                align-items: center;
+
+                &-item {
+                    margin-left: 3rem;
+                }
+
+                &--white {
+                    .page__summary-item {
+                        color: $white;
+                    }
+                }
+            }
+        }
     }
 
-  }
+    &__content-holder {
+        margin-bottom: 6rem;
+    }
 
-  &__main {
-    flex: 1 0 auto;
-  }
+    &.no-scroll {
+        overflow: hidden;
+    }
 
-  &__pre{
-    display: none;
-
-    @include media('>=xl'){
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-
-      .page__crumbs{
-        flex: 1;
-        min-width: 0;
-      }
-
-      .page__summary{
+    &__header {
         flex-shrink: 0;
-        padding-left: 20px;
-        display: flex;
-        align-items: center;
-
-        &-item{
-          margin-left: 3rem;
-        }
-
-        &--white{
-          .page__summary-item {
-            color: $white;
-          }
-        }
-      }
     }
-  }
 
-  &__content-holder{
-    margin-bottom: 6rem;
-  }
-
-  &.no-scroll{
-    overflow: hidden;
-  }
-
-  &__header {
-    flex-shrink: 0;
-  }
-
-  &__footer {
-    flex-shrink: 0;
-  }
+    &__footer {
+        flex-shrink: 0;
+    }
 }

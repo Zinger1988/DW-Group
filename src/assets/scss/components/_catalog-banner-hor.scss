@@ -1,11 +1,24 @@
 .catalog-banner-hor {
-  display: block;
-  width: 100%;
-  margin: 0;
-
-  &__img {
     display: block;
     width: 100%;
     margin: 0;
-  }
+    padding: 35.8% 0 0 0;
+    position: relative;
+
+    @include media('>500px') {
+        padding: 18.37% 0 0 0;
+    }
+
+    @include media('>925px') {
+        padding: 7.53% 0 0 0;
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

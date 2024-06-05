@@ -1,34 +1,35 @@
-.fav-add{
-  @extend %linkreset;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  @include animate(color);
+.fav-add {
+    @extend %linkreset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    @include animate(color);
 
-  &:not(.active):hover{
-    &__icon{
-      color: $regentGray;
+    &:not(.active):hover {
+        &__icon {
+            color: $regentGray;
+        }
     }
-  }
 
-  &.active{
-    .fav-add__icon {
-      color: $mySin;
+    &.active {
+        .fav-add__icon {
+            color: $mySin;
+        }
     }
-  }
 
-  &__icon{
-    font-size: 2.4rem;
-    line-height: 1;
-    color: $tiara;
-    position: relative;
-  }
+    &__icon {
+        font-size: 2.4rem;
+        line-height: 0.95;
+        color: #b0b6b5;
 
-  &__text{
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    margin-right: 1.3rem;
-    white-space: nowrap;
-    font-weight: 700;
-  }
+        position: relative;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-right: 1.3rem;
+        white-space: nowrap;
+        font-weight: 700;
+    }
 }

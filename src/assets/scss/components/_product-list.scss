@@ -1,50 +1,75 @@
-.product-list{
+.product-list {
     padding: 0 1.5rem;
 
-  $this: &;
+    $this: &;
 
-    @include media(">=sm"){
+    @include media('>=sm') {
         padding: 0 2.2rem;
     }
 
-    @include media(">=md"){
+    @include media('>=md') {
         padding: 0 2.1rem;
     }
 
-    @include media('>=lg'){
-      padding: 0;
+    @include media('>=lg') {
+        padding: 0;
 
-      .product-hor{
-        
-        &:nth-child(odd){
-          background-color: rgba(245, 246, 246,1);
+        .product-hor {
+            background-color: #eaeef0;
 
-          .text-overflow__toggle{
-            background: $tiara;
-            background: linear-gradient(0deg, rgba(245, 246, 246,1) 15%, rgba(245, 246, 246,0) 100%);
-          }
+            .product-hor__part-number,
+            .product-hor__availability {
+                color: #59616d;
+            }
+
+            .text-overflow__toggle {
+                background: #eaeef0;
+                background: linear-gradient(0deg, #eaeef0 15%, rgba(234, 238, 240, 0) 100%);
+            }
+
+            .text-overflow__toggle--right {
+                background: #eaeef0;
+                background: linear-gradient(90deg, rgba(234, 238, 240, 0) 0%, #eaeef0 24%);
+            }
+
+            &:nth-child(odd) {
+                background-color: #d6dfe3;
+
+                .text-overflow__toggle {
+                    background: rgb(214, 223, 227);
+                    background: linear-gradient(0deg, rgba(214, 223, 227, 1) 15%, rgba(214, 223, 227, 0) 100%);
+                }
+
+                .text-overflow__toggle--right {
+                    background: rgb(214, 223, 227);
+                    background: linear-gradient(90deg, rgba(214, 223, 227, 0) 0%, rgba(214, 223, 227, 1) 24%);
+                }
+            }
+
+            .item-quantity__input {
+                background-color: #fafafa;
+            }
         }
-      }
     }
-    
-    &__title-bordered{
-      margin-bottom: 2rem;
 
-      @include media('>=lg'){
-        padding: 0 1.5rem;
-      }
+    &__title-bordered {
+        margin-bottom: 2rem;
 
-      @include media('>=xl'){
-        padding: 0 2rem;
-      }
+        @include media('>=lg') {
+            padding: 0 1.5rem;
+        }
 
-      @include media('>=xxl'){
-        padding: 0 2.5rem;
-      }
+        @include media('>=xl') {
+            padding: 0 2rem;
+        }
+
+        @include media('>=xxl') {
+            padding: 0 2.5rem;
+        }
     }
 }
 
-.product-list.product-list--cart{
-  padding: 0;
-  margin: 0 0 2rem;
+.product-list.product-list--cart {
+    padding: 0;
+    margin: 0 0 2rem;
 }

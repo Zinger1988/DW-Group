@@ -1,52 +1,52 @@
-.chars-table{
-    background-color: #FAFAFA;
+.chars-table {
+    background-color: #fafafa;
     border-radius: 4px;
 
     $this: &;
 
-    &__item{
+    &__item {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        padding: .5rem 1.4rem;
+        padding: 0.5rem 1.4rem;
         font-size: 1.2rem;
         line-height: 1.5;
         position: relative;
 
-        @include media(">=md"){
+        @include media('>=md') {
             font-size: 1.3rem;
-            padding: .5rem 2.3rem;
+            padding: 0.5rem 2.3rem;
         }
 
-        &:first-child{
+        &:first-child {
             padding-top: 1rem;
             border-radius: 4px 4px 0 0;
 
-            @include media(">=md"){
+            @include media('>=md') {
                 padding-top: 1.2rem;
             }
         }
 
-        &:last-child{
+        &:last-child {
             padding-bottom: 1rem;
             border-radius: 0 0 4px 4px;
 
-            @include media(">=md"){
+            @include media('>=md') {
                 padding-bottom: 1.2rem;
             }
         }
 
-        &::before{
-            content: "";
+        &::before {
+            content: '';
             position: absolute;
             left: 1.8rem;
             top: 1.7rem;
             height: 0;
             width: calc(100% - 3.6rem);
-            border-top: 1px dotted rgba(#707070, .3);
+            border-top: 1px dotted rgba(#707070, 0.3);
             z-index: 3;
 
-            @include media(">=md"){
+            @include media('>=md') {
                 left: 2.5rem;
                 top: 2rem;
                 width: calc(100% - 5rem);
@@ -54,37 +54,38 @@
         }
     }
 
-    #{$this}__text-inner{
-        background-color: #FAFAFA;
+    #{$this}__text-inner {
+        background-color: #fafafa;
         position: relative;
         z-index: 5;
+        word-break: break-all;
     }
 
-    &__attr{
+    &__attr {
         max-width: 36.333%;
         color: $regentGray;
         padding-right: 1rem;
 
-        #{$this}__text-inner::after{
-            content: "\00A0 \00A0";
+        #{$this}__text-inner::after {
+            content: '\00A0 \00A0';
         }
     }
 
-    &__param{
+    &__param {
         padding-left: 1rem;
         max-width: 60.666%;
         text-align: right;
 
-        #{$this}__text-inner::before{
-            content: "\00A0 \00A0";
+        #{$this}__text-inner::before {
+            content: '\00A0 \00A0';
         }
     }
 
-    &__item:nth-child(even){
-        background-color: #F2F2F2;
+    &__item:nth-child(even) {
+        background-color: #f2f2f2;
 
-        #{$this}__text-inner{
-            background-color: #F2F2F2;
+        #{$this}__text-inner {
+            background-color: #f2f2f2;
         }
     }
 }

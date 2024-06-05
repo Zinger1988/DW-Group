@@ -1,15 +1,13 @@
 <div class="header__middle">
     <div class="container container--wide header__middle-container">
-
         <a href="#" class="logo header__logo">
             <picture class="header__img-wrap">
-                <source srcset="assets/img/public/logo-small.svg" media="(max-width:1259px)">
-                <img class="logo__img" src="assets/img/public/logo.svg" alt="DW Group">
+                <source srcset="assets/img/public/logo-small.svg" media="(max-width:1259px)" />
+                <img loading="lazy" class="logo__img" src="assets/img/public/logo.svg" alt="DW Group" />
             </picture>
         </a>
 
         <div class="holder">
-
             <button class="header__catalog-btn">
                 <i class="icon icon--layout--grid--6"></i>
                 <span>Каталог товаров</span>
@@ -22,13 +20,18 @@
 
             <div class="header__search search">
                 <form class="search__form" action="/" method="post">
-
                     <button type="submit" class="search__submit">
                         <i class="icon icon--search"></i>
                         <span>Найти</span>
                     </button>
 
-                    <input class="search__input" placeholder="Поиск товаров" type="text" name="search" autocomplete="off">
+                    <input
+                        class="search__input"
+                        placeholder="Поиск товаров"
+                        type="text"
+                        name="search"
+                        autocomplete="off"
+                    />
 
                     <a class="search__extended" href="#" data-modal-id="modal-search">
                         <i class="icon icon--gear"></i>
@@ -38,38 +41,19 @@
                     <button type="button" class="header__search-close">
                         <i class="icon--cancel"></i>
                     </button>
-
-                </form><!-- search form-->
+                </form>
+                <!-- search form-->
 
                 <div class="search__autocomplete">
                     <div class="search__autocomplete-body">
-                        <div  class="search__autocomplete-item">
+                        <div class="search__autocomplete-item">
                             <a href="#" class="search__autocomplete-img">
-                                <img src="assets/img/catalog/01.jpg" alt="" class="search__autocomplete-img-item">
-                            </a>
-                            <div class="search__autocomplete-desc">
-                                <a href="#" class="search__autocomplete-name">
-                                    Тонер Katun HP LJ 1010/ 1012/ 1015/ 1020/ 1022/ 1050/ 1150/ 1200/ 1250/ 1020/ 1022/
-                                    1050/ 1022/ 1050/ 1150/
-                                </a>
-                                <div class="search__autocomplete-price product-price">
-                                    <div class="product-price__item">
-                                        <span class="product-price__value">99 999.00</span>
-                                        <span class="product-price__currency">&#8372;</span>
-                                    </div>
-                                </div>
-                                <div class="search__autocomplete-rating item-rating">
-                                    <div class="item-rating__mark" data-mark="4.6"></div>
-                                    <a class="item-rating__link" href="#">
-                                        <span class="item-rating__link-pre">отзывы:</span>
-                                        <span class="item-rating__link-val">14</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div><!-- search autocomplete item-->
-                        <div  class="search__autocomplete-item">
-                            <a href="#" class="search__autocomplete-img">
-                                <img src="assets/img/catalog/01.jpg" alt="" class="search__autocomplete-img-item">
+                                <img
+                                    loading="lazy"
+                                    src="assets/img/catalog/01.jpg"
+                                    alt=""
+                                    class="search__autocomplete-img-item"
+                                />
                             </a>
                             <div class="search__autocomplete-desc">
                                 <a href="#" class="search__autocomplete-name">
@@ -91,33 +75,65 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- search autocomplete body-->
+                        <!-- search autocomplete item-->
+                        <div class="search__autocomplete-item">
+                            <a href="#" class="search__autocomplete-img">
+                                <img
+                                    loading="lazy"
+                                    src="assets/img/catalog/01.jpg"
+                                    alt=""
+                                    class="search__autocomplete-img-item"
+                                />
+                            </a>
+                            <div class="search__autocomplete-desc">
+                                <a href="#" class="search__autocomplete-name">
+                                    Тонер Katun HP LJ 1010/ 1012/ 1015/ 1020/ 1022/ 1050/ 1150/ 1200/ 1250/ 1020/ 1022/
+                                    1050/ 1022/ 1050/ 1150/
+                                </a>
+                                <div class="search__autocomplete-price product-price">
+                                    <div class="product-price__item">
+                                        <span class="product-price__value">99 999.00</span>
+                                        <span class="product-price__currency">&#8372;</span>
+                                    </div>
+                                </div>
+                                <div class="search__autocomplete-rating item-rating">
+                                    <div class="item-rating__mark" data-mark="4.6"></div>
+                                    <a class="item-rating__link" href="#">
+                                        <span class="item-rating__link-pre">отзывы:</span>
+                                        <span class="item-rating__link-val">14</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- search autocomplete body-->
                     <div class="search__autocomplete-footer">
                         <button type="button" class="search__autocomplete-footer-btn btn btn--style--wired-default">
                             <span class="btn__text">Больше результатов</span>
                         </button>
                     </div>
-                </div><!-- search autocomplete-->
-
-            </div><!-- header search -->
-
-        </div><!-- header holder -->
+                </div>
+                <!-- search autocomplete-->
+            </div>
+            <!-- header search -->
+        </div>
+        <!-- header holder -->
 
         <div class="header__controls">
-
             <div class="header__controls-item header__controls-item--menu">
                 <button class="header__controls-btn">
                     <i class="header__controls-btn-icon icon icon--burger--outline"></i>
                     <span class="header__controls-btn-text">Меню</span>
                 </button>
-            </div><!-- header controls item-->
+            </div>
+            <!-- header controls item-->
 
-<!--            <div class="header__controls-item">-->
-<!--                <a href="#" class="header__controls-btn header__controls-btn&#45;&#45;profile">-->
-<!--                    <i class="header__controls-btn-icon icon icon&#45;&#45;text&#45;&#45;solid-alt"></i>-->
-<!--                    <span class="header__controls-btn-text">Регистрация</span>-->
-<!--                </a>-->
-<!--            </div>&lt;!&ndash; header controls item&ndash;&gt;-->
+            <!--            <div class="header__controls-item">-->
+            <!--                <a href="#" class="header__controls-btn header__controls-btn&#45;&#45;profile">-->
+            <!--                    <i class="header__controls-btn-icon icon icon&#45;&#45;text&#45;&#45;solid-alt"></i>-->
+            <!--                    <span class="header__controls-btn-text">Регистрация</span>-->
+            <!--                </a>-->
+            <!--            </div>&lt;!&ndash; header controls item&ndash;&gt;-->
 
             <div class="header__controls-item">
                 <a href="#" class="header__controls-btn header__controls-btn--profile">
@@ -128,10 +144,10 @@
                         <span class="notify__count">1</span>
                     </span>
                 </a>
-            </div><!-- header controls item-->
+            </div>
+            <!-- header controls item-->
 
             <div class="header__controls-item">
-
                 <div class="header__controls-btn header__controls-btn--cart">
                     <i class="header__controls-btn-icon icon icon--cart--alt"></i>
                     <span class="header__controls-btn-text">Корзина</span>
@@ -140,7 +156,6 @@
 
                 <div class="header__controls-dropdown cart-dropdown">
                     <div class="cart-dropdown__body">
-                        
                         <div class="cart-dropdown__item">
                             <button class="cart-dropdown__delete">
                                 <i class="icon icon--cancel"></i>
@@ -148,7 +163,12 @@
                             </button>
                             <a href="#" class="cart-dropdown__link">
                                 <div class="cart-dropdown__img">
-                                    <img class="cart-dropdown__img-item" src="assets/img/catalog/01.jpg" alt="image">
+                                    <img
+                                        loading="lazy"
+                                        class="cart-dropdown__img-item"
+                                        src="assets/img/catalog/01.jpg"
+                                        alt="image"
+                                    />
                                 </div>
                                 <div class="cart-dropdown__name">
                                     Тонер Katun HP LJ 1010/ 1012/ 1015/ 1020/ 1022/ 1050/ 1150/ 1200/ 1250/ 1020/ 1022/
@@ -159,7 +179,7 @@
                                 <div class="cart-dropdown__total-item item-quantity">
                                     <button class="item-quantity__btn item-quantity__btn--dec">-</button>
                                     <button class="item-quantity__btn item-quantity__btn--inc">+</button>
-                                    <input class="item-quantity__input" type="number" value="1" min="1">
+                                    <input class="item-quantity__input" type="number" value="1" min="1" />
                                 </div>
                                 <div class="cart-dropdown__total-item product-price">
                                     <div class="product-price__item">
@@ -176,7 +196,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- cart dropdown item -->
+                        </div>
+                        <!-- cart dropdown item -->
 
                         <div class="cart-dropdown__item">
                             <button class="cart-dropdown__delete">
@@ -185,7 +206,12 @@
                             </button>
                             <a href="#" class="cart-dropdown__link">
                                 <div class="cart-dropdown__img">
-                                    <img class="cart-dropdown__img-item" src="assets/img/catalog/01.jpg" alt="image">
+                                    <img
+                                        loading="lazy"
+                                        class="cart-dropdown__img-item"
+                                        src="assets/img/catalog/01.jpg"
+                                        alt="image"
+                                    />
                                 </div>
                                 <div class="cart-dropdown__name">
                                     Тонер Katun HP LJ 1010/ 1012/ 1015/ 1020/ 1022/ 1050/ 1150/ 1200/ 1250/ 1020/ 1022/
@@ -196,7 +222,7 @@
                                 <div class="cart-dropdown__total-item item-quantity">
                                     <button class="item-quantity__btn item-quantity__btn--dec">-</button>
                                     <button class="item-quantity__btn item-quantity__btn--inc">+</button>
-                                    <input class="item-quantity__input" type="number" value="1" min="1">
+                                    <input class="item-quantity__input" type="number" value="1" min="1" />
                                 </div>
                                 <div class="cart-dropdown__total-item product-price">
                                     <div class="product-price__pre">Цена</div>
@@ -213,9 +239,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- cart dropdown item -->
-
-                    </div><!-- cart dropdown body -->
+                        </div>
+                        <!-- cart dropdown item -->
+                    </div>
+                    <!-- cart dropdown body -->
                     <div class="cart-dropdown__footer">
                         <a href="#" class="btn btn--style--default">
                             <span class="btn__text">Оформить заказ</span>
@@ -229,10 +256,10 @@
                         </div>
                     </div>
                 </div>
-
-            </div><!-- header controls item-->
-
-        </div><!-- header controls -->
-
+            </div>
+            <!-- header controls item-->
+        </div>
+        <!-- header controls -->
     </div>
-</div><!-- header middle -->
+</div>
+<!-- header middle -->

@@ -90,6 +90,7 @@
         @include media('>=lg') {
             width: 4.6rem;
             height: 4.6rem;
+            border-radius: 0.4rem;
         }
     }
 
@@ -457,9 +458,11 @@
         left: 0;
         top: 1.6rem;
         z-index: 5;
+        background-color: $white;
+        border-radius: 50%;
 
         @include media('>=lg') {
-            top: 1rem;
+            top: 0.4rem;
             left: 0.5rem;
         }
 
