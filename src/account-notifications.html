@@ -1,0 +1,92 @@
+---
+layout: default
+title: account
+---
+
+<div class="container">
+  <div class="page__pre">
+    <nav class="crumbs crumbs--white page__crumbs">
+      <ul class="crumbs__list">
+        <li class="crumbs__item">
+          <a href="/" class="crumbs__link">Главная</a>
+        </li>
+        <li class="crumbs__item">
+          <a href="#" class="crumbs__link">Заказы</a>
+        </li>
+        <li class="crumbs__item crumbs__item--active">
+          <span>Счета</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--page pre-->
+
+  <div class="page__content-holder content-holder">
+    <ul class="tabs account__tabs tabs--theme--dark">
+      <li class="tabs__item">
+        <a class="tabs__link" href="#" data-tab-label="product-info">Незакрытые заказы</a>
+      </li>
+      <li class="tabs__item">
+        <a class="tabs__link" href="#" data-tab-label="comments">Все заказы</a>
+      </li>
+      <li class="tabs__item">
+        <a class="tabs__link" href="#" data-tab-label="comments">Резервы</a>
+      </li>
+      <li class="tabs__item">
+        <a class="tabs__link" href="#" data-tab-label="comments">Счета</a>
+      </li>
+      <li class="tabs__item">
+        <a class="tabs__link" href="#" data-tab-label="comments">Возвраты</a>
+      </li>
+      <li class="tabs__item">
+        <a class="tabs__link" href="#" data-tab-label="comments">Текущие заказы</a>
+      </li>
+      <li class="tabs__item tabs__item--active">
+        <a class="tabs__link" href="#" data-tab-label="comments">Оповещения</a>
+      </li>
+    </ul>
+    <!-- tabs -->
+
+    <div class="content-holder__body account">
+      <h1 class="h3">Счета</h1>
+      <table class="table table--build-xl account__table">
+        {{> table-notifications }}
+      </table>
+    </div>
+    <!--content holder body-->
+
+    <div class="content-holder__footer">
+      <nav class="pagination pagination--footer">
+        <span class="pagination__btn pagination__btn--disabled">
+          <i class="pagination__btn-icon icon--arrow--angle--left"></i>
+          <span class="pagination__btn-text">Предыдущая страница</span>
+        </span>
+
+        <ul class="pagination__list">
+          <li class="pagination__list-item pagination__list-item--active">
+            <a href="#" class="pagination__list-link">1</a>
+          </li>
+          <li class="pagination__list-item">
+            <a href="#" class="pagination__list-link">2</a>
+          </li>
+          <li class="pagination__list-item">
+            <a href="#" class="pagination__list-link">3</a>
+          </li>
+          <li class="pagination__list-item">
+            <a href="#" class="pagination__list-link">4</a>
+          </li>
+          <li class="pagination__list-item">
+            <a href="#" class="pagination__list-link">5</a>
+          </li>
+        </ul>
+
+        <a href="#" class="pagination__btn">
+          <span class="pagination__btn-text">Следующая страница</span>
+          <i class="pagination__btn-icon icon--arrow--angle--right"></i>
+        </a>
+      </nav>
+    </div>
+    <!--content holder footer-->
+  </div>
+  <!--content holder-->
+</div>

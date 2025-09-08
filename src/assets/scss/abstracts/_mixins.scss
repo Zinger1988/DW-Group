@@ -1,29 +1,30 @@
 @mixin descending-z-index($count: 30) {
-    // @include on UL class
+  // @include on UL class
+  position: relative;
+  li {
     position: relative;
-    li {
-        position: relative;
-        $target: 0;
-        $index: $count;
-        @while $index > 0 {
-            &:nth-child(#{$target}) {
-                z-index: #{$index};
-            }
-            $target: $target + 1;
-            $index: $index - 1;
-        }
+    $target: 0;
+    $index: $count;
+    @while $index > 0 {
+      &:nth-child(#{$target}) {
+        z-index: #{$index};
+      }
+      $target: $target + 1;
+      $index: $index - 1;
     }
+  }
 }
 
 // Font-face generator mixin
 @mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-        font-family: $font_name;
-        font-display: block;
-        src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2');
-        font-weight: #{$weight};
-        font-style: #{$style};
-    }
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
 }
 
 // vertical align el inside parent with fixed height/min-height
@@ -35,22 +36,22 @@
 //
 
 @mixin v-align($va-height: 100%, $va-direction: middle, $va-pseudo: after) {
-    white-space: nowrap;
+  white-space: nowrap;
 
-    &:#{$va-pseudo} {
-        content: '';
-        display: inline-block;
-        vertical-align: $va-direction;
-        width: 0;
-        min-height: $va-height;
-    }
+  &:#{$va-pseudo} {
+    content: "";
+    display: inline-block;
+    vertical-align: $va-direction;
+    width: 0;
+    min-height: $va-height;
+  }
 
-    > * {
-        white-space: normal;
-        display: inline-block;
-        vertical-align: $va-direction;
-        max-width: 99%;
-    }
+  > * {
+    white-space: normal;
+    display: inline-block;
+    vertical-align: $va-direction;
+    max-width: 99%;
+  }
 }
 
 /// Animate css properties
@@ -62,12 +63,12 @@
 $animation-speed: 0.2s !default;
 
 @mixin animate($properties, $duration: $animation-speed, $easing: ease-in-out) {
-    $list: ();
-    @each $prop in $properties {
-        $str: #{$prop} #{$duration} #{$easing};
-        $list: join($list, #{$str}, comma);
-    }
-    transition: $list;
+  $list: ();
+  @each $prop in $properties {
+    $str: #{$prop} #{$duration} #{$easing};
+    $list: join($list, #{$str}, comma);
+  }
+  transition: $list;
 }
 
 /// Mixin for styling form-placeholders
@@ -85,22 +86,22 @@ $animation-speed: 0.2s !default;
 ///   }
 
 @mixin placeholder {
-    &::-webkit-input-placeholder {
-        @content;
-    }
-    &::-moz-placeholder {
-        opacity: 1;
-        @content;
-    }
-    &:-moz-placeholder {
-        @content;
-    }
-    &:-ms-input-placeholder {
-        @content;
-    }
-    &.placeholder {
-        @content;
-    }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &.placeholder {
+    @content;
+  }
 }
 
 // Font-size px to rem calc
@@ -110,6 +111,6 @@ $animation-speed: 0.2s !default;
 // }
 
 @mixin rem-font-size($pxSize) {
-    font-size: $pxSize;
-    font-size: ($pxSize / 10px) + rem;
+  font-size: $pxSize;
+  font-size: ($pxSize / 10px) + rem;
 }

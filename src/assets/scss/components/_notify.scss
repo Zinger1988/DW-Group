@@ -1,23 +1,25 @@
-.notify{
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
+.notify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 
   $this: &;
 
-  &__icon{
-    font-size: 1.6rem;
+  &__svg-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: $white;
   }
 
-  &__text{
+  &__text {
     font-size: 1.4rem;
   }
 
-  &.active{
+  &.active {
     color: $white;
 
-    #{$this}__icon{
-      color: $pumpkin;
+    #{$this}__svg-icon {
+      fill: $pumpkin;
     }
   }
 }

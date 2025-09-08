@@ -1,11 +1,15 @@
-.post{
-  font-size: 1.6rem;
+.post {
+  font-size: 1.4rem;
+
+  @include media(">=lg") {
+    font-size: 1.6rem;
+  }
 }
 
-.post__table{
+.post__table {
   margin: 5rem 0;
 }
 
-.post__table:last-child{
+.post__table:last-child {
   margin-bottom: 0;
 }

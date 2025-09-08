@@ -1,36 +1,42 @@
-.iconic-list{
+.iconic-list {
   @extend %listreset;
 
-  &__item{
+  &__item {
     line-height: 1.285;
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 
-    &:last-child{
+    &:last-child {
       margin: 0;
     }
   }
 
-  &__icon{
+  &__svg-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $mySin;
+    margin-right: 1rem;
+  }
+
+  &__icon {
     color: $mySin;
     font-size: 2rem;
     margin-right: 1rem;
     line-height: 1;
   }
 
-  &__link{
+  &__link {
     color: inherit;
-    @include animate(text-decoration color, .15s);
+    @include animate(text-decoration color, 0.15s);
 
-    &:hover{
+    &:hover {
       color: $mySin;
       text-decoration-color: $mySin;
     }
   }
 
-  &__header-note{
-    margin-top: .3rem;
+  &__header-note {
+    margin-top: 0.3rem;
   }
-
 }

@@ -1,4 +1,4 @@
-.table{
+.table {
   display: block;
   width: 100%;
   border-radius: 4px;
@@ -7,153 +7,157 @@
 
   $this: &;
 
-  &__tbody{
+  &__tbody {
     display: block;
   }
 
-  &__row{
+  &__post {
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+
+  &__row {
     display: flex;
     flex-direction: column;
     padding: 1.25rem 0;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     margin-bottom: 1.75rem;
     border-radius: 4px;
     @include animate(color);
 
-    .text-overflow__toggle{
+    .text-overflow__toggle {
       justify-content: flex-start;
-      background: linear-gradient(0deg, #F2F2F2 15%, rgba(#F2F2F2, 0) 100%);
+      background: linear-gradient(0deg, #f2f2f2 15%, rgba(#f2f2f2, 0) 100%);
     }
 
     &:hover {
-      background-color: #FFECC6;
+      background-color: #ffecc6;
 
-      .text-overflow__toggle{
-        background: linear-gradient(0deg, #FFECC6 15%, rgba(#FFECC6, 0) 100%);
+      .text-overflow__toggle {
+        background: linear-gradient(0deg, #ffecc6 15%, rgba(#ffecc6, 0) 100%);
       }
     }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
 
-    &--toggler{
+    &--toggler {
       cursor: pointer;
       padding-bottom: 0;
       position: relative;
       @include animate(color margin);
-  
-      &--active{
-        background-color: #77818C;
+
+      &--active {
+        background-color: #77818c;
         color: $white;
         border-radius: 4px 4px 0 0;
         margin-bottom: 0;
-  
-        &:hover{
-          background-color: #6B747E;
 
-          .text-overflow__toggle{
-            background: linear-gradient(0deg, #6B747E 15%, rgba(#6B747E, 0) 100%);
+        &:hover {
+          background-color: #6b747e;
+
+          .text-overflow__toggle {
+            background: linear-gradient(0deg, #6b747e 15%, rgba(#6b747e, 0) 100%);
           }
         }
 
-        .text-overflow__toggle{
-          background: linear-gradient(0deg, #77818C 15%, rgba(#77818C, 0) 100%);
+        .text-overflow__toggle {
+          background: linear-gradient(0deg, #77818c 15%, rgba(#77818c, 0) 100%);
         }
 
-        #{$this}__cell{
-          border-bottom: 1px solid rgba(255,255,255,.2);
+        #{$this}__cell {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
-  
-        #{$this}__dropdown{
+
+        #{$this}__dropdown {
           border-radius: 0;
-          background-color: #5C6772;
+          background-color: #5c6772;
         }
-  
-        #{$this}__dropdown-icon::before{
+
+        #{$this}__dropdown-icon::before {
           transform: rotate(180deg);
         }
-  
-        #{$this}__dropdown-text{
+
+        #{$this}__dropdown-text {
           display: block;
-  
-          &--active{
+
+          &--active {
             display: none;
           }
         }
 
-        .table__product-name{
+        .table__product-name {
           color: $white;
 
           &:hover,
-          &:focus{
+          &:focus {
             text-decoration-color: $white;
           }
         }
       }
     }
 
-    &--clear{
+    &--clear {
       background-color: transparent;
       padding: 0;
 
-      &:hover{
+      &:hover {
         background-color: transparent;
       }
 
-      #{$this}__cell{
+      #{$this}__cell {
         justify-content: center;
       }
     }
 
-    #{$this}__clear-btn{
+    #{$this}__clear-btn {
       @extend %buttonreset;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 1rem 2.5rem;
       border-radius: 20px;
-      border: 1px solid rgba(#8E9AA7, 0.4);
+      border: 1px solid rgba(#8e9aa7, 0.4);
       @include animate(background-color border);
       white-space: nowrap;
 
-
-      &:hover{
+      &:hover {
         border: 1px solid transparent;
-        background-color: rgba(#8E9AA7, .15);
+        background-color: rgba(#8e9aa7, 0.15);
       }
     }
 
-    #{$this}__clear-btn-icon{
+    #{$this}__clear-btn-icon {
       color: $mySin;
       font-size: 1.8rem;
       line-height: 1;
-      margin-right: .5em;
+      margin-right: 0.5em;
     }
 
-    #{$this}__clear-btn-text{
+    #{$this}__clear-btn-text {
       font: 700 1.3rem/ 1 $headings-font-family;
       text-transform: uppercase;
       @include animate(color);
     }
   }
 
-  &__row-head{
+  &__row-head {
     display: none;
   }
 
-  &__row-sub{
-    &--active{
+  &__row-sub {
+    &--active {
       display: block;
       margin-bottom: 3rem;
 
-      #{$this}__cell-sub{
+      #{$this}__cell-sub {
         padding: 1rem 1rem 1.5rem;
       }
     }
   }
 
-  &__dropdown{
+  &__dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,41 +168,41 @@
     cursor: pointer;
     @include animate(background-color, border-radius);
 
-    @include media('>=sm') {
+    @include media(">=sm") {
       padding: 1.25rem;
     }
 
-    @include media('>=md') {
+    @include media(">=md") {
       padding: 1.5rem;
     }
 
-    &--sub{
+    &--sub {
       position: absolute;
       left: 0;
       bottom: 0;
       width: 100%;
       background-color: $white;
-      border-top: 1px dotted rgba(#8E9AA7, .3);
+      border-top: 1px dotted rgba(#8e9aa7, 0.3);
       z-index: 5;
     }
   }
 
-  &__dropdown-text{
+  &__dropdown-text {
     text-transform: uppercase;
     font-weight: 700;
-    margin-right: .75rem;
+    margin-right: 0.75rem;
     display: none;
 
-    &--active{
+    &--active {
       display: block;
     }
   }
 
-  &__dropdown-icon{
+  &__dropdown-icon {
     font-size: 1.2rem;
   }
 
-  &__dropdown-btn{
+  &__dropdown-btn {
     @extend %buttonreset;
     display: inline-flex;
     justify-content: center;
@@ -206,44 +210,44 @@
     width: 100%;
     max-width: 20rem;
     border-radius: 20px;
-    border: 1px solid rgba(#8E9AA7, .4);
+    border: 1px solid rgba(#8e9aa7, 0.4);
     @include animate(background-color border);
 
-    &:hover{
+    &:hover {
       border: 1px solid transparent;
-      background-color: rgba(#8E9AA7, .15);
+      background-color: rgba(#8e9aa7, 0.15);
     }
   }
 
-  &__cell{
+  &__cell {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     font-size: 1.2rem;
     line-height: 1.428;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     vertical-align: middle;
     border-bottom: 1px solid #fff;
     @include animate(border);
 
-    @include media('>=sm') {
+    @include media(">=sm") {
       font-size: 1.3rem;
-      padding: .75rem 2rem;
+      padding: 0.75rem 2rem;
     }
 
-    @include media('>=600px') {
+    @include media(">=600px") {
       font-size: 1.4rem;
-      padding: .8rem 2.4rem;
+      padding: 0.8rem 2.4rem;
     }
 
-    @include media('>=xxl') {
+    @include media(">=xxl") {
       font-size: 1.4rem;
       padding: 1.2rem 2rem;
     }
 
     &[data-col-name]::before {
       content: attr(data-col-name);
-      padding-right: .75rem;
+      padding-right: 0.75rem;
       position: relative;
       z-index: 5;
       font-weight: 700;
@@ -251,60 +255,60 @@
 
     #{$this}__cell-inner {
       max-width: 50%;
-      padding-left: .75rem;
+      padding-left: 0.75rem;
       position: relative;
       z-index: 5;
     }
 
-    &--wide{
+    &--wide {
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
       width: 100%;
       flex-shrink: 0;
 
-      #{$this}__cell-inner{
+      #{$this}__cell-inner {
         max-width: none;
         flex: 0 0 100%;
         padding-left: 0;
       }
     }
 
-    &--check{
+    &--check {
       order: 1;
       padding-top: 1.4rem;
       padding-bottom: 0;
       font-size: 1.6rem;
       border-bottom: none;
 
-      @include media('>=sm') {
+      @include media(">=sm") {
         font-size: 1.8rem;
         padding-top: 1.6rem;
         padding-bottom: 0;
       }
-  
-      @include media('>=600px') {
+
+      @include media(">=600px") {
         font-size: 1.8rem;
         padding-top: 2rem;
         padding-bottom: 1rem;
       }
 
-      @include media('>=xxl') {
+      @include media(">=xxl") {
         font-size: 1.8rem;
         padding-top: 2rem;
         padding-bottom: 1rem;
       }
 
-      .checkbox-radio__label{
+      .checkbox-radio__label {
         font-size: 1.4rem;
 
-        @include media('>=sm') {
+        @include media(">=sm") {
           font-size: 1.5rem;
         }
       }
     }
 
-    &--dropdown{
+    &--dropdown {
       display: block;
       padding: 0;
 
@@ -313,32 +317,32 @@
         padding: 0;
       }
 
-      @include media('>=sm') {
-          padding: 0;
+      @include media(">=sm") {
+        padding: 0;
       }
-  
-      @include media('>=600px') {
-          padding: 0;
+
+      @include media(">=600px") {
+        padding: 0;
       }
     }
 
-    &--delete{
+    &--delete {
       background: transparent;
       padding: 0;
 
-      @include media('>=600px') {
+      @include media(">=600px") {
         padding: 0;
       }
 
-      @include media('>=xxl') {
+      @include media(">=xxl") {
         padding: 0;
       }
 
-      #{$this}__cell-inner{
+      #{$this}__cell-inner {
         position: static;
       }
 
-      #{$this}__delete-btn{
+      #{$this}__delete-btn {
         @extend %buttonreset;
         color: #fff;
         font-size: 0;
@@ -350,49 +354,48 @@
         border-radius: 50%;
         text-align: center;
         transform: translate(50%, -50%);
-        background-color: #A2B1C0;
+        background-color: #a2b1c0;
         @include animate(background-color);
 
-        &:hover{
+        &:hover {
           background-color: #707776;
         }
       }
 
-      #{$this}__delete-btn-icon{
+      #{$this}__delete-btn-icon {
         font-size: 1rem;
         line-height: 3.1rem;
       }
     }
   }
 
-  &__quantity-input{
-    background-color: #FFFFFF;
+  &__quantity-input {
+    background-color: #ffffff;
     border-radius: 3px;
     position: relative;
   }
 
-  &__quantity-input-label{
-
-    .form-row__control{
+  &__quantity-input-label {
+    .form-row__control {
       background-color: transparent;
       border: none;
       text-align: center;
       width: 11rem;
-      padding: .8rem 4.4rem .8rem;
+      padding: 0.8rem 4.4rem 0.8rem;
       font-size: 1.2rem;
 
-      @include media(">=sm"){
+      @include media(">=sm") {
         width: 12rem;
         font-size: 1.3rem;
       }
 
-      @include media(">=600px"){
+      @include media(">=600px") {
         font-size: 1.4rem;
       }
     }
   }
 
-  &__quantity-input-btn{
+  &__quantity-input-btn {
     @extend %buttonreset;
     position: absolute;
     top: 50%;
@@ -402,174 +405,170 @@
     height: 2.9rem;
     font-size: 1.6rem;
     border-radius: 2px;
-    color: #A2B1C0;
+    color: #a2b1c0;
     @include animate(color background-color);
     z-index: 5;
 
-    @include media(">=sm"){
+    @include media(">=sm") {
       width: 3rem;
       height: 3rem;
     }
 
-    @include media(">=600px"){
+    @include media(">=600px") {
       width: 3.1rem;
       height: 3.1rem;
     }
 
-    &:hover{
+    &:hover {
       color: $white;
-      background-color: #A2B1C0;
+      background-color: #a2b1c0;
     }
 
-    &--inc{
-      right: .1rem;
+    &--inc {
+      right: 0.1rem;
 
-      @include media(">=sm"){
-        right: .2rem;
+      @include media(">=sm") {
+        right: 0.2rem;
       }
     }
 
-    &--dec{
-      left: .1rem;
+    &--dec {
+      left: 0.1rem;
 
-      @include media(">=sm"){
-        left: .2rem;
+      @include media(">=sm") {
+        left: 0.2rem;
       }
     }
   }
 
-  &__cell-sub{
+  &__cell-sub {
     display: block;
     padding: 0 1rem;
-    background-color: #8E9AA7;
+    background-color: #8e9aa7;
     @include animate(padding);
     border-radius: 0 0 4px 4px;
   }
 
-  &__cell-sub-content{
+  &__cell-sub-content {
     display: none;
     position: relative;
     background-color: $white;
     border-radius: 4px;
     padding: 1rem 1rem 9rem;
 
-    &.active{
+    &.active {
       display: block;
     }
   }
 
-  &__cell-sub-table{
+  &__cell-sub-table {
     margin-bottom: 2rem;
   }
 
-  &__order-summary{
+  &__order-summary {
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0 0 2rem;
 
-    &:last-child{
+    &:last-child {
       margin: 0;
     }
 
     $this: ".order-summary";
 
-    @include media(">=sm"){
+    @include media(">=sm") {
       padding-left: 2rem;
       padding-right: 2rem;
     }
   }
 
-  &__product-name{
+  &__product-name {
     display: block;
     overflow: hidden;
     position: relative;
     word-break: break-all;
-    
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 1rem;
     }
   }
 
-  &__availability{
+  &__availability {
     font-size: 1.2rem;
     font-weight: 500;
-    color: #98A3B3;
+    color: #98a3b3;
 
-    @include media(">=md"){
+    @include media(">=md") {
       font-size: 1.3rem;
     }
   }
 
-  &__status-radio{
-
-    .checkbox-radio__input[type="radio"]{
-
-      ~ .checkbox-radio__toggler{
+  &__status-radio {
+    .checkbox-radio__input[type="radio"] {
+      ~ .checkbox-radio__toggler {
         position: relative;
         width: 2rem;
         height: 2rem;
         color: transparent;
-        @include animate(background-color, .1s);
+        @include animate(background-color, 0.1s);
 
-        &::before{
+        &::before {
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-50%,-50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
           content: "\e823";
-          font: .7em/1 "Fontello";
+          font: 0.7em/1 "Fontello";
           line-height: 1;
-          @include animate(transform, .2s);
+          @include animate(transform, 0.2s);
         }
       }
 
-      &:checked{
-        ~ .checkbox-radio__toggler{
+      &:checked {
+        ~ .checkbox-radio__toggler {
           box-shadow: none;
           background-color: $forestGreen;
           color: #fff;
 
-          &::before{
-            transform: translate(-50%,-50%) scale(1);
+          &::before {
+            transform: translate(-50%, -50%) scale(1);
           }
         }
       }
     }
   }
 
-  &__sub-form{
+  &__sub-form {
     margin-bottom: 2rem;
   }
 
-  &__add-file{
+  &__add-file {
     margin-bottom: 1rem;
   }
 
-  &__info-block{
-    &:not(:last-child){
+  &__info-block {
+    &:not(:last-child) {
       margin-bottom: 2rem;
     }
 
-    @include media(">=lg"){
+    @include media(">=lg") {
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
     }
   }
 
-  &__text{
+  &__text {
     display: inline-block;
     line-height: 1.4;
   }
 }
 
 @mixin table-build($breakpoint, $tableModifier) {
-
-  $this: '.table'; /* THIS value */
+  $this: ".table"; /* THIS value */
 
   .#{$tableModifier} {
-
-    @include media('>=#{$breakpoint}') {
+    @include media(">=#{$breakpoint}") {
       display: table;
 
       #{$this}__tbody {
@@ -579,26 +578,25 @@
       #{$this}__row {
         display: table-row;
 
-        &:not(:hover):nth-child(odd){
-          background-color: #FAFAFA;
+        &:not(:hover):nth-child(odd) {
+          background-color: #fafafa;
 
-          .text-overflow__toggle{
-            background: linear-gradient(0deg, #FAFAFA 15%, rgba(#FAFAFA, 0) 100%);
+          .text-overflow__toggle {
+            background: linear-gradient(0deg, #fafafa 15%, rgba(#fafafa, 0) 100%);
           }
         }
-        
-        &--toggler{
 
+        &--toggler {
           #{$this}__cell {
             padding-top: 1rem;
             padding-bottom: 1rem;
           }
         }
 
-        &--clear{
+        &--clear {
           text-align: right;
 
-          #{$this}__cell{
+          #{$this}__cell {
             padding: 1.5rem 0 0;
           }
         }
@@ -616,23 +614,23 @@
         }
       }
 
-      #{$this}__dropdown:not(#{$this}__dropdown--sub){
+      #{$this}__dropdown:not(#{$this}__dropdown--sub) {
         padding: 0;
         background-color: unset;
 
         #{$this}__dropdown-text,
-        #{$this}__dropdown-text.active{
+        #{$this}__dropdown-text.active {
           display: none;
         }
 
-        #{$this}__dropdown-icon{
-          color: #A2B1C0;
+        #{$this}__dropdown-icon {
+          color: #a2b1c0;
         }
       }
 
       #{$this}__cell {
         display: table-cell;
-        padding: .7rem 2rem;
+        padding: 0.7rem 2rem;
         @include animate(padding);
 
         &[data-col-name]::before {
@@ -650,7 +648,7 @@
           border-bottom: 1px solid #fff;
           font-size: 1.4rem;
 
-          .checkbox-radio__label{
+          .checkbox-radio__label {
             display: none;
           }
         }
@@ -665,21 +663,20 @@
             left: 0;
             top: 50%;
             transform: translate(-50%, -50%);
-            color: rgba(#A2B1C0, .5);
+            color: rgba(#a2b1c0, 0.5);
           }
         }
 
-        &--delete{
-
-          #{$this}__delete-btn{
+        &--delete {
+          #{$this}__delete-btn {
             position: static;
             transform: none;
             width: 2.7rem;
             height: 2.7rem;
           }
 
-          #{$this}__delete-btn-icon{
-            font-size: .8rem;
+          #{$this}__delete-btn-icon {
+            font-size: 0.8rem;
             line-height: 2.7rem;
           }
         }
@@ -690,11 +687,11 @@
         border-bottom: 2px solid $mySin;
         font-size: 1.1rem;
         font-weight: 700;
-        padding: .8rem 2rem;
+        padding: 0.8rem 2rem;
         white-space: nowrap;
         text-align: left;
 
-        &--hidden{
+        &--hidden {
           font-size: 0;
         }
       }
@@ -705,25 +702,23 @@
         border-radius: 0;
       }
 
-      #{$this}__cell-sub-content{
+      #{$this}__cell-sub-content {
         padding-bottom: 10rem;
 
-        &--returns{
+        &--returns {
           padding: 2.6rem 2rem 10rem;
         }
       }
     }
 
-    @include media('>=1400px'){
-      #{$this}__cell-head{
-        &:not(#{$this}__cell-head--hidden){
+    @include media(">=1400px") {
+      #{$this}__cell-head {
+        &:not(#{$this}__cell-head--hidden) {
           font-size: 1.3rem;
-          padding: .8rem 2rem;
+          padding: 0.8rem 2rem;
         }
       }
     }
-
-    
   }
 }
 

@@ -1,0 +1,136 @@
+.search-results {
+  padding: 1.5rem 0;
+  background-color: $white;
+  box-shadow: 0 3px 12px rgba($mineShaft, 0.14);
+  border-radius: 6px;
+
+  @include media(">=xxl") {
+    padding: 2rem 0;
+  }
+
+  &__heading {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 0 1.5rem 1.5rem;
+    margin: 0 0 2.5rem;
+    border-bottom: 1px solid $mercury;
+
+    @include media(">=xxl") {
+      padding: 0 2rem 1.5rem;
+    }
+  }
+
+  &__list {
+    @extend %listreset;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1.5rem;
+
+    @include media(">=md") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(">=xl") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media(">=xxl") {
+      gap: 1.5rem;
+      padding: 0 2rem;
+    }
+
+    @include media(">=xxxl") {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &__item {
+    display: block;
+    display: flex;
+    height: 100%;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include media(">=lg") {
+      font-size: 1.3rem;
+    }
+
+    @include media(">=xxl") {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__img {
+    display: none;
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+    @include media(">=md") {
+      flex: 0 0 5rem;
+      display: block;
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+    }
+  }
+
+  &__img-item {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+  }
+
+  &__link {
+    @extend %linkreset;
+    padding: 1rem 1.5rem;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1.5rem;
+    width: 100%;
+    @include animate(border box-shadow);
+    background-color: rgba($mercury, 0.3);
+
+    &:hover {
+      border: 1px solid $mySin;
+      box-shadow: inset 0 0 0 0.1rem $mySin;
+    }
+
+    @include media(">=xxl") {
+      gap: 1.8rem;
+    }
+  }
+
+  &__quantity {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    background-color: $pumpkin;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: $white;
+    transform: translate(40%, -40%);
+    box-shadow: 0 0 0 0.5rem $white;
+
+    @include media(">=xxl") {
+      width: 2.2rem;
+      height: 2.2rem;
+      line-height: 2.2rem;
+    }
+  }
+}

@@ -1,55 +1,55 @@
-.header{
+.header {
   background: $outerSpace;
   color: $white;
 
   $this: &;
 
-  &__top{
+  &__top {
     border-bottom: 1px dotted $outerSpaceDarken;
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       border-bottom-style: solid;
     }
   }
 
-  &__middle{
+  &__middle {
     padding: 1rem 0;
     border-bottom: 1px solid $outerSpaceDarken;
     position: relative;
     z-index: 50;
 
-    .holder{
+    .holder {
       order: 1;
       flex-shrink: 0;
       width: 100%;
       margin: 1rem 0 0;
       position: relative;
 
-      @include media('>=md'){
+      @include media(">=md") {
         order: unset;
         width: auto;
         flex-grow: 1;
         margin: 0 1.5rem 0 0;
       }
 
-      @include media('>=lg'){
+      @include media(">=lg") {
         display: flex;
         align-items: flex-end;
       }
     }
   }
 
-  &__middle-container{
+  &__middle-container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
 
-    @include media('>=lg'){
+    @include media(">=lg") {
       flex-wrap: nowrap;
     }
   }
 
-  &__catalog-btn{
+  &__catalog-btn {
     width: 100%;
     background: none;
     color: inherit;
@@ -59,57 +59,77 @@
     font-family: $headings-font-family;
     font-weight: 700;
     text-transform: uppercase;
-    padding: .5rem 6rem;
+    padding: 0.5rem 6rem;
     height: 5rem;
     border-radius: 4px;
     white-space: nowrap;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include animate(background-color color);
 
-    @include media('>=lg'){
-      padding: .5rem 3rem;
+    @include media(">=lg") {
+      padding: 0.5rem 3rem;
       width: auto;
       margin: 0 1.5rem 0 0;
 
-      &.active{
+      &.active {
         background-color: $mySin;
         color: $outerSpace;
       }
     }
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       font-size: 1.3rem;
       height: 4.3rem;
 
-      .icon{
-        margin-right: .8em;
+      .icon {
+        margin-right: 0.8em;
+      }
+
+      .svg-icon {
+        margin-right: 1rem;
       }
     }
 
-    &:hover{
+    &:hover {
       background-color: $mySin;
       color: $outerSpace;
 
-      ~ #{$this}__search-btn{
-        color: rgba($outerSpace, .5);
+      ~ #{$this}__search-btn {
+        color: rgba($outerSpace, 0.5);
 
-        &::before{
-          border-left: 1px solid rgba($outerSpace, .25);
+        &::before {
+          border-left: 1px solid rgba($outerSpace, 0.25);
         }
+      }
+
+      .svg-icon {
+        fill: $black;
       }
     }
 
-    &:focus{
+    &:focus {
       outline: none;
     }
 
-    .icon{
+    .icon {
       font-size: 1.5rem;
-      margin-right: .5em;
+      margin-right: 0.5em;
+    }
+
+    .svg-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 1rem;
+      display: block;
+      fill: white;
+      @include animate(fill);
     }
   }
 
-  &__search-btn{
+  &__search-btn {
     @extend %buttonreset;
     position: absolute;
     right: 0;
@@ -125,11 +145,11 @@
     border-radius: 0 4px 4px 0;
     @include animate(color background-color);
 
-    @include media('>=lg'){
+    @include media(">=lg") {
       display: none;
     }
 
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       left: 0;
@@ -139,59 +159,67 @@
       @include animate(border);
     }
 
-    &:hover{
+    &:hover {
       color: $white;
       background-color: $mySin;
 
-      &::before{
+      &::before {
         border-left: 1px solid $mySin;
       }
     }
 
-    .icon{
+    .icon {
       font-size: 2.3rem;
     }
+
+    .svg-icon {
+      width: 2.3rem;
+      height: 2.3rem;
+      fill: $regentGray;
+    }
   }
 
-  &__logo{
+  &__logo {
     width: 8rem;
+    height: 5.6rem;
+    object-fit: contain;
     margin-right: 1rem;
 
-    @include media('>=md'){
+    @include media(">=md") {
       width: 9.5rem;
+      height: 6.7rem;
     }
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       margin-right: 4.5rem;
       width: 16rem;
+      height: 5.9rem;
     }
   }
 
-  &__controls{
+  &__controls {
     display: flex;
-    //border: 2px solid $outerSpaceDarken;
-    //border-radius: 4px;
     flex-grow: 1;
     max-width: 27rem;
     margin-left: auto;
     position: relative;
 
-    @include media('>=md'){
+    @include media(">=md") {
       width: 30rem;
       flex-grow: 0;
     }
 
-    @include media('>=lg'){
+    @include media(">=lg") {
       width: 26rem;
       max-width: none;
     }
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       border: none;
       width: auto;
     }
 
-    &-btn{
+    &-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -200,7 +228,7 @@
       outline: none;
       text-decoration: none;
       cursor: pointer;
-      padding: .5rem;
+      padding: 0.5rem;
       font-family: inherit;
       color: $regentGray;
       height: 4rem;
@@ -210,95 +238,98 @@
       border-left-width: 0;
       @include animate(color border background-color);
 
-      &--cart{
+      @include media(">=md") {
+        height: 4.6rem;
+      }
+
+      @include media(">=xl") {
+        height: 4.3rem;
+        border: 2px solid $outerSpaceDarken;
+        border-radius: 4px;
+        padding: 0.5rem 1.5rem;
+      }
+
+      @include media(">=xxl") {
+        padding: 0.5rem 2rem;
+
+        &--cart {
+          min-width: 16.9rem;
+        }
+      }
+
+      &--cart {
         cursor: default;
         flex: 2 0 auto;
         padding-right: 1rem;
         padding-left: 1rem;
 
-        #{$this}__controls-btn-text{
-          @include media(">=xl"){
+        #{$this}__controls-btn-text {
+          @include media(">=xl") {
             font-size: 1.6rem;
           }
         }
       }
 
-      &--profile{
-        #{$this}__controls-btn-icon{
-          color: $mySin;
+      #{$this}__controls-btn-icon {
+        fill: $regentGray;
+        width: 2.2rem;
+        height: 2.2rem;
+
+        @include media(">=sm") {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+
+        @include media(">=xl") {
+          margin-right: 0.7rem;
         }
       }
 
-      @include media('>=md'){
-        height: 4.6rem;
-      }
-
-      @include media('>=xl'){
-        height: 4.3rem;
-        border: 2px solid $outerSpaceDarken;
-        border-radius: 4px;
-        padding: .5rem 1.5rem;
-      }
-
-      @include media('>=xxl'){
-        padding: .5rem 2rem;
-
-        &--cart{
-          min-width: 16.9rem;
+      &--profile {
+        #{$this}__controls-btn-icon {
+          fill: $mySin;
         }
       }
 
-      #{$this}__controls-btn-icon{
-        font-size: 2.2rem;
-
-        @include media('>=sm'){
-          font-size: 2.6rem;
-        }
-
-        @include media('>=xl'){
-          margin-right: .7rem;
-        }
-      }
-
-      &-text{
+      &-text {
         display: none;
 
-        @include media('>=xl'){
+        @include media(">=xl") {
           display: block;
           font-size: 1.4rem;
         }
       }
 
-      &-count{
+      &-count {
         display: none;
         font-size: 1rem;
         line-height: 1;
         position: absolute;
-        padding: .2rem;
+        padding: 0.2rem;
         border-radius: 1rem;
         background-color: #00a046;
         top: 1.1rem;
         left: 1.1rem;
-        transform: translate(50%,-50%);
+        transform: translate(50%, -50%);
         color: $white;
         min-width: 1.8rem;
         font-weight: 700;
         text-align: center;
 
-        @include media(">=sm"){
+        @include media(">=sm") {
           left: 1.4rem;
           top: 1.3rem;
         }
 
-        @include media(">=xl"){
+        @include media(">=xl") {
           left: 2.8rem;
           font-size: 1.1rem;
-          padding: .25rem .4rem;
+          padding: 0.25rem 0.4rem;
         }
       }
     }
 
-    &-dropdown{
+    &-dropdown {
       display: none;
       position: absolute;
       right: -2px;
@@ -308,96 +339,122 @@
       max-height: 90vh;
       overflow-y: auto;
 
-      @include media('>=sm'){
+      @include media(">=sm") {
         width: 40rem;
       }
 
-      @include media('>=md'){
+      @include media(">=md") {
         width: 44rem;
         max-height: 85vh;
       }
 
-      @include media('>xl'){
+      @include media(">xl") {
         max-height: 80vh;
       }
 
-      &.active{
+      &.active {
         display: block;
       }
     }
-
   }
 
-  &__controls-item{
+  &__controls-item {
     display: flex;
-    flex: 1 0 25%;
+    flex: 1 1 25%;
     position: relative;
 
-    &:first-child{
-
-      #{$this}__controls-btn{
+    &:first-child {
+      #{$this}__controls-btn {
         border-radius: 4px 0 0 4px;
         border-left-width: 2px;
       }
     }
 
-    &:last-child{
-
-      #{$this}__controls-btn{
+    &:last-child {
+      #{$this}__controls-btn {
         border-radius: 0 4px 4px 0;
         border-right-width: 2px;
       }
     }
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       width: auto;
       border: none;
       margin-right: 1.5rem;
 
       &:first-child,
-      &:last-child{
+      &:last-child {
         #{$this}__controls-btn {
           border-radius: 4px;
         }
       }
 
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
 
-      &--menu{
+      &--menu {
         display: none;
       }
     }
 
     &.active .header__controls-btn {
       cursor: pointer;
-      color: #fff;
+      color: $white;
 
-      &-text{
-        display: block;
-        white-space: nowrap;
-        margin-left: .5em;
+      &-icon {
+        fill: $white;
       }
 
-      &-count{
+      &-text {
+        display: block;
+        white-space: nowrap;
+        margin-left: 0.5em;
+      }
+
+      &-count {
         display: block;
       }
     }
 
-    &:not(.active):hover .header__controls-btn{
+    &:not(.active):hover .header__controls-btn {
       color: $white;
 
-      @include media('<xl'){
+      &-icon {
+        fill: $white;
+      }
+
+      @include media("<xl") {
         background-color: $outerSpaceDarken;
       }
-      @include media('>=xl'){
+      @include media(">=xl") {
         border: 2px solid $raven;
+      }
+    }
+
+    &--notify {
+      #{$this}__controls-btn {
+        @include media(">=xl") {
+          border: none;
+          padding: 0;
+        }
+
+        @include media(">=xxl") {
+          padding: 0;
+        }
+      }
+
+      @include media(">=xl") {
+        &:not(.active):hover {
+          #{$this}__controls-btn {
+            border: none;
+          }
+        }
       }
     }
   }
 
-  &__main-nav{
+  &__main-nav {
     position: fixed;
     left: 0;
     top: 0;
@@ -405,20 +462,20 @@
     overflow: hidden auto;
     width: $menu-mob-width;
 
-    @include media('<lg'){
+    @include media("<lg") {
       transform: translateX(-100%);
       width: 85%;
       max-width: 42rem;
       min-width: 32rem;
       height: 100vh;
-      @include animate(transform, .2s, 'ease');
+      @include animate(transform, 0.2s, "ease");
 
-      &.active{
+      &.active {
         transform: translateX(0);
       }
     }
 
-    @include media('>=lg'){
+    @include media(">=lg") {
       position: absolute;
       width: 100%;
       left: 0;
@@ -426,63 +483,62 @@
       display: none;
       z-index: 40;
 
-      &.active{
+      &.active {
         display: block;
       }
     }
   }
 
-  &__search{
+  &__search {
     position: relative;
 
-    @include media('<lg'){
+    @include media("<lg") {
       display: none;
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
-      z-index: 5 ;
+      z-index: 5;
 
-      &.active{
+      &.active {
         display: block;
       }
 
-      .search__input{
+      .search__input {
         padding-right: 9.5rem;
 
-        &:focus{
+        &:focus {
           padding-right: 6rem;
         }
       }
 
-      .search__extended{
+      .search__extended {
         right: 5rem;
       }
     }
 
-    @include media('>=lg'){
+    @include media(">=lg") {
       flex-grow: 1;
     }
 
-    @include media('>=xl'){
-
-      .search__input{
+    @include media(">=xl") {
+      .search__input {
         padding: 1.15rem 1.15rem 1.15rem 5rem;
       }
     }
   }
 
-  &__search-close{
+  &__search-close {
     @extend %buttonreset;
     display: none;
 
-    @include media('<lg'){
+    @include media("<lg") {
       display: block;
       position: absolute;
       width: 3.4rem;
       height: 3.4rem;
-      right: .8rem;
-      top: .8rem;
+      right: 0.8rem;
+      top: 0.8rem;
       font-size: 1.6rem;
       line-height: 1;
       border-radius: 50%;
@@ -491,49 +547,49 @@
     }
   }
 
-  .account-nav__list{
+  .account-nav__list {
     padding-left: 1rem;
 
-    @include media('>=sm'){
+    @include media(">=sm") {
       padding-left: 2.2rem;
     }
 
-    @include media('>=md'){
+    @include media(">=md") {
       padding-left: 2.1rem;
     }
 
-    @include media('>=lg'){
+    @include media(">=lg") {
       padding-left: 2.9rem;
     }
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       padding-left: 0;
       padding-right: 3.3rem;
     }
 
-    @include media('>=xxl'){
+    @include media(">=xxl") {
       padding-right: 3.7rem;
     }
 
-    @include media('>=xxxl'){
+    @include media(">=xxxl") {
       padding-right: 6rem;
     }
   }
 
-  &__bottom{
-    padding: .9rem 0 0;
+  &__bottom {
+    padding: 0.9rem 0 0;
 
-    @include media('>=xl'){
+    @include media(">=xl") {
       .container {
         display: flex;
         align-items: center;
         overflow-x: auto;
       }
 
-      .account-nav{
+      .account-nav {
         flex-grow: 1;
 
-        &__list{
+        &__list {
           justify-content: flex-end;
         }
       }
@@ -541,174 +597,192 @@
 
     .container {
       padding-right: 0;
-      @include media('<xl'){
+      @include media("<xl") {
         padding-left: 0;
       }
     }
 
-    #{$this}__labels{
+    #{$this}__labels {
       flex-wrap: nowrap;
       flex-shrink: 0;
       padding-right: 3rem;
 
-      @include media('<xl'){
+      @include media("<xl") {
         display: none;
       }
     }
   }
 
-  &--index{
-    background-color: #2A295A;
+  &--index {
+    background-color: #2a295a;
 
-    &.page__header{
+    &.page__header {
       margin-bottom: 0;
     }
 
-    #{$this}__top{
-      border-bottom: 1px dotted #3A3956;
+    #{$this}__top {
+      border-bottom: 1px dotted #3a3956;
     }
 
     .contact-panel__item-icon {
-      color: rgba(255,255,255,.3);
+      color: rgba(255, 255, 255, 0.3);
     }
 
-    .contact-panel__lang-selector{
-      background-color: rgba(#1E2625, .5);
+    .contact-panel__lang-selector {
+      background-color: rgba(#1e2625, 0.5);
     }
 
-    #{$this}__controls{
-
-      @include media('>=xl'){
+    #{$this}__controls {
+      @include media(">=xl") {
         border: none;
       }
 
-      &-btn{
-        border-color: rgba(255,255,255,.3);
+      &-btn {
+        border-color: rgba(255, 255, 255, 0.3);
 
-        @include media('>=xl'){
+        @include media(">=xl") {
           height: 4.3rem;
-          border-color: rgba(255,255,255,.3);
+          border-color: rgba(255, 255, 255, 0.3);
           border-radius: 4px;
-          padding: .5rem 2rem;
+          padding: 0.5rem 2rem;
         }
       }
     }
 
-    #{$this}__controls-item{
-
-      &:not(.active):hover .header__controls-btn{
+    #{$this}__controls-item {
+      &:not(.active):hover .header__controls-btn {
         color: $white;
-        background-color: rgba(255,255,255,.3);
+        background-color: rgba(255, 255, 255, 0.3);
 
-        @include media('>=xl'){
+        @include media(">=xl") {
           border: 2px solid transparent;
         }
       }
     }
 
-    #{$this}__middle{
-      background-color: #2A295A;
+    #{$this}__middle {
+      background-color: #2a295a;
       border: none;
     }
 
-    #{$this}__catalog-btn{
+    #{$this}__catalog-btn {
       border: none;
-      background: rgb(112,26,180);
-      background: linear-gradient(90deg, rgba(112,26,180,1) 0%, rgba(33,208,166,1) 50%, rgba(151,89,205,1) 100%);
+      background: rgb(112, 26, 180);
+      background: linear-gradient(
+        90deg,
+        rgba(112, 26, 180, 1) 0%,
+        rgba(33, 208, 166, 1) 50%,
+        rgba(151, 89, 205, 1) 100%
+      );
       background-size: 200%;
       background-position: 0 center;
-      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       @include animate(background-position background-size);
 
-      &.active{
+      &.active {
         background-color: inherit;
         color: inherit;
         background-size: 400%;
         background-position: 100% center;
       }
 
-      &:hover{
+      &:hover {
         background-color: inherit;
         color: inherit;
         background-position: 100% center;
 
-        ~ #{$this}__search-btn{
+        .svg-icon {
+          fill: $white;
+        }
+
+        ~ #{$this}__search-btn {
           color: $white;
 
-          &::before{
+          &::before {
             border-left: 1px solid $white;
           }
         }
       }
     }
 
-    #{$this}__search-btn{
+    #{$this}__search-btn {
       color: $white;
 
-      &::before{
-        border-left: 1px solid rgba(255,255,255,.4);
+      .svg-icon {
+        fill: $white;
       }
 
-      &:hover{
-        color: $white;
-        background-color: rgba(0,0,0,.2);
+      &::before {
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+      }
 
-        &::before{
+      &:hover {
+        color: $white;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        &::before {
           border-left: 1px solid transparent;
         }
       }
     }
 
-    .main-nav{
-      background-color: #2A295A;
+    .main-nav {
+      background-color: #2a295a;
 
-      @include media(">=lg"){
-        border-top: 1px solid #3A3956;
+      @include media(">=lg") {
+        border-top: 1px solid #3a3956;
       }
     }
 
-    .select2-container--default .select2--theme--outerSpace{
-      background-color: #2A295A;
-      border: 1px solid #3A3956;
+    .select2-container--default .select2--theme--outerSpace {
+      background-color: #2a295a;
+      border: 1px solid #3a3956;
     }
 
     .main-nav__link:hover {
       @include media(">=lg") {
-        background-color: rgba($black, .15);
+        background-color: rgba($black, 0.15);
       }
     }
 
     .main-nav__filter-desc {
-      color: #8C8BC2;
+      color: #8c8bc2;
     }
   }
 
-  &__controls-notify{
-    margin-left: .5rem;
+  &__controls-notify {
+    // margin-left: 0.5rem;
 
-    @include media(">=xl"){
-      margin-left: 1.2rem;
-    }
+    // @include media(">=xl") {
+    //   margin-left: 1.2rem;
+    // }
 
-    .notify__icon{
-      font-size: 1.3rem;
-      opacity: .75;
+    // .notify__icon {
+    //   font-size: 1.3rem;
+    //   opacity: 0.75;
 
-      @include media(">=xl"){
-        font-size: 1.6rem;
+    //   @include media(">=xl") {
+    //     font-size: 1.6rem;
+    //   }
+    // }
+
+    .notify__svg-icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      opacity: 0.75;
+
+      @include media(">=xl") {
+        width: 1.8rem;
+        height: 1.8rem;
       }
     }
 
-    .notify__count{
-      display: none;
+    &.active {
+      // .notify__icon {
+      //   opacity: 1;
+      // }
 
-      @include media(">=xl"){
-        display: inline;
-      }
-    }
-
-    &.active{
-      .notify__icon{
+      .notify__svg-icon {
         opacity: 1;
       }
     }

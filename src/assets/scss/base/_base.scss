@@ -1,4 +1,4 @@
-@import "fonts";
+// @import "fonts";
 @import "typography";
 @import "forms";
 @import "helpers";
@@ -12,6 +12,6 @@ html {
 
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
 }
